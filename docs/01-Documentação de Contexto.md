@@ -1,6 +1,6 @@
 # Introdução
 
-No cenário atual e dinâmico da tecnologia de software e mídias digitais, um ramo da indústria que que se mantém como uma força persistente e vibrante é a indústria de jogos eletrônicos, mantendo-se como um dos principais pilares de entretenimento na sociedade por mais de duas décadas. Este setor, constantemente inovador, atrai um público vasto de diversas faixas etárias, redefinindo-se continuamente e introduzindo novas formas de engajamento.
+No cenário atual e dinâmico da tecnologia de software e mídias digitais, um ramo da indústria que se mantém como uma força persistente e vibrante é a indústria de jogos eletrônicos, mantendo-se como um dos principais pilares de entretenimento na sociedade por mais de duas décadas. Este setor, constantemente inovador, atrai um público vasto de diversas faixas etárias, redefinindo-se continuamente e introduzindo novas formas de engajamento.
 
 Com o avanço tecnológico e a disseminação do acesso à internet, os jogos eletrônicos emergiram como uma forma de entretenimento popular, especialmente entre os jovens. Contudo, diante da sucessão de inovações, a constante introdução de novos jogos, mecânicas, plataformas e movimentações empresariais criaram um panorama desafiador. Nesse contexto, surge a necessidade de uma ferramenta que ofereça foco, atenção e transparência ao público, fornecendo informações atualizadas, notícias e lançamentos da indústria de jogos eletrônicos.
 
