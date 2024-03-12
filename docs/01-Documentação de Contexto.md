@@ -40,8 +40,4 @@ Dessa forma, a justificativa para este aplicativo reside na necessidade evidente
 ## Público-Alvo
 
 O público-alvo que o projeto se propõe atender abrange uma ampla gama de entusiastas, consumidores e profissionais envolvidos no universo dos jogos eletrônicos. Em particular, o software visa atender: jovens ou qualquer entusiasta que possuem interesse em jogos eletrônicos, pessoas interessadas em notícias, informações atualizadas e estatísticas detalhadas sobre seus jogos favoritos, confiáveis e novidades do mercado de jogos eletrônicos, Pessoas interessadas terão condições  em acompanhar o panorama geral da indústria de jogos eletrônicos, incluindo notícias sobre empresas, lançamentos e tendências. 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+
