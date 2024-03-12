@@ -10,7 +10,8 @@ Ao atender a essa necessidade, não só facilitaremos o acesso à informação, 
 
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+
+O problema a ser resolvido por este projeto é a falta de uma plataforma centralizada e confiável, que ofereça informações atualizadas e detalhadas sobre jogos eletrônicos. Atualmente, os usuários enfrentam dificuldades para acessar notícias relevantes e atualizadas, estatísticas de jogos, preços em diversas lojas e dados sobre jogadores em uma única fonte confiável. O projeto busca preencher essa lacuna, proporcionando aos usuários uma plataforma que não apenas informa sobre a indústria de jogos, mas também facilita a interação da comunidade, permitindo, também, personalização e acesso fácil às estatísticas detalhadas.
 
 Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
 
