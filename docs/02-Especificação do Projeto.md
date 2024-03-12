@@ -1,10 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
 
@@ -22,11 +18,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Programador  | Informações acessíveis e confiáveis.     | Ter fontes confiáveis para embasar suas pesquisas e aprimorar o trabalho.  |
-|Programador  | Notificações de lançamentos relevantes.  | Ficar atualizado sobre novas mecânicas e tendências no mercado de jogos. |
+|     | Notificações de lançamentos relevantes.  | Ficar atualizado sobre novas mecânicas e tendências no mercado de jogos. |
 |Estudante    | Notícias diárias de novos jogos          | Descobrir as últimas sensações do mundo dos jogos online.    |
-|Estudante    |Acompanhamento de jogos de sucesso        |Manter-se atualizado(a) com informações e estatísticas de novos jogos. |
+|       |Acompanhamento de jogos de sucesso        |Manter-se atualizado(a) com informações e estatísticas de novos jogos. |
 |Entusiasta Gamer    | Receber notícias atualizadas       | Estar sempre informada sobre as últimas novidades.    |
-|Entusiasta Gamer    | Acessar análises detalhadas        | Tomar decisões informadas sobre novos lançamentos. |
+|       | Acessar análises detalhadas        | Tomar decisões informadas sobre novos lançamentos. |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
@@ -45,8 +41,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA | 
-|RF-002| A aplicação deve emitir um relatório de tarefas realizadas no mês   | MÉDIA |
+|RF-001| Cadastro de Usuário: | ALTA | 
+|      | •	Permitir que os usuários criem e gerenciem contas individuais. |  | 
+|      | •	Coletar dados de usuário, como nome, senha, endereço de e-mail, jogos de sua preferência etc. |     | 
+|RF-002| Portal de Notícias:| ALTA | 
+|      | •	Exibir notícias atualizadas sobre a indústria de jogos.|    | 
+|      | •	Gerenciar o conteúdo de publicação ou edição de notícias.|    | 
+|      | •	Possibilitar que os usuários comentem ou contribuam com notícias.|    | 
+|      | •	Possibilitar o usuário personalizar seu portal de notícias. |    | 
+|RF-003| Estatística de Jogos: | ALTA | 
+|      | •	Integrar informações de preços com APIs de diferentes lojas online. |    | 
+|      | •	Apresentar estatísticas de jogos, incluindo número de jogadores online. |    | 
+|RF-004| Interface Atrativa: | MÉDIA |
+|      | • Construir um design de fácil manipulação e responsivo para diferentes dispositivos. |     |
+|      | • Prover uma interface com Facilidade de navegação e busca eficiente de informações. |     |
 
 ### Requisitos não Funcionais
 
