@@ -63,9 +63,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| Garantir que o aplicativo seja responsivo para diferentes dispositivos, como desktops, tablets e smartphones. | ALTA | 
 |RNF-004| Garantir a privacidade dos dados dos usuários em relação à Lei Geral de Proteção de Dados Pessoais - LGPD. | ALTA | 
 |RNF-005| Adesão a direitos autorais e licenças de uso de dados provenientes das APIs. | ALTA | 
-|RNF-006|	O site deve permitir que os usuários compreendam as funções do sistema e manipulem de maneira adequada as funcionalidades que estão disponíveis. | MÉDIA | 
+|RNF-006| O site deve permitir que os usuários compreendam as funções do sistema e manipulem de maneira adequada as funcionalidades que estão disponíveis. | MÉDIA | 
 |RNF-007| Tempo de resposta para informações aparecerem na tela deve ser menor que 03 segundos em 90% dos casos. | BAIXA | 
-|RNF-008|	Tempos de respostas rápidos para garantir uma experiência de usuário fluida. | BAIXA | 
+|RNF-008| Tempos de respostas rápidos para garantir uma experiência de usuário fluida. | BAIXA | 
 
 **Prioridade: Alta / Média / Baixa.
 
