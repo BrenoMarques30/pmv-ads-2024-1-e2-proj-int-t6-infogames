@@ -41,20 +41,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Cadastro de Usuário: | ALTA | 
-|      | •	Permitir que os usuários criem e gerenciem contas individuais. |  | 
-|      | •	Coletar dados de usuário, como nome, senha, endereço de e-mail, jogos de sua preferência etc. |     | 
-|RF-002| Portal de Notícias:| ALTA | 
-|      | •	Exibir notícias atualizadas sobre a indústria de jogos.|    | 
-|      | •	Gerenciar o conteúdo de publicação ou edição de notícias.|    | 
-|      | •	Possibilitar que os usuários comentem ou contribuam com notícias.|    | 
-|      | •	Possibilitar o usuário personalizar seu portal de notícias. |    | 
-|RF-003| Estatística de Jogos: | ALTA | 
-|      | •	Integrar informações de preços com APIs de diferentes lojas online. |    | 
-|      | •	Apresentar estatísticas de jogos, incluindo número de jogadores online. |    | 
-|RF-004| Interface Atrativa: | MÉDIA |
-|      | • Construir um design de fácil manipulação e responsivo para diferentes dispositivos. |     |
-|      | • Prover uma interface com Facilidade de navegação e busca eficiente de informações. |     |
+|RF-001| Permitir que os usuários criem e gerenciem contas individuais. | ALTA |
+|RF-002| Exibir notícias atualizadas sobre a indústria de jogos. | ALTA | 
+|RF-003| Gerenciar o conteúdo de publicação ou edição de notícias. | ALTA |
+|RF-004| Possibilitar que os usuários comentem ou contribuam com notícias. | MÉDIA | 
+|RF-005| Permitir o usuário personalizar seu portal de notícias. | MÉDIA | 
+|RF-006| Integrar informações de preços com APIs de diferentes lojas online. | ALTA | 
+|RF-007| Apresentar estatísticas de jogos, incluindo número de jogadores online. | ALTA | 
+|RF-008| Construir um design de fácil manipulação e responsivo para diferentes dispositivos. | MÉDIA |
+|RF-009| Prover uma interface com Facilidade de navegação e busca eficiente de informações. | MÉDIA |
 
 **Prioridade: Alta / Média / Baixa.
 
@@ -63,19 +58,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Segurança: | ALTA | 
-|       | • Implementar medidas de segurança, garantindo a segurança dos dados os quais o usuário não quer compartilhar. |      | 
-|       | • Implementar autenticação robusta para proteger contas. |      | 
-|RNF-002| Aplicação Responsiva: | ALTA | 
-|       | • Garantir que o aplicativo seja responsivo para diferentes dispositivos, como desktops, tablets e smartphones. |       | 
-|RNF-003| Legal: | ALTA | 
-|       | •	Garantir a privacidade dos dados dos usuários em relação à Lei Geral de Proteção de Dados Pessoais - LGPD. |    | 
-|       | •	Adesão a direitos autorais e licenças de uso de dados provenientes das APIs. |    | 
-|RNF-004| Usabilidade: | MÉDIA | 
-|       | •	O site deve permitir que os usuários compreendam as funções do sistema e manipulem de maneira adequada as funcionalidades que estão disponíveis. |    | 
-|RNF-005| Desempenho: | BAIXA | 
-|       | •	Tempo de resposta para informações aparecerem na tela deve ser menor que 03 segundos em 90% dos casos. |    | 
-|       | •	Tempos de respostas rápidos para garantir uma experiência de usuário fluida. |    | 
+|RNF-001| Implementar medidas de segurança, garantindo a segurança dos dados os quais o usuário não quer compartilhar. | ALTA | 
+|RNF-002| Implementar autenticação robusta para proteger contas. | ALTA | 
+|RNF-003| Garantir que o aplicativo seja responsivo para diferentes dispositivos, como desktops, tablets e smartphones. | ALTA | 
+|RNF-004| Garantir a privacidade dos dados dos usuários em relação à Lei Geral de Proteção de Dados Pessoais - LGPD. | ALTA | 
+|RNF-005| Adesão a direitos autorais e licenças de uso de dados provenientes das APIs. | ALTA | 
+|RNF-006|	O site deve permitir que os usuários compreendam as funções do sistema e manipulem de maneira adequada as funcionalidades que estão disponíveis. | MÉDIA | 
+|RNF-007| Tempo de resposta para informações aparecerem na tela deve ser menor que 03 segundos em 90% dos casos. | BAIXA | 
+|RNF-008|	Tempos de respostas rápidos para garantir uma experiência de usuário fluida. | BAIXA | 
 
 **Prioridade: Alta / Média / Baixa.
 
@@ -87,10 +77,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre letivo da PUC Minas. |
-|02| O desenvolvimento do projeto deve incluir a implementação de um módulo de backend para suportar as funcionalidades da plataforma.        |
-|03| A plataforma deve ser compatível com os principais navegadores web (Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) para garantir uma experiência consistente para os usuários.  |
-|04| O design da interface do usuário deve ser responsivo, adaptando-se a diferentes tamanhos de tela, desde dispositivos móveis até monitores de desktop.    |
+|01| A plataforma deve ser compatível com os principais navegadores web (Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) para garantir uma experiência consistente para os usuários.  |
+|02| O design da interface do usuário deve ser responsivo, adaptando-se a diferentes tamanhos de tela, desde dispositivos móveis até monitores de desktop.    |
 
 
 ## Diagrama de Casos de Uso
