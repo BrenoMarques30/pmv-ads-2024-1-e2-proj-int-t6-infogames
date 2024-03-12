@@ -21,8 +21,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Programador  | Informações acessíveis e confiáveis.     | Ter fontes confiáveis para embasar suas pesquisas e aprimorar o trabalho.  |
+|Programador  | Notificações de lançamentos relevantes.  | Ficar atualizado sobre novas mecânicas e tendências no mercado de jogos. |
+|Estudante    | Notícias diárias de novos jogos          | Descobrir as últimas sensações do mundo dos jogos online.    |
+|Estudante    |Acompanhamento de jogos de sucesso        |Manter-se atualizado(a) com informações e estatísticas de novos jogos. |
+|Entusiasta Gamer    | Receber notícias atualizadas       | Estar sempre informada sobre as últimas novidades.    |
+|Entusiasta Gamer    | Acessar análises detalhadas        | Tomar decisões informadas sobre novos lançamentos. |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
@@ -82,11 +86,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
+![Diagrama-Casos de Uso-InfoGames-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/fac4d7c5-ae61-4dd7-9dff-f4cabcc059af)
 
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
