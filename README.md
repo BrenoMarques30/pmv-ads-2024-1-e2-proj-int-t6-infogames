@@ -1,3 +1,4 @@
+![Logo-Infogame-2-ESCOLHIDO-jpeg-PEQUENO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1fbd8218-13e8-4088-98f7-24b6cfdd12e9)
 # TÍTULO DO PROJETO: INFOGAMES
 
 `CURSO`Análise e Desenvolvimento de Sistemas
