@@ -31,31 +31,31 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID    | Descrição do Requisito                                                                                                       | Prioridade |
 | ----- | ---------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| RF-01 | Permitir que o usuário crie e gerencie seu perfil na plataforma.                                                             | ALTA       |
-| RF-02 | Proibir criação de perfil e interação de usuários menores de 13 anos com demais usuários                                     | ALTA       |
-| RF-03 | Permitir que o usuário sincronize seu perfil da plataforma com o seu perfil da Steam® - Via única Steam® -> InfoGames        | BAIXA      |
-| RF-04 | Permitir que o usuário faça cadastro e login usando SSO Steam®                                                               | MÉDIA      |
-| RF-05 | Exibir notícias atualizadas sobre jogos que o usuário possui e/ou segue (Portal de notícias)                                 | BAIXA      |
-| RF-06 | Permitir o usuário personalizar seu portal de notícias.                                                                      | ALTA       |
-| RF-07 | Permitir o usuário curtir e comentar nas notícias.                                                                           | MÉDIA      |
-| RF-08 | Permitir que outros usuários interajam (curtir e responder) com comentários                                                  | MÉDIA      |
-| RF-09 | Proibir que usuários criem comentários ofensivos (xingamentos, ofensas à raça, religião, gênero, etc)                        | ALTA       |
-| RF-10 | Ordenar comentários por engajamento (curtidas+comentários)                                                                   | BAIXA      |
-| RF-11 | Permitir a pesquisa de jogos disponíveis na loja por nome e gênero                                                           | ALTA       |
-| RF-12 | Permitir a filtrar e/ou ordenar a lista de resultados de pesquisa por classificação, preço, desconto e/ou data de lançamento | ALTA       |
-| RF-13 | Definir todos jogos classificados como "Mature" ou "Proibido para menores" como "restritos"                                  | ALTA       |
-| RF-14 | Criar verificação de idade para acessar conteúdo de jogos restritos                                                          | ALTA       |
-| RF-15 | Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                       | ALTA       |
-| RF-16 | Permitir que usuários de 18 anos ou mais habilitem o acesso a conteúdo de jogos restritos                                    | MÉDIA      |
-| RF-17 | Exibir informações de preço atual e histórico de jogos na Steam®                                                             | ALTA       |
-| RF-18 | Exibir estatísticas de jogos, incluindo número de jogadores online.                                                          | ALTA       |
-| RF-19 | Criar um backup dioturno com informações dos usuários e jogos                                                                | MÉDIA      |
-| RF-20 | Permitir que o usuário compartilhe a página do jogo                                                                          | MÉDIA      |
-| RF-21 | Permitir que o usuários pesquise por outros usuários                                                                         | MÉDIA      |
-| RF-22 | Permitir que usuários gerenciem seus amigos (convidar, adicionar, remover)                                                   | BAIXA      |
-| RF-23 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
+| RF-001 | Permitir que o usuário crie e gerencie seu perfil na plataforma.                                                             | ALTA       |
+| RF-002 | Proibir criação de perfil e interação de usuários menores de 13 anos com demais usuários                                     | ALTA       |
+| RF-003 | Permitir que o usuário sincronize seu perfil da plataforma com o seu perfil da Steam® - Via única Steam® -> InfoGames        | BAIXA      |
+| RF-004 | Permitir que o usuário faça cadastro e login usando SSO Steam®                                                               | MÉDIA      |
+| RF-005 | Exibir notícias atualizadas sobre jogos que o usuário possui e/ou segue (Portal de notícias)                                 | BAIXA      |
+| RF-006 | Permitir o usuário personalizar seu portal de notícias.                                                                      | ALTA       |
+| RF-007 | Permitir o usuário curtir e comentar nas notícias.                                                                           | MÉDIA      |
+| RF-008 | Permitir que outros usuários interajam (curtir e responder) com comentários                                                  | MÉDIA      |
+| RF-009 | Proibir que usuários criem comentários ofensivos (xingamentos, ofensas à raça, religião, gênero, etc)                        | ALTA       |
+| RF-010 | Ordenar comentários por engajamento (curtidas+comentários)                                                                   | BAIXA      |
+| RF-011 | Permitir a pesquisa de jogos disponíveis na loja por nome e gênero                                                           | ALTA       |
+| RF-012 | Permitir a filtrar e/ou ordenar a lista de resultados de pesquisa por classificação, preço, desconto e/ou data de lançamento | ALTA       |
+| RF-013 | Definir todos jogos classificados como "Mature" ou "Proibido para menores" como "restritos"                                  | ALTA       |
+| RF-014 | Criar verificação de idade para acessar conteúdo de jogos restritos                                                          | ALTA       |
+| RF-015 | Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                       | ALTA       |
+| RF-016 | Permitir que usuários de 18 anos ou mais habilitem o acesso a conteúdo de jogos restritos                                    | MÉDIA      |
+| RF-017 | Exibir informações de preço atual e histórico de jogos na Steam®                                                             | ALTA       |
+| RF-018 | Exibir estatísticas de jogos, incluindo número de jogadores online.                                                          | ALTA       |
+| RF-019 | Criar um backup dioturno com informações dos usuários e jogos                                                                | MÉDIA      |
+| RF-020 | Permitir que o usuário compartilhe a página do jogo                                                                          | MÉDIA      |
+| RF-021 | Permitir que o usuários pesquise por outros usuários                                                                         | MÉDIA      |
+| RF-022 | Permitir que usuários gerenciem seus amigos (convidar, adicionar, remover)                                                   | BAIXA      |
+| RF-023 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
 | RF-24 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
-| RF-25 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
+| RF-025 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
 
 ### Requisitos Não Funcionais
 
@@ -83,4 +83,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos.
 
-![Diagrama-Casos de Uso-InfoGames-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/fac4d7c5-ae61-4dd7-9dff-f4cabcc059af)
+![Diagrama-Casos de Uso-InfoGames-v3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e41278d2-4d19-41c8-b84c-9b4eb0e5a87a)
+
