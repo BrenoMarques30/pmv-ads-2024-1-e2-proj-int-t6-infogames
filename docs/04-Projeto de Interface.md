@@ -11,14 +11,27 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+Diagrama 1 –FLUXO GERAL DO APLICATIVO
+![1-Diagr-nfogames-Fluxo Geral](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0e1c69e3-58bf-4cfa-86c0-aba118a27232)
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+Diagrama 2 –Representações / Formas Utilizadas
+![1-Representações Utilizadas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/aa559938-74ce-4a7a-b9bf-62607d01d127)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
+Diagrama 3 –FLUXO GERENCIAR CONTA
+![2-Gerenciar Conta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a1b5c6cc-3200-4571-9b04-99d828a050b5)
 
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+Diagrama 4 –FLUXO DE PESQUISA
+![3-Pesquisa](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a4211e4e-4343-4e8d-8dbe-b34b0963255d)
+
+Diagrama 5 –FLUXO PARA JOGOS FAVORITOS
+![4-Jogos Favoritos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/64047484-fc7a-4885-a666-41794e6f08d9)
+
+Diagrama 6 –FLUXO PORTAL DE NOTÍCIAS
+![5-Portal de Notícias](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/8f99869f-0892-4eb3-8c31-045f55454c64)
+
+Diagrama 7 –FLUXO PORTAL DE PROMOÇÕES
+![6-Portal de Promoções](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/f85904d3-2afb-40f5-9d06-5e9830326dd5)
+
 
 ## Wireframes
 
