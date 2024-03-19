@@ -12,10 +12,13 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
 Diagrama 1 –FLUXO GERAL DO APLICATIVO
+
 ![1-Diagr-nfogames-Fluxo Geral](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0e1c69e3-58bf-4cfa-86c0-aba118a27232)
 
 Diagrama 2 –Representações / Formas Utilizadas
-![1-Representações Utilizadas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/aa559938-74ce-4a7a-b9bf-62607d01d127)
+
+![1-Representações Utilizadas-PEQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/7d7e92b4-e762-496c-a36a-403bde5ade08)
+
 
 Diagrama 3 –FLUXO GERENCIAR CONTA
 ![2-Gerenciar Conta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a1b5c6cc-3200-4571-9b04-99d828a050b5)
