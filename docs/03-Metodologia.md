@@ -49,7 +49,7 @@ Os papéis, na Equipe 1, foram distribuídos da seguinte maneira:
 
 ●	**Equipe de Design**: _Willian Barbosa de Andrade_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Rafael Fernandes Mourão, Raissa Saunier.
 
-●	**Equipe de Desenvolvimento**: _ Rafael Fernandes Mourão_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Raissa Saunier, Willian Barbosa de Andrade.
+●	**Equipe de Desenvolvimento**: _Rafael Fernandes Mourão_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Raissa Saunier, Willian Barbosa de Andrade.
 
 As tarefas são organizadas no backlog do produto, e, em todo processo de construção da aplicação, a equipe reuniu-se semanalmente para definição e planejamento das tarefas, distribuição das atividades, revisão e planejamento dos próximos passos.
 Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diversas ferramentas de comunicação, documentação e construção de softwares.
