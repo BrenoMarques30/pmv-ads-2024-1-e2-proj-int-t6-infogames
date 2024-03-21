@@ -2,11 +2,11 @@
 
 ## Personas
 
-Rodolfo Nunes tem 23 anos, é programador recém-formado e trabalha para uma empresa desenvolvedora de jogos digitais. Encarregado de programar as mecânicas de jogos, ele pesquisa regularmente as mecânicas de jogabilidade mais presentes e utilizadas pela concorrência de mercado para, além de compreendê-las e reproduzi-las, possuir capacidade de inová-las. Ele busca por meios de informação acessíveis e confiáveis para utilizar em sua pesquisa.
+* Rodolfo Nunes tem 23 anos, é programador recém-formado e trabalha para uma empresa desenvolvedora de jogos digitais. Encarregado de programar as mecânicas de jogos, ele pesquisa regularmente as mecânicas de jogabilidade mais presentes e utilizadas pela concorrência de mercado para, além de compreendê-las e reproduzi-las, possuir capacidade de inová-las. Ele busca por meios de informação acessíveis e confiáveis para utilizar em sua pesquisa.
 
-Laura Fagundes possui 18 anos, é estudante universitária e joga online com pessoas ao redor do globo, todas as noites ao retornar de suas aulas. Apesar de jogar frequentemente alguns jogos de ação competitivos nos últimos anos, ela é interessada nas próximas sensações do ano, em matéria de jogos multijogador. Dessa forma, ela acompanha diariamente as notícias de novos jogos que adquirem sucesso.
+* Laura Fagundes possui 18 anos, é estudante universitária e joga online com pessoas ao redor do globo, todas as noites ao retornar de suas aulas. Apesar de jogar frequentemente alguns jogos de ação competitivos nos últimos anos, ela é interessada nas próximas sensações do ano, em matéria de jogos multijogador. Dessa forma, ela acompanha diariamente as notícias de novos jogos que adquirem sucesso.
 
-Ana Silva tem 28 anos, trabalha como desenvolvedora de software em uma empresa de tecnologia. Entusiasta de jogos eletrônicos, adora se manter atualizada sobre as últimas novidades, lançamentos e tendências da indústria. Ela costuma navegar por vários sites e fóruns para obter informações, mas sente falta de uma fonte centralizada para encontrar notícias confiáveis, análises detalhadas, estatísticas de jogos e preços atualizados em um único lugar.
+* Ana Silva tem 28 anos, trabalha como desenvolvedora de software em uma empresa de tecnologia. Entusiasta de jogos eletrônicos, adora se manter atualizada sobre as últimas novidades, lançamentos e tendências da indústria. Ela costuma navegar por vários sites e fóruns para obter informações, mas sente falta de uma fonte centralizada para encontrar notícias confiáveis, análises detalhadas, estatísticas de jogos e preços atualizados em um único lugar.
 
 ## Histórias de Usuários
 
