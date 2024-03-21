@@ -41,12 +41,19 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+Os papéis, na Equipe 1, foram distribuídos da seguinte maneira:
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+●	**Produt Owner**: ???.
+
+●	**Scrum Master**: Rafael Fernandes Mourão.
+
+●	**Equipe de Design**: _Willian Barbosa de Andrade_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Rafael Fernandes Mourão, Raissa Saunier.
+
+●	**Equipe de Desenvolvimento**: _ Rafael Fernandes Mourão_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Raissa Saunier, Willian Barbosa de Andrade.
+
+As tarefas são organizadas no backlog do produto, e, em todo processo de construção da aplicação, a equipe reuniu-se semanalmente para definição e planejamento das tarefas, distribuição das atividades, revisão e planejamento dos próximos passos.
+Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diversas ferramentas de comunicação, documentação e construção de softwares.
+
 
 ### Processo
 
