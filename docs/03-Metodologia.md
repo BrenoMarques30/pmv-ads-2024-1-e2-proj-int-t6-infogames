@@ -72,9 +72,9 @@ As ferramentas empregadas no projeto são:
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Documentos e Gerenciamento do projeto / Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/main/                       |
+| Documentos e Gerenciamento do projeto / Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/main/         |
 | Projeto de Interface                | Figma                              |                          |
-| Backlog                             | Kanban                             | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/665/views/1                         |
+| Backlog                             | Kanban                             | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/909/views/1               |
 | Encontros síncronos com Orientador  | Microsoft Teams                    |                           |
 | Reuniões da equipe                  | GoogleMeet                         |             |
 | Comunicação da equipe               | WhatsApp                           | web.whatsapp.com                            |
