@@ -69,6 +69,20 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 
 As ferramentas empregadas no projeto são:
 
+
+| AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
+|-------------------------------------|------------------------------------|----------------------------------------|
+| Documentos e Gerenciamento do projeto / Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/main/                       |
+| Projeto de Interface                | Figma                              |                          |
+| Backlog                             | Kanban                             | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/665/views/1                         |
+| Encontros síncronos com Orientador  | Microsoft Teams                    |                           |
+| Reuniões da equipe                  | GoogleMeet                         |             |
+| Comunicação da equipe               | WhatsApp                           | web.whatsapp.com                            |
+| Diagramas de Fluxo doprojeto  | Whimsical                          |  https://whimsical.com/            |
+| Linguagem de programação que permite interatividade e dinamismo às páginas web  | Visual Studio                       |  https://code.visualstudio.com   |
+
+
+
 - Editor de código.
 - Ferramentas de comunicação
 - Ferramentas de desenho de tela (_wireframing_)
