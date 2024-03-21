@@ -76,8 +76,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 | ID  | Restrição                                                                                                                                                                                |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 01  | A plataforma deve ser compatível com os principais navegadores web (Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) para garantir uma experiência consistente para os usuários. |
-| 02  | O design da interface do usuário deve ser responsivo, adaptando-se a diferentes tamanhos de tela, desde dispositivos móveis até monitores de desktop.                                    |
+| 01  | A plataforma deve ser compatível com os principais navegadores web (Google Chrome, Mozilla Firefox, Safari e Microsoft Edge), garantindo uma experiência consistente para os usuários, independentemente do navegador utilizado. |
+| 02  | O design da interface do usuário deve ser responsivo, adaptando-se de forma eficaz e esteticamente atraente a uma variedade de dispositivos, desde smartphones e tablets até monitores de desktop, proporcionando uma experiência de usuário otimizada em qualquer dispositivo e tamanho de tela.                                    |
 
 ## Diagrama de Casos de Uso
 
