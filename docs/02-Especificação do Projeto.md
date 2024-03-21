@@ -78,6 +78,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 01  | A plataforma deve ser compatível com os principais navegadores web (Google Chrome, Mozilla Firefox, Safari e Microsoft Edge), garantindo uma experiência consistente para os usuários, independentemente do navegador utilizado. |
 | 02  | O design da interface do usuário deve ser responsivo, adaptando-se de forma eficaz e esteticamente atraente a uma variedade de dispositivos, desde smartphones e tablets até monitores de desktop, proporcionando uma experiência de usuário otimizada em qualquer dispositivo e tamanho de tela.                                    |
+| 03  | O projeto será sem fins lucrativos.                                    |
+| 04  | O repositório das entregas deverá ser feito no GitHub.                                    |
+
 
 ## Diagrama de Casos de Uso
 
