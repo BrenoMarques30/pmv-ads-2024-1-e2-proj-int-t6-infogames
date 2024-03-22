@@ -6,7 +6,10 @@ Conjunto de slides em um arquivo PowerPoint ou PDF com a apresentação do proje
 
 ## Título do Projeto
 
-Nome e marca do projeto
+### INFOGAMES
+
+![Logo-Infogame-2-ESCOLHIDO-jpeg-PEQUENO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1a977cb9-9f52-4338-b29f-befc2a48522f)
+
 
 ## Identidade Visual (Marca, Design)
 
