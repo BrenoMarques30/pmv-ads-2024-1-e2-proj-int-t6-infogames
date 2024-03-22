@@ -34,10 +34,25 @@ Diagrama 6 –FLUXO PORTAL DE NOTÍCIAS
 Diagrama 7 –FLUXO PORTAL DE PROMOÇÕES
 ![6-Portal de Promoções](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/f85904d3-2afb-40f5-9d06-5e9830326dd5)
 
-
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Figura 1 –TELA ANTES LOGIN E TELA APÓS LOGIN
+![1-Telas iniciais-antes e depois Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e669eb2c-fb00-4c34-b7b9-7e3aa0dae248)
+
+Figura 2 –TELA LOGIN E TELA CADASTRO
+
+![2-Tela Login e Tela Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/99ea6abc-ebf5-46ac-a2ba-7fde523b78b5)
+
+Figura 3 - TELA RECUPERAR SENHA E TELA REDEFINIR SENHA
+![3-Tela Recuperar Senha e Tela Redefinir Senha](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/eb738061-ff0b-48a3-8386-ffb14afd0408)
+
+Figura 4 - PÁGINA DE NOTÍCIAS DE JOGOS ELETRÔNICOS
+![4-Pág Notícias-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/db0e8e40-3892-4451-9c95-bb1ebc421bfb)
+
+Figura 5 - PÁGINA DE ESTATÍSTICAS DE JOGOS ELETRÔNICOS
+![4-Pág Estatísticas-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b8ee688-cde6-4fe2-b7b3-d6e2bbd39a03)
+
+
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
