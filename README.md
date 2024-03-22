@@ -7,7 +7,7 @@
 
 `SEMESTRE: 2024.1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Esse projeto visa implementar um software para usuários de jogos eletrônicos, que possibilite integrar um portal de notícias atualizadas, ofereça estatísticas detalhadas sobre os jogos, promovendo assim uma experiência enriquecedora para a comunidade de jogadores. 
 
 ## Integrantes
 
