@@ -54,7 +54,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-021 | Permitir que o usuários pesquise por outros usuários                                                                         | MÉDIA      |
 | RF-022 | Permitir que usuários gerenciem seus amigos (convidar, adicionar, remover)                                                   | BAIXA      |
 | RF-023 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
-| RF-24 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
+| RF-024 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
 | RF-025 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
 
 ### Requisitos Não Funcionais
