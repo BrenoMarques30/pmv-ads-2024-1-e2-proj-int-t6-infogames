@@ -69,7 +69,75 @@ Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diver
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+#### Backlog do Produto:
+
+- **Etapa 1 (Sprint 1)**:
+
+       Definição do problema.
+
+       Proposta de solução.
+
+       Personas e Histórias de usuários.
+
+       Requisitos e Restrições.
+
+       Diagrama de Casos de Uso.
+
+       Vídeo de 2 minutos sobre o problema e a solução proposta.
+
+       Documentação atualizada no Github.
+
+
+- **Etapa 2 (Sprint 2)**:
+  
+       Documentação da Metodologia.
+
+       Diagrama de Classes
+
+       Diagrama de Fluxo
+
+       Wireframes interativos
+
+       Modelo Entidade Relacionamento (Projeto Conceitual)
+
+       Projeto da Base de Dados
+
+       Plano de Testes de Software
+
+       Plano de Testes de Usabilidade
+
+       Projeto do Github com Backlog e Plano de Sprints
+
+### Etapa 1 (Sprint 1):
+
+*1.1 Planejamento:*
+
+Nessa etapa, foi discutido e acordado qual o problema a ser abordado; foram planejados os seus objetivos, o público-alvo que se pretende alcançar e seus perfis, bem como proposta dos Requisitos funcionais e não-funcionais a serem atendidos, bem como as restrições da solução, no desenvolvimento da aplicação. Foi construída a apresentação, contendo a abordagem geral do projeto, e um vídeo sobre o que será abordado.
+
+Após a formação da equipe, foram planejadas reuniões do grupo, através das ferramentas Teams e Google Meet. Foi construído um grupo do WhatsApp, para troca de ideias, discussões gerais, para definições das ferramentas a serem utilizadas no desenvolvimento do projeto.
+
+Foi escrito e entregue a documentação referente a essa etapa, que consistiu das seguintes Sessões: Documentação do Contexto e a Especificação do projeto.
+
+
+*1.2 Execução:*
+
+Durante essa etapa, foram realizados encontros com o professor, através do Teams, que orientou a respeito dos encaminhamentos, utilização dos recursos nessa fase e como descrever a documentação, bem como suas correções e sugestões de melhoria. 
+As reuniões da equipe foram realizadas em até duas vezes por semana, pelo Meet de forma síncrona, uma vez que se trata de uma etapa de muitas definições para os futuros encaminhamentos do projeto. Esses encontros sempre resultaram nas distribuições de atividades com os componentes, para os ajustes e composição final dos documentos.
+
+As tarefas definidas foram distribuídas com os componentes da equipe, ficando assim dispostas: a Introdução foi feita por Márcia Miranda, a definição do Problema ficou com Enzo, a descrição dos objetivos foi Fábio, a Justificativa com Márcia, as Aplicações semelhantes com Rodrigo, a descrição do Público-Alvo e Perfil dos Usuários com Caio, e a apresentação do projeto até essa etapa foi feita pelo  André.
+
+Podemos destacar que houve um certo trabalho na definição e fechamento dos perfis dos usuários da aplicação a ser desenvolvida, que necessitou de uma abrangência maior, para alcançar os objetivos pretendidos, e foram escolhidos baseados nas características dos usuários frequentes de aplicações nessa área. Houve uma revisão geral na documentação elaborada e a equipe concluiu as demais definições do projeto, como objetivos e os requisitos.
+
+
+
+*1.3 Evidências:*
+
+Foram marcados diversos encontros e reuniões com a equipe, para discussões e definições dos objetivos, público-alvo, requisitos, perfis dos usuários e demais pontos importantes para o desenvolvimento do projeto. Essas reuniões resultaram em atas, com os resultados acordados e distribuição de tarefas. Ademais, produzimos resultados documentais, logo do projeto e a apresentação da Etapa 1.
+
+
+
+
+
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
