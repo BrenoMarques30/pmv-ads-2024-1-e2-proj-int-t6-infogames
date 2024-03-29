@@ -17,11 +17,25 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
+Conforme especificação do porjeto InfoGames, o Modelo ER, com as relações entre as entidades, está representada nas Figuras abaixo:
 
-A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
+Figura 1:Entidades do conjunto de Classes Steam
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+![1-Modelo ER-SteamApp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0d06244a-0fc7-49f2-af15-94ad0cd9a6d2)
+
+Figura 2: Entidades do conjunto de Classes Usuário e Jogador
+
+![2-Modelo ER-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3ce6648a-9d3b-45af-9e4d-3071061f9359)
+
+Abaixo, as representações dos objetos, entidades e seus atributos, dos modelos ER do projeto InfoGames:
+
+![3-Repres-Atributos-Usr](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/994d850e-c79b-4ef7-b551-67da1577a814)
+
+![3-Repres-Atributos-Usr-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/8873c44f-13a5-4402-b26d-fe5cc7e108e0)
+
+![4-Repres-Atributos-Steam](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/746a0743-9c7c-4241-a877-fbc085dc4ee4)
+
+
 
 ## Projeto da Base de Dados
 
