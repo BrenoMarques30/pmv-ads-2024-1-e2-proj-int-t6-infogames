@@ -140,6 +140,14 @@ Houve uma revisão geral na documentação elaborada, por parte de toda equipe, 
 Foram marcados diversos encontros e reuniões com a equipe, para discussões e definições dos objetivos, público-alvo, requisitos, perfis dos usuários e demais pontos importantes para o desenvolvimento do projeto. Essas reuniões resultaram em atas, com os resultados acordados e distribuição de tarefas. Ademais, produzimos resultados documentais, logo do projeto e a apresentação da Etapa 1.
 
 
+Figura 1 – Atas das reuniões de Equipe ocorridas para discussões e decisões da etapa 1
+
+![1-Ata reunião](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/6a1f9cc3-ed8a-405d-90fc-decf72f4bac1)
+
+
+Figura 2 – Etapa da Construção da apresentação do projeto – Etapa 1
+
+![2-Construção Apres Projeto-etapa 1-Peq](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/14e20d29-0c8b-407b-8943-c08d631906ed)
 
 
 
