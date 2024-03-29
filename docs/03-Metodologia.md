@@ -3,7 +3,17 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+_Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times)._
+
+A metodologia utilizada neste projeto é baseada no SCRUM, que é uma abordagem ágil de desenvolvimento e tem como objetivo otimizar a especificação e execução de projetos. Através dessa metodologia, procura-se organizar melhor as equipes de trabalho e fragmentar suas tarefas, distribuindo-as e buscando prover mais eficiência no desenvolvimento.
+
+O Scrum é uma metodologia que se baseia na entrega do produto de forma parcial e construtiva, ou seja, em etapas curtas e regulares, chamadas de sprints. Nesse sentido, com o Scrum, procuramos fazer com que todos trabalhem de forma colaborativa e contribuam com suas ideias e habilidades. Além disso, por meio dessa metodologia, procura-se fazer com que o problema em foco possa ser resolvido com mais facilidade, otimizando cada etapa de desenvolvimento e execução.
+
+Como mencionado anteriormente, o Scrum é uma abordagem ágil e colaborativa que se concentra no trabalho em equipe, com responsabilidades e atividades bem definidas. Basicamente, sua estrutura está dividida nos seguintes componentes:
+
+Os papéis: Scrum Master, Product Owner e a Equipe de Desenvolvimento;
+Os eventos: planejamento, sprints e retrospectiva de sprint;
+Os artefatos: backlog do produto, lista de pendências de sprint, lista de pendências do produto, gráfico de burndown, log, etc;
 
 ## Controle de Versão
 
