@@ -74,38 +74,24 @@ Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diver
 - **Etapa 1 (Sprint 1)**:
 
        Definição do problema.
-
        Proposta de solução.
-
        Personas e Histórias de usuários.
-
        Requisitos e Restrições.
-
        Diagrama de Casos de Uso.
-
        Vídeo de 2 minutos sobre o problema e a solução proposta.
-
        Documentação atualizada no Github.
 
 
 - **Etapa 2 (Sprint 2)**:
   
        Documentação da Metodologia.
-
        Diagrama de Classes
-
        Diagrama de Fluxo
-
        Wireframes interativos
-
        Modelo Entidade Relacionamento (Projeto Conceitual)
-
        Projeto da Base de Dados
-
        Plano de Testes de Software
-
        Plano de Testes de Usabilidade
-
        Projeto do Github com Backlog e Plano de Sprints
 
 ### Etapa 1 (Sprint 1):
@@ -149,7 +135,9 @@ Figura 2 – Etapa da Construção da apresentação do projeto – Etapa 1
 
 ![2-Construção Apres Projeto-etapa 1-Peq](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/14e20d29-0c8b-407b-8943-c08d631906ed)
 
+Figura 3 – Reunião da Equipe com uso da Ferramenta Astah – Etapa 1
 
+![Reunião-02-03-2024-PEQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/8bbe6ebd-ea0f-4a75-b3ab-aee4a4b6fe6e)
 
  
 > **Links Úteis**:
