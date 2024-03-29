@@ -139,6 +139,10 @@ Figura 3 – Reunião da Equipe com uso da Ferramenta Astah – Etapa 1
 
 ![Reunião-02-03-2024-PEQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/8bbe6ebd-ea0f-4a75-b3ab-aee4a4b6fe6e)
 
+### Etapa 2 (Sprint 2):
+
+*2.1 Planejamento:*
+
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
