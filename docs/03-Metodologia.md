@@ -121,13 +121,18 @@ Foi escrito e entregue a documentação referente a essa etapa, que consistiu da
 
 *1.2 Execução:*
 
-Durante essa etapa, foram realizados encontros com o professor, através do Teams, que orientou a respeito dos encaminhamentos, utilização dos recursos nessa fase e como descrever a documentação, bem como suas correções e sugestões de melhoria. 
+Durante essa etapa, foram realizados, semanalmente, encontros com o professor, através do Teams, que orientou a respeito dos encaminhamentos, como descrever a documentação, direcionamentos a respeito da utilização do Github e dos diagramas a serem entregues nessa etapa, bem como suas correções e sugestões de melhoria. 
 As reuniões da equipe foram realizadas em até duas vezes por semana, pelo Meet de forma síncrona, uma vez que se trata de uma etapa de muitas definições para os futuros encaminhamentos do projeto. Esses encontros sempre resultaram nas distribuições de atividades com os componentes, para os ajustes e composição final dos documentos.
 
-As tarefas definidas foram distribuídas com os componentes da equipe, ficando assim dispostas: a Introdução foi feita por Márcia Miranda, a definição do Problema ficou com Enzo, a descrição dos objetivos foi Fábio, a Justificativa com Márcia, as Aplicações semelhantes com Rodrigo, a descrição do Público-Alvo e Perfil dos Usuários com Caio, e a apresentação do projeto até essa etapa foi feita pelo  André.
+As tarefas definidas foram distribuídas com os componentes da equipe, ficando assim dispostas: 
+* A sessão de Documentação foi feita por Caio Miranda e revisada por Willian, Pablo e Márcia,
+* A definição do Problema ficou com Rafael,
+* A especificação do projeto ficou com Márcia e Rafael
+* Revisão dos Requisitos e Restrições ficou com Pablo e Raíssa.
+* Apresentação do projeto ficou com Márcia, Raíssa e Caio.
+* Diagrama de Casos de Uso ficou com Rafael e Willian.
 
-Podemos destacar que houve um certo trabalho na definição e fechamento dos perfis dos usuários da aplicação a ser desenvolvida, que necessitou de uma abrangência maior, para alcançar os objetivos pretendidos, e foram escolhidos baseados nas características dos usuários frequentes de aplicações nessa área. Houve uma revisão geral na documentação elaborada e a equipe concluiu as demais definições do projeto, como objetivos e os requisitos.
-
+Houve uma revisão geral na documentação elaborada, por parte de toda equipe, e a equipe concluiu as demais definições do projeto, como objetivos e os requisitos. A equipe colaborou, em conjunto, em todas as etapas.
 
 
 *1.3 Evidências:*
