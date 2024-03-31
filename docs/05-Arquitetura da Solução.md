@@ -21,21 +21,18 @@ Conforme especificação do porjeto InfoGames, o Modelo ER, com as relações en
 
 Figura 1:Entidades do conjunto de Classes Steam
 
-![1-Modelo ER-SteamApp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0d06244a-0fc7-49f2-af15-94ad0cd9a6d2)
+![2-Modelo ER-InfoGames-Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/45ece1d9-57a9-4f7f-8f42-13e49e9e7450)
 
 Figura 2: Entidades do conjunto de Classes Usuário e Jogador
 
 ![2-Modelo ER-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3ce6648a-9d3b-45af-9e4d-3071061f9359)
 
 Abaixo, as representações dos objetos, entidades e seus atributos, dos modelos ER do projeto InfoGames:
+![3-Respres-Entidades-Atrib-Usr](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e106b7d0-1326-42c9-9574-0326c4c37138)
 
-![3-Repres-Atributos-Usr](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/994d850e-c79b-4ef7-b551-67da1577a814)
+![3-Respres-Entidades-Atrib-Usr-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/67c6554e-0114-4ff2-a9dc-97eee7c19aee)
 
-![3-Repres-Atributos-Usr-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/8873c44f-13a5-4402-b26d-fe5cc7e108e0)
-
-![4-Repres-Atributos-Steam](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/746a0743-9c7c-4241-a877-fbc085dc4ee4)
-
-
+![4-Respres-Entidades-Atrib-Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1c8236b9-88cb-4ec0-b2a9-eae1dcab884f)
 
 ## Projeto da Base de Dados
 
