@@ -53,15 +53,15 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 
 Os papéis, na Equipe 1, foram distribuídos da seguinte maneira:
 
-●	**Produt Owner**: ???.
+●	**Produt Owner**: Willian Barbosa de Andrade.
 
 ●	**Scrum Master**: Rafael Fernandes Mourão.
 
-●	**Equipe de Design**: _Willian Barbosa de Andrade_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Rafael Fernandes Mourão, Raissa Saunier.
+●	**Equipe de Design**: Willian Barbosa de Andrade, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Rafael Fernandes Mourão, Raissa Saunier.
 
-●	**Equipe de Desenvolvimento**: _Rafael Fernandes Mourão_, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Raissa Saunier, Willian Barbosa de Andrade.
+●	**Equipe de Desenvolvimento**: Rafael Fernandes Mourão, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Raissa Saunier, Willian Barbosa de Andrade.
 
-●	**Equipe de Documentação**: _Márcia V. C. Miranda_, Caio Costa Miranda.
+●	**Equipe de Documentação**: Márcia V. C. Miranda, Caio Costa Miranda.
 
 As tarefas são organizadas no backlog do produto, e, em todo processo de construção da aplicação, a equipe reuniu-se semanalmente para definição e planejamento das tarefas, distribuição das atividades, revisão e planejamento dos próximos passos.
 Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diversas ferramentas de comunicação, documentação e construção de softwares.
@@ -112,8 +112,8 @@ As reuniões da equipe foram realizadas em até duas vezes por semana, pelo Meet
 
 As tarefas definidas foram distribuídas com os componentes da equipe, ficando assim dispostas: 
 * A sessão de Documentação foi feita por Caio Miranda e revisada por Willian, Pablo e Márcia,
-* A definição do Problema ficou com Rafael,
-* A especificação do projeto ficou com Márcia e Rafael
+* A definição do Problema ficou com Rafael, Willian, Caio, Márcia, Raíssa e Pablo.
+* A especificação do projeto ficou com Márcia e Rafael.
 * Revisão dos Requisitos e Restrições ficou com Pablo e Raíssa.
 * Apresentação do projeto ficou com Márcia, Raíssa e Caio.
 * Diagrama de Casos de Uso ficou com Rafael e Willian.
