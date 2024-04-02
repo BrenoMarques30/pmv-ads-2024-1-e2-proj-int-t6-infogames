@@ -13,6 +13,11 @@ Essa Sessão contém a apresentação do projeto InfoGames em um arquivo PowerPo
 
 O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do contexto da solução proposta, de forma a manter a temática do problema.
 
+Para construção da aplicação, partimos do conjunto de especificações abaixo, para identidade visual:
+
+[INFOGAME-Identidade Visual.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14842394/INFOGAME-Identidade.Visual.pdf)
+
+
 > **Links Úteis**:
 > - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
 > - [7 dicas de design para criar apresentações de PowerPoint incríveis e eficientes](https://www.shutterstock.com/pt/blog/7-dicas-de-design-para-criar-apresentacoes-de-powerpoint-incriveis-e-eficientes)
