@@ -143,6 +143,21 @@ Figura 3 – Reunião da Equipe com uso da Ferramenta Astah – Etapa 1
 
 *2.1 Planejamento:*
 
+O planejamento dessa etapa consistiu da documentação da metodologia, no que concerne as descrições até esse item, com as atribuições dde atividades a cada membro da equipe (segundo a metodologia SCRUM) a ser desenvolvida no projeto. Foram construídos os Diagramas de Classes e de Fluxo, os protótipos das interfaces a serem construídas especificados e construídos o Modelo Entidade-Relacionamento (Projeto Conceitual) e o projeto da Base de Dados, foram descritos o plano de Testes de Software e plano de Testes de Usabilidade, iniciais para esse nível de etapa de desenvolvimento.
+
+2.2 Execução:
+
+A equipe realizou reuniões semanais e decidiu pela utilização das ferramentas Whimscal e Figma, utilizados no design do Fluxo de Usuário e protótipos das telas do aplicativo, levando em consideração os requisitos funcionais e não funcionais. Foi utilizada a ferramenta Astah para construção do diagrama de Casos de Uso e Projeto de Banco de dados, a ferramanta Lucid, em sua versão gratuita, para a construção dos modelos Entidade-Relacionamento. Foram utilizadas ferramentas, como os recursos de diagramas do Power Point, para as representações de Entidades e atributos.
+Algumas dessas ferramentas, como Astah e Lucid, constituíram-se novidades para a equipe, portanto houve um esforço inicial em seu aprendizado e utilização. Verificou-se uma colaboração excelente entre os membros, principalmente no compartilhamento dos cadastros das ferramentas utilizadas, facilitando a construção e revisão dos designs, por todos os membros.
+
+Os diagramas dos Fluxos dos usuários foram feitos por Rafael, Willian, majoritariamente, e Márcia, com correções de toda equipe. As telas do protótipo foram elaborados por Willian, e corrigidas por todos os membros. Os diagramas de Classes foram construídos por Rafael, principalmente, e Raíssa, com participação em revisão de todos. Os modelos Entidade-Relacionamento foram construídos por Márcia e Caio, com revisão de Rafael. Os modelos de projeto ficaram sob a responsabilidade de Pablo e Raíssa, com revisão geral de todos. Os planos de testes e usabilidade ficaram com Rafael, tendo a participação da equipe inteira, também.
+Os textos construídos no Github foram realizados por Márcia, com revisão geral de todo material foi realizada por todos os membros da equipe.
+
+Além disso, o método Kanban foi adotado para formalizar o cadastro de distribuição das tarefas, registrando as tarefas a serem feitas, em etapas futuras, e as já realizadas até o momento.
+
+2.3 Evidências:
+
+Algumas demonstrações das atividades realizadas nessa etapa, estão nas imagens abaixo:
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
