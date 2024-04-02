@@ -138,6 +138,11 @@ Figura 3 – Reunião da Equipe com uso da Ferramenta Astah – Etapa 1
 
 ![Reunião-02-03-2024-PEQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/8bbe6ebd-ea0f-4a75-b3ab-aee4a4b6fe6e)
 
+Figura 4 - Kanban do projeto InfoGames - Etapa 1
+
+![7-Kanban-InfoGames-Etapa 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/cac18cfd-3d20-4432-9d6e-dc2f77a48bc2)
+
+
 ### Etapa 2 (Sprint 2):
 
 *2.1 Planejamento:*
@@ -158,23 +163,23 @@ Além disso, o método Kanban foi adotado para formalizar o cadastro de distribu
 
 Algumas demonstrações das atividades realizadas nessa etapa, estão nas imagens abaixo:
 
-Figura 4- Ata de reunião de Equipe
+Figura 5 - Ata de reunião de Equipe
 
 ![5-Reunião equipe-Infogames-etapa 2-print](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b00ed4d0-9ae4-4d79-91bc-529b2e48699c)
 
-Figura 5 - Captura do Figma, no processo de construção dos Protótipos do Aplicativo.
+Figura 6 - Captura do Figma, no processo de construção dos Protótipos do Aplicativo.
 
 ![1-Print Figma-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/22a49f29-f872-470d-a5e7-4bf9b153e9cf)
 
-Figura 6 - Captura do Astah, no processo de construção dos Diagramas de Caso de uso e de Classes.
+Figura 7 - Captura do Astah, no processo de construção dos Diagramas de Caso de uso e de Classes.
 
 ![2-3-Print Diagr-Casos Uso e Classes-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1e9a8a02-2f62-4aff-b2a9-5d0fdd9d8fc5)
 
-Figura 6 - Captura da ferramenta Lucid, no processo de construção dos Modelos Entidade-Relacionamento (Conceitual).
+Figura 8 - Captura da ferramenta Lucid, no processo de construção dos Modelos Entidade-Relacionamento (Conceitual).
 
 ![4-Print-Modelo ER-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/77f45d07-b9b5-47c2-860e-ad8f0944ab8e)
 
-
+Figura 9 - Kanban do projeto InfoGames - Etapa 2
 
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
