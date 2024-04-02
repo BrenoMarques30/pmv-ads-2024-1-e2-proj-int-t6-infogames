@@ -181,6 +181,9 @@ Figura 8 - Captura da ferramenta Lucid, no processo de construção dos Modelos 
 
 Figura 9 - Kanban do projeto InfoGames - Etapa 2
 
+![8-Kanban-InfoGames-Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d28f3340-871a-4e1c-bc05-d4d1e802ebba)
+
+
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
 > - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
