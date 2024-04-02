@@ -204,6 +204,7 @@ As ferramentas empregadas no projeto são:
 | Reuniões da equipe                  | GoogleMeet                         |             |
 | Comunicação da equipe               | WhatsApp                           | web.whatsapp.com                            |
 | Diagramas de Fluxo doprojeto  | Whimsical                          |  https://whimsical.com/            |
+| Modelos Entidade-Relacionamento (Conceitual)  | Lucid                          |  https://lucid.com/            |
 | Linguagem de programação que permite interatividade e dinamismo às páginas web  | Visual Studio                       |  https://code.visualstudio.com   |
 
 
