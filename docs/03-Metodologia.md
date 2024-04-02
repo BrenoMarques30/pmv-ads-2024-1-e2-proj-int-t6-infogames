@@ -144,7 +144,7 @@ Figura 3 – Reunião da Equipe com uso da Ferramenta Astah – Etapa 1
 
 O planejamento dessa etapa consistiu da documentação da metodologia, no que concerne as descrições até esse item, com as atribuições dde atividades a cada membro da equipe (segundo a metodologia SCRUM) a ser desenvolvida no projeto. Foram construídos os Diagramas de Classes e de Fluxo, os protótipos das interfaces a serem construídas especificados e construídos o Modelo Entidade-Relacionamento (Projeto Conceitual) e o projeto da Base de Dados, foram descritos o plano de Testes de Software e plano de Testes de Usabilidade, iniciais para esse nível de etapa de desenvolvimento.
 
-2.2 Execução:
+*2.2 Execução:*
 
 A equipe realizou reuniões semanais e decidiu pela utilização das ferramentas Whimscal e Figma, utilizados no design do Fluxo de Usuário e protótipos das telas do aplicativo, levando em consideração os requisitos funcionais e não funcionais. Foi utilizada a ferramenta Astah para construção do diagrama de Casos de Uso e Projeto de Banco de dados, a ferramanta Lucid, em sua versão gratuita, para a construção dos modelos Entidade-Relacionamento. Foram utilizadas ferramentas, como os recursos de diagramas do Power Point, para as representações de Entidades e atributos.
 Algumas dessas ferramentas, como Astah e Lucid, constituíram-se novidades para a equipe, portanto houve um esforço inicial em seu aprendizado e utilização. Verificou-se uma colaboração excelente entre os membros, principalmente no compartilhamento dos cadastros das ferramentas utilizadas, facilitando a construção e revisão dos designs, por todos os membros.
@@ -154,10 +154,28 @@ Os textos construídos no Github foram realizados por Márcia, com revisão gera
 
 Além disso, o método Kanban foi adotado para formalizar o cadastro de distribuição das tarefas, registrando as tarefas a serem feitas, em etapas futuras, e as já realizadas até o momento.
 
-2.3 Evidências:
+*2.3 Evidências:*
 
 Algumas demonstrações das atividades realizadas nessa etapa, estão nas imagens abaixo:
- 
+
+Figura 4- Ata de reunião de Equipe
+
+![5-Reunião equipe-Infogames-etapa 2-print](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b00ed4d0-9ae4-4d79-91bc-529b2e48699c)
+
+Figura 5 - Captura do Figma, no processo de construção dos Protótipos do Aplicativo.
+
+![1-Print Figma-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/22a49f29-f872-470d-a5e7-4bf9b153e9cf)
+
+Figura 6 - Captura do Astah, no processo de construção dos Diagramas de Caso de uso e de Classes.
+
+![2-3-Print Diagr-Casos Uso e Classes-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1e9a8a02-2f62-4aff-b2a9-5d0fdd9d8fc5)
+
+Figura 6 - Captura da ferramenta Lucid, no processo de construção dos Modelos Entidade-Relacionamento (Conceitual).
+
+![4-Print-Modelo ER-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/77f45d07-b9b5-47c2-860e-ad8f0944ab8e)
+
+
+
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
 > - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
