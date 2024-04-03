@@ -171,15 +171,19 @@ Figura 6 - Captura do Figma, no processo de construção dos Protótipos do Apli
 
 ![1-Print Figma-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/22a49f29-f872-470d-a5e7-4bf9b153e9cf)
 
-Figura 7 - Captura do Astah, no processo de construção dos Diagramas de Caso de uso e de Classes.
+Figura 7 - Captura do Whisimcal, no processo de construção dos Diagramas de Fluxo do projeto.
+![8-Print Whimsical-fluxo do projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/95cb61df-a30e-4ed3-9b5f-0217ed31d881)
+
+
+Figura 8 - Captura do Astah, no processo de construção dos Diagramas de Caso de uso e de Classes.
 
 ![2-3-Print Diagr-Casos Uso e Classes-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1e9a8a02-2f62-4aff-b2a9-5d0fdd9d8fc5)
 
-Figura 8 - Captura da ferramenta Lucid, no processo de construção dos Modelos Entidade-Relacionamento (Conceitual).
+Figura 9 - Captura da ferramenta Lucid, no processo de construção dos Modelos Entidade-Relacionamento (Conceitual).
 
 ![4-Print-Modelo ER-Infogames-etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/77f45d07-b9b5-47c2-860e-ad8f0944ab8e)
 
-Figura 9 - Kanban do projeto InfoGames - Etapa 2
+Figura 10 - Kanban do projeto InfoGames - Etapa 2
 
 ![8-Kanban-InfoGames-Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d28f3340-871a-4e1c-bc05-d4d1e802ebba)
 
