@@ -12,11 +12,13 @@ Figura 1: Diagrama de Classes: Loja e demais
 
 ![1-Diagrama de Classes-Loja](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e1ac765c-a268-4929-9af6-a03b131e7ad1)
 
+[1-Diagrama de Classes-Loja.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14851904/1-Diagrama.de.Classes-Loja.pdf)
 
 Figura 2: Diagrama de Classes: Usuário e demais
 
 ![2-Diagrama de Classes-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/05ece767-8461-4fc4-875e-b16320618bcf)
 
+[2-Diagrama de Classes-Usuário.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14851911/2-Diagrama.de.Classes-Usuario.pdf)
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
 
