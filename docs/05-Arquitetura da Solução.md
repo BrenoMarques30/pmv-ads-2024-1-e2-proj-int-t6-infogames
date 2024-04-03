@@ -8,13 +8,15 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
 
-Figura 1: Diagrama de Classes: Jogos e demais
+Figura 1: Diagrama de Classes: Loja e demais
 
-![1-Diagrama Classes Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a7d50383-eaa2-4f74-9052-d15d8104d269)
+![1-Diagrama de Classes-Loja](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e1ac765c-a268-4929-9af6-a03b131e7ad1)
+
 
 Figura 2: Diagrama de Classes: Usuário e demais
 
-![2-Diagrama Classes -Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3c3988b9-0c24-40ee-8e72-9ace60702d81)
+![2-Diagrama de Classes-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/05ece767-8461-4fc4-875e-b16320618bcf)
+
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
 
