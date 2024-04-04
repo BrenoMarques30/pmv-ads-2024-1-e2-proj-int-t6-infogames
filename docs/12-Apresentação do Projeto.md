@@ -1,16 +1,22 @@
 # Apresentação
 
-<span style="color:red">Pré-requisitos: Todos os demais artefatos</span>
-
-Conjunto de slides em um arquivo PowerPoint ou PDF com a apresentação do projeto contemplando todos os itens trabalhados nos demais artefatos.
+Essa Sessão contém a apresentação do projeto InfoGames em um arquivo PowerPoint ou PDF, contemplando todos os itens trabalhados nos demais artefatos.
 
 ## Título do Projeto
 
-Nome e marca do projeto
+### INFOGAMES
+
+![Logo-Infogame-2-ESCOLHIDO-jpeg-PEQUENO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1a977cb9-9f52-4338-b29f-befc2a48522f)
+
 
 ## Identidade Visual (Marca, Design)
 
 O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do contexto da solução proposta, de forma a manter a temática do problema.
+
+Para construção da aplicação, partimos do conjunto de especificações abaixo, para identidade visual:
+
+[INFOGAME-Identidade Visual.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14842394/INFOGAME-Identidade.Visual.pdf)
+
 
 > **Links Úteis**:
 > - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
@@ -19,8 +25,14 @@ O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do conte
 
 ## Conjunto de Slides (Estrutura)
 
-O grupo deve distribuir de forma coerente o conteúdo a ser apresentado, dentro do tempo determinado. Importante ressaltar a importância da descrição clara de todo o andamento do projeto, insumos gerados e requisitos atendidos.
- 
+Apresentação do projeto, com conteúdo sucinto sobre o foco do problema abordado, descrevendo as etapas de sua onstrução.
+
+1- Apresentação do Projeto (formato PDF)
+
+ [3-Apres InfoGames-Total.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14808851/3-Apres.InfoGames-Total.pdf)
+
+
+
 > **Links Úteis**:
 > - [A regra 10-20-30 para apresentações de sucesso](https://revistapegn.globo.com/Noticias/noticia/2014/07/regra-10-20-30-para-apresentacoes-de-sucesso.html)
 > - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)

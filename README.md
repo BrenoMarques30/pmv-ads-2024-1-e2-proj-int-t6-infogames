@@ -1,4 +1,5 @@
-# TÍTULO DO PROJETO: INFOGAMES
+
+# TÍTULO DO PROJETO: INFOGAMES  ![Logo-Infogame-2-ESCOLHIDO-jpeg-PEQUENO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1a977cb9-9f52-4338-b29f-befc2a48522f)
 
 `CURSO`Análise e Desenvolvimento de Sistemas
 
@@ -6,7 +7,7 @@
 
 `SEMESTRE: 2024.1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Esse projeto visa implementar um software para usuários de jogos eletrônicos, que possibilite integrar um portal de notícias atualizadas, ofereça estatísticas detalhadas sobre os jogos, promovendo assim uma experiência enriquecedora para a comunidade de jogadores. 
 
 ## Integrantes
 
