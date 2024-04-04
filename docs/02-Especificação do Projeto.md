@@ -32,7 +32,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ID    | Descrição do Requisito                                                                                                       | Prioridade |
 | ----- | ---------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | RF-01 | Permitir que o usuário crie e gerencie seu perfil na plataforma.                                                             | ALTA       |
-| RF-02 | Proibir criação de perfil e interação de usuários menores de 13 anos com demais usuários                                     | ALTA       |
+| RF-02 | Proibir interação de usuários menores de 13 anos com demais usuários                                                         | ALTA       |
 | RF-03 | Permitir que o usuário sincronize seu perfil da plataforma com o seu perfil da Steam® - Via única Steam® -> InfoGames        | BAIXA      |
 | RF-04 | Permitir que o usuário faça cadastro e login usando SSO Steam®                                                               | MÉDIA      |
 | RF-05 | Exibir notícias atualizadas sobre jogos que o usuário possui e/ou segue (Portal de notícias)                                 | BAIXA      |
@@ -49,26 +49,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-16 | Permitir que usuários de 18 anos ou mais habilitem o acesso a conteúdo de jogos restritos                                    | MÉDIA      |
 | RF-17 | Exibir informações de preço atual e histórico de jogos na Steam®                                                             | ALTA       |
 | RF-18 | Exibir estatísticas de jogos, incluindo número de jogadores online.                                                          | ALTA       |
-| RF-19 | Criar um backup dioturno com informações dos usuários e jogos                                                                | MÉDIA      |
-| RF-20 | Permitir que o usuário compartilhe a página do jogo                                                                          | MÉDIA      |
-| RF-21 | Permitir que o usuários pesquise por outros usuários                                                                         | MÉDIA      |
-| RF-22 | Permitir que usuários gerenciem seus amigos (convidar, adicionar, remover)                                                   | BAIXA      |
-| RF-23 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
-| RF-24 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
-| RF-25 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
+| RF-19 | Permitir que o usuário compartilhe a página do jogo                                                                          | MÉDIA      |
+| RF-20 | Permitir que o usuários pesquise por outros usuários                                                                         | MÉDIA      |
+| RF-21 | Permitir que usuários gerenciem seus amigos (convidar, adicionar, remover)                                                   | BAIXA      |
+| RF-22 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
+| RF-23 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
+| RF-24 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
 
 ### Requisitos Não Funcionais
 
 | ID      | Descrição do Requisito                                                                                                                           | Prioridade |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| RNF-001 |                                                                                                                                                  | ALTA       |
-| RNF-002 | Implementar autenticação robusta para proteger contas.                                                                                           | ALTA       |
-| RNF-003 | Garantir que o aplicativo seja responsivo para diferentes dispositivos, como desktops, tablets e smartphones.                                    | ALTA       |
-| RNF-004 | Garantir a privacidade dos dados dos usuários em relação à Lei Geral de Proteção de Dados Pessoais - LGPD.                                       | ALTA       |
-| RNF-005 | Adesão a direitos autorais e licenças de uso de dados provenientes das APIs.                                                                     | ALTA       |
-| RNF-006 | O site deve permitir que os usuários compreendam as funções do sistema e manipulem de maneira adequada as funcionalidades que estão disponíveis. | MÉDIA      |
-| RNF-007 | Tempo de resposta para informações aparecerem na tela deve ser menor que 03 segundos em 90% dos casos.                                           | BAIXA      |
-| RNF-008 | Tempos de respostas rápidos para garantir uma experiência de usuário fluida.                                                                     | BAIXA      |
+| RNF-001 | Implementar autenticação robusta para proteger contas.                                                                                           | ALTA       |
+| RNF-002 | Garantir que o aplicativo seja responsivo para diferentes dispositivos, como desktops, tablets e smartphones.                                    | ALTA       |
+| RNF-003 | Garantir a privacidade dos dados dos usuários em relação à Lei Geral de Proteção de Dados Pessoais - LGPD.                                       | ALTA       |
+| RNF-004 | Adesão a direitos autorais e licenças de uso de dados provenientes das APIs.                                                                     | ALTA       |
+| RNF-005 | O site deve permitir que os usuários compreendam as funções do sistema e manipulem de maneira adequada as funcionalidades que estão disponíveis. | MÉDIA      |
+| RNF-006 | Tempo de resposta para informações aparecerem na tela deve ser menor que 03 segundos em 90% dos casos.                                           | BAIXA      |
+| RNF-007 | Tempos de respostas rápidos para garantir uma experiência de usuário fluida.                                                                     | BAIXA      |
 
 ## Restrições
 
