@@ -54,9 +54,15 @@ Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+As ferramentas empregadas no projeto são:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+•	Linguagens utlizadas para desenvolver o projeto: HTML, CSS, JavaScript, MySQL e C#.
+•	IDEs de desenvolvimento: Visual Studio Code
+•	Plataforma para hospedagem dos arquivos: GitHub
+•	Ferramenta para a criação de logo e imagens: Canva
+•	Ferramenta para criação de template: Figma.
+•	Ferramenta para criação do Fluxo do Usuário: Whisimcal.
+
 
 ## Hospedagem
 
