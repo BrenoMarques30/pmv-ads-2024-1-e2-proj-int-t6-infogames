@@ -56,12 +56,12 @@ Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
 As ferramentas empregadas no projeto são:
 
-•	Linguagens utlizadas para desenvolver o projeto: HTML, CSS, JavaScript, MySQL e C#.
-•	IDEs de desenvolvimento: Visual Studio Code
-•	Plataforma para hospedagem dos arquivos: GitHub
-•	Ferramenta para a criação de logo e imagens: Canva
-•	Ferramenta para criação de template: Figma.
-•	Ferramenta para criação do Fluxo do Usuário: Whisimcal.
+* Linguagens utlizadas para desenvolver o projeto: HTML, CSS, JavaScript, MySQL e C#.
+*	IDEs de desenvolvimento: Visual Studio Code
+*	Plataforma para hospedagem dos arquivos: GitHub
+*	Ferramenta para a criação de logo e imagens: Canva
+*	Ferramenta para criação de template: Figma.
+*	Ferramenta para criação do Fluxo do Usuário: Whisimcal.
 
 
 ## Hospedagem
