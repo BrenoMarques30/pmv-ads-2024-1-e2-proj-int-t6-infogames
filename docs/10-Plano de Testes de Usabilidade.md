@@ -64,5 +64,10 @@ O plano de teste de usabilidade proposto oferece uma estrutura abrangente para a
 Ademais, construímos um roteiro sucinto de plano de usabilidade, cada tarefa (baseada nos requisitos de funcionalidades) está listada com seu correspondente critério de êxito e o que especificamente será avaliado durante o teste. 
 Este roteiro visa garantir uma avaliação abrangente da experiência do usuário com a plataforma, focando na facilidade de uso, eficiência e satisfação.
 
-
-
+| **Tarefas** | **Critério de Êxito** | **O que será avaliado** |
+|--------------|-----------------------|-------------------------|
+| Realização de Login no sistema. | O usuário consegue fazer login em até 2 tentativas, utilizando menos de 30 segundos. | - Facilidade de encontrar o campo de login. 
+| | | - Clareza das instruções para login. |
+| | | - Tempo gasto para realizar o login. |
+| | | - Necessidade de recuperar a senha. |
+| Cadastro do usuário e gerenciamento de perfil. | O usuário completa o cadastro em menos de 5 minutos e consegue atualizar seu perfil em menos de 3 minutos. Concluir o cadastro, aparecendo a mensagem "Cadastro realizado com sucesso". | Concretização da tarefa. Quantidade de erros cometidos. Tempo necessario para se concluir. |
