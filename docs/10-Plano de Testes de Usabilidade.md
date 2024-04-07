@@ -6,53 +6,54 @@ __Objetivos dos Testes de Usabilidade__
 
 Os testes de usabilidade consistem em avaliar:
 
-•	Facilidade de navegação e uso das funcionalidades do software.
-•	Clareza das informações apresentadas para o usuário, especialmente em relação às notícias, estatísticas dos jogos, e informações de preços.
-•	Eficiência do sistema de cadastro, login, e gerenciamento de perfil.
-•	Efetividade dos filtros de idade e conteúdo para proteger usuários menores
-•	Relevância e personalização do conteúdo no portal de notícias e promoções.
-•	Acessibilidade e inclusão, garantindo que o software seja utilizável por um amplo espectro de usuários.
+•	Facilidade de navegação e uso das funcionalidades do software.\
+•	Clareza das informações apresentadas para o usuário, especialmente em relação às notícias, estatísticas dos jogos, e informações de preços.\
+•	Eficiência do sistema de cadastro, login, e gerenciamento de perfil.\
+•	Efetividade dos filtros de idade e conteúdo para proteger usuários menores.\
+•	Relevância e personalização do conteúdo no portal de notícias e promoções.\
+•	Acessibilidade e inclusão, garantindo que o software seja utilizável por um amplo espectro de usuários.\
 •	Confirmar as informações das estatísticas dos jogos, os preços atualizados e eficiência da pesquisa e filtragem dos jogos.
 
 __Critérios de Seleção dos Participantes__
 
-•	__Faixa Etária__: Incluir usuários acima de 13 anos e um grupo específico acima de 18 anos para testar as restrições de idade.
-•	__Interesses__ Jogadores com interesses vinculados a jogos eletrônicos, de forma a garantir que o feedback sobre funcionalidades atendam a procura que os consumidores possuem ao acessar o software.
+•	__Faixa Etária__: Incluir usuários acima de 13 anos e um grupo específico acima de 18 anos para testar as restrições de idade.\
+•	__Interesses__ Jogadores com interesses vinculados a jogos eletrônicos, de forma a garantir que o feedback sobre funcionalidades atendam a procura que os consumidores possuem ao acessar o software.\
 •	__Experiência__: Consideram-se dois tipos: jogadores experientes e novatos, para avaliar a curva de aprendizado da plataforma.
 
 __Procedimentos e Método__
 
-• __Método__: Combinação de observação direta (para testes presenciais) e avaliação remota usando ferramentas de gravação de tela e áudio.
+• __Método__: Combinação de observação direta (para testes presenciais) e avaliação remota usando ferramentas de gravação de tela e áudio.\
 •	__Local__: Testes realizados tanto de forma presencial em um laboratório controlado quanto de forma remota, para maior flexibilidade.
 
 __Tarefas a Serem Executadas__
 
 1.	__Cadastro e Gerenciamento de Perfil__: Criação de um novo perfil e ajuste das configurações pessoais e informações do usuário.
 2.	__Navegação e Personalização__: Explorar as notícias, personalizar o feed (escopo das notícias recebidas) e acessar o portal de promoções nos preços dos jogos eletrônicos.
-3.	__Pesquisa e Filtragem__: Buscar por jogos específicos e aplicar diferentes filtros na busca
+3.	__Pesquisa e Filtragem__: Buscar por jogos específicos e aplicar diferentes filtros na busca.
 4.	__Interatividade Social__: Postar um comentário em uma notícia e interagir com outros usuários.
 5.	__Verificação de Idade__: Tentativa de acesso a conteúdo restrito por faixa etária.
 
 __Dados a Serem Coletados__
 
-•	__Quantidade de Cliques__: Para completar cada tarefa.
-•	__Tempo de Conclusão__: Tempo necessário para finalizar cada tarefa.
-•	__Erros Cometidos__: Quantas vezes o usuário se desviou do caminho ideal, precisando retroceder o trajeto de suas interações para alcançar seu objetivo.
+•	__Quantidade de Cliques__: Para completar cada tarefa.\
+•	__Tempo de Conclusão__: Tempo necessário para finalizar cada tarefa.\
+•	__Erros Cometidos__: Quantas vezes o usuário se desviou do caminho ideal, precisando retroceder o trajeto de suas interações para alcançar seu objetivo.\
 •	__Satisfação do Usuário__: Através de questionários aplicados após a conclusão das tarefas.
 
 __Ordem de Execução__
+
 As tarefas serão realizadas na ordem listada acima para simular uma experiência de usuário natural desde o início ao envolvimento mais profundo com a plataforma.
 
 __Recursos Demandados__
 
-•	Computadores ou dispositivos móveis com acesso à plataforma.
-•	Ferramentas de gravação de tela e áudio para testes remotos.
+•	Computadores ou dispositivos móveis com acesso à plataforma.\
+•	Ferramentas de gravação de tela e áudio para testes remotos.\
 •	Questionários de satisfação e feedback.
 
 __Métricas Coletadas__
 
-•	__Usabilidade__: Medida pelo número de erros, cliques e tempo gasto.
-•	__Satisfação__: Avaliada por meio de questionários.
+•	__Usabilidade__: Medida pelo número de erros, cliques e tempo gasto.\
+•	__Satisfação__: Avaliada por meio de questionários.\
 •	__Engajamento__: Frequência de uso das funcionalidades disponíveis.
 
 __Observações Finais__: Todos os dados coletados serão anonimizados para cumprir com a LGPD. 
