@@ -187,12 +187,9 @@ Figura 10 - Kanban do projeto InfoGames - Etapa 2
 
 ![8-Kanban-InfoGames-Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d28f3340-871a-4e1c-bc05-d4d1e802ebba)
 
+Figura 11 - Kanban do projeto InfoGames - Final da Etapa 2
+![2-Kanban-final Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/755d28f3-dca9-4961-9d05-cf2ad228fd80)
 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
 
 ### Ferramentas
 
