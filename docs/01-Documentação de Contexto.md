@@ -24,6 +24,7 @@ Desenvolver e implementar um software dedicado aos usuários de jogos eletrônic
 
 *	Desenvolver um meio, como um portal de notícias, que possibilite obter e publicar notícias atuais relacionadas à indústria de jogos.
 *	Apresentar estatísticas dos jogos, integrando o aplicativo às fontes de informações de preços, bem como permitir visualizar seu histórico.
+*	Disponibilizar um portal com informações sobre promoções nas vendas dos jogos eletrônicos de preferência do usuário.
 *	Desenvolver uma interface atrativa que possibilite acesso e fácil manuseio pelo público-alvo.
 
 
