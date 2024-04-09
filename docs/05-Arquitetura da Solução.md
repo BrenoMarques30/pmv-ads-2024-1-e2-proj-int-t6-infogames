@@ -61,8 +61,10 @@ As ferramentas empregadas no projeto são:
 *	IDEs de desenvolvimento: Visual Studio Code
 *	Plataforma para hospedagem dos arquivos: GitHub
 *	Ferramenta para a criação de logo e imagens: Canva
-*	Ferramenta para criação de template: Figma.
-*	Ferramenta para criação do Fluxo do Usuário: Whisimcal.
+*	Ferramenta para Projeto de Interface: Figma.
+* Ferramenta para criação do Fluxo do Usuário: Whisimcal.
+* Ferramenta para o Backlog: Kanban.
+* Ferramenta para os Modelos Entidade-Relacionamento (Conceitual) e Projeto BD: Lucid.
 
 
 ## Hospedagem
