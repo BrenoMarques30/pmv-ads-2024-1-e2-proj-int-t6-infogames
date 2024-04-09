@@ -29,7 +29,7 @@ Apresentação do projeto, com conteúdo sucinto sobre o foco do problema aborda
 
 1- Apresentação do Projeto (formato PDF)
 
- [3-Apres InfoGames-Total.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14808851/3-Apres.InfoGames-Total.pdf)
+[3-Apres InfoGames-Total - Final.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14920059/3-Apres.InfoGames-Total.-.Final.pdf)
 
 
 
