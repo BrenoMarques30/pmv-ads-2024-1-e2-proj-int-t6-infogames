@@ -215,8 +215,3 @@ O editor de código foi escolhido porque ele possui uma integração com o siste
 As ferramentas de comunicação utilizadas porque são de conhecimento de todos os membros da equipe, possuem integração semelhante, por isso foram selecionadas. 
 Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução, acessível e conhecido por todos os membros da equipe do projeto.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
