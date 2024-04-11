@@ -15,7 +15,6 @@ Esse projeto visa implementar um software para usuários de jogos eletrônicos, 
 * Márcia Verônica Costa Miranda
 * Pablo Vinícius Ramos Lopes
 * Rafael Fernandes Mourão
-* Raissa Saunier
 * Willian Barbosa de Andrade
 
 ## Orientador
