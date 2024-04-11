@@ -34,7 +34,7 @@ O desenvolvimento desse aplicativo é fundamentado no crescente dinamismo da ind
 
 A rapidez com que novos jogos são lançados, atualizações são implementadas e notícias são divulgadas torna desafiador para os interessados manterem-se informados de forma eficiente. Este projeto busca abordar essa lacuna, proporcionando um software que agrega, filtra e apresenta informações relevantes de maneira acessível e compreensível.
 
-Ao fornecer uma plataforma que atenda às necessidades do público-alvo, este projeto visa não apenas facilitar o acesso à informação, mas também promover uma compreensão mais aprofundada e envolvente do cenário de jogos eletrônicos, mas também beneficiará os profissionais da indústria, que necessitam acompanhar tendências, preços e novidades.
+Ao fornecer uma plataforma que atenda às necessidades do público-alvo, este projeto visa não apenas facilitar o acesso à informação, mas também promover uma compreensão mais aprofundada e envolvente do cenário de jogos eletrônicos, beneficiando os profissionais da indústria, que necessitam acompanhar tendências, preços e novidades.
 
 Dessa forma, a justificativa para este aplicativo reside na necessidade evidente de uma ferramenta que simplifique e aprimore a experiência dos interessados em um dos setores mais dinâmicos e crescentes da indústria de entretenimento.
 
