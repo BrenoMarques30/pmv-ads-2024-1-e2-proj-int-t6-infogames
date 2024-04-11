@@ -17,6 +17,16 @@ Para construção da aplicação, partimos do conjunto de especificações abaix
 
 [INFOGAME-Identidade Visual.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14842394/INFOGAME-Identidade.Visual.pdf)
 
+Algumas imagens da identidade visual planejada para o projeto InfoGames:
+
+1- Tipografia Planejada / Variação de cores do logo do Projeto
+
+![1-Identidade Visual-img 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/5f620764-7b2c-4f6f-8ec5-2d8575bd5157)
+
+2- Paleta de Cores
+
+![2-Identidade Visual-img 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/97a94f2f-7dab-4b84-ac0b-400d7dbebb1d)
+
 
 > **Links Úteis**:
 > - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
