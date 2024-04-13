@@ -8,17 +8,18 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
 
-Figura 1: Diagrama de Classes: Loja e demais
+Figura 1: Diagrama de Classes: Jogos e demais
 
-![1-Diagrama de Classes-Loja](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e1ac765c-a268-4929-9af6-a03b131e7ad1)
+![1-Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/363dc1be-2b21-40f9-b7f6-b95eb916bd08)
 
-[1-Diagrama de Classes-Loja.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14851904/1-Diagrama.de.Classes-Loja.pdf)
+[1-Diagrama de Classes-Jogos.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14968446/1-Diagrama.de.Classes-Jogos.pdf)
+
 
 Figura 2: Diagrama de Classes: Usuário e demais
 
-![2-Diagrama de Classes-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/05ece767-8461-4fc4-875e-b16320618bcf)
+![2-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/24102708-1c00-44b8-8dba-abde28fc31a0)
 
-[2-Diagrama de Classes-Usuário.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14851911/2-Diagrama.de.Classes-Usuario.pdf)
+[2-Diagrama de Classes-Usuario.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14968447/2-Diagrama.de.Classes-Usuario.pdf)
 
 
 
