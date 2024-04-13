@@ -19,7 +19,7 @@ Esse projeto visa implementar um software para usuários de jogos eletrônicos, 
 
 ## Orientador
 
-* Bernardo Jeunon de Alencar
+* Prof. Dr. Bernardo Jeunon de Alencar
 
 ## Instruções de utilização
 
