@@ -48,7 +48,7 @@ Abaixo, Figutas com as representações dos objetos, entidades e seus atributos,
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
-![1-Diagrama BD-Jogos-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3cd26788-94dc-4638-8b3d-606ffa66303d)
+![1-Diagrama BD-Jogos-2-Final](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a48e383e-6c1b-44ea-abec-ac26eb6f6bab)
 
 ![2-Diagrama BD-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/88dd0716-09f9-4213-870b-57d879058bae)
 
