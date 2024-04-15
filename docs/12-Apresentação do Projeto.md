@@ -37,7 +37,7 @@ Algumas imagens da identidade visual planejada para o projeto InfoGames:
 
 Apresentação do projeto, com conteúdo sucinto sobre o foco do problema abordado, descrevendo as etapas de sua onstrução.
 
-1- __Apresentação do Projeto (formato PDF)__
+1- __Apresentação do Projeto (Slides em formato PDF)__
 
 [3-Apres InfoGames-Total - Final - Vídeo-Final.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/files/14951346/3-Apres.InfoGames-Total.-.Final.-.Video-Final.pdf)
 
