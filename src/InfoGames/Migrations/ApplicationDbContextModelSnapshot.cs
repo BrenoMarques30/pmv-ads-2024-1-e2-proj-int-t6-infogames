@@ -21,7 +21,7 @@ namespace InfoGames.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("InfoGames.Models.LojaModel", b =>
+            modelBuilder.Entity("InfoGames.Models.Loja", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -33,6 +33,7 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Url")
@@ -45,7 +46,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1",
+                            Id = "5f61e164-21cf-4b8a-9b6d-cdfe18858861",
                             ChaveApi = "123456",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",

@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace InfoGames.Models {
-    public class LojaModel {
+    public class Loja {
 
         [Key] public required string Id { get; set; }
-        public string? Nome { get; set; }
+        public required string Nome { get; set; }
         public string? Url { get; set; }
         public string? Logo { get; set; }
         public string? ChaveApi { get; set; }

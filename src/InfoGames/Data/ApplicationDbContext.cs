@@ -8,12 +8,12 @@ namespace InfoGames.Data {
 
         }
 
-        public DbSet<LojaModel> Lojas { get; set; }
+        public DbSet<Loja> Lojas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
-            modelBuilder.Entity<LojaModel>().HasData(
-                               new LojaModel {
-                                   Id = "1",
+            modelBuilder.Entity<Loja>().HasData(
+                               new Loja {
+                                   Id = Guid.NewGuid().ToString(),
                                    Nome = "Steam",
                                    Url = "https://store.steampowered.com/",
                                    Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",

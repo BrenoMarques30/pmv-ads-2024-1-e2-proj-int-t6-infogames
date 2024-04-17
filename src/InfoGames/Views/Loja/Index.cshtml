@@ -1,1 +1,46 @@
-﻿<h1>Lista de lojas</h1>
+﻿@model List<Loja>
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Lista de Lojas
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a class="btn btn-primary" asp-controller="Loja" asp-action="Form" asp-route-method="add">
+                Adicionar Loja
+            </a>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Url</th>
+                <th>Logo</th>
+                <th>Chave Api</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var loja in Model.OrderBy(u => u.Id)) {
+                <tr>
+                    <td>@loja.Id</td>
+                    <td>@loja.Nome</td>
+                    <td><a href="@loja.Url">Visite o site</a></td>
+                    <td><img src="@loja.Logo" /></td>
+                    <td>@loja.ChaveApi</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Loja" asp-action="Form" asp-route-id="@loja.Id" asp-route-method="edit">
+                            Editar
+                        </a>
+                        <a class="btn btn-danger" asp-controller="Loja" asp-action="Delete" asp-route-id="@loja.Id">
+                            Excluir
+                        </a>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
