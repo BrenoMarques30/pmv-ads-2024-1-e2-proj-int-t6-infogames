@@ -19,27 +19,29 @@ namespace InfoGames.Middlewares {
             _db = db;
         }
 
-        public async Task<IActionResult> Index(string id) {
-            if (id == null) {
+        public async Task<IActionResult> Index(string Id) {
+            if (Id == null) {
                 return BadRequest("Invalid app id.");
             }
-            if (_db.Jogos.Find(id) == null) {
+            if (_db.Jogos.Find(Id) == null) {
                 return BadRequest("App not found.");
             } else {
-                JogoModel? app = _db.Jogos.Find(keyValues: id);
+                JogoModel? app = _db.Jogos.Find(keyValues: Id);
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 RestClient storeClient = new RestClient("https://store.steampowered.com/api/");
 
-                RestRequest restReq = new RestRequest("appdetails/");
-                restReq.AddParameter("appids", app.AppId);
+                RestRequest restReq = new RestRequest("appdetails/")
+                .AddQueryParameter("l", "brazilian")
+                .AddQueryParameter("cc", "BR")
+                .AddQueryParameter("appids", app.AppId);
                 restReq.RequestFormat = DataFormat.Json;
                 restReq.Method = RestSharp.Method.Get;
 
                 var response = storeClient.Execute<dynamic>(restReq);
                 JObject jObject = JObject.Parse(response.Content);
                 var appDetails = jObject[app.AppId].Value<JObject>().ToObject<RootDetails>(new Newtonsoft.Json.JsonSerializer { Converters = { new RequirementsConverter() } }).Data;
-                if (appDetails == null) {
+                if (appDetails is not null) {
 
                     app.Detalhes = new DetalhesJogo {
                         Id = Guid.NewGuid().ToString(),
@@ -72,9 +74,9 @@ namespace InfoGames.Middlewares {
                     Console.WriteLine("App details: " + appDetails.Name);
                     Console.WriteLine(appDetails);
                     _db.Jogos.Update(app);
-                    _db.DetalhesJogos.Add(app.Detalhes);
+                    //_db.DetalhesJogos.Add(app.Detalhes);
                     await _db.SaveChangesAsync();
-                    return RedirectToAction("Index", "Jogo");
+                    return RedirectToAction("Detalhes", app);
                 }
 
                 return BadRequest("Failed to fetch app details.");

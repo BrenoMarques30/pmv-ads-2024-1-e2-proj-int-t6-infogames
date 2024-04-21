@@ -6,6 +6,7 @@ namespace InfoGames.Models {
         [Key] public required string Id { get; set; }
         public required string AppId { get; set; }
         public required string Nome { get; set; }
+        [ForeignKey("Detalhes")] public string? DetalhesId { get; set; }
         public DetalhesJogo? Detalhes { get; set; }
     }
 

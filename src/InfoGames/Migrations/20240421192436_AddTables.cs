@@ -5,7 +5,7 @@
 namespace InfoGames.Migrations
 {
     /// <inheritdoc />
-    public partial class ChangeDetalhesPK : Migration
+    public partial class AddTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -73,7 +73,7 @@ namespace InfoGames.Migrations
             migrationBuilder.InsertData(
                 table: "Lojas",
                 columns: new[] { "Id", "ChaveApi", "Logo", "Nome", "Url" },
-                values: new object[] { "656e5381-158e-4c83-9df2-d792cbb7cb49", "123456", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
+                values: new object[] { "d58f4180-8360-4240-a006-3eb24b7cd005", "123456", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Jogos_DetalhesId",

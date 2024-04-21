@@ -37,9 +37,9 @@ namespace InfoGames.Controllers {
             return await getApps.Index();
         }
 
-        public async Task<IActionResult> GetAppDetails(string id) {
-            GetAppDetails getApps = new GetAppDetails(_db);
-            return await getApps.Index(id);
+        public async Task<IActionResult> GetAppDetails(string Id) {
+            GetAppDetails getAppDetails = new GetAppDetails(_db);
+            return await getAppDetails.Index(Id);
         }
 
         public IActionResult Form(string method, string id) {
@@ -85,6 +85,22 @@ namespace InfoGames.Controllers {
             _db.Jogos.Remove(obj);
             _db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Detalhes(string id) {
+            if (id == null || id == "") {
+                return NotFound();
+            }
+            JogoModel app = _db.Jogos.Find(id);
+            if (app == null) {
+                return NotFound();
+            }
+            // Get the details of the game from database. If not found, get from Steam API
+            app.Detalhes = _db.DetalhesJogos.Find(app.DetalhesId);
+            if (app.Detalhes == null) {
+                GetAppDetails(app.Id);
+            }
+            return View(app);
         }
     }
 }

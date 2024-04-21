@@ -1,71 +1,87 @@
 ﻿@model List<JogoModel>
 
-<div class="container">
-    <div class="row pt-4 pb-3">
-        <div class="col-6">
-            <h2 class="text-primary">
-                Lista de Jogos
-            </h2>
-        </div>
-        <div class="col-3 text-end">
-            <a class="btn btn-primary" asp-controller="Jogo" asp-action="Form" asp-route-method="add">
-                Adicionar Jogo
-            </a>
-        </div>
-        <div class="col-3 text-end">
-            <a class="btn btn-primary" asp-controller="Jogo" asp-action="GetApps">
-                Sincronizar com a Steam
-            </a>
-        </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#SyncButton').one('click', function () {
+            $(this).prop('disabled', true);
+        });
+    });
+</script>
+
+
+@if (Model.Count == 0) {
+    <div class="alert alert-warning" role="alert">
+        Nenhum jogo encontrado.
     </div>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>AppId</th>
-                <th>Nome</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var jogo in Model.OrderBy(u => u.AppId)) {
+    <div class="col-3 text-end">
+        <a id="SyncButton" class="btn btn-primary" asp-controller="Jogo" asp-action="GetApps">
+            Sincronizar com a Steam (~1 minuto)
+        </a>
+    </div>
+} else {
+
+
+    <div class="container">
+        <div class="row pt-4 pb-3">
+            <div class="col-6">
+                <h2 class="text-primary">
+                    Lista de Jogos
+                </h2>
+            </div>
+            <!--<div class="col-3 text-end">
+                <a class="btn btn-primary" asp-controller="Jogo" asp-action="Form" asp-route-method="add">
+                    Adicionar Jogo
+                </a>
+            </div>-->
+
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
                 <tr>
-                    <td>@jogo.Id</td>
-                    <td>@jogo.AppId</td>
-                    <td>@jogo.Nome</td>
-                    <td>
-                        <a class="btn btn-primary" asp-controller="Jogo" asp-action="Form" asp-route-id="@jogo.Id" asp-route-method="edit">
-                            Editar
-                        </a>
-                        <a class="btn btn-danger" asp-controller="Jogo" asp-action="Delete" asp-route-id="@jogo.Id">
-                            Excluir
-                        </a>
-                        <a class="btn btn-primary" asp-controller="Jogo" asp-action="GetAppDetails" asp-route-id="@jogo.Id">
-                            Detalhes
-                        </a>
+                    <th>Jogos</th>
+                    <!--<th>Ações</th>-->
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
-<div>
-    <form action="@Url.Action("ChangePageSize", "Jogo")" method="post">
-        <label for="pageSizeDropdown">Entries per page:</label>
-        <select id="pageSizeDropdown" name="pageSize" onchange="this.form.submit()">
-            <!option value="10" @(ViewBag.PageSize == 10 ? "selected" : "")>10</!option>
-            <!option value="25" @(ViewBag.PageSize == 25 ? "selected" : "")>25</!option>
-            <!option value="50" @(ViewBag.PageSize == 50 ? "selected" : "")>50</!option>
-        </select>
-    </form>
-</div>
+            </thead>
+            <tbody>
+                @foreach (var jogo in Model.OrderBy(u => u.AppId)) {
+                    <tr>
+                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id"><img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+jogo.AppId+"/capsule_sm_120.jpg")" /></a></td>
+                        <!--<td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">@jogo.AppId</a></td>-->
+                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">@jogo.Nome</a></td>
+                        <!--<td>
+                            <a class="btn btn-primary" asp-controller="Jogo" asp-action="Form" asp-route-id="@jogo.Id" asp-route-method="edit">
+                                Editar
+                            </a>
+                            <a class="btn btn-danger" asp-controller="Jogo" asp-action="Delete" asp-route-id="@jogo.Id">
+                                Excluir
+                            </a>
+                        </td>-->
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <form action="@Url.Action("ChangePageSize", "Jogo")" method="post">
+            <label for="pageSizeDropdown">Entries per page:</label>
+            <select id="pageSizeDropdown" name="pageSize" onchange="this.form.submit()">
+                <!option value="10" @(ViewBag.PageSize == 10 ? "selected" : "")>10</!option>
+                <!option value="25" @(ViewBag.PageSize == 25 ? "selected" : "")>25</!option>
+                <!option value="50" @(ViewBag.PageSize == 50 ? "selected" : "")>50</!option>
+            </select>
+        </form>
+    </div>
 
-<div>
-    @if (ViewBag.Page > 1) {
-        <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page - 1, pageSize = ViewBag.PageSize })">Previous</a>
-    }
+    <div>
+        @if (ViewBag.Page > 1) {
+            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page - 1, pageSize = ViewBag.PageSize })">Previous</a>
+        }
 
-    @if (ViewBag.Page < ViewBag.TotalPages) {
-        <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page + 1, pageSize = ViewBag.PageSize })">Next</a>
-    }
-</div>
-<span>Page @ViewBag.Page / <a href="@Url.Action("Index","Jogo", new { page=ViewBag.TotalPages,pageSize = ViewBag.PageSize})">@ViewBag.TotalPages</a></span>
+        @if (ViewBag.Page < ViewBag.TotalPages) {
+            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page + 1, pageSize = ViewBag.PageSize })">Next</a>
+        }
+    </div>
+    <span>Page @ViewBag.Page / <a href="@Url.Action("Index","Jogo", new { page=ViewBag.TotalPages,pageSize = ViewBag.PageSize})">@ViewBag.TotalPages</a></span>
+
+}

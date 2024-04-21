@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InfoGames")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eefc5e6b06b06c81eed74678d3ace998037b447a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d10cdec6b3a8e14df48122b25ac071d24c8d05")]
 [assembly: System.Reflection.AssemblyProductAttribute("InfoGames")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InfoGames")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

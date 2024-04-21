@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGames.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240421173319_ChangeDetalhesPK")]
-    partial class ChangeDetalhesPK
+    [Migration("20240421192436_AddTables")]
+    partial class AddTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -128,7 +128,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "656e5381-158e-4c83-9df2-d792cbb7cb49",
+                            Id = "d58f4180-8360-4240-a006-3eb24b7cd005",
                             ChaveApi = "123456",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",

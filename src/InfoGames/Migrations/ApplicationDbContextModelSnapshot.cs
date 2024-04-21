@@ -125,7 +125,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "656e5381-158e-4c83-9df2-d792cbb7cb49",
+                            Id = "d58f4180-8360-4240-a006-3eb24b7cd005",
                             ChaveApi = "123456",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
