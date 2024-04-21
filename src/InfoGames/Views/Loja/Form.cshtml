@@ -1,8 +1,8 @@
-﻿@model Loja
+﻿@model LojaModel
 
 @{
     string action = Model is null ? "Add" : "Edit";
-    string id = Model is null ? "1" : Model.Id.ToString();
+    string id = Model is null ? Guid.NewGuid().ToString() : Model.Id.ToString();
 }
 
 <h1>@(Model is null ? "Criar Loja" : "Editar Loja")</h1>

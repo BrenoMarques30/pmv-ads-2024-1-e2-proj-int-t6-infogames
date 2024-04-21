@@ -2,6 +2,7 @@
 using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace InfoGames.Controllers {
     public class LojaController : Controller {
         private readonly ApplicationDbContext _db;
@@ -9,7 +10,7 @@ namespace InfoGames.Controllers {
             _db = db;
         }
         public IActionResult Index() {
-            List<Loja> objLojasList = _db.Lojas.ToList();
+            List<LojaModel> objLojasList = _db.Lojas.ToList();
             return View(objLojasList);
         }
 
@@ -27,7 +28,7 @@ namespace InfoGames.Controllers {
             }
         }
 
-        public IActionResult Add(Loja obj) {
+        public IActionResult Add(LojaModel obj) {
             obj.Id = Guid.NewGuid().ToString();
             if (ModelState.IsValid) {
                 _db.Lojas.Add(obj);
@@ -38,7 +39,7 @@ namespace InfoGames.Controllers {
         }
 
 
-        public IActionResult Edit(Loja obj) {
+        public IActionResult Edit(LojaModel obj) {
             if (ModelState.IsValid) {
                 _db.Lojas.Update(obj);
                 _db.SaveChanges();

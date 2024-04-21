@@ -1,4 +1,4 @@
-﻿@model List<Loja>
+﻿@model List<LojaModel>
 
 <div class="container">
     <div class="row pt-4 pb-3">
@@ -29,7 +29,7 @@
                 <tr>
                     <td>@loja.Id</td>
                     <td>@loja.Nome</td>
-                    <td><a href="@loja.Url">Visite o site</a></td>
+                    <td><a href="@loja.Url">@loja.Url</a></td>
                     <td><img src="@loja.Logo" /></td>
                     <td>@loja.ChaveApi</td>
                     <td>
