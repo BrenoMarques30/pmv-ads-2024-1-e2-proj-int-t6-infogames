@@ -11,7 +11,7 @@ namespace InfoGames.Controllers {
         }
         public ActionResult Index(int page = 1, int pageSize = 10) {
             // Perform pagination
-            var jogosOnPage = _db.Jogos.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var jogosOnPage = _db.Jogos.OrderBy(j => j.Nome).Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
             // Pass data to the view
             ViewBag.Jogos = jogosOnPage;

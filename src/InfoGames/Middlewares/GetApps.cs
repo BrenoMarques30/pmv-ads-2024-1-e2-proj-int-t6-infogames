@@ -17,10 +17,15 @@ namespace InfoGames.Middlewares {
             if (response.IsSuccessStatusCode) {
                 var content = await response.Content.ReadAsStringAsync();
                 var appListResponse = JsonConvert.DeserializeObject<SteamAppListResponse>(content);
+                // Remove leading blank space from app names, if any
+                foreach (var app in appListResponse.Applist.Apps) {
+                    if (app.Name.Length > 0 && app.Name[0] == ' ') app.Name = new string(app.Name.SkipWhile(c => c == ' ').ToArray());
+                }
+                // Order the app list by name
+                var orderedApps = appListResponse.Applist.Apps.OrderBy(app => app.Name);
 
-
-                for (int i = 0; i < appListResponse?.Applist.Apps.Count; i++) {
-                    SteamApp? app = appListResponse.Applist.Apps[i];
+                foreach (var app in orderedApps) {
+                    if (app.Name == "" || app.Name == null) continue;
                     _db.Jogos.Add(new JogoModel { Id = Guid.NewGuid().ToString(), AppId = app.Appid.ToString(), Nome = app.Name });
                 }
                 await _db.SaveChangesAsync();
