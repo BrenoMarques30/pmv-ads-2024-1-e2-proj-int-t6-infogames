@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8ABAidjU0ftzhQmjXNrMcC1fYezBqriYwZuhA1M+Xtg=",
+  "Hash": "YfQ3gZMtGCeya8ipMuyR1OB0qH+s8qVV5rhPjS2rISU=",
   "Source": "InfoGames",
   "BasePath": "_content/InfoGames",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\img\\dummy_120x45.png",
+      "SourceId": "InfoGames",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\",
+      "BasePath": "_content/InfoGames",
+      "RelativePath": "img/dummy_120x45.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\dummy_120x45.png"
     },
     {
       "Identity": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\js\\disableButtonOnClick.js",

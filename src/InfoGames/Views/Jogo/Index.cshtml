@@ -1,6 +1,5 @@
 ﻿@model List<JogoModel>
 
-
 @if (Model.Count == 0) {
     <div class="alert alert-warning" role="alert">
         Nenhum jogo encontrado.
@@ -28,7 +27,11 @@
             <tbody>
                 @foreach (var jogo in Model.OrderBy(u => u.Nome)) {
                     <tr>
-                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id"><img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+jogo.AppId+"/capsule_sm_120.jpg")" /></a></td>
+                        <td>
+                            <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">
+                                <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+jogo.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
+                            </a>
+                        </td>
                         <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">@jogo.Nome</a></td>
                     </tr>
                 }
