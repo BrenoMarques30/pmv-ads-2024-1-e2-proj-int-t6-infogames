@@ -2,11 +2,6 @@
 using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
 using InfoGames.Middlewares;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace InfoGames.Controllers {
     public class JogoController : Controller {

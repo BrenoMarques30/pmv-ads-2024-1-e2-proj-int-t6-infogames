@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\js\\disableButtonOnClick.js",
+      "PackagePath": "staticwebassets\\js\\disableButtonOnClick.js"
+    },
+    {
       "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
