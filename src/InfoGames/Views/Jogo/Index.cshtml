@@ -1,27 +1,16 @@
 ﻿@model List<JogoModel>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#SyncButton').one('click', function () {
-            $(this).prop('disabled', true);
-        });
-    });
-</script>
-
 
 @if (Model.Count == 0) {
     <div class="alert alert-warning" role="alert">
         Nenhum jogo encontrado.
     </div>
     <div class="col-3 text-end">
-        <a id="SyncButton" class="btn btn-primary" asp-controller="Jogo" asp-action="GetApps">
+        <a class="btn btn-primary disable-button-on-click" asp-controller="Jogo" asp-action="GetApps">
             Sincronizar com a Steam (~1 minuto)
         </a>
     </div>
 } else {
-
-
     <div class="container">
         <div class="row pt-4 pb-3">
             <div class="col-6">
@@ -29,34 +18,18 @@
                     Lista de Jogos
                 </h2>
             </div>
-            <!--<div class="col-3 text-end">
-                <a class="btn btn-primary" asp-controller="Jogo" asp-action="Form" asp-route-method="add">
-                    Adicionar Jogo
-                </a>
-            </div>-->
-
         </div>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>Jogos</th>
-                    <!--<th>Ações</th>-->
                 </tr>
             </thead>
             <tbody>
-                @foreach (var jogo in Model.OrderBy(u => u.AppId)) {
+                @foreach (var jogo in Model.OrderBy(u => u.Nome)) {
                     <tr>
                         <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id"><img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+jogo.AppId+"/capsule_sm_120.jpg")" /></a></td>
-                        <!--<td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">@jogo.AppId</a></td>-->
                         <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">@jogo.Nome</a></td>
-                        <!--<td>
-                            <a class="btn btn-primary" asp-controller="Jogo" asp-action="Form" asp-route-id="@jogo.Id" asp-route-method="edit">
-                                Editar
-                            </a>
-                            <a class="btn btn-danger" asp-controller="Jogo" asp-action="Delete" asp-route-id="@jogo.Id">
-                                Excluir
-                            </a>
-                        </td>-->
                     </tr>
                 }
             </tbody>
@@ -85,3 +58,5 @@
     <span>Page @ViewBag.Page / <a href="@Url.Action("Index","Jogo", new { page=ViewBag.TotalPages,pageSize = ViewBag.PageSize})">@ViewBag.TotalPages</a></span>
 
 }
+
+
