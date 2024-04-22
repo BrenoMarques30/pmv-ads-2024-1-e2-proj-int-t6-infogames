@@ -1,13 +1,4 @@
 docs/.markdownlint.json
 /src/InfoGames/.vs
-/src/InfoGames/bin/Debug/net8.0/InfoGames.exe
-/src/InfoGames/bin/Debug/net8.0/InfoGames.pdb
-/src/InfoGames/bin/Debug/net8.0/InfoGames.dll
-/src/InfoGames/obj/Debug/net8.0/ref/InfoGames.dll
-/src/InfoGames/obj/Debug/net8.0/refint/InfoGames.dll
-/src/InfoGames/obj/Debug/net8.0/InfoGames.AssemblyInfo.cs
-/src/InfoGames/obj/Debug/net8.0/apphost.exe
-/src/InfoGames/obj/Debug/net8.0/InfoGames.AssemblyInfoInputs.cache
-/src/InfoGames/obj/Debug/net8.0/InfoGames.dll
-/src/InfoGames/obj/Debug/net8.0/InfoGames.pdb
-/src/InfoGames/obj/Debug/net8.0/InfoGames.sourcelink.json
+/src/InfoGames/bin/Debug/
+/src/InfoGames/obj/Debug/net8.0
