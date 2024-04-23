@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\img\\BG Body 01.jpg",
+      "PackagePath": "staticwebassets\\img\\BG Body 01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\img\\BG Body 02.jpg",
+      "PackagePath": "staticwebassets\\img\\BG Body 02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\img\\BG Menu 01.jpg",
+      "PackagePath": "staticwebassets\\img\\BG Menu 01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\img\\BG Menu 02.jpg",
+      "PackagePath": "staticwebassets\\img\\BG Menu 02.jpg"
+    },
+    {
       "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\img\\dummy_120x45.png",
       "PackagePath": "staticwebassets\\img\\dummy_120x45.png"
     },
@@ -251,6 +267,38 @@
     {
       "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\BLACK.png",
+      "PackagePath": "staticwebassets\\logo\\BLACK.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\INFOGAME.png",
+      "PackagePath": "staticwebassets\\logo\\INFOGAME.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\LOGO FAVICON BLACK.png",
+      "PackagePath": "staticwebassets\\logo\\LOGO FAVICON BLACK.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\LOGO FAVICON NO WHITE.png",
+      "PackagePath": "staticwebassets\\logo\\LOGO FAVICON NO WHITE.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\LOGO FAVICON WHITE.png",
+      "PackagePath": "staticwebassets\\logo\\LOGO FAVICON WHITE.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\LOGO FAVICON.png",
+      "PackagePath": "staticwebassets\\logo\\LOGO FAVICON.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\NO WHITE.png",
+      "PackagePath": "staticwebassets\\logo\\NO WHITE.png"
+    },
+    {
+      "Id": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\WHITE.png",
+      "PackagePath": "staticwebassets\\logo\\WHITE.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InfoGames.Microsoft.AspNetCore.StaticWebAssets.props",
