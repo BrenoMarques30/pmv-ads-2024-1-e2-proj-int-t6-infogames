@@ -2,3 +2,9 @@ docs/.markdownlint.json
 /src/InfoGames/.vs
 /src/InfoGames/bin/Debug/
 /src/InfoGames/obj/Debug/net8.0
+/src/InfoGames/bin/Debug
+src/InfoGames/bin/Debug/net8.0/InfoGames.staticwebassets.runtime.json
+src/InfoGames/obj/Debug/net8.0/staticwebassets.build.json
+src/InfoGames/obj/Debug/net8.0/staticwebassets.development.json
+src/InfoGames/obj/Debug/net8.0/staticwebassets.pack.json
+src/InfoGames/obj/Debug/net8.0/staticwebassets/msbuild.InfoGames.Microsoft.AspNetCore.StaticWebAssets.props

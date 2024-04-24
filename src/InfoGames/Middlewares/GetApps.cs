@@ -1,6 +1,7 @@
 ﻿using InfoGames.Data;
 using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace InfoGames.Middlewares {
@@ -24,9 +25,11 @@ namespace InfoGames.Middlewares {
                 // Order the app list by name
                 var orderedApps = appListResponse.Applist.Apps.OrderBy(app => app.Name);
 
+                var loja = _db.Lojas.FirstOrDefault(l => l.Nome == "Steam");
+                if (loja == null) return BadRequest("Loja não encontrada.");
                 foreach (var app in orderedApps) {
                     if (app.Name == "" || app.Name == null) continue;
-                    _db.Jogos.Add(new JogoModel { Id = Guid.NewGuid().ToString(), AppId = app.Appid.ToString(), Nome = app.Name });
+                    _db.Jogos.Add(new Jogo { Id = Guid.NewGuid().ToString(), AppId = app.Appid.ToString(), Nome = app.Name, Loja=loja, LojaId=loja.Id });
                 }
                 await _db.SaveChangesAsync();
 

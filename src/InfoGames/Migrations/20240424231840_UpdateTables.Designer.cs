@@ -4,6 +4,7 @@ using InfoGames.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGames.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240424231840_UpdateTables")]
+    partial class UpdateTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -179,81 +182,12 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1d5f4004-1ff0-4714-8d7f-257a70916dac",
+                            Id = "72103ceb-ffc4-4f49-b11f-2189221b636a",
                             ChaveApi = "123456",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
                             Url = "https://store.steampowered.com/"
                         });
-                });
-
-            modelBuilder.Entity("InfoGames.Models.RequisitoLinux", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Minimum")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Recommended")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
-
-                    b.ToTable("RequisitosLinux");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.RequisitoMac", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Minimum")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Recommended")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
-
-                    b.ToTable("RequisitosMac");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.RequisitoPC", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Minimum")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Recommended")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
-
-                    b.ToTable("RequisitosPC");
                 });
 
             modelBuilder.Entity("InfoGames.Models.DetalhesJogo", b =>
@@ -289,48 +223,9 @@ namespace InfoGames.Migrations
                     b.Navigation("DetalhesJogo");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.RequisitoLinux", b =>
-                {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
-                        .WithOne("RequisitoLinux")
-                        .HasForeignKey("InfoGames.Models.RequisitoLinux", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DetalhesJogo");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.RequisitoMac", b =>
-                {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
-                        .WithOne("RequisitoMac")
-                        .HasForeignKey("InfoGames.Models.RequisitoMac", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DetalhesJogo");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.RequisitoPC", b =>
-                {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
-                        .WithOne("RequisitoPC")
-                        .HasForeignKey("InfoGames.Models.RequisitoPC", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DetalhesJogo");
-                });
-
             modelBuilder.Entity("InfoGames.Models.DetalhesJogo", b =>
                 {
                     b.Navigation("JogoCompleto");
-
-                    b.Navigation("RequisitoLinux");
-
-                    b.Navigation("RequisitoMac");
-
-                    b.Navigation("RequisitoPC");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Jogo", b =>

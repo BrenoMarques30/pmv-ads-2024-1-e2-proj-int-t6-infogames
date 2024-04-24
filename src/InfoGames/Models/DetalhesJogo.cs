@@ -1,19 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InfoGames.Models {
     [Table("DetalhesJogos")]
     public class DetalhesJogo {
+
         [Display(Name = "Id (referencia interna")]
         [Key] public required string Id { get; set; }
 
-        [Display(Name = "Id do Jogo (referencia interna)")]
+        [Display(Name = "Id do Jogo (referencia na Steam)")]
         public required string IdJogo { get; set; }
 
         [ForeignKey("IdJogo")]
         [Required(ErrorMessage = "Obrigatório informar o jogo")]
         public required Jogo Jogo { get; set; }
-
 
         [Display(Name = "Tipo")]
         public string? Type { get; set; }
@@ -70,68 +71,70 @@ namespace InfoGames.Models {
         public string? BackgroundRaw { get; set; }
 
         [Display(Name = "DLCs")]
-        public ICollection<string>? Dlc { get; set; }
+        public List<string>? Dlc { get; set; }
 
         [Display(Name = "Desenvolvedores")]
-        public ICollection<string>? Developers { get; set; }
+        public List<string>? Developers { get; set; }
 
         [Display(Name = "Editores")]
-        public ICollection<string>? Publishers { get; set; }
+        public List<string>? Publishers { get; set; }
 
         [Display(Name = "Pacotes")]
-        public ICollection<string>? Packages { get; set; }
+        public List<string>? Packages { get; set; }
 
         [Display(Name = "Jogo Completo")]
-        public ICollection<JogoCompleto>? FullGame { get; set; }
+        public JogoCompleto? JogoCompleto { get; set; }
 
         [Display(Name = "Requisitos de Hardware para Windows")]
-        public ICollection<Requisito>? PcRequirements { get; set; }
+        public RequisitoPC? RequisitoPC { get; set; }
 
         [Display(Name = "Requisitos de Hardware para Mac")]
-        public ICollection<Requisito>? MacRequirements { get; set; }
+        public RequisitoMac? RequisitoMac { get; set; }
 
         [Display(Name = "Requisitos de Hardware para Linux")]
-        public ICollection<Requisito>? LinuxRequirements { get; set; }
+        public RequisitoLinux? RequisitoLinux { get; set; }
 
-        [Display(Name = "Detalhes do preço")]
-        public ICollection<DetalhesPreco>? PriceOverview { get; set; }
+        //[Display(Name = "Detalhes do preço")]
+        //public ICollection<DetalhesPreco>? PriceOverview { get; set; }
 
-        [Display(Name = "Grupos de pacotes")]
-        public ICollection<GrupoDePacote>? PackageGroups { get; set; }
+        //[Display(Name = "Grupos de pacotes")]
+        //public ICollection<GrupoDePacote>? PackageGroups { get; set; }
 
-        [Display(Name = "Plataformas")]
-        public ICollection<Plataformas>? Platforms { get; set; }
+        //[Display(Name = "Plataformas")]
+        //public ICollection<Plataformas>? Platforms { get; set; }
 
-        [Display(Name = "Metacrítica")]
-        public ICollection<Metacritica>? Metacritic { get; set; }
+        //[Display(Name = "Metacrítica")]
+        //public ICollection<Metacritica>? Metacritic { get; set; }
 
-        [Display(Name = "Categorias")]
-        public ICollection<Categoria>? Categories { get; set; }
+        //[Display(Name = "Categorias")]
+        //public ICollection<Categoria>? Categories { get; set; }
 
-        [Display(Name = "Generos")]
-        public ICollection<Genero>? Genres { get; set; }
+        //[Display(Name = "Generos")]
+        //public ICollection<Genero>? Genres { get; set; }
 
-        [Display(Name = "Fotos")]
-        public ICollection<Screenshot>? Screenshots { get; set; }
+        //[Display(Name = "Fotos")]
+        //public ICollection<Screenshot>? Screenshots { get; set; }
 
-        [Display(Name = "Filmes")]
-        public ICollection<Movie>? Movies { get; set; }
+        //[Display(Name = "Filmes")]
+        //public ICollection<Filme>? Movies { get; set; }
 
-        [Display(Name = "Conquista")]
-        public ICollection<Conquista>? Achievments { get; set; }
+        //[Display(Name = "Conquista")]
+        //public ICollection<Conquista>? Achievements { get; set; }
 
-        [Display(Name = "Data de lançamento")]
-        public ICollection<DataDeLancamento>? ReleaseDate { get; set; }
+        //[Display(Name = "Data de lançamento")]
+        //public ICollection<DataDeLancamento>? ReleaseDate { get; set; }
 
-        [Display(Name = "Informações de suporte")]
-        public ICollection<InformacaoDeSuporte>? SupportInfo { get; set; }
+        //[Display(Name = "Informações de suporte")]
+        //public ICollection<InformacaoDeSuporte>? SupportInfo { get; set; }
 
-        [Display(Name = "Descritores de conteúdo")]
-        public ICollection<DescritorDeConteudo>? ContentDescriptors { get; set; }
+        //[Display(Name = "Descritores de conteúdo")]
+        //public ICollection<DescritorDeConteudo>? ContentDescriptors { get; set; }
 
-        [Display(Name = "Classificações")]
-        public ICollection<Classificacao>? Ratings { get; set; }
+        //[Display(Name = "Classificações")]
+        //public ICollection<Classificacao>? Ratings { get; set; }
 
+        //[Display(Name = "Demonstrações")]
+        //public ICollection<Demos>? Demos { get; set; }
     }
 
     [Table("JogosCompletos")]
@@ -153,8 +156,46 @@ namespace InfoGames.Models {
         public required string Name { get; set; }
     }
 
-    [Table("RequisitosDeHardware")]
-    public class Requisito {
+    [Table("RequisitosPC")]
+    public class RequisitoPC {
+        [Key]
+        [Display(Name = "Id (referencia interna)")]
+        public required string Id { get; set; }
+
+        [Display(Name = "Id da key na tabela DetalhesJogos")]
+        public required string IdDetalhesJogo { get; set; }
+
+        [ForeignKey("IdDetalhesJogo")]
+        public required DetalhesJogo? DetalhesJogo { get; set; }
+
+        [Display(Name = "Requisitos Mínimos")]
+        public string? Minimum { get; set; }
+
+        [Display(Name = "Requisitos Recomendados")]
+        public string? Recommended { get; set; }
+    }
+
+    [Table("RequisitosMac")]
+    public class RequisitoMac {
+        [Key]
+        [Display(Name = "Id (referencia interna)")]
+        public required string Id { get; set; }
+
+        [Display(Name = "Id da key na tabela DetalhesJogos")]
+        public required string IdDetalhesJogo { get; set; }
+
+        [ForeignKey("IdDetalhesJogo")]
+        public required DetalhesJogo? DetalhesJogo { get; set; }
+
+        [Display(Name = "Requisitos Mínimos")]
+        public string? Minimum { get; set; }
+
+        [Display(Name = "Requisitos Recomendados")]
+        public string? Recommended { get; set; }
+    }
+
+    [Table("RequisitosLinux")]
+    public class RequisitoLinux {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -243,10 +284,10 @@ namespace InfoGames.Models {
 
     [Table("Pacotes")]
     public class Pacote {
-        [Key] public required string GrupoDePacoteId { get; set; }
+        [Key] public required string IdGrupoDePacote { get; set; }
 
         [ForeignKey("GrupoDePacoteId")]
-        public GrupoDePacote? GrupoDePacote { get; set; }
+        public required GrupoDePacote? GrupoDePacote { get; set; }
 
         [Display(Name = "Id do pacote (referencia na Steam)")]
         public string? PackageId { get; set; }
@@ -267,7 +308,7 @@ namespace InfoGames.Models {
         public string? CanGetFreeLicense { get; set; }
 
         [Display(Name = "Licensa é gratuita?")]
-        public bool IsFreeLicense { get; set; }
+        public bool? IsFreeLicense { get; set; }
 
         [Display(Name = "Preço com desconto (em centavos)")]
         public string? PriceInCentsWithDiscount { get; set; }
@@ -550,5 +591,24 @@ namespace InfoGames.Models {
 
         [Display(Name = "Recomendação etária")]
         public string? RequiredAge { get; set; }
+    }
+
+    [Table("Demos")]
+    public class Demos {
+        [Key]
+        [Display(Name = "Id (referencia interna)")]
+        public required string Id { get; set; }
+
+        [Display(Name = "Id da key na tabela DetalhesJogos")]
+        public required string IdDetalhesJogo { get; set; }
+
+        [ForeignKey("IdDetalhesJogo")]
+        public required DetalhesJogo? DetalhesJogo { get; set; }
+
+        [Display(Name = "Id do jogo (referencia na Steam)")]
+        public string? Appid { get; set; }
+
+        [Display(Name = "Descrição")]
+        public string? Description { get; set; }
     }
 }

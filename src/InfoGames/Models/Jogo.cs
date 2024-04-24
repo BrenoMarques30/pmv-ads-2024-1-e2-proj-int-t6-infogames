@@ -19,7 +19,7 @@ namespace InfoGames.Models {
         [ForeignKey("LojaId")]
         public required Loja Loja { get; set; }
 
-        public ICollection<DetalhesJogo>? DetalhesJogo { get; set; }
+        public DetalhesJogo? DetalhesJogo { get; set; }
 
     }
 }

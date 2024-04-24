@@ -10,7 +10,7 @@ namespace InfoGames.Controllers {
             _db = db;
         }
         public IActionResult Index() {
-            List<LojaModel> objLojasList = _db.Lojas.ToList();
+            List<Loja> objLojasList = _db.Lojas.ToList();
             return View(objLojasList);
         }
 
@@ -28,7 +28,7 @@ namespace InfoGames.Controllers {
             }
         }
 
-        public IActionResult Add(LojaModel obj) {
+        public IActionResult Add(Loja obj) {
             obj.Id = Guid.NewGuid().ToString();
             if (ModelState.IsValid) {
                 _db.Lojas.Add(obj);
@@ -39,7 +39,7 @@ namespace InfoGames.Controllers {
         }
 
 
-        public IActionResult Edit(LojaModel obj) {
+        public IActionResult Edit(Loja obj) {
             if (ModelState.IsValid) {
                 _db.Lojas.Update(obj);
                 _db.SaveChanges();

@@ -51,7 +51,7 @@ namespace InfoGames.Controllers {
             }
         }
 
-        public IActionResult Add(JogoModel obj) {
+        public IActionResult Add(Jogo obj) {
             if (ModelState.IsValid) {
                 _db.Jogos.Add(obj);
                 _db.SaveChanges();
@@ -60,7 +60,7 @@ namespace InfoGames.Controllers {
             return RedirectToAction("Form");
         }
 
-        public IActionResult Edit(JogoModel obj) {
+        public IActionResult Edit(Jogo obj) {
             if (ModelState.IsValid) {
                 _db.Jogos.Update(obj);
                 _db.SaveChanges();
@@ -86,14 +86,13 @@ namespace InfoGames.Controllers {
             if (id == null || id == "") {
                 return NotFound();
             }
-            JogoModel app = _db.Jogos.Find(id);
+            Jogo app = _db.Jogos.Find(id);
             if (app == null) {
                 return NotFound();
             }
-            // Get the details of the game from database. If not found, get from Steam API
-            app.Detalhes = _db.DetalhesJogos.Find(app.DetalhesId);
-            if (app.Detalhes == null) {
-                GetAppDetails(app.Id);
+            //// Get the details of the game from database. If not found, get from Steam API
+            if (app.DetalhesJogo == null) {
+                _ = GetAppDetails(app.Id);
             }
             return View(app);
         }

@@ -8,11 +8,11 @@ namespace InfoGames.Data {
 
         }
 
-        public DbSet<LojaModel> Lojas { get; set; }
+        public DbSet<Loja> Lojas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
-            modelBuilder.Entity<LojaModel>().HasData(
-                               new LojaModel {
+            modelBuilder.Entity<Loja>().HasData(
+                               new Loja {
                                    Id = Guid.NewGuid().ToString(),
                                    Nome = "Steam",
                                    Url = "https://store.steampowered.com/",
@@ -22,7 +22,7 @@ namespace InfoGames.Data {
                              );
         }
 
-        public DbSet<JogoModel> Jogos { get; set; }
+        public DbSet<Jogo> Jogos { get; set; }
         public DbSet<DetalhesJogo> DetalhesJogos { get; set; }
         //public DbSet<Fullgame> Fullgames { get; set; }
         //public DbSet<PcRequirements> PcRequirements { get; set; }

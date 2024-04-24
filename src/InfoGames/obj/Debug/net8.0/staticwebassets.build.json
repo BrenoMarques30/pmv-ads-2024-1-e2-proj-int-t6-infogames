@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jUdUfrxmoV1/UNbGIpF7OPuBNO3P/G1OSOjuRH8snVU=",
+  "Hash": "la55cujnue7D+g7GcnIfIKIZksBE1RrRoyVn5CGhTK0=",
   "Source": "InfoGames",
   "BasePath": "_content/InfoGames",
   "Mode": "Default",
@@ -1440,6 +1440,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\logo\\LOGO FAVICON WHITE.png"
+    },
+    {
+      "Identity": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\LOGO FAVICON.ico",
+      "SourceId": "InfoGames",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\",
+      "BasePath": "_content/InfoGames",
+      "RelativePath": "logo/LOGO FAVICON.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo\\LOGO FAVICON.ico"
     },
     {
       "Identity": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\wwwroot\\logo\\LOGO FAVICON.png",
