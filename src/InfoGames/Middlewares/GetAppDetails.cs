@@ -6,11 +6,17 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using RestSharp;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Diagnostics;
+using System.Net.Http;
+using Screenshot = InfoGames.Models.Screenshot;
+using Webm = InfoGames.Models.Webm;
+using Mp4 = InfoGames.Models.Mp4;
 
 namespace InfoGames.Middlewares {
     public class GetAppDetails : Controller {
-        private readonly HttpClient _httpClient;
         private readonly ApplicationDbContext _db;
+        private readonly HttpClient _httpClient;
 
         public GetAppDetails(ApplicationDbContext db) {
             _httpClient = new HttpClient();
@@ -42,44 +48,34 @@ namespace InfoGames.Middlewares {
                 var response = storeClient.Execute<dynamic>(restReq);
                 JObject jObject = JObject.Parse(response?.Content);
                 var appDetails = jObject[app?.AppId]?.Value<JObject>()?.ToObject<RootDetails>(new Newtonsoft.Json.JsonSerializer { Converters = { new RequirementsConverter() } })?.Data;
-                if (appDetails is not null) {
+                if (appDetails is null) {
+                    return BadRequest("Failed to fetch app details.");
+                } else {
 
                     var _DetalhesJogo = new DetalhesJogo {
                         Id = Guid.NewGuid().ToString(),
                         IdJogo = app.Id.ToString(),
                         Jogo = app,
-                        Type = appDetails?.Type,
-                        Name = appDetails?.Name,
+                        Tipo = appDetails?.Type,
+                        Nome = appDetails?.Name,
                         AppId = appDetails?.Appid,
-                        RequiredAge = appDetails?.RequiredAge,
-                        IsFree = appDetails?.IsFree,
-                        ControllerSupport = appDetails?.ControllerSupport,
-                        DetailedDescription = appDetails?.DetailedDescription,
-                        AboutTheGame = appDetails?.AboutTheGame,
-                        ShortDescription = appDetails?.ShortDescription,
-                        SupportedLanguages = appDetails?.SupportedLanguages,
-                        HeaderImage = appDetails?.HeaderImage,
-                        CapsuleImage = appDetails?.CapsuleImage,
-                        CapsuleImagev5 = appDetails?.CapsuleImagev5,
+                        RecomendacaoEtaria = appDetails?.RequiredAge,
+                        EGratuito = appDetails?.IsFree,
+                        SuporteAControle = appDetails?.ControllerSupport,
+                        DescricaoDetalhada = appDetails?.DetailedDescription,
+                        SobreOJogo = appDetails?.AboutTheGame,
+                        DescricaoCurta = appDetails?.ShortDescription,
+                        LinguasDisponiveis = appDetails?.SupportedLanguages,
+                        ImagemPrincipal = appDetails?.HeaderImage,
+                        Thumbnail = appDetails?.CapsuleImage,
+                        Thumbnailv5 = appDetails?.CapsuleImagev5,
                         Website = appDetails?.Website,
-                        LegalNotice = appDetails?.LegalNotice,
-                        RecommendationsTotal = appDetails?.Recommendations?.Total,
+                        NotificacaoLegal = appDetails?.LegalNotice,
+                        NumeroDeLikes = appDetails?.Recommendations?.Total,
                         Dlc = appDetails?.Dlc,
-                        Developers = appDetails?.Developers,
-                        Publishers = appDetails?.Publishers,
-                        Packages = appDetails?.Packages,
-                        //PackageGroups = (ICollection<GrupoDePacote>?)(appDetails?.PackageGroups),
-                        //Platforms = (ICollection<Plataformas>?)(appDetails?.Platforms),
-                        //Metacritic = (ICollection<Metacritica>?)(appDetails?.Metacritic),
-                        //Categories = (ICollection<Categoria>?)(appDetails?.Categories),
-                        //Genres = (ICollection<Genero>?)(appDetails?.Genres),
-                        //Screenshots = (ICollection<Models.Screenshot>?)(appDetails?.Screenshots),
-                        //Movies = (ICollection<Filme>?)(appDetails?.Movies),
-                        //Achievements = (ICollection<Conquista>?)(appDetails?.Achievements),
-                        //ReleaseDate = (ICollection<DataDeLancamento>?)(appDetails?.ReleaseDate),
-                        //SupportInfo = (ICollection<InformacaoDeSuporte>?)(appDetails?.SupportInfo),
-                        //ContentDescriptors = (ICollection<DescritorDeConteudo>?)(appDetails?.ContentDescriptors),
-                        //Ratings = (ICollection<Classificacao>?)(appDetails?.Ratings),
+                        Desenvolvedor = appDetails?.Developers,
+                        Editor = appDetails?.Publishers,
+                        Pacotes = appDetails?.Packages,
 
                     };
 
@@ -88,10 +84,11 @@ namespace InfoGames.Middlewares {
                             Id = Guid.NewGuid().ToString(),
                             IdDetalhesJogo = _DetalhesJogo.Id,
                             DetalhesJogo = _DetalhesJogo,
-                            FullGameAppId = appDetails?.FullGame?.Appid ?? "",
-                            Name = appDetails?.FullGame?.Name ?? "",
+                            IdJogoCompleto = appDetails?.FullGame?.Appid ?? "",
+                            Nome = appDetails?.FullGame?.Name ?? "",
                         };
                         _DetalhesJogo.JogoCompleto = _jogoCompleto;
+                        _ = _db.JogosCompletos.Add(_jogoCompleto);
                     }
 
                     if (appDetails?.PcRequirements is not null) {
@@ -99,10 +96,11 @@ namespace InfoGames.Middlewares {
                             Id = Guid.NewGuid().ToString(),
                             IdDetalhesJogo = _DetalhesJogo.Id,
                             DetalhesJogo = _DetalhesJogo,
-                            Minimum = appDetails?.PcRequirements?.Requirements?.Minimum ?? "",
-                            Recommended = appDetails?.PcRequirements?.Requirements?.Recommended ?? "",
+                            Minimo = appDetails?.PcRequirements?.Requirements?.Minimum ?? "",
+                            Recomendado = appDetails?.PcRequirements?.Requirements?.Recommended ?? "",
                         };
                         _DetalhesJogo.RequisitoPC = _requisito;
+                        _ = _db.RequisitosPC.Add(_requisito);
                     }
 
                     if (appDetails?.MacRequirements is not null) {
@@ -110,10 +108,11 @@ namespace InfoGames.Middlewares {
                             Id = Guid.NewGuid().ToString(),
                             IdDetalhesJogo = _DetalhesJogo.Id,
                             DetalhesJogo = _DetalhesJogo,
-                            Minimum = appDetails?.MacRequirements?.Requirements?.Minimum ?? "",
-                            Recommended = appDetails?.MacRequirements?.Requirements?.Recommended ?? "",
+                            Minimo = appDetails?.MacRequirements?.Requirements?.Minimum ?? "",
+                            Recomendado = appDetails?.MacRequirements?.Requirements?.Recommended ?? "",
                         };
                         _DetalhesJogo.RequisitoMac = _requisito;
+                        _ = _db.RequisitosMac.Add(_requisito);
                     }
 
                     if (appDetails?.LinuxRequirements is not null) {
@@ -121,69 +120,283 @@ namespace InfoGames.Middlewares {
                             Id = Guid.NewGuid().ToString(),
                             IdDetalhesJogo = _DetalhesJogo.Id,
                             DetalhesJogo = _DetalhesJogo,
-                            Minimum = appDetails?.LinuxRequirements?.Requirements?.Minimum ?? "",
-                            Recommended = appDetails?.LinuxRequirements?.Requirements?.Recommended ?? "",
+                            Minimo = appDetails?.LinuxRequirements?.Requirements?.Minimum ?? "",
+                            Recomendado = appDetails?.LinuxRequirements?.Requirements?.Recommended ?? "",
                         };
                         _DetalhesJogo.RequisitoLinux = _requisito;
+                        _ = _db.RequisitosLinux.Add(_requisito);
                     }
 
-                    //if (appDetails?.PackageGroups is not null) {
-                    //    _DetalhesJogo.PackageGroups = new List<GrupoDePacote>();
-                    //    foreach (var packageGroup in appDetails.PackageGroups) {
-                    //        var _grupoDePacote = new GrupoDePacote {
-                    //            Id = Guid.NewGuid().ToString(),
-                    //            IdDetalhesJogo = _DetalhesJogo.Id,
-                    //            DetalhesJogo = _DetalhesJogo,
-                    //            Name = packageGroup?.Name,
-                    //            Title = packageGroup?.Title,
-                    //            Description = packageGroup?.Description,
-                    //            SelectionText = packageGroup?.SelectionText,
-                    //            SaveText = packageGroup?.SaveText,
-                    //            DisplayType = packageGroup?.DisplayType,
-                    //            IsRecurringSubscription = packageGroup?.IsRecurringSubscription,
-                    //        };
-                    //        if (packageGroup?.Subs is not null) {
-                    //            _grupoDePacote.Packages = new List<Pacote>();
-                    //            foreach (var sub in packageGroup.Subs) {
-                    //                var _sub = new Pacote {
-                    //                    IdGrupoDePacote = _grupoDePacote.Id,
-                    //                    GrupoDePacote = _grupoDePacote,
-                    //                    PackageId = sub?.Packageid,
-                    //                    PercentSavingsText = sub?.PercentSavingsText,
-                    //                    PercentSavings = sub?.PercentSavings,
-                    //                    OptionText = sub?.OptionText,
-                    //                    OptionDescription = sub?.OptionDescription,
-                    //                    CanGetFreeLicense = sub?.CanGetFreeLicense,
-                    //                    IsFreeLicense = sub?.IsFreeLicense,
-                    //                    PriceInCentsWithDiscount = sub?.PriceInCentsWithDiscount,
-                    //                };
-                    //                _grupoDePacote.Packages.Add(_sub);
-                    //            }
-                    //        }
-                    //        _DetalhesJogo.PackageGroups.Add(_grupoDePacote);
-                    //    }
-                    //}
+                    if (appDetails?.PackageGroups is not null) {
+                        _DetalhesJogo.GrupoDePacotes = new List<GrupoDePacote>();
+                        foreach (var packageGroup in appDetails.PackageGroups) {
+                            var _grupoDePacote = new GrupoDePacote {
+                                Id = Guid.NewGuid().ToString(),
+                                IdDetalhesJogo = _DetalhesJogo.Id,
+                                DetalhesJogo = _DetalhesJogo,
+                                Nome = packageGroup?.Name,
+                                Titulo = packageGroup?.Title,
+                                Descricao = packageGroup?.Description,
+                                SelecaoDeTexto = packageGroup?.SelectionText,
+                                SalvarTexto = packageGroup?.SaveText,
+                                ExibirTipo = packageGroup?.DisplayType,
+                                EAssinaturaRecorrente = packageGroup?.IsRecurringSubscription,
+                            };
+                            if (packageGroup?.Subs is not null) {
+                                _grupoDePacote.Pacotes = new List<Pacote>();
+                                foreach (var sub in packageGroup.Subs) {
+                                    var _sub = new Pacote {
+                                        IdGrupoDePacote = _grupoDePacote.Id,
+                                        GrupoDePacote = _grupoDePacote,
+                                        PackageId = sub?.Packageid,
+                                        PorcentagemDoDescontoTexto = sub?.PercentSavingsText,
+                                        PorcentagemDoDesconto = sub?.PercentSavings,
+                                        OpcaoTexto = sub?.OptionText,
+                                        OpcaoDescricao = sub?.OptionDescription,
+                                        ObtidaGratuitamente = sub?.CanGetFreeLicense,
+                                        LicencaEGratuita = sub?.IsFreeLicense,
+                                        PrecoComDesconto = sub?.PriceInCentsWithDiscount,
+                                    };
+                                    _grupoDePacote.Pacotes.Add(_sub);
+                                    _db.Pacotes.Add(_sub);
+                                }
+                            }
+                            _DetalhesJogo.GrupoDePacotes.Add(_grupoDePacote);
+                            _ = _db.GruposDePacotes.Add(_grupoDePacote);
+                        }
+                    }
+
+                    if (appDetails?.Platforms is not null) {
+                        var _platform = new Plataforma {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Windows = appDetails?.Platforms?.Windows,
+                            Mac = appDetails?.Platforms?.Mac,
+                            Linux = appDetails?.Platforms?.Linux,
+                        };
+                        _DetalhesJogo.Plataforma = _platform;
+                        _ = _db.Plataformas.Add(_platform);
+                    }
+
+                    if (appDetails?.Metacritic is not null) {
+                        var _metacritic = new Metacritica {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Pontuacao = appDetails.Metacritic.Score,
+                            Url = appDetails.Metacritic.Url,
+                        };
+                        _DetalhesJogo.Metacritica = _metacritic;
+                        _ = _db.Metacriticas.Add(_metacritic);
+                    }
+
+                    if (appDetails?.Categories is not null) {
+                        _DetalhesJogo.Categoria = new List<Categoria>();
+                        foreach (var category in appDetails.Categories) {
+                            var _category = new Categoria {
+                                Id = Guid.NewGuid().ToString(),
+                                IdDetalhesJogo = _DetalhesJogo.Id,
+                                DetalhesJogo = _DetalhesJogo,
+                                IdCategoria = category.Id,
+                                Descricao = category.Description,
+                            };
+                            _DetalhesJogo.Categoria.Add(_category);
+                            _ = _db.Categorias.Add(_category);
+                        }
+                    }
+
+                    if (appDetails?.Genres is not null) {
+                        _DetalhesJogo.Genero = new List<Generos>();
+                        foreach (var genre in appDetails.Genres) {
+                            var _genre = new Generos {
+                                Id = Guid.NewGuid().ToString(),
+                                IdDetalhesJogo = _DetalhesJogo.Id,
+                                DetalhesJogo = _DetalhesJogo,
+                                IdGenero = genre.Id,
+                                Descricao = genre.Description,
+                            };
+                            _DetalhesJogo.Genero.Add(_genre);
+                            _ = _db.Generos.Add(_genre);
+                        }
+                    }
+
+                    if (appDetails?.PriceOverview is not null) {
+                        var _priceOverview = new DetalhesDoPreco {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Moeda = appDetails.PriceOverview.Currency,
+                            PrecoInicial = appDetails.PriceOverview.Initial,
+                            PrecoFinal = appDetails.PriceOverview.Final,
+                            DescontoPorcentagem = appDetails.PriceOverview.DiscountPercent,
+                            PrecoInicialFormatado = appDetails.PriceOverview.InitialFormatted,
+                            PrecoFinalFormatado = appDetails.PriceOverview.FinalFormatted,
+                        };
+                        _DetalhesJogo.DetalhesDoPreco = _priceOverview;
+                        _ = _db.DetalhesDePrecos.Add(_priceOverview);
+                    }
+
+
+                    if (appDetails?.Screenshots is not null) {
+                        _DetalhesJogo.Screenshot = new List<Screenshot>();
+                        foreach (var screenshot in appDetails.Screenshots) {
+                            var _screenshot = new Screenshot {
+                                Id = Guid.NewGuid().ToString(),
+                                IdDetalhesJogo = _DetalhesJogo.Id,
+                                DetalhesJogo = _DetalhesJogo,
+                                UrlThumbnail = screenshot.PathThumbnail,
+                                UrlImagemCompleta = screenshot.PathFull,
+                            };
+                            _DetalhesJogo.Screenshot.Add(_screenshot);
+                            _ = _db.Screenshots.Add(_screenshot);
+                        }
+                    }
+
+                    if (appDetails?.Movies is not null) {
+                        _DetalhesJogo.Filme = new List<Filme>();
+                        foreach (var movie in appDetails.Movies) {
+                            var _movie = new Filme {
+                                Id = Guid.NewGuid().ToString(),
+                                IdDetalhesJogo = _DetalhesJogo.Id,
+                                DetalhesJogo = _DetalhesJogo,
+                                Nome = movie.Name,
+                                Thumbnail = movie.Thumbnail,
+                                Destacar = movie.Highlight,
+                            };
+
+                            if (movie.Webm is not null) {
+                                var _webm = new Webm {
+                                    Id = Guid.NewGuid().ToString(),
+                                    IdFilme = _movie.Id,
+                                    Filme = _movie,
+                                    Max = movie.Webm.Max,
+                                    _480 = movie.Webm._480
+                                };
+                                _movie.Webm = _webm;
+                                _ = _db.Webms.Add(_webm);
+                            }
+
+                            if (movie.Mp4 is not null) {
+                                var _mp4 = new Mp4 {
+                                    Id = Guid.NewGuid().ToString(),
+                                    IdFilme = _movie.Id,
+                                    Filme = _movie,
+                                    Max = movie.Mp4.Max,
+                                    _480 = movie.Mp4._480
+                                };
+                                _movie.Mp4 = _mp4;
+                                _ = _db.Mp4s.Add(_mp4);
+                            }
+
+                            _DetalhesJogo.Filme.Add(_movie);
+                            _ = _db.Filmes.Add(_movie);
+                        }
+                    }
+
+                    if (appDetails?.Achievements is not null) {
+                        var _achievement = new Conquista {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Total = appDetails.Achievements.Total,
+                        };
+
+                        if (appDetails.Achievements.Highlighted is not null) {
+                            _achievement.Destaque = new List<Destaque>();
+                            foreach (var achievement in appDetails.Achievements.Highlighted) {
+                                var _destaque = new Destaque {
+                                    Id = Guid.NewGuid().ToString(),
+                                    IdConquista = _achievement.Id,
+                                    Conquista = _achievement,
+                                    Nome = achievement.Name,
+                                    UrlIcone = achievement.Path,
+                                };
+                                _achievement.Destaque.Add(_destaque);
+                                _ = _db.Destaques.Add(_destaque);
+                            }
+                        }
+
+                        _DetalhesJogo.Conquista = _achievement;
+                        _ = _db.Conquistas.Add(_achievement);
+                    }
+
+                    if (appDetails?.ReleaseDate is not null) {
+                        var _releaseDate = new DataDeLancamento {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Data = appDetails.ReleaseDate.Date,
+                            EstaChegando = appDetails.ReleaseDate.ComingSoon,
+                        };
+
+                        _DetalhesJogo.DataDeLancamento = _releaseDate;
+                        _ = _db.DatasDeLancamento.Add(_releaseDate);
+                    }
+
+                    if (appDetails?.SupportInfo is not null) {
+                        var _supportInfo = new InformacaoDeSuporte {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Email = appDetails.SupportInfo.Email,
+                            Url = appDetails.SupportInfo.Url,
+                        };
+                        _DetalhesJogo.InformacaoDeSuporte = _supportInfo;
+                        _ = _db.InformacoesDeSuporte.Add(_supportInfo);
+                    }
+
+                    if (appDetails?.ContentDescriptors is not null) {
+                        var _contentDescriptors = new DescritorDeConteudo {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                            Notas = appDetails.ContentDescriptors.Notes,
+                        };
+                        _DetalhesJogo.DescritorDeConteudo = _contentDescriptors;
+                        _ = _db.DescritoresDeConteudo.Add(_contentDescriptors);
+                    }
+
+                    if (appDetails?.Ratings is not null) {
+                        var _ratings = new Classificacao {
+                            Id = Guid.NewGuid().ToString(),
+                            IdDetalhesJogo = _DetalhesJogo.Id,
+                            DetalhesJogo = _DetalhesJogo,
+                        };
+
+                        if (appDetails.Ratings.Dejus is not null) {
+                            var _dejus = new ClassificacaoIndicativa {
+                                Id = Guid.NewGuid().ToString(),
+                                IdClassificacoes = _ratings.Id,
+                                Classificacao = _ratings,
+                                Descricao = appDetails.Ratings.Dejus.Descriptors,
+                                RecomendacaoEtaria = appDetails.Ratings.Dejus.RequiredAge,
+                                BloquearPorIdade = appDetails.Ratings.Dejus.UseAgeGate,
+                            };
+                            _ratings.Dejus = _dejus;
+                            _ = _db.ClassificacoesIndicativas.Add(_dejus);
+                        }
+                        _DetalhesJogo.Classificacao = _ratings;
+                        _ = _db.Classificacoes.Add(_ratings);
+                    }
 
                     app.DetalhesJogo = _DetalhesJogo;
-                    _ = _db.DetalhesJogos.Add(_DetalhesJogo);
-
-                    //try {
-                    //    // Attempt to update the entity in the database
-                    //    _db.Entry(app).State = EntityState.Modified;
-                    //    _ = await _db.SaveChangesAsync();
-                    //} catch (DbUpdateConcurrencyException ex) {
-                    //    // Handle the concurrency conflict
-                    //    // Reload the entity from the database to get the latest version
-                    //    await ex.Entries.Single().ReloadAsync();
-                    //    // Now you can try updating the entity again or handle the conflict as needed
-                    //}
                     _db.Jogos.Update(app);
-                    _ = await _db.SaveChangesAsync();
+
+                    try {
+                        // Attempt to update the entity in the database
+                        _db.Entry(app).State = EntityState.Modified;
+                        _ = _db.SaveChanges();
+                    } catch (DbUpdateConcurrencyException ex) {
+                        // Handle the concurrency conflict
+                        // Reload the entity from the database to get the latest version
+                        await ex.Entries.Single().ReloadAsync();
+                        await _db.SaveChangesAsync();
+                        // Now you can try updating the entity again or handle the conflict as needed
+                        Debug.WriteLine("Erro ao atualizar o jogo no banco de dados: " + ex.Message + ex.HelpLink);
+                    }
                     return RedirectToAction("Detalhes", app);
                 }
-
-                return BadRequest("Failed to fetch app details.");
-
             }
         }
     }

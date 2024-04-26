@@ -22,28 +22,33 @@ namespace InfoGames.Data {
                              );
         }
 
-        public DbSet<Jogo> Jogos { get; set; }
-        public DbSet<DetalhesJogo> DetalhesJogos { get; set; }
-        //public DbSet<Fullgame> Fullgames { get; set; }
-        //public DbSet<PcRequirements> PcRequirements { get; set; }
-        //public DbSet<MacRequirements> MacRequirements { get; set; }
-        //public DbSet<LinuxRequirements> LinuxRequirements { get; set; }
-        //public DbSet<PriceOverview> PriceOverviews { get; set; }
-        //public DbSet<PackageGroup> PackageGroups { get; set; }
-        //public DbSet<Package> Packages { get; set; }
-        //public DbSet<Platforms> Platforms { get; set; }
-        //public DbSet<Genre> Genres { get; set; }
-        //public DbSet<Category> Categories { get; set; }
-        //public DbSet<Screenshot> Screenshots { get; set; }
-        //public DbSet<ReleaseDate> ReleaseDates { get; set; }
-        //public DbSet<Movie> Movies { get; set; }
-        //public DbSet<Webm> webms { get; set; }
-        //public DbSet<Mp4> mp4s { get; set; }
-        //public DbSet<ReleaseDate> releaseDates { get; set; }
-        //public DbSet<SupportInfo> SupportInfos { get; set; }
-        //public DbSet<ContentDescriptors> ContentDescriptors { get; set; }
-        //public DbSet<Ratings> Ratings { get; set; }
-        //public DbSet<Dejus> Dejus { get; set; }
 
+        public DbSet<Jogo> Jogos { get; set; }
+
+
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Classificacao> Classificacoes { get; set; }
+        public DbSet<ClassificacaoIndicativa> ClassificacoesIndicativas { get; set; }
+        public DbSet<Conquista> Conquistas { get; set; }
+        public DbSet<DataDeLancamento> DatasDeLancamento { get; set; }
+        public DbSet<Demos> Demos { get; set; }
+        public DbSet<DescritorDeConteudo> DescritoresDeConteudo { get; set; }
+        public DbSet<Destaque> Destaques { get; set; }
+        public DbSet<DetalhesDoPreco> DetalhesDePrecos { get; set; }
+        public DbSet<DetalhesJogo> DetalhesJogos { get; set; }
+        public DbSet<Filme> Filmes { get; set; }
+        public DbSet<Generos> Generos { get; set; }
+        public DbSet<GrupoDePacote> GruposDePacotes { get; set; }
+        public DbSet<InformacaoDeSuporte> InformacoesDeSuporte { get; set; }
+        public DbSet<JogoCompleto> JogosCompletos { get; set; }
+        public DbSet<Metacritica> Metacriticas { get; set; }
+        public DbSet<Mp4> Mp4s { get; set; }
+        public DbSet<Pacote> Pacotes { get; set; }
+        public DbSet<Plataforma> Plataformas { get; set; }
+        public DbSet<RequisitoLinux> RequisitosLinux { get; set; }
+        public DbSet<RequisitoMac> RequisitosMac { get; set; }
+        public DbSet<RequisitoPC> RequisitosPC { get; set; }
+        public DbSet<Screenshot> Screenshots { get; set; }
+        public DbSet<Webm> Webms { get; set; }
     }
 }

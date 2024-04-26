@@ -28,7 +28,7 @@
                             App Type
                         </div>
                         <div class="col-5">
-                            @Model?.DetalhesJogo?
+                            @Model?.DetalhesJogo?.Tipo
                         </div>
                     </div>
                     <div class="row">
@@ -36,7 +36,12 @@
                             Developer
                         </div>
                         <div class="col-5">
-                            TBD
+                            @if (Model?.DetalhesJogo?.Desenvolvedor is not null) {
+                                foreach (var developer in Model?.DetalhesJogo?.Desenvolvedor) {
+                                    <span>@developer</span>
+                                    <br />
+                                }
+                            }
                         </div>
                     </div>
                     <div class="row">
@@ -44,30 +49,117 @@
                             Publisher
                         </div>
                         <div class="col-5">
-                            TBD
+                            @if (Model?.DetalhesJogo?.Editor is not null) {
+                                foreach (var publisher in Model?.DetalhesJogo?.Editor) {
+                                    <span>@publisher</span>
+                                    <br />
+                                }
+                            }
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-3">
-                            Supported Systems
+                            Sistemas Operacionais Suportados
                         </div>
                         <div class="col-5">
-                            TBD
+                            @if (Model?.DetalhesJogo?.Plataforma?.Windows is true) {
+                                <span>Windows</span>
+                                <br />
+                            }
+                            @if (Model?.DetalhesJogo?.Plataforma?.Mac is true) {
+                                <span>Mac</span>
+                                <br />
+                            }
+                            @if (Model?.DetalhesJogo?.Plataforma?.Linux is true) {
+                                <span>Linux</span>
+                                <br />
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            Classificação Indicativa
+                        </div>
+                        <div class="col-5">
+                            @if (Model?.DetalhesJogo?.RecomendacaoEtaria is not null) {
+                                <span>@Model?.DetalhesJogo?.RecomendacaoEtaria</span>
+                            } else {
+                                <span>Não informado</span>
+                            }
+                            <span>@Model?.DetalhesJogo?.Classificacao?.Dejus?.Descricao</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            Preço
+                        </div>
+                        <div class="col-5">
+                            @if (Model?.DetalhesJogo?.DetalhesDoPreco is not null) {
+                                <span>@Model.DetalhesJogo.DetalhesDoPreco.PrecoFinalFormatado</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            Generos
+                        </div>
+                        <div class="col-5">
+                            @if (Model?.DetalhesJogo?.Genero is not null) {
+                                foreach (var genero in Model?.DetalhesJogo?.Genero) {
+                                    <span>@genero.Descricao</span>
+                                    <br />
+                                }
+                            }
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="@Model?.DetalhesJogo?.HeaderImage" />
+                    <img src="@Model?.DetalhesJogo?.ImagemPrincipal" />
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <h2>Sobre o Jogo</h2>
+        </div>
+        <div class="row">
+            <p>
+                @Html.Raw(Model?.DetalhesJogo?.SobreOJogo)
+            </p>
         </div>
         <div class="row">
             <h2>Descrição</h2>
         </div>
         <div class="row">
             <p>
-                @Html.Raw(Model?.DetalhesJogo?.DetailedDescription)
+                @Html.Raw(Model?.DetalhesJogo?.DescricaoDetalhada)
             </p>
+        </div>
+        <div>
+            <h2>Screenshots</h2>
+        </div>
+        <div class="row">
+            @if (Model?.DetalhesJogo?.Screenshot is not null) {
+                foreach (var screenshot in Model?.DetalhesJogo?.Screenshot) {
+                    <div class="row col-6">
+                        <img src="@screenshot.UrlThumbnail" width="480" />
+                    </div>
+                }
+            }
+        </div>
+        <div>
+            <h2>Filmes</h2>
+        </div>
+        <div class="row">
+            @if (Model?.DetalhesJogo?.Filme is not null) {
+                foreach (var filme in Model?.DetalhesJogo?.Filme) {
+                    <div class="row col-6">
+                        <video controls>
+                            <source src="@filme.Mp4._480" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                }
+            }
         </div>
     </div>
 </div>

@@ -17,70 +17,70 @@ namespace InfoGames.Models {
         public required Jogo Jogo { get; set; }
 
         [Display(Name = "Tipo")]
-        public string? Type { get; set; }
+        public string? Tipo { get; set; }
 
         [Display(Name = "Nome")]
-        public string? Name { get; set; }
+        public string? Nome { get; set; }
 
         [Display(Name = "Id do Jogo (referencia na Steam)")]
         public string? AppId { get; set; }
 
         [Display(Name = "Recomendação etária")]
-        public string? RequiredAge { get; set; }
+        public string? RecomendacaoEtaria { get; set; }
 
         [Display(Name = "É gratuito")]
-        public bool? IsFree { get; set; }
+        public bool? EGratuito { get; set; }
 
         [Display(Name = "Suporte à Controle")]
-        public string? ControllerSupport { get; set; }
+        public string? SuporteAControle { get; set; }
 
         [Display(Name = "Descrição detalhada")]
-        public string? DetailedDescription { get; set; }
+        public string? DescricaoDetalhada { get; set; }
 
         [Display(Name = "Sobre o jogo")]
-        public string? AboutTheGame { get; set; }
+        public string? SobreOJogo { get; set; }
 
         [Display(Name = "Descrição curta")]
-        public string? ShortDescription { get; set; }
+        public string? DescricaoCurta { get; set; }
 
         [Display(Name = "Línguas disponíveis")]
-        public string? SupportedLanguages { get; set; }
+        public string? LinguasDisponiveis { get; set; }
 
         [Display(Name = "Imagem Principal")]
-        public string? HeaderImage { get; set; }
+        public string? ImagemPrincipal { get; set; }
 
-        [Display(Name = "Thumnail")]
-        public string? CapsuleImage { get; set; }
+        [Display(Name = "Thumbnail")]
+        public string? Thumbnail { get; set; }
 
         [Display(Name = "Thumbnailv5")]
-        public string? CapsuleImagev5 { get; set; }
+        public string? Thumbnailv5 { get; set; }
 
         [Display(Name = "Website")]
         public string? Website { get; set; }
 
         [Display(Name = "Notificação Legal")]
-        public string? LegalNotice { get; set; }
+        public string? NotificacaoLegal { get; set; }
 
         [Display(Name = "Número de Likes")]
-        public string? RecommendationsTotal { get; set; }
+        public string? NumeroDeLikes { get; set; }
 
         [Display(Name = "Imagem de fundo")]
-        public string? Background { get; set; }
+        public string? ImagemBackground { get; set; }
 
         [Display(Name = "Imagem de fundo, sem tratamento")]
-        public string? BackgroundRaw { get; set; }
+        public string? ImagemBackgroundRaw { get; set; }
 
         [Display(Name = "DLCs")]
         public List<string>? Dlc { get; set; }
 
         [Display(Name = "Desenvolvedores")]
-        public List<string>? Developers { get; set; }
+        public List<string>? Desenvolvedor { get; set; }
 
         [Display(Name = "Editores")]
-        public List<string>? Publishers { get; set; }
+        public List<string>? Editor { get; set; }
 
         [Display(Name = "Pacotes")]
-        public List<string>? Packages { get; set; }
+        public List<string>? Pacotes { get; set; }
 
         [Display(Name = "Jogo Completo")]
         public JogoCompleto? JogoCompleto { get; set; }
@@ -94,47 +94,47 @@ namespace InfoGames.Models {
         [Display(Name = "Requisitos de Hardware para Linux")]
         public RequisitoLinux? RequisitoLinux { get; set; }
 
-        //[Display(Name = "Detalhes do preço")]
-        //public ICollection<DetalhesPreco>? PriceOverview { get; set; }
+        [Display(Name = "Detalhes dos preços")]
+        public DetalhesDoPreco? DetalhesDoPreco { get; set; }
 
-        //[Display(Name = "Grupos de pacotes")]
-        //public ICollection<GrupoDePacote>? PackageGroups { get; set; }
+        [Display(Name = "Grupos de pacotes")]
+        public ICollection<GrupoDePacote>? GrupoDePacotes { get; set; }
 
-        //[Display(Name = "Plataformas")]
-        //public ICollection<Plataformas>? Platforms { get; set; }
+        [Display(Name = "Plataformas")]
+        public Plataforma? Plataforma { get; set; }
 
-        //[Display(Name = "Metacrítica")]
-        //public ICollection<Metacritica>? Metacritic { get; set; }
+        [Display(Name = "Metacrítica")]
+        public Metacritica? Metacritica { get; set; }
 
-        //[Display(Name = "Categorias")]
-        //public ICollection<Categoria>? Categories { get; set; }
+        [Display(Name = "Categorias")]
+        public ICollection<Categoria>? Categoria { get; set; }
 
-        //[Display(Name = "Generos")]
-        //public ICollection<Genero>? Genres { get; set; }
+        [Display(Name = "Generos")]
+        public ICollection<Generos>? Genero { get; set; }
 
-        //[Display(Name = "Fotos")]
-        //public ICollection<Screenshot>? Screenshots { get; set; }
+        [Display(Name = "Fotos")]
+        public ICollection<Screenshot>? Screenshot { get; set; }
 
-        //[Display(Name = "Filmes")]
-        //public ICollection<Filme>? Movies { get; set; }
+        [Display(Name = "Filmes")]
+        public ICollection<Filme>? Filme { get; set; }
 
-        //[Display(Name = "Conquista")]
-        //public ICollection<Conquista>? Achievements { get; set; }
+        [Display(Name = "Conquista")]
+        public Conquista? Conquista { get; set; }
 
-        //[Display(Name = "Data de lançamento")]
-        //public ICollection<DataDeLancamento>? ReleaseDate { get; set; }
+        [Display(Name = "Data de lançamento")]
+        public DataDeLancamento? DataDeLancamento { get; set; }
 
-        //[Display(Name = "Informações de suporte")]
-        //public ICollection<InformacaoDeSuporte>? SupportInfo { get; set; }
+        [Display(Name = "Informações de suporte")]
+        public InformacaoDeSuporte? InformacaoDeSuporte { get; set; }
 
-        //[Display(Name = "Descritores de conteúdo")]
-        //public ICollection<DescritorDeConteudo>? ContentDescriptors { get; set; }
+        [Display(Name = "Descritores de conteúdo")]
+        public DescritorDeConteudo? DescritorDeConteudo { get; set; }
 
-        //[Display(Name = "Classificações")]
-        //public ICollection<Classificacao>? Ratings { get; set; }
+        [Display(Name = "Classificações")]
+        public Classificacao? Classificacao { get; set; }
 
-        //[Display(Name = "Demonstrações")]
-        //public ICollection<Demos>? Demos { get; set; }
+        [Display(Name = "Demonstrações")]
+        public ICollection<Demos>? Demonstracao { get; set; }
     }
 
     [Table("JogosCompletos")]
@@ -150,10 +150,10 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Id do jogo completo")]
-        public required string FullGameAppId { get; set; }
+        public required string IdJogoCompleto { get; set; }
 
         [Display(Name = "Nome do jogo completo")]
-        public required string Name { get; set; }
+        public required string Nome { get; set; }
     }
 
     [Table("RequisitosPC")]
@@ -169,10 +169,10 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Requisitos Mínimos")]
-        public string? Minimum { get; set; }
+        public string? Minimo { get; set; }
 
         [Display(Name = "Requisitos Recomendados")]
-        public string? Recommended { get; set; }
+        public string? Recomendado { get; set; }
     }
 
     [Table("RequisitosMac")]
@@ -188,10 +188,10 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Requisitos Mínimos")]
-        public string? Minimum { get; set; }
+        public string? Minimo { get; set; }
 
         [Display(Name = "Requisitos Recomendados")]
-        public string? Recommended { get; set; }
+        public string? Recomendado { get; set; }
     }
 
     [Table("RequisitosLinux")]
@@ -207,14 +207,14 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Requisitos Mínimos")]
-        public string? Minimum { get; set; }
+        public string? Minimo { get; set; }
 
         [Display(Name = "Requisitos Recomendados")]
-        public string? Recommended { get; set; }
+        public string? Recomendado { get; set; }
     }
 
-    [Table("DetalhesDePrecos")]
-    public class DetalhesPreco {
+    [Table("DetalhesDosPrecos")]
+    public class DetalhesDoPreco {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -226,22 +226,22 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Moeda")]
-        public string? Currency { get; set; }
+        public string? Moeda { get; set; }
 
         [Display(Name = "Preço Inicial")]
-        public string? Initial { get; set; }
+        public string? PrecoInicial { get; set; }
 
         [Display(Name = "Preço Final")]
-        public string? Final { get; set; }
+        public string? PrecoFinal { get; set; }
 
         [Display(Name = "Desconto (%)")]
-        public string? DiscountPercent { get; set; }
+        public string? DescontoPorcentagem { get; set; }
 
         [Display(Name = "Preço Inicial Formatado")]
-        public string? InitialFormatted { get; set; }
+        public string? PrecoInicialFormatado { get; set; }
 
         [Display(Name = "Preço Final Formatado")]
-        public string? FinalFormatted { get; set; }
+        public string? PrecoFinalFormatado { get; set; }
     }
 
     [Table("GruposDePacotes")]
@@ -258,28 +258,28 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Nome")]
-        public string? Name { get; set; }
+        public string? Nome { get; set; }
 
         [Display(Name = "Título")]
-        public string? Title { get; set; }
+        public string? Titulo { get; set; }
 
         [Display(Name = "Descrição")]
-        public string? Description { get; set; }
+        public string? Descricao { get; set; }
 
         [Display(Name = "Seleção de texto")]
-        public string? SelectionText { get; set; }
+        public string? SelecaoDeTexto { get; set; }
 
         [Display(Name = "Salvar texto")]
-        public string? SaveText { get; set; }
+        public string? SalvarTexto { get; set; }
 
         [Display(Name = "Exibir tipo")]
-        public string? DisplayType { get; set; }
+        public string? ExibirTipo { get; set; }
 
         [Display(Name = "É assinatura recorrente")]
-        public string? IsRecurringSubscription { get; set; }
+        public string? EAssinaturaRecorrente { get; set; }
 
         [Display(Name = "Pacotes")]
-        public ICollection<Pacote>? Packages { get; set; }
+        public ICollection<Pacote>? Pacotes { get; set; }
     }
 
     [Table("Pacotes")]
@@ -293,29 +293,29 @@ namespace InfoGames.Models {
         public string? PackageId { get; set; }
 
         [Display(Name = "Porcentagem do desconto (texto)")]
-        public string? PercentSavingsText { get; set; }
+        public string? PorcentagemDoDescontoTexto { get; set; }
 
         [Display(Name = "Porcentagem do desconto")]
-        public string? PercentSavings { get; set; }
+        public string? PorcentagemDoDesconto { get; set; }
 
         [Display(Name = "Opção (texto)")]
-        public string? OptionText { get; set; }
+        public string? OpcaoTexto { get; set; }
 
         [Display(Name = "Opção (descrição)")]
-        public string? OptionDescription { get; set; }
+        public string? OpcaoDescricao { get; set; }
 
         [Display(Name = "Licensa pode ser obtida gratuitamente?")]
-        public string? CanGetFreeLicense { get; set; }
+        public string? ObtidaGratuitamente { get; set; }
 
         [Display(Name = "Licensa é gratuita?")]
-        public bool? IsFreeLicense { get; set; }
+        public bool? LicencaEGratuita { get; set; }
 
         [Display(Name = "Preço com desconto (em centavos)")]
-        public string? PriceInCentsWithDiscount { get; set; }
+        public string? PrecoComDesconto { get; set; }
     }
 
     [Table("Plataformas")]
-    public class Plataformas {
+    public class Plataforma {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -327,13 +327,13 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Windows")]
-        public bool Windows { get; set; }
+        public bool? Windows { get; set; }
 
         [Display(Name = "macOS")]
-        public bool Mac { get; set; }
+        public bool? Mac { get; set; }
 
         [Display(Name = "Linux")]
-        public bool Linux { get; set; }
+        public bool? Linux { get; set; }
     }
 
     [Table("Metacriticas")]
@@ -349,7 +349,7 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Pontuação")]
-        public string? Score { get; set; }
+        public string? Pontuacao { get; set; }
 
         [Display(Name = "Link")]
         public string? Url { get; set; }
@@ -371,11 +371,11 @@ namespace InfoGames.Models {
         public string? IdCategoria { get; set; }
 
         [Display(Name = "Descrição")]
-        public string? Description { get; set; }
+        public string? Descricao { get; set; }
     }
 
     [Table("Generos")]
-    public class Genero {
+    public class Generos {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -387,7 +387,10 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Descrição")]
-        public string? Description { get; set; }
+        public string? Descricao { get; set; }
+
+        [Display(Name = "Id do Gênero (referencia na Steam)")]
+        public string? IdGenero { get; set; }
     }
 
     [Table("Screenshots")]
@@ -403,10 +406,10 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "URL da thumbnail")]
-        public required string PathThumbnail { get; set; }
+        public required string UrlThumbnail { get; set; }
 
         [Display(Name = "URL da imagem completa")]
-        public required string PathFull { get; set; }
+        public required string UrlImagemCompleta { get; set; }
     }
 
     [Table("Filmes")]
@@ -422,23 +425,42 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Nome")]
-        public string? Name { get; set; }
+        public string? Nome { get; set; }
 
         [Display(Name = "URL da thumbnail")]
         public string? Thumbnail { get; set; }
 
         [Display(Name = "Vídeo (Web movie)")]
-        public ICollection<Midia>? Webm { get; set; }
+        public Webm? Webm { get; set; }
 
         [Display(Name = "Vídeo (.mp4)")]
-        public ICollection<Midia>? Mp4 { get; set; }
+        public Mp4? Mp4 { get; set; }
 
         [Display(Name = "Destacar?")]
-        public bool Highlight { get; set; }
+        public bool Destacar { get; set; }
     }
 
-    [Table("Midias")]
-    public class Midia {
+    [Table("Webms")]
+    public class Webm {
+        [Key]
+        [Display(Name = "Id (referencia interna)")]
+        public required string Id { get; set; }
+
+        [Display(Name = "Id da key na tabela Filmes")]
+        public required string IdFilme { get; set; }
+
+        [ForeignKey("IdFilme")]
+        public required Filme? Filme { get; set; }
+
+        [Display(Name = "URL do vídeo (480p)")]
+        public string? _480 { get; set; }
+
+        [Display(Name = "URL do vídeo (max)")]
+        public string? Max { get; set; }
+    }
+
+    [Table("Mp4s")]
+    public class Mp4 {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -472,7 +494,7 @@ namespace InfoGames.Models {
         public string? Total { get; set; }
 
         [Display(Name = "Destaques")]
-        public ICollection<Destaque>? Highlighted { get; set; }
+        public ICollection<Destaque>? Destaque { get; set; }
     }
 
     [Table("Destaques")]
@@ -482,16 +504,16 @@ namespace InfoGames.Models {
         public required string Id { get; set; }
 
         [Display(Name = "Id da key na tabela Conquistas")]
-        public required string IdConquistas { get; set; }
+        public required string IdConquista { get; set; }
 
         [ForeignKey("IdConquistas")]
         public required Conquista Conquista { get; set; }
 
         [Display(Name = "Nome")]
-        public string? Name { get; set; }
+        public string? Nome { get; set; }
 
         [Display(Name = "URL")]
-        public string? Path { get; set; }
+        public string? UrlIcone { get; set; }
     }
 
     [Table("DatasDeLancamento")]
@@ -507,10 +529,10 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Está chegando?")]
-        public bool ComingSoon { get; set; }
+        public bool EstaChegando { get; set; }
 
         [Display(Name = "Data de lançamento")]
-        public string? Date { get; set; }
+        public string? Data { get; set; }
     }
 
     [Table("InformacoesDeSuporte")]
@@ -548,7 +570,7 @@ namespace InfoGames.Models {
         public ICollection<string>? Ids { get; set; }
 
         [Display(Name = "Notas")]
-        public string? Notes { get; set; }
+        public string? Notas { get; set; }
     }
 
     [Table("Classificacoes")]
@@ -564,7 +586,7 @@ namespace InfoGames.Models {
         public required DetalhesJogo? DetalhesJogo { get; set; }
 
         [Display(Name = "Classificação DEJUS")]
-        public ICollection<ClassificacaoIndicativa>? Dejus { get; set; }
+        public ClassificacaoIndicativa? Dejus { get; set; }
 
     }
 
@@ -584,13 +606,13 @@ namespace InfoGames.Models {
         public string? Rating { get; set; }
 
         [Display(Name = "Descrição")]
-        public string? Descriptors { get; set; }
+        public string? Descricao { get; set; }
 
         [Display(Name = "Usar barreira de idade?")]
-        public string? UseAgeGate { get; set; }
+        public string? BloquearPorIdade { get; set; }
 
         [Display(Name = "Recomendação etária")]
-        public string? RequiredAge { get; set; }
+        public string? RecomendacaoEtaria { get; set; }
     }
 
     [Table("Demos")]
@@ -609,6 +631,6 @@ namespace InfoGames.Models {
         public string? Appid { get; set; }
 
         [Display(Name = "Descrição")]
-        public string? Description { get; set; }
+        public string? Descricao { get; set; }
     }
 }

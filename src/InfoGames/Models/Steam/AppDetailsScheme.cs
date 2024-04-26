@@ -195,7 +195,7 @@ namespace InfoGames.Models.Steam {
 
         [JsonProperty("demos", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("demos")]
-        public List<Demos?>? Demos { get; set; }        
+        public List<Demos?>? Demos { get; set; }
     }
 
     public class Dejus {
@@ -255,7 +255,7 @@ namespace InfoGames.Models.Steam {
     public class Achievements {
         [JsonProperty("total", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("total")]
-        public int? Total { get; set; }
+        public string? Total { get; set; }
 
         [JsonProperty("highlighted", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("highlighted")]
@@ -337,7 +337,7 @@ namespace InfoGames.Models.Steam {
 
         [JsonProperty("highlight", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("highlight")]
-        public bool? Highlight { get; set; }
+        public bool Highlight { get; set; }
     }
 
     public class Mp4 {
@@ -433,7 +433,7 @@ namespace InfoGames.Models.Steam {
     public class ReleaseDate {
         [JsonProperty("coming_soon", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("coming_soon")]
-        public bool? ComingSoon { get; set; }
+        public bool ComingSoon { get; set; }
 
         [JsonProperty("date", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("date")]
@@ -443,15 +443,15 @@ namespace InfoGames.Models.Steam {
     public class Screenshot {
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("id")]
-        public string? Id { get; set; }
+        public required string Id { get; set; }
 
         [JsonProperty("path_thumbnail", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("path_thumbnail")]
-        public string? PathThumbnail { get; set; }
+        public required string PathThumbnail { get; set; }
 
         [JsonProperty("path_full", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("path_full")]
-        public string? PathFull { get; set; }
+        public required string PathFull { get; set; }
     }
 
     public class Sub {

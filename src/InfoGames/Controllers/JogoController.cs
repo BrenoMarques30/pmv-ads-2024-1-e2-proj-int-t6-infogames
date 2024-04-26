@@ -2,6 +2,7 @@
 using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
 using InfoGames.Middlewares;
+using System.Diagnostics;
 
 namespace InfoGames.Controllers {
     public class JogoController : Controller {
@@ -92,6 +93,7 @@ namespace InfoGames.Controllers {
             }
             //// Get the details of the game from database. If not found, get from Steam API
             if (app.DetalhesJogo == null) {
+                Debug.WriteLine("Detalhes do jogo não encontrados no banco de dados. Buscando da API Steam.");
                 _ = GetAppDetails(app.Id);
             }
             return View(app);
