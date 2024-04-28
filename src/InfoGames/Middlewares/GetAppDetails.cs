@@ -148,7 +148,7 @@ namespace InfoGames.Middlewares {
                                     var _sub = new Pacote {
                                         IdGrupoDePacote = _grupoDePacote.Id,
                                         GrupoDePacote = _grupoDePacote,
-                                        PackageId = sub?.Packageid,
+                                        PacoteId = sub?.Packageid,
                                         PorcentagemDoDescontoTexto = sub?.PercentSavingsText,
                                         PorcentagemDoDesconto = sub?.PercentSavings,
                                         OpcaoTexto = sub?.OptionText,
@@ -357,27 +357,18 @@ namespace InfoGames.Middlewares {
                         _ = _db.DescritoresDeConteudo.Add(_contentDescriptors);
                     }
 
-                    if (appDetails?.Ratings is not null) {
-                        var _ratings = new Classificacao {
+                    if (appDetails?.Ratings?.Dejus is not null) {
+                        var _dejus = new ClassificacaoIndicativa {
                             Id = Guid.NewGuid().ToString(),
                             IdDetalhesJogo = _DetalhesJogo.Id,
                             DetalhesJogo = _DetalhesJogo,
+                            Descricao = appDetails.Ratings.Dejus.Descriptors,
+                            RecomendacaoEtaria = appDetails.Ratings.Dejus.RequiredAge,
+                            BloquearPorIdade = appDetails.Ratings.Dejus.UseAgeGate,
                         };
+                        _DetalhesJogo.Classificacao = _dejus;
+                        _ = _db.ClassificacoesIndicativas.Add(_dejus);
 
-                        if (appDetails.Ratings.Dejus is not null) {
-                            var _dejus = new ClassificacaoIndicativa {
-                                Id = Guid.NewGuid().ToString(),
-                                IdClassificacoes = _ratings.Id,
-                                Classificacao = _ratings,
-                                Descricao = appDetails.Ratings.Dejus.Descriptors,
-                                RecomendacaoEtaria = appDetails.Ratings.Dejus.RequiredAge,
-                                BloquearPorIdade = appDetails.Ratings.Dejus.UseAgeGate,
-                            };
-                            _ratings.Dejus = _dejus;
-                            _ = _db.ClassificacoesIndicativas.Add(_dejus);
-                        }
-                        _DetalhesJogo.Classificacao = _ratings;
-                        _ = _db.Classificacoes.Add(_ratings);
                     }
 
                     app.DetalhesJogo = _DetalhesJogo;

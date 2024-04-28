@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGames.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240425231757_AddTables")]
+    [Migration("20240428200756_AddTables")]
     partial class AddTables
     {
         /// <inheritdoc />
@@ -47,23 +47,6 @@ namespace InfoGames.Migrations
                     b.ToTable("Categorias");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Classificacao", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
-
-                    b.ToTable("Classificacoes");
-                });
-
             modelBuilder.Entity("InfoGames.Models.ClassificacaoIndicativa", b =>
                 {
                     b.Property<string>("Id")
@@ -75,7 +58,7 @@ namespace InfoGames.Migrations
                     b.Property<string>("Descricao")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdClassificacoes")
+                    b.Property<string>("IdDetalhesJogo")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -87,7 +70,7 @@ namespace InfoGames.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdClassificacoes")
+                    b.HasIndex("IdDetalhesJogo")
                         .IsUnique();
 
                     b.ToTable("ClassificacoesIndicativas");
@@ -235,7 +218,8 @@ namespace InfoGames.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdDetalhesJogo");
+                    b.HasIndex("IdDetalhesJogo")
+                        .IsUnique();
 
                     b.ToTable("DetalhesDosPrecos");
                 });
@@ -504,7 +488,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "de30958b-bf06-4eff-80c3-55b8271e228d",
+                            Id = "5f53fa89-5bd1-466f-8090-ef580bd2e855",
                             ChaveApi = "123456",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
@@ -578,7 +562,7 @@ namespace InfoGames.Migrations
                     b.Property<string>("OpcaoTexto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PackageId")
+                    b.Property<string>("PacoteId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PorcentagemDoDesconto")
@@ -750,26 +734,15 @@ namespace InfoGames.Migrations
                     b.Navigation("DetalhesJogo");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Classificacao", b =>
+            modelBuilder.Entity("InfoGames.Models.ClassificacaoIndicativa", b =>
                 {
                     b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
                         .WithOne("Classificacao")
-                        .HasForeignKey("InfoGames.Models.Classificacao", "IdDetalhesJogo")
+                        .HasForeignKey("InfoGames.Models.ClassificacaoIndicativa", "IdDetalhesJogo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("DetalhesJogo");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.ClassificacaoIndicativa", b =>
-                {
-                    b.HasOne("InfoGames.Models.Classificacao", "Classificacao")
-                        .WithOne("Dejus")
-                        .HasForeignKey("InfoGames.Models.ClassificacaoIndicativa", "IdClassificacoes")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Classificacao");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Conquista", b =>
@@ -828,8 +801,8 @@ namespace InfoGames.Migrations
             modelBuilder.Entity("InfoGames.Models.DetalhesDoPreco", b =>
                 {
                     b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
-                        .WithMany("DetalhesDoPreco")
-                        .HasForeignKey("IdDetalhesJogo")
+                        .WithOne("DetalhesDoPreco")
+                        .HasForeignKey("InfoGames.Models.DetalhesDoPreco", "IdDetalhesJogo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1008,11 +981,6 @@ namespace InfoGames.Migrations
                         .IsRequired();
 
                     b.Navigation("Filme");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.Classificacao", b =>
-                {
-                    b.Navigation("Dejus");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Conquista", b =>

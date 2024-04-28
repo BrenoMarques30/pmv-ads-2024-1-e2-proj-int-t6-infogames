@@ -27,7 +27,6 @@ namespace InfoGames.Data {
 
 
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Classificacao> Classificacoes { get; set; }
         public DbSet<ClassificacaoIndicativa> ClassificacoesIndicativas { get; set; }
         public DbSet<Conquista> Conquistas { get; set; }
         public DbSet<DataDeLancamento> DatasDeLancamento { get; set; }

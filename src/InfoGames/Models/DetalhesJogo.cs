@@ -130,15 +130,14 @@ namespace InfoGames.Models {
         [Display(Name = "Descritores de conteúdo")]
         public DescritorDeConteudo? DescritorDeConteudo { get; set; }
 
-        [Display(Name = "Classificações")]
-        public Classificacao? Classificacao { get; set; }
+        [Display(Name = "ClassificaçoesIndicativas")]
+        public ClassificacaoIndicativa? Classificacao { get; set; }
 
         [Display(Name = "Demonstrações")]
         public ICollection<Demos>? Demonstracao { get; set; }
     }
 
-    [Table("JogosCompletos")]
-    public class JogoCompleto {
+    public class FilhoDetalheJogo {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -148,82 +147,40 @@ namespace InfoGames.Models {
 
         [ForeignKey("IdDetalhesJogo")]
         public required DetalhesJogo? DetalhesJogo { get; set; }
+    }
 
-        [Display(Name = "Id do jogo completo")]
+    [Table("JogosCompletos")]
+    public class JogoCompleto : FilhoDetalheJogo {
+
+        [Display(Name = "Id do jogo completo (referencia na Steam)")]
         public required string IdJogoCompleto { get; set; }
 
         [Display(Name = "Nome do jogo completo")]
         public required string Nome { get; set; }
     }
 
-    [Table("RequisitosPC")]
-    public class RequisitoPC {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
-
+    public class Requisito : FilhoDetalheJogo {
         [Display(Name = "Requisitos Mínimos")]
         public string? Minimo { get; set; }
 
         [Display(Name = "Requisitos Recomendados")]
         public string? Recomendado { get; set; }
+    }
+
+    [Table("RequisitosPC")]
+    public class RequisitoPC : Requisito {
     }
 
     [Table("RequisitosMac")]
-    public class RequisitoMac {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
-
-        [Display(Name = "Requisitos Mínimos")]
-        public string? Minimo { get; set; }
-
-        [Display(Name = "Requisitos Recomendados")]
-        public string? Recomendado { get; set; }
+    public class RequisitoMac : Requisito {
     }
 
     [Table("RequisitosLinux")]
-    public class RequisitoLinux {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
-
-        [Display(Name = "Requisitos Mínimos")]
-        public string? Minimo { get; set; }
-
-        [Display(Name = "Requisitos Recomendados")]
-        public string? Recomendado { get; set; }
+    public class RequisitoLinux : Requisito {
     }
 
     [Table("DetalhesDosPrecos")]
-    public class DetalhesDoPreco {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class DetalhesDoPreco : FilhoDetalheJogo {
 
         [Display(Name = "Moeda")]
         public string? Moeda { get; set; }
@@ -245,17 +202,7 @@ namespace InfoGames.Models {
     }
 
     [Table("GruposDePacotes")]
-    public class GrupoDePacote {
-
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class GrupoDePacote : FilhoDetalheJogo {
 
         [Display(Name = "Nome")]
         public string? Nome { get; set; }
@@ -290,7 +237,7 @@ namespace InfoGames.Models {
         public required GrupoDePacote? GrupoDePacote { get; set; }
 
         [Display(Name = "Id do pacote (referencia na Steam)")]
-        public string? PackageId { get; set; }
+        public string? PacoteId { get; set; }
 
         [Display(Name = "Porcentagem do desconto (texto)")]
         public string? PorcentagemDoDescontoTexto { get; set; }
@@ -315,16 +262,7 @@ namespace InfoGames.Models {
     }
 
     [Table("Plataformas")]
-    public class Plataforma {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class Plataforma : FilhoDetalheJogo {
 
         [Display(Name = "Windows")]
         public bool? Windows { get; set; }
@@ -337,16 +275,7 @@ namespace InfoGames.Models {
     }
 
     [Table("Metacriticas")]
-    public class Metacritica {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class Metacritica : FilhoDetalheJogo {
 
         [Display(Name = "Pontuação")]
         public string? Pontuacao { get; set; }
@@ -356,17 +285,7 @@ namespace InfoGames.Models {
     }
 
     [Table("Categorias")]
-    public class Categoria {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
-
+    public class Categoria : FilhoDetalheJogo {
         [Display(Name = "Id da Categoria (referencia na Steam)")]
         public string? IdCategoria { get; set; }
 
@@ -375,35 +294,17 @@ namespace InfoGames.Models {
     }
 
     [Table("Generos")]
-    public class Generos {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
-
-        [Display(Name = "Descrição")]
-        public string? Descricao { get; set; }
+    public class Generos : FilhoDetalheJogo {
 
         [Display(Name = "Id do Gênero (referencia na Steam)")]
         public string? IdGenero { get; set; }
+
+        [Display(Name = "Descrição")]
+        public string? Descricao { get; set; }
     }
 
     [Table("Screenshots")]
-    public class Screenshot {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class Screenshot : FilhoDetalheJogo {
 
         [Display(Name = "URL da thumbnail")]
         public required string UrlThumbnail { get; set; }
@@ -413,16 +314,7 @@ namespace InfoGames.Models {
     }
 
     [Table("Filmes")]
-    public class Filme {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class Filme : FilhoDetalheJogo {
 
         [Display(Name = "Nome")]
         public string? Nome { get; set; }
@@ -440,8 +332,7 @@ namespace InfoGames.Models {
         public bool Destacar { get; set; }
     }
 
-    [Table("Webms")]
-    public class Webm {
+    public class Midias {
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -457,38 +348,18 @@ namespace InfoGames.Models {
 
         [Display(Name = "URL do vídeo (max)")]
         public string? Max { get; set; }
+    }
+
+    [Table("Webms")]
+    public class Webm : Midias {
     }
 
     [Table("Mp4s")]
-    public class Mp4 {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela Filmes")]
-        public required string IdFilme { get; set; }
-
-        [ForeignKey("IdFilme")]
-        public required Filme? Filme { get; set; }
-
-        [Display(Name = "URL do vídeo (480p)")]
-        public string? _480 { get; set; }
-
-        [Display(Name = "URL do vídeo (max)")]
-        public string? Max { get; set; }
+    public class Mp4 : Midias {
     }
 
     [Table("Conquistas")]
-    public class Conquista {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class Conquista : FilhoDetalheJogo {
 
         [Display(Name = "Número de pessoas que atingiram essa conquista")]
         public string? Total { get; set; }
@@ -517,16 +388,7 @@ namespace InfoGames.Models {
     }
 
     [Table("DatasDeLancamento")]
-    public class DataDeLancamento {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class DataDeLancamento : FilhoDetalheJogo {
 
         [Display(Name = "Está chegando?")]
         public bool EstaChegando { get; set; }
@@ -536,16 +398,7 @@ namespace InfoGames.Models {
     }
 
     [Table("InformacoesDeSuporte")]
-    public class InformacaoDeSuporte {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class InformacaoDeSuporte : FilhoDetalheJogo {
 
         [Display(Name = "URL")]
         public string? Url { get; set; }
@@ -555,16 +408,7 @@ namespace InfoGames.Models {
     }
 
     [Table("DescritoresDeConteudo")]
-    public class DescritorDeConteudo {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class DescritorDeConteudo : FilhoDetalheJogo {
 
         [Display(Name = "Ids")]
         public ICollection<string>? Ids { get; set; }
@@ -573,34 +417,8 @@ namespace InfoGames.Models {
         public string? Notas { get; set; }
     }
 
-    [Table("Classificacoes")]
-    public class Classificacao {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
-
-        [Display(Name = "Classificação DEJUS")]
-        public ClassificacaoIndicativa? Dejus { get; set; }
-
-    }
-
     [Table("ClassificacoesIndicativas")]
-    public class ClassificacaoIndicativa {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela Classificações")]
-        public required string IdClassificacoes { get; set; }
-
-        [ForeignKey("IdClassificacoes")]
-        public required Classificacao? Classificacao { get; set; }
+    public class ClassificacaoIndicativa : FilhoDetalheJogo {
 
         [Display(Name = "Classificação")]
         public string? Rating { get; set; }
@@ -616,16 +434,7 @@ namespace InfoGames.Models {
     }
 
     [Table("Demos")]
-    public class Demos {
-        [Key]
-        [Display(Name = "Id (referencia interna)")]
-        public required string Id { get; set; }
-
-        [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
-
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+    public class Demos : FilhoDetalheJogo {
 
         [Display(Name = "Id do jogo (referencia na Steam)")]
         public string? Appid { get; set; }

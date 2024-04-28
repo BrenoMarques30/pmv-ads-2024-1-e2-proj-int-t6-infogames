@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-5">
                             @if (Model?.DetalhesJogo?.Desenvolvedor is not null) {
-                                foreach (var developer in Model?.DetalhesJogo?.Desenvolvedor) {
+                                foreach (var developer in Model.DetalhesJogo.Desenvolvedor) {
                                     <span>@developer</span>
                                     <br />
                                 }
@@ -86,7 +86,7 @@
                             } else {
                                 <span>Não informado</span>
                             }
-                            <span>@Model?.DetalhesJogo?.Classificacao?.Dejus?.Descricao</span>
+                            <span>@Model?.DetalhesJogo?.Classificacao?.Descricao</span>
                         </div>
                     </div>
                     <div class="row">
@@ -105,7 +105,7 @@
                         </div>
                         <div class="col-5">
                             @if (Model?.DetalhesJogo?.Genero is not null) {
-                                foreach (var genero in Model?.DetalhesJogo?.Genero) {
+                                foreach (var genero in Model.DetalhesJogo.Genero) {
                                     <span>@genero.Descricao</span>
                                     <br />
                                 }
@@ -139,7 +139,7 @@
         </div>
         <div class="row">
             @if (Model?.DetalhesJogo?.Screenshot is not null) {
-                foreach (var screenshot in Model?.DetalhesJogo?.Screenshot) {
+                foreach (var screenshot in Model.DetalhesJogo.Screenshot) {
                     <div class="row col-6">
                         <img src="@screenshot.UrlThumbnail" width="480" />
                     </div>
@@ -151,10 +151,10 @@
         </div>
         <div class="row">
             @if (Model?.DetalhesJogo?.Filme is not null) {
-                foreach (var filme in Model?.DetalhesJogo?.Filme) {
+                foreach (var filme in Model.DetalhesJogo.Filme) {
                     <div class="row col-6">
                         <video controls>
-                            <source src="@filme.Mp4._480" type="video/mp4" />
+                            <source src="@filme.Mp4?._480" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
