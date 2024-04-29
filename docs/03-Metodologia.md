@@ -56,9 +56,9 @@ Os papéis, na Equipe 1, foram distribuídos da seguinte maneira:
 
 ●	**Scrum Master**: Rafael Fernandes Mourão.
 
-●	**Equipe de Design**: Willian Barbosa de Andrade, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Rafael Fernandes Mourão, Raissa Saunier.
+●	**Equipe de Design**: Willian Barbosa de Andrade, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Rafael Fernandes Mourão.
 
-●	**Equipe de Desenvolvimento**: Rafael Fernandes Mourão, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Raissa Saunier, Willian Barbosa de Andrade.
+●	**Equipe de Desenvolvimento**: Rafael Fernandes Mourão, Caio Costa Miranda, Márcia Verônica Costa Miranda, Pablo Vinícius Ramos Lopes, Willian Barbosa de Andrade.
 
 ●	**Equipe de Documentação**: Márcia V. C. Miranda, Caio Costa Miranda.
 
