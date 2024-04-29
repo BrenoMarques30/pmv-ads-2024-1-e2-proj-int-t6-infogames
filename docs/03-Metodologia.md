@@ -264,6 +264,7 @@ Figura 14 - Reunião de equipe para planejamento e implementação da Etapa 3.
 
 Figura 15 - Kanban do projeto InfoGames - Etapa 3
 
+![5-Print Kanban-Etapa 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/437a7b7a-cfd1-45ec-a7af-47a4aa707ebb)
 
 
 ### Ferramentas
