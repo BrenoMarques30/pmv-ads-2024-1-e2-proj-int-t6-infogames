@@ -209,6 +209,27 @@ Figura 11 - Kanban do projeto InfoGames - Etapa 2
 Figura 12 - Kanban do projeto InfoGames - Final da Etapa 2
 ![2-Kanban-final Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/755d28f3-dca9-4961-9d05-cf2ad228fd80)
 
+### Etapa 3 (Sprint 3):
+
+*3.1 Planejamento:*
+
+O planejamento dessa etapa consistiu da documentação da metodologia, no que concerne as descrições até esse item, com as atribuições dde atividades a cada membro da equipe (segundo a metodologia SCRUM) a ser desenvolvida no projeto. Foram construídos os Diagramas de Classes e de Fluxo, os protótipos das interfaces a serem construídas especificados e construídos o Modelo Entidade-Relacionamento (Projeto Conceitual) e o projeto da Base de Dados, foram descritos o plano de Testes de Software e plano de Testes de Usabilidade, iniciais para esse nível de etapa de desenvolvimento.
+
+Faz-se necessário registrar que, ao final dessa etapa, a aluna Raíssa Saunier pediu cancelamento de sua matrícula no curso ADS da PUC, retirando-se, obviamente, do nosso grupo.
+
+*3.2 Execução:*
+
+*3.3 Evidências:*
+
+Algumas demonstrações das atividades realizadas nessa etapa, estão nas imagens abaixo:
+
+Figura 12 - Aula com o orientador, Prof Bernardo, com a Equipe do projeto. Demostração de execução das Informações de uma classe do projeto.
+
+![2-Aula-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0611a552-ecb9-484c-8a10-f1f8ea110022)
+
+Figura 13 - Reunião de equipe para planejamento e implementação da Etapa 3.
+![2-Print reunião-planejamento-Equipe 1-T6](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e75d4d41-9237-4473-b000-482869aaaef7)
+
 
 ### Ferramentas
 
