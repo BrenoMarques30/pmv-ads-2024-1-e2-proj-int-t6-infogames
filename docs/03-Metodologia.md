@@ -93,6 +93,17 @@ Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diver
        Plano de Testes de Usabilidade
        Projeto do Github com Backlog e Plano de Sprints
 
+- **Etapa 3 (Sprint 3)**:
+  
+       Template padrão da aplicação interativa
+       Prova de Conceito da Arquitetura (POC) - exemplo de implementação com a integração do front-end com o back-end
+       Programação de Funcionalidades
+       Realização e registro dos testes de software
+       Realização e registro dos testes de usabilidade
+       Projeto do Github com Backlog e Plano de Sprints
+
+
+
 ### Etapa 1 (Sprint 1):
 
 *1.1 Planejamento:*
