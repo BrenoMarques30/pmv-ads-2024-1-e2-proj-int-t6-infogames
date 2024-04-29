@@ -209,15 +209,46 @@ Figura 11 - Kanban do projeto InfoGames - Etapa 2
 Figura 12 - Kanban do projeto InfoGames - Final da Etapa 2
 ![2-Kanban-final Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/755d28f3-dca9-4961-9d05-cf2ad228fd80)
 
+
+
 ### Etapa 3 (Sprint 3):
 
 *3.1 Planejamento:*
 
-O planejamento dessa etapa consistiu da documentação da metodologia, no que concerne as descrições até esse item, com as atribuições dde atividades a cada membro da equipe (segundo a metodologia SCRUM) a ser desenvolvida no projeto. Foram construídos os Diagramas de Classes e de Fluxo, os protótipos das interfaces a serem construídas especificados e construídos o Modelo Entidade-Relacionamento (Projeto Conceitual) e o projeto da Base de Dados, foram descritos o plano de Testes de Software e plano de Testes de Usabilidade, iniciais para esse nível de etapa de desenvolvimento.
+O planejamento dessa etapa consistiu nos estudos e definições dos frameworks, estilo de arquitetura e tipo de aplicação Web utilizado no projeto. Assim sendo, a metodologia de nosso projeto é baseado nas seguintes especificações:
 
-Faz-se necessário registrar que, ao final dessa etapa, a aluna Raíssa Saunier pediu cancelamento de sua matrícula no curso ADS da PUC, retirando-se, obviamente, do nosso grupo.
+1.	Framework padrão de projeto utilizado: MVC
+2.	Estilo de arquitetura: Cliente-Servidor 
+3.	Tipo de aplicação web: CSR (Client Side Rendered) 
+
+Foram planejados os Templates da Aplicação, baseados nos Fluxos de Usuários e Telas da interface (conforme especificados na Sessão 04), além dos protótipos já planejados anteriormente. Foram planejados e distribuídas as atividades de programação das funcionalidades de mais elevada prioridade, utilizando as ferramentas necessárias durante essa etapa, como C# e SQL server. Para essa etapa, foi planejado a implemenação do Requisito Funcional RF-01 a 04, bem como o back end das Classes Usuário, Lojas e Jogos.
+
 
 *3.2 Execução:*
+
+A equipe realizou reuniões semanais, definindo as prioridades a serem implementadas. Podemos elencar as atividades a serem implementadas: Requisito Funcional RF-01: Cadastro do Usuário, back end das classes Usuário, Lojas e Jogos, front end do Portais de Notícias e Promoções.
+Houve o compartilhamento do aprendizado nas ferramentas necessárias para essa etapa: desenvolvimento back end, uso de APIs, C# e SQL, entre os membros da equipe. 
+
+Esses frameworks e ferramentas constituíram-se novidades para a maioria dos membros da equipe, tendo sido necessário um grande esforço de aprendizado, para sua efetiva utilização. A equipe trabalhou com grande colaboração entre si. O colega de equipe Rafael iniciou a implementação da parte de back end, com integração do Banco de Dados e uso da API, necessária ao projeto, que permitiu o desenvovimento inicial das demais páginas da aplicação, pelo restante da equipe. 
+
+Vale salientar que, para facilitar a leitura do código fonte, foi decidido, no processo de implementação, manter o nome original dos atributos, até antes de salvar no banco de dados. Posteriormente, serão devidamente passados para o português (ver Figura abaixo).  
+![3-Padrão Nomenclatura Utilizado-OK2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/ba27db0d-4803-44c1-9304-c9a99b7a3dfb)
+
+
+Baseado nos protótipos já planejados na etapa anterior, as atividades foram distribuídas entre os membros da equipe, que facilitou a colaboração a obtenção do produto, até essa etapa.
+As tarefas, nessa etapa, foram assim distribuídas:
+
+a) Back end e front end da Classe Usuário (RF-001 a RF-004): Caio e Márcia;
+b) Back end das Classes Lojas e Jogos: Rafael; 
+c) Front End do Portal de Notícias e Promoções: Willian e Pablo; 
+d) GitHub - textos e atualizações: Márcia; 
+e) Correções e Revisões gerais (Programação e GitHub): Rafael, Márcia, Caio, Willian e Pablo.
+
+Foi planejado o template padrão do projeto, que irá aparecer nas páginas do projeto, com um menu de contexto, no canto superior direito, um menu de navegação geral no rodapé, e conteúdo centralizado na página. Optamos por utilizar, inicialmente, a fonte Time News Roman, cor branca, para os botões de menus, e fonte Serif, cor preta, para os textos das páginas. Os botões de menus de navegação superior são da cor azul e os botões do rodapé são da cor vermelha.
+
+Ademais, a equipe focou na construção, desde a fase de planejamento até a execução, de um padrão de responsividade, pelo programa, que fosse congruente com as necessidades dos usuários, já desenvolvendo a visualização dos elementos do programa para o desktop, tablet e dispositivos móveis. 
+
+Quanto à correções relativa à implementação da Funcionalidade do Cadastro do usuário (RF-01), foi especificada a estrutura de dados para os dados cadastrais dos usuários. Conforme observa-se na Figura 6, ilustra-se a implementação dessa funcionalidade, exibindo-se a estrutura de dados utilizada no projeto, além dos dados armazenados no Local Storage.
 
 *3.3 Evidências:*
 
@@ -229,6 +260,10 @@ Figura 12 - Aula com o orientador, Prof Bernardo, com a Equipe do projeto. Demos
 
 Figura 13 - Reunião de equipe para planejamento e implementação da Etapa 3.
 ![2-Print reunião-planejamento-Equipe 1-T6](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e75d4d41-9237-4473-b000-482869aaaef7)
+
+
+Figura 14 - Kanban do projeto InfoGames - Etapa 3
+
 
 
 ### Ferramentas
