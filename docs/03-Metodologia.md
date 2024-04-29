@@ -238,11 +238,11 @@ Vale salientar que, para facilitar a leitura do código fonte, foi decidido, no 
 Baseado nos protótipos já planejados na etapa anterior, as atividades foram distribuídas entre os membros da equipe, que facilitou a colaboração a obtenção do produto, até essa etapa.
 As tarefas, nessa etapa, foram assim distribuídas:
 
-a) Back end e front end da Classe Usuário (RF-001 a RF-004): Caio e Márcia;
-b) Back end das Classes Lojas e Jogos: Rafael; 
-c) Front End do Portal de Notícias e Promoções: Willian e Pablo; 
-d) GitHub - textos e atualizações: Márcia; 
-e) Correções e Revisões gerais (Programação e GitHub): Rafael, Márcia, Caio, Willian e Pablo.
+1. Back end e front end da Classe Usuário (RF-001 a RF-004): Caio e Márcia;
+2. Back end das Classes Lojas e Jogos: Rafael; 
+3. Front End do Portal de Notícias e Promoções: Willian e Pablo; 
+4. GitHub - textos e atualizações: Márcia; 
+5. Correções e Revisões gerais (Programação e GitHub): Rafael, Márcia, Caio, Willian e Pablo.
 
 Foi planejado o template padrão do projeto, que irá aparecer nas páginas do projeto, com um menu de contexto, no canto superior direito, um menu de navegação geral no rodapé, e conteúdo centralizado na página. Optamos por utilizar, inicialmente, a fonte Time News Roman, cor branca, para os botões de menus, e fonte Serif, cor preta, para os textos das páginas. Os botões de menus de navegação superior são da cor azul e os botões do rodapé são da cor vermelha.
 
