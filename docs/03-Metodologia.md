@@ -248,21 +248,21 @@ Foi planejado o template padrão do projeto, que irá aparecer nas páginas do p
 
 Ademais, a equipe focou na construção, desde a fase de planejamento até a execução, de um padrão de responsividade, pelo programa, que fosse congruente com as necessidades dos usuários, já desenvolvendo a visualização dos elementos do programa para o desktop, tablet e dispositivos móveis. 
 
-Quanto à correções relativa à implementação da Funcionalidade do Cadastro do usuário (RF-01), foi especificada a estrutura de dados para os dados cadastrais dos usuários. Conforme observa-se na Figura 6, ilustra-se a implementação dessa funcionalidade, exibindo-se a estrutura de dados utilizada no projeto, além dos dados armazenados no Local Storage.
 
 *3.3 Evidências:*
 
 Algumas demonstrações das atividades realizadas nessa etapa, estão nas imagens abaixo:
 
-Figura 12 - Aula com o orientador, Prof Bernardo, com a Equipe do projeto. Demostração de execução das Informações de uma classe do projeto.
+Figura 13 - Aula com o orientador, Prof Bernardo, com a Equipe do projeto. Demostração de execução das Informações de uma classe do projeto.
 
 ![2-Aula-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0611a552-ecb9-484c-8a10-f1f8ea110022)
 
-Figura 13 - Reunião de equipe para planejamento e implementação da Etapa 3.
+Figura 14 - Reunião de equipe para planejamento e implementação da Etapa 3.
+
 ![2-Print reunião-planejamento-Equipe 1-T6](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e75d4d41-9237-4473-b000-482869aaaef7)
 
 
-Figura 14 - Kanban do projeto InfoGames - Etapa 3
+Figura 15 - Kanban do projeto InfoGames - Etapa 3
 
 
 
