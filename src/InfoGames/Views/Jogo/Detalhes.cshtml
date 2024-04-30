@@ -151,8 +151,10 @@
         </div>
         <div class="row">
             @if (Model?.DetalhesJogo?.Filme is not null) {
+                <p>@Model.DetalhesJogo.Filme.Count()</p>
                 foreach (var filme in Model.DetalhesJogo.Filme) {
                     <div class="row col-6">
+                        <p>@filme.Id</p>
                         <video controls>
                             <source src="@filme.Mp4?._480" type="video/mp4" />
                             Your browser does not support the video tag.

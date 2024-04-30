@@ -43,6 +43,11 @@ namespace InfoGames.Controllers {
             return await getAppDetails.Index(Id);
         }
 
+        public async Task<IActionResult> GetAppDetailsFromDatabase(Jogo app) {
+            GetAppDetailsFromDatabase getAppDetailsFromDatabase = new GetAppDetailsFromDatabase();
+            return await getAppDetailsFromDatabase.Index(app, _db);
+        }
+
         public IActionResult Form(string method, string id) {
             if (method == "add") {
                 return View();
@@ -92,20 +97,19 @@ namespace InfoGames.Controllers {
             if (id == null || id == "") {
                 return NotFound();
             }
-            Jogo app = _db.Jogos.Find(id);
+            Jogo? app = _db.Jogos.FirstOrDefault(i => i.Id == id);
             if (app == null) {
                 return NotFound();
             }
             //// Get the details of the game from database. If not found, get from Steam API
-            if (app.DetalhesJogo is null) {
-                app.DetalhesJogo = _db.DetalhesJogos.FirstOrDefault(j => j.IdJogo == app.Id);
+            app.DetalhesJogo = _db.DetalhesJogos.FirstOrDefault(j => j.IdJogo == app.Id);
 
-                if (app.DetalhesJogo is null) {
-                    Debug.WriteLine("Detalhes do jogo não encontrados no banco de dados. Buscando da API Steam.");
-                    _ = GetAppDetails(app.Id);
-                } else {
-                    Debug.WriteLine("Detalhes do jogo encontrados no banco de dados.");
-                }
+            if (app.DetalhesJogo is null) {
+                Debug.WriteLine("Detalhes do jogo não encontrados no banco de dados. Buscando da API Steam.");
+                _ = GetAppDetails(app.Id);
+            } else {
+                Debug.WriteLine("Detalhes do jogo encontrados no banco de dados.");
+                _ = GetAppDetailsFromDatabase(app);
             }
             return View(app);
         }
