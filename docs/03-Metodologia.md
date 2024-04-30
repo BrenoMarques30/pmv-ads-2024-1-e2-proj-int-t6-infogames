@@ -250,6 +250,10 @@ Ademais, a equipe focou na construção, desde a fase de planejamento até a exe
 
 Os bancos de dados utilizados nesse projeto, armazenam os dados cadastrais do usuário, bem como recuperados, através de APIs de Steams de jogos eletrônicos, dados de Lojas e jogos, conforme pode ser observado nas Figuras abaixo, que comprovam a implementação dessas funcionalidades.
 
+![1-Print BD Lojas-Jogos -det lançamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0ea8363c-b69a-4904-aa17-35bc32f30a9d)
+
+![2-Print BD Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/ea40ee4c-ee06-42aa-9d13-c8bd6e78aae8)
+
 
 
 *3.3 Evidências:*
@@ -264,8 +268,11 @@ Figura 14 - Reunião de equipe para planejamento e implementação da Etapa 3.
 
 ![2-Print reunião-planejamento-Equipe 1-T6](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e75d4d41-9237-4473-b000-482869aaaef7)
 
+Figura 15 - Exemplo de armazenamento no Banco de dados
 
-Figura 15 - Kanban do projeto InfoGames - Etapa 3
+![3-Print BD Jogos-categoria e Preços](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1caeb941-3590-4cc2-97de-146d873fd812)
+
+Figura 16 - Kanban do projeto InfoGames - Etapa 3
 
 ![5-Print Kanban-Etapa 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/437a7b7a-cfd1-45ec-a7af-47a4aa707ebb)
 
