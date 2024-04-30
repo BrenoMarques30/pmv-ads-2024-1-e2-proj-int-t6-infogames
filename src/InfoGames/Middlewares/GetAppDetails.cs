@@ -274,7 +274,7 @@ namespace InfoGames.Middlewares {
                                     _480 = movie.Webm._480
                                 };
                                 _movie.Webm = _webm;
-                                _ = _db.Webms.Add(_webm);
+                                //_ = _db.Webms.Add(_webm);
                             }
 
                             if (movie.Mp4 is not null) {
@@ -286,7 +286,7 @@ namespace InfoGames.Middlewares {
                                     _480 = movie.Mp4._480
                                 };
                                 _movie.Mp4 = _mp4;
-                                _ = _db.Mp4s.Add(_mp4);
+                                //_ = _db.Mp4s.Add(_mp4);
                             }
 
                             _DetalhesJogo.Filme.Add(_movie);
