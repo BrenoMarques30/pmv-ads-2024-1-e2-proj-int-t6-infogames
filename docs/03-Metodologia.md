@@ -244,9 +244,12 @@ As tarefas, nessa etapa, foram assim distribuídas:
 4. GitHub - textos e atualizações: Márcia; 
 5. Correções e Revisões gerais (Programação e GitHub): Rafael, Márcia, Caio, Willian e Pablo.
 
-Foi planejado o template padrão do projeto, que irá aparecer nas páginas do projeto, com um menu de contexto, no canto superior direito, um menu de navegação geral no rodapé, e conteúdo centralizado na página. Optamos por utilizar, inicialmente, a fonte Time News Roman, cor branca, para os botões de menus, e fonte Serif, cor preta, para os textos das páginas. Os botões de menus de navegação superior são da cor azul e os botões do rodapé são da cor vermelha.
+Foi planejado o template padrão do projeto (descrito na Sessão 06 deste documento) que irá aparecer nas páginas do projeto. A tela inicial tem um background com imagem relativo ao tema do projeto (jogos eletrônicos), botão de entrada na cor vermelha no canto superior direito. Após login, a tela tem um menu de contexto vertical, na lateral esquerda da tela,  e conteúdo centralizado na página. Optamos por utilizar, inicialmente, a Sans-serif e Exo, cor branca, para os botões de menus e para os textos das páginas. Os botões de menus de navegação superior são da cor vermelha.
 
 Ademais, a equipe focou na construção, desde a fase de planejamento até a execução, de um padrão de responsividade, pelo programa, que fosse congruente com as necessidades dos usuários, já desenvolvendo a visualização dos elementos do programa para o desktop, tablet e dispositivos móveis. 
+
+Os bancos de dados utilizados nesse projeto, armazenam os dados cadastrais do usuário, bem como recuperados, através de APIs de Steams de jogos eletrônicos, dados de Lojas e jogos, conforme pode ser observado nas Figuras abaixo, que comprovam a implementação dessas funcionalidades.
+
 
 
 *3.3 Evidências:*
