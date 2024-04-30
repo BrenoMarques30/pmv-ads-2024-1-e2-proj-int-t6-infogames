@@ -6,7 +6,7 @@ Layout padrão da aplicação que será utilizado em todas as páginas com a def
 
 A construção e implementação da aplicação, como um todo, partiu do processo, apresentado na Metodologia, de Fluxo de Telas e de Informações da ferramenta do projeto. A partir da especificação das telas, já planejadas e necessárias para a funcionalidade global do aplicativo, passou-se à construção das funcionalidades, na ordem das prioridades dos Requisitos Funcionais já especificados.
 
-Tela Padrão da Aplicação
+## Tela Padrão da Aplicação
 
 Para construção e implementação das páginas do aplicativo, foram planejados o layout e as telas bases de acesso ao aplicativo.
 
