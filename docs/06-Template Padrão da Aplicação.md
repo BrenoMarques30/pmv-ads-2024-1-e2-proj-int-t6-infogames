@@ -4,6 +4,45 @@
 
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
+A construção e implementação da aplicação, como um todo, partiu do processo, apresentado na Metodologia, de Fluxo de Telas e de Informações da ferramenta do projeto. A partir da especificação das telas, já planejadas e necessárias para a funcionalidade global do aplicativo, passou-se à construção das funcionalidades, na ordem das prioridades dos Requisitos Funcionais já especificados.
+
+Tela Padrão da Aplicação
+
+Para construção e implementação das páginas do aplicativo, foram planejados o layout e as telas bases de acesso ao aplicativo.
+
+O Layout do aplicativo foi pensado de forma que seu aspecto fosse moderno e que representasse a áreo ou foco dos usuários dessa aplicação, que são usuários de jogos eletrônicos. 
+A cada opção do Menu, uma imagem representativa a jogos eletrônicos, servirá de base e como background para as telas da aplicação, conforme mostrado na Sessão 04 desse documento (Wireframes do projeto).
+
+O template padrão do projeto, que irá aparecer em suas páginas, foi planejado para ter o logo do projeto no canto superior esquerdo, botão de Entrar no canto superior direito da tela, um menu de contexto em barra vertical nna lateral esquerda da tela, com conteúdo centralizado na página.
+
+A imagem abaixo ilustra o Template padrão do InfoGames.
+
+![Template-página InfoGames](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d3166d4c-9e8d-4312-b2dd-702d414b5a35)
+
+## Logotipo
+![logo-pequena-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b8a4d9ec-8b2d-400a-ad16-6de28b14ace7)
+
+
+## Paleta de Cores
+![2-Identidade Visual-img 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/6169866e-a86a-4364-a3ad-4e942b04f9ad)
+
+
+## Tipografia
+![1-Identidade Visual-img 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9bb2195d-4aa4-4a8e-a6e2-93fe1708f86e)
+
+
+## Telas
+
+Todas as telas apresentam um layout responsivo, tendo seu conteúdo ajustado para qualquer tamanho de tela. O template criado é composto pelos seguintes layouts:
+- Home Page
+- Tela do Cadastro do Usuário
+- Tela da Login do Usuário
+- Tela Redefinir Senha do Usuário
+- Tela Portal de Notícias
+- Tela Portal de Promoções
+- Tela de Comentários
+
+
 > **Links Úteis**:
 >
 > - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
