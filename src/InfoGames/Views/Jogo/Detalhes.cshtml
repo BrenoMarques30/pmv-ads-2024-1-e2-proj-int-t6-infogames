@@ -1,16 +1,17 @@
 ﻿@model Jogo
 
 <div class="container">
+
+    <div class="col-3">
+        <a class="btn btn-primary" asp-controller="Jogo" asp-action="Index">
+            Voltar
+        </a>
+    </div>
     <div class="row pt-4 pb-3">
         <div class="col-6">
             <h2 class="text-primary">
                 @Model?.Nome
             </h2>
-        </div>
-        <div class="col-3 text-end">
-            <a class="btn btn-primary" asp-controller="Jogo" asp-action="Index">
-                Voltar
-            </a>
         </div>
         <div class="col-12">
             <div class="row">
@@ -28,7 +29,13 @@
                             App Type
                         </div>
                         <div class="col-5">
-                            @Model?.DetalhesJogo?.Tipo
+                            @{
+                                var tipoApp = Model?.DetalhesJogo?.Tipo == "game" ? "Jogo" :
+                                Model?.DetalhesJogo?.Tipo == "dlc" ? "DLC" :
+                                Model?.DetalhesJogo?.Tipo == "music" ? "Soundtrack" :
+                                Model?.DetalhesJogo?.Tipo == "demo" ? "Demonstração" : Model?.DetalhesJogo?.Tipo;
+                                <div>@tipoApp</div>
+                            }
                         </div>
                     </div>
                     <div class="row">
@@ -50,7 +57,7 @@
                         </div>
                         <div class="col-5">
                             @if (Model?.DetalhesJogo?.Editor is not null) {
-                                foreach (var publisher in Model?.DetalhesJogo?.Editor) {
+                                foreach (var publisher in Model.DetalhesJogo.Editor) {
                                     <span>@publisher</span>
                                     <br />
                                 }
@@ -114,54 +121,111 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="@Model?.DetalhesJogo?.ImagemPrincipal" />
+                    <img class="rounded-20" src="@Model?.DetalhesJogo?.ImagemPrincipal" />
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!--<div class="row">
             <h2>Sobre o Jogo</h2>
         </div>
         <div class="row">
             <p>
-                @Html.Raw(Model?.DetalhesJogo?.SobreOJogo)
+        @Html.Raw(Model?.DetalhesJogo?.SobreOJogo)
             </p>
-        </div>
+        </div>-->
         <div class="row">
             <h2>Descrição</h2>
         </div>
-        <div class="row">
+
+        <div class="row" id="descricaoCurta">
+            <p>
+                @Html.Raw(Model?.DetalhesJogo?.DescricaoCurta)
+            </p>
+            <div class="row">
+                <button class="btn btn-primary" id="btnReadMore">Read More</button>
+            </div>
+        </div>
+        <div class="row" id="descricaoDetalhada" hidden>
             <p>
                 @Html.Raw(Model?.DetalhesJogo?.DescricaoDetalhada)
             </p>
+            <div class="row">
+                <button class="btn btn-primary" id="btnReadLess">Read Less</button>
+            </div>
         </div>
-        <div>
-            <h2>Screenshots</h2>
-        </div>
-        <div class="row">
-            @if (Model?.DetalhesJogo?.Screenshot is not null) {
-                foreach (var screenshot in Model.DetalhesJogo.Screenshot) {
-                    <div class="row col-6">
-                        <img src="@screenshot.UrlThumbnail" width="480" />
-                    </div>
-                }
-            }
-        </div>
-        <div>
-            <h2>Filmes</h2>
-        </div>
-        <div class="row">
-            @if (Model?.DetalhesJogo?.Filme is not null) {
-                <p>@Model.DetalhesJogo.Filme.Count()</p>
-                foreach (var filme in Model.DetalhesJogo.Filme) {
-                    <div class="row col-6">
-                        <p>@filme.Id</p>
-                        <video controls>
-                            <source src="@filme.Mp4?._480" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                }
-            }
-        </div>
+
+        <script>
+            document.getElementById("btnReadMore").addEventListener("click", function () {
+                document.getElementById("descricaoCurta").hidden = true;
+                document.getElementById("descricaoDetalhada").hidden = false;
+            });
+
+            document.getElementById("btnReadLess").addEventListener("click", function () {
+                document.getElementById("descricaoCurta").hidden = false;
+                document.getElementById("descricaoDetalhada").hidden = true;
+            });
+        </script>
+        @if (Model?.DetalhesJogo?.Screenshot is not null || Model?.DetalhesJogo?.Filme is not null) {
+            <div>
+                <h2>Traillers e Screenshots</h2>
+            </div>
+
+            <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel" style="height:50rem;width:100rem">
+                <div class="carousel-inner rounded-20">
+                    <ol class="carousel-indicators">
+                        @{
+                            var j = 0;
+                            if (Model?.DetalhesJogo?.Filme is not null) {
+                                foreach (var filme in Model.DetalhesJogo.Filme) {
+                                    <li data-bs-target="#screenshotCarousel" data-bs-slide-to="@j" class="@(j == 0 ? "active" : "")"></li>
+                                    j++;
+                                }
+                            }
+                            if (Model?.DetalhesJogo?.Screenshot is not null) {
+                                foreach (var screenshot in Model.DetalhesJogo.Screenshot) {
+                                    <li data-bs-target="#screenshotCarousel" data-bs-slide-to="@j" class="@(j == 0 ? "active" : "")"></li>
+                                    j++;
+                                }
+                            }
+                        }
+                    </ol>
+                    @{
+                        var i = 0;
+                        if (Model?.DetalhesJogo?.Filme is not null) {
+                            foreach (var filme in Model.DetalhesJogo.Filme) {
+                                <div class="carousel-item @(i == 0 ? "active" : "")" data-bs-interval="600000">
+                                    <video controls poster=@filme.Thumbnail class="d-block w-100">
+                                        <source src="@filme.Mp4?._480" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                i++;
+                            }
+                        }
+                        if (Model?.DetalhesJogo?.Screenshot is not null) {
+                            foreach (var screenshot in Model.DetalhesJogo.Screenshot) {
+
+                                <div class="carousel-item @(i == 0 ? "active" : "")">
+                                    <a href="@screenshot.UrlImagemCompleta"><img src="@screenshot.UrlThumbnail" class="d-block w-100" alt="..."></a>
+                                </div>
+                                i++;
+                            }
+                        }
+                    }
+                </div>
+                <a class="carousel-control-prev" role="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
+                    <span class="media-control-button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" role="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
+                    <span class="media-control-button">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        }
     </div>
 </div>
