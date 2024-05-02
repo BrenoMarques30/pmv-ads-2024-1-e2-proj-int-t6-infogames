@@ -7,24 +7,24 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var app = builder.Build();
+var _jogo = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment()) {
-    app.UseExceptionHandler("/Home/Error");
+if (!_jogo.Environment.IsDevelopment()) {
+    _jogo.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    _jogo.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+_jogo.UseHttpsRedirection();
+_jogo.UseStaticFiles();
 
-app.UseRouting();
+_jogo.UseRouting();
 
-app.UseAuthorization();
+_jogo.UseAuthorization();
 
-app.MapControllerRoute(
+_jogo.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+_jogo.Run();

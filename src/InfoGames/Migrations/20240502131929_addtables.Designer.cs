@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGames.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240428200756_AddTables")]
-    partial class AddTables
+    [Migration("20240502131929_addtables")]
+    partial class addtables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -59,7 +58,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Rating")
@@ -71,7 +69,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("ClassificacoesIndicativas");
                 });
@@ -82,7 +81,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Total")
@@ -91,7 +89,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("Conquistas");
                 });
@@ -108,18 +107,18 @@ namespace InfoGames.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("DatasDeLancamento");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Demos", b =>
+            modelBuilder.Entity("InfoGames.Models.Demonstracoes", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -131,7 +130,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -147,7 +145,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Ids")
@@ -159,7 +156,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("DescritoresDeConteudo");
                 });
@@ -198,7 +196,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Moeda")
@@ -219,12 +216,13 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("DetalhesDosPrecos");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.DetalhesJogo", b =>
+            modelBuilder.Entity("InfoGames.Models.DetalhesJogoModel", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -269,9 +267,6 @@ namespace InfoGames.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NotificacaoLegal")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("NumeroDeLikes")
                         .HasColumnType("nvarchar(max)");
 
@@ -285,6 +280,9 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SuporteAControle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TermosDeUso")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Thumbnail")
@@ -316,7 +314,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Nome")
@@ -341,7 +338,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdGenero")
@@ -369,7 +365,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Nome")
@@ -400,7 +395,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Url")
@@ -409,12 +403,38 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("InformacoesDeSuporte");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Jogo", b =>
+            modelBuilder.Entity("InfoGames.Models.JogoCompleto", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IdDetalhesJogo")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IdJogoCompleto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdDetalhesJogo")
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
+
+                    b.ToTable("JogosCompletos");
+                });
+
+            modelBuilder.Entity("InfoGames.Models.JogoModel", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -438,32 +458,7 @@ namespace InfoGames.Migrations
                     b.ToTable("Jogos");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.JogoCompleto", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IdJogoCompleto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
-
-                    b.ToTable("JogosCompletos");
-                });
-
-            modelBuilder.Entity("InfoGames.Models.Loja", b =>
+            modelBuilder.Entity("InfoGames.Models.LojaModel", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -488,8 +483,8 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5f53fa89-5bd1-466f-8090-ef580bd2e855",
-                            ChaveApi = "123456",
+                            Id = "36b6719e-6365-469c-a029-9ad73136c371",
+                            ChaveApi = "",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
                             Url = "https://store.steampowered.com/"
@@ -502,7 +497,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Pontuacao")
@@ -514,7 +508,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("Metacriticas");
                 });
@@ -544,11 +539,15 @@ namespace InfoGames.Migrations
 
             modelBuilder.Entity("InfoGames.Models.Pacote", b =>
                 {
-                    b.Property<string>("IdGrupoDePacote")
+                    b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("GrupoDePacoteId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IdGrupoDePacote")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("LicencaEGratuita")
                         .HasColumnType("bit");
@@ -574,7 +573,7 @@ namespace InfoGames.Migrations
                     b.Property<string>("PrecoComDesconto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdGrupoDePacote");
+                    b.HasKey("Id");
 
                     b.HasIndex("GrupoDePacoteId");
 
@@ -587,7 +586,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<bool?>("Linux")
@@ -602,7 +600,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("Plataformas");
                 });
@@ -613,7 +612,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Minimo")
@@ -625,7 +623,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("RequisitosLinux");
                 });
@@ -636,7 +635,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Minimo")
@@ -648,7 +646,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("RequisitosMac");
                 });
@@ -659,7 +658,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Minimo")
@@ -671,7 +669,8 @@ namespace InfoGames.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdDetalhesJogo")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[IdDetalhesJogo] IS NOT NULL");
 
                     b.ToTable("RequisitosPC");
                 });
@@ -682,7 +681,6 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdDetalhesJogo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UrlImagemCompleta")
@@ -725,66 +723,54 @@ namespace InfoGames.Migrations
 
             modelBuilder.Entity("InfoGames.Models.Categoria", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithMany("Categoria")
-                        .HasForeignKey("IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.ClassificacaoIndicativa", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("Classificacao")
-                        .HasForeignKey("InfoGames.Models.ClassificacaoIndicativa", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.ClassificacaoIndicativa", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Conquista", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("Conquista")
-                        .HasForeignKey("InfoGames.Models.Conquista", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.Conquista", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.DataDeLancamento", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("DataDeLancamento")
-                        .HasForeignKey("InfoGames.Models.DataDeLancamento", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.DataDeLancamento", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Demos", b =>
+            modelBuilder.Entity("InfoGames.Models.Demonstracoes", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithMany("Demonstracao")
-                        .HasForeignKey("IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.DescritorDeConteudo", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("DescritorDeConteudo")
-                        .HasForeignKey("InfoGames.Models.DescritorDeConteudo", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.DescritorDeConteudo", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
@@ -800,20 +786,18 @@ namespace InfoGames.Migrations
 
             modelBuilder.Entity("InfoGames.Models.DetalhesDoPreco", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("DetalhesDoPreco")
-                        .HasForeignKey("InfoGames.Models.DetalhesDoPreco", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.DetalhesDoPreco", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.DetalhesJogo", b =>
+            modelBuilder.Entity("InfoGames.Models.DetalhesJogoModel", b =>
                 {
-                    b.HasOne("InfoGames.Models.Jogo", "Jogo")
+                    b.HasOne("InfoGames.Models.JogoModel", "Jogo")
                         .WithOne("DetalhesJogo")
-                        .HasForeignKey("InfoGames.Models.DetalhesJogo", "IdJogo")
+                        .HasForeignKey("InfoGames.Models.DetalhesJogoModel", "IdJogo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -822,51 +806,52 @@ namespace InfoGames.Migrations
 
             modelBuilder.Entity("InfoGames.Models.Filme", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithMany("Filme")
-                        .HasForeignKey("IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Generos", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithMany("Genero")
-                        .HasForeignKey("IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.GrupoDePacote", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithMany("GrupoDePacotes")
-                        .HasForeignKey("IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.InformacaoDeSuporte", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("InformacaoDeSuporte")
-                        .HasForeignKey("InfoGames.Models.InformacaoDeSuporte", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.InformacaoDeSuporte", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Jogo", b =>
+            modelBuilder.Entity("InfoGames.Models.JogoCompleto", b =>
                 {
-                    b.HasOne("InfoGames.Models.Loja", "Loja")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
+                        .WithOne("JogoCompleto")
+                        .HasForeignKey("InfoGames.Models.JogoCompleto", "IdDetalhesJogo");
+
+                    b.Navigation("DetalhesJogo");
+                });
+
+            modelBuilder.Entity("InfoGames.Models.JogoModel", b =>
+                {
+                    b.HasOne("InfoGames.Models.LojaModel", "Loja")
                         .WithMany("Jogos")
                         .HasForeignKey("LojaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -875,24 +860,11 @@ namespace InfoGames.Migrations
                     b.Navigation("Loja");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.JogoCompleto", b =>
-                {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
-                        .WithOne("JogoCompleto")
-                        .HasForeignKey("InfoGames.Models.JogoCompleto", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DetalhesJogo");
-                });
-
             modelBuilder.Entity("InfoGames.Models.Metacritica", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("Metacritica")
-                        .HasForeignKey("InfoGames.Models.Metacritica", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.Metacritica", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
@@ -919,55 +891,45 @@ namespace InfoGames.Migrations
 
             modelBuilder.Entity("InfoGames.Models.Plataforma", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("Plataforma")
-                        .HasForeignKey("InfoGames.Models.Plataforma", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.Plataforma", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.RequisitoLinux", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("RequisitoLinux")
-                        .HasForeignKey("InfoGames.Models.RequisitoLinux", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.RequisitoLinux", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.RequisitoMac", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("RequisitoMac")
-                        .HasForeignKey("InfoGames.Models.RequisitoMac", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.RequisitoMac", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.RequisitoPC", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithOne("RequisitoPC")
-                        .HasForeignKey("InfoGames.Models.RequisitoPC", "IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InfoGames.Models.RequisitoPC", "IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Screenshot", b =>
                 {
-                    b.HasOne("InfoGames.Models.DetalhesJogo", "DetalhesJogo")
+                    b.HasOne("InfoGames.Models.DetalhesJogoModel", "DetalhesJogo")
                         .WithMany("Screenshot")
-                        .HasForeignKey("IdDetalhesJogo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdDetalhesJogo");
 
                     b.Navigation("DetalhesJogo");
                 });
@@ -988,7 +950,7 @@ namespace InfoGames.Migrations
                     b.Navigation("Destaque");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.DetalhesJogo", b =>
+            modelBuilder.Entity("InfoGames.Models.DetalhesJogoModel", b =>
                 {
                     b.Navigation("Categoria");
 
@@ -1039,12 +1001,12 @@ namespace InfoGames.Migrations
                     b.Navigation("Pacotes");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Jogo", b =>
+            modelBuilder.Entity("InfoGames.Models.JogoModel", b =>
                 {
                     b.Navigation("DetalhesJogo");
                 });
 
-            modelBuilder.Entity("InfoGames.Models.Loja", b =>
+            modelBuilder.Entity("InfoGames.Models.LojaModel", b =>
                 {
                     b.Navigation("Jogos");
                 });

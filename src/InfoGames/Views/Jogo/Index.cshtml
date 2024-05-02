@@ -1,16 +1,17 @@
-﻿@model List<Jogo>
+﻿@model List<JogoModel>
 
 @if (Model.Count == 0) {
     <div class="alert alert-warning" role="alert">
-        Nenhum jogo encontrado.
+        Nenhum Jogo encontrado.
     </div>
     <div class="col-3 text-end">
-        <a class="btn btn-primary disable-button-on-click" asp-controller="Jogo" asp-action="GetApps">
+        <a class="btn btn-primary disable-button-on-click" asp-controller="Jogo" asp-action="RecuperarJogos">
             Sincronizar com a Steam (~1 minuto)
         </a>
     </div>
 } else {
     <div class="container">
+        <!-- Ainda nao implementado -->
         <!--<div class="col-3 text-end">
             <a class="btn btn-primary disable-button-on-click" asp-controller="Jogo" asp-action="GetAppPrices">
                 Baixar Preços (~1 minuto)
@@ -31,14 +32,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var jogo in Model.OrderBy(u => u.Nome)) {
+                @foreach (var _jogo in Model.OrderBy(u => u.Nome)) {
                     <tr>
                         <td>
-                            <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">
-                                <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+jogo.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
+                            <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@_jogo.Id">
+                                <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+_jogo.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
                             </a>
                         </td>
-                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogo.Id">@jogo.Nome</a></td>
+                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@_jogo.Id">@_jogo.Nome</a></td>
                     </tr>
                 }
             </tbody>

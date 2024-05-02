@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InfoGames.Models {
     [Table("Lojas")]
-    public class Loja {
+    public class LojaModel {
         [Key]
         public required string Id { get; set; }
 
@@ -16,6 +16,6 @@ namespace InfoGames.Models {
 
         public string? ChaveApi { get; set; }
 
-        public ICollection<Jogo>? Jogos { get; set; }
+        public ICollection<JogoModel>? Jogos { get; set; }
     }
 }

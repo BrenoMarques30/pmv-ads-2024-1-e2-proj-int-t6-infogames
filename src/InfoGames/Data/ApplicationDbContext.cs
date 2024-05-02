@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using InfoGames.Models;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace InfoGames.Data {
     public class ApplicationDbContext : DbContext {
@@ -8,33 +9,38 @@ namespace InfoGames.Data {
 
         }
 
-        public DbSet<Loja> Lojas { get; set; }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+        //    base.OnConfiguring(optionsBuilder);
+
+        //    // Suppress the specific warning
+        //    optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.ForeignKeyPropertiesMappedToUnrelatedTables));
+        //}
+
+        public DbSet<LojaModel> Lojas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
-            modelBuilder.Entity<Loja>().HasData(
-                               new Loja {
+            modelBuilder.Entity<LojaModel>().HasData(
+                               new LojaModel {
                                    Id = Guid.NewGuid().ToString(),
                                    Nome = "Steam",
                                    Url = "https://store.steampowered.com/",
                                    Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
-                                   ChaveApi = "123456"
+                                   ChaveApi = ""
                                }
                              );
         }
 
 
-        public DbSet<Jogo> Jogos { get; set; }
-
-
+        public DbSet<JogoModel> Jogos { get; set; }
+        public DbSet<DetalhesJogoModel> DetalhesJogos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<ClassificacaoIndicativa> ClassificacoesIndicativas { get; set; }
         public DbSet<Conquista> Conquistas { get; set; }
         public DbSet<DataDeLancamento> DatasDeLancamento { get; set; }
-        public DbSet<Demos> Demos { get; set; }
+        public DbSet<Demonstracoes> Demos { get; set; }
         public DbSet<DescritorDeConteudo> DescritoresDeConteudo { get; set; }
         public DbSet<Destaque> Destaques { get; set; }
         public DbSet<DetalhesDoPreco> DetalhesDePrecos { get; set; }
-        public DbSet<DetalhesJogo> DetalhesJogos { get; set; }
         public DbSet<Filme> Filmes { get; set; }
         public DbSet<Generos> Generos { get; set; }
         public DbSet<GrupoDePacote> GruposDePacotes { get; set; }

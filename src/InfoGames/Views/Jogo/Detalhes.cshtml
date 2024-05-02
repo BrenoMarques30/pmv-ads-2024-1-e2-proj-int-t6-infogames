@@ -1,5 +1,9 @@
-﻿@model Jogo
-
+﻿@{
+    var app = ViewData["App"] as JogoModel;
+    var dlcs = ViewData["Dlcs"] as List<JogoModel>;
+    var jogoCompleto = ViewData["JogoCompleto"] as JogoModel;
+    var demos = ViewData["Demos"] as List<JogoModel>;
+}
 <div class="container">
 
     <div class="col-3">
@@ -10,7 +14,7 @@
     <div class="row pt-4 pb-3">
         <div class="col-6">
             <h2 class="text-primary">
-                @Model?.Nome
+                @app?.Nome
             </h2>
         </div>
         <div class="col-12">
@@ -21,7 +25,7 @@
                             App ID
                         </div>
                         <div class="col-5">
-                            @Model?.AppId
+                            @app?.AppId
                         </div>
                     </div>
                     <div class="row">
@@ -30,10 +34,10 @@
                         </div>
                         <div class="col-5">
                             @{
-                                var tipoApp = Model?.DetalhesJogo?.Tipo == "game" ? "Jogo" :
-                                Model?.DetalhesJogo?.Tipo == "dlc" ? "DLC" :
-                                Model?.DetalhesJogo?.Tipo == "music" ? "Soundtrack" :
-                                Model?.DetalhesJogo?.Tipo == "demo" ? "Demonstração" : Model?.DetalhesJogo?.Tipo;
+                                var tipoApp = app?.DetalhesJogo?.Tipo == "game" ? "Jogo" :
+                                app?.DetalhesJogo?.Tipo == "dlc" ? "DLC" :
+                                app?.DetalhesJogo?.Tipo == "music" ? "Soundtrack" :
+                                app?.DetalhesJogo?.Tipo == "demo" ? "Demonstração" : app?.DetalhesJogo?.Tipo;
                                 <div>@tipoApp</div>
                             }
                         </div>
@@ -43,8 +47,8 @@
                             Developer
                         </div>
                         <div class="col-5">
-                            @if (Model?.DetalhesJogo?.Desenvolvedor is not null) {
-                                foreach (var developer in Model.DetalhesJogo.Desenvolvedor) {
+                            @if (app?.DetalhesJogo?.Desenvolvedor is not null) {
+                                foreach (var developer in app.DetalhesJogo.Desenvolvedor) {
                                     <span>@developer</span>
                                     <br />
                                 }
@@ -56,8 +60,8 @@
                             Publisher
                         </div>
                         <div class="col-5">
-                            @if (Model?.DetalhesJogo?.Editor is not null) {
-                                foreach (var publisher in Model.DetalhesJogo.Editor) {
+                            @if (app?.DetalhesJogo?.Editor is not null) {
+                                foreach (var publisher in app.DetalhesJogo.Editor) {
                                     <span>@publisher</span>
                                     <br />
                                 }
@@ -69,15 +73,15 @@
                             Sistemas Operacionais Suportados
                         </div>
                         <div class="col-5">
-                            @if (Model?.DetalhesJogo?.Plataforma?.Windows is true) {
+                            @if (app?.DetalhesJogo?.Plataforma?.Windows is true) {
                                 <span>Windows</span>
                                 <br />
                             }
-                            @if (Model?.DetalhesJogo?.Plataforma?.Mac is true) {
+                            @if (app?.DetalhesJogo?.Plataforma?.Mac is true) {
                                 <span>Mac</span>
                                 <br />
                             }
-                            @if (Model?.DetalhesJogo?.Plataforma?.Linux is true) {
+                            @if (app?.DetalhesJogo?.Plataforma?.Linux is true) {
                                 <span>Linux</span>
                                 <br />
                             }
@@ -88,12 +92,12 @@
                             Classificação Indicativa
                         </div>
                         <div class="col-5">
-                            @if (Model?.DetalhesJogo?.RecomendacaoEtaria is not null) {
-                                <span>@Model?.DetalhesJogo?.RecomendacaoEtaria</span>
+                            @if (app?.DetalhesJogo?.RecomendacaoEtaria is not null) {
+                                <span>@app?.DetalhesJogo?.RecomendacaoEtaria</span>
                             } else {
                                 <span>Não informado</span>
                             }
-                            <span>@Model?.DetalhesJogo?.Classificacao?.Descricao</span>
+                            <span>@app?.DetalhesJogo?.Classificacao?.Descricao</span>
                         </div>
                     </div>
                     <div class="row">
@@ -101,8 +105,8 @@
                             Preço
                         </div>
                         <div class="col-5">
-                            @if (Model?.DetalhesJogo?.DetalhesDoPreco is not null) {
-                                <span>@Model.DetalhesJogo.DetalhesDoPreco.PrecoFinalFormatado</span>
+                            @if (app?.DetalhesJogo?.DetalhesDoPreco is not null) {
+                                <span>@app.DetalhesJogo.DetalhesDoPreco.PrecoFinalFormatado</span>
                             }
                         </div>
                     </div>
@@ -111,8 +115,8 @@
                             Generos
                         </div>
                         <div class="col-5">
-                            @if (Model?.DetalhesJogo?.Genero is not null) {
-                                foreach (var genero in Model.DetalhesJogo.Genero) {
+                            @if (app?.DetalhesJogo?.Genero is not null) {
+                                foreach (var genero in app.DetalhesJogo.Genero) {
                                     <span>@genero.Descricao</span>
                                     <br />
                                 }
@@ -121,25 +125,17 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <img class="rounded-20" src="@Model?.DetalhesJogo?.ImagemPrincipal" />
+                    <img class="rounded-20" src="@app?.DetalhesJogo?.ImagemPrincipal" />
                 </div>
             </div>
         </div>
-        <!--<div class="row">
-            <h2>Sobre o Jogo</h2>
-        </div>
-        <div class="row">
-            <p>
-        @Html.Raw(Model?.DetalhesJogo?.SobreOJogo)
-            </p>
-        </div>-->
         <div class="row">
             <h2>Descrição</h2>
         </div>
 
         <div class="row" id="descricaoCurta">
             <p>
-                @Html.Raw(Model?.DetalhesJogo?.DescricaoCurta)
+                @Html.Raw(app?.DetalhesJogo?.DescricaoCurta)
             </p>
             <div class="row">
                 <button class="btn btn-primary" id="btnReadMore">Read More</button>
@@ -147,7 +143,7 @@
         </div>
         <div class="row" id="descricaoDetalhada" hidden>
             <p>
-                @Html.Raw(Model?.DetalhesJogo?.DescricaoDetalhada)
+                @Html.Raw(app?.DetalhesJogo?.DescricaoDetalhada)
             </p>
             <div class="row">
                 <button class="btn btn-primary" id="btnReadLess">Read Less</button>
@@ -165,67 +161,129 @@
                 document.getElementById("descricaoDetalhada").hidden = true;
             });
         </script>
-        @if (Model?.DetalhesJogo?.Screenshot is not null || Model?.DetalhesJogo?.Filme is not null) {
+        @if (app?.DetalhesJogo?.Screenshot?.Count > 0 || app?.DetalhesJogo?.Filme?.Count > 0) {
             <div>
                 <h2>Traillers e Screenshots</h2>
             </div>
-
-            <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel" style="height:50rem;width:100rem">
-                <div class="carousel-inner rounded-20">
-                    <ol class="carousel-indicators">
+            <div class="col-6 align-self-auto">
+                <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-20">
+                        <ol class="carousel-indicators">
+                            @{
+                                var j = 0;
+                                if (app?.DetalhesJogo?.Filme is not null) {
+                                    foreach (var filme in app.DetalhesJogo.Filme) {
+                                        <li data-bs-target="#screenshotCarousel" data-bs-slide-to="@j" class="@(j == 0 ? "active" : "")"></li>
+                                        j++;
+                                    }
+                                }
+                                if (app?.DetalhesJogo?.Screenshot is not null) {
+                                    foreach (var screenshot in app.DetalhesJogo.Screenshot) {
+                                        <li data-bs-target="#screenshotCarousel" data-bs-slide-to="@j" class="@(j == 0 ? "active" : "")"></li>
+                                        j++;
+                                    }
+                                }
+                            }
+                        </ol>
                         @{
-                            var j = 0;
-                            if (Model?.DetalhesJogo?.Filme is not null) {
-                                foreach (var filme in Model.DetalhesJogo.Filme) {
-                                    <li data-bs-target="#screenshotCarousel" data-bs-slide-to="@j" class="@(j == 0 ? "active" : "")"></li>
-                                    j++;
+                            var i = 0;
+                            if (app?.DetalhesJogo?.Filme is not null) {
+                                foreach (var filme in app.DetalhesJogo.Filme) {
+                                    <div class="carousel-item @(i == 0 ? "active" : "")" data-bs-interval="600000">
+                                        <video controls poster=@filme.Thumbnail class="d-block w-100">
+                                            <source src="@filme.Mp4?._480" type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    i++;
                                 }
                             }
-                            if (Model?.DetalhesJogo?.Screenshot is not null) {
-                                foreach (var screenshot in Model.DetalhesJogo.Screenshot) {
-                                    <li data-bs-target="#screenshotCarousel" data-bs-slide-to="@j" class="@(j == 0 ? "active" : "")"></li>
-                                    j++;
-                                }
-                            }
-                        }
-                    </ol>
-                    @{
-                        var i = 0;
-                        if (Model?.DetalhesJogo?.Filme is not null) {
-                            foreach (var filme in Model.DetalhesJogo.Filme) {
-                                <div class="carousel-item @(i == 0 ? "active" : "")" data-bs-interval="600000">
-                                    <video controls poster=@filme.Thumbnail class="d-block w-100">
-                                        <source src="@filme.Mp4?._480" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                i++;
-                            }
-                        }
-                        if (Model?.DetalhesJogo?.Screenshot is not null) {
-                            foreach (var screenshot in Model.DetalhesJogo.Screenshot) {
+                            if (app?.DetalhesJogo?.Screenshot is not null) {
+                                foreach (var screenshot in app.DetalhesJogo.Screenshot) {
 
-                                <div class="carousel-item @(i == 0 ? "active" : "")">
-                                    <a href="@screenshot.UrlImagemCompleta"><img src="@screenshot.UrlThumbnail" class="d-block w-100" alt="..."></a>
-                                </div>
-                                i++;
+                                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                                        <a href="@screenshot.UrlImagemCompleta"><img src="@screenshot.UrlThumbnail" class="d-block w-100" alt="..."></a>
+                                    </div>
+                                    i++;
+                                }
                             }
                         }
-                    }
+                    </div>
+                    <a class="carousel-control-prev" role="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
+                        <span class="media-control-button">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" role="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
+                        <span class="media-control-button">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </span>
+                        <span class="sr-only"></span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" role="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
-                    <span class="media-control-button">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </span>
-                    <span class="sr-only"></span>
-                </a>
-                <a class="carousel-control-next" role="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
-                    <span class="media-control-button">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </span>
-                    <span class="sr-only"></span>
-                </a>
             </div>
+        }
+
+        @if (tipoApp == "Jogo" && app?.DetalhesJogo?.Dlc?.Count > 0) {
+            <div>
+                <h2>DLCs</h2>
+            </div>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    @foreach (var dlc in dlcs.OrderBy(u => u.Nome)) {
+                        <tr>
+                            <td>
+                                <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">
+                                    <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+dlc.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
+                                </a>
+                            </td>
+                            <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">@dlc.Nome</a></td>
+                            <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">@dlc.DetalhesJogo?.DetalhesDoPreco?.PrecoFinalFormatado</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+        @if (demos is not null) {
+            <div>
+                <h2>Demonstrações</h2>
+            </div>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    @foreach (var demo in demos.OrderBy(u => u.Nome)) {
+                        <tr>
+                            <td>
+                                <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@demo.Id">
+                                    <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+demo.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
+                                </a>
+                            </td>
+                            <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@demo.Id">@demo.Nome</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+
+        @if (jogoCompleto is not null) {
+            <div>
+                <h2>Jogo Completo</h2>
+            </div>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogoCompleto.Id">
+                                <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+jogoCompleto.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
+                            </a>
+                        </td>
+                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogoCompleto.Id">@jogoCompleto.Nome</a></td>
+                        <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@jogoCompleto.Id">@jogoCompleto.DetalhesJogo?.DetalhesDoPreco?.PrecoFinalFormatado</a></td>
+                    </tr>
+                </tbody>
+            </table>
         }
     </div>
 </div>

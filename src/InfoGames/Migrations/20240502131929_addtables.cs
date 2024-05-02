@@ -5,7 +5,7 @@
 namespace InfoGames.Migrations
 {
     /// <inheritdoc />
-    public partial class AddTables : Migration
+    public partial class addtables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -65,7 +65,7 @@ namespace InfoGames.Migrations
                     Thumbnail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Thumbnailv5 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Website = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NotificacaoLegal = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TermosDeUso = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NumeroDeLikes = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImagemBackground = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImagemBackgroundRaw = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -92,7 +92,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdCategoria = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -101,8 +101,7 @@ namespace InfoGames.Migrations
                         name: "FK_Categorias_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -114,7 +113,7 @@ namespace InfoGames.Migrations
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BloquearPorIdade = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RecomendacaoEtaria = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -123,8 +122,7 @@ namespace InfoGames.Migrations
                         name: "FK_ClassificacoesIndicativas_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -133,7 +131,7 @@ namespace InfoGames.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Total = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -142,8 +140,7 @@ namespace InfoGames.Migrations
                         name: "FK_Conquistas_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -153,7 +150,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EstaChegando = table.Column<bool>(type: "bit", nullable: false),
                     Data = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -162,8 +159,7 @@ namespace InfoGames.Migrations
                         name: "FK_DatasDeLancamento_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -173,7 +169,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Appid = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -182,8 +178,7 @@ namespace InfoGames.Migrations
                         name: "FK_Demos_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -193,7 +188,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Ids = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Notas = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -202,8 +197,7 @@ namespace InfoGames.Migrations
                         name: "FK_DescritoresDeConteudo_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -217,7 +211,7 @@ namespace InfoGames.Migrations
                     DescontoPorcentagem = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrecoInicialFormatado = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrecoFinalFormatado = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -226,8 +220,7 @@ namespace InfoGames.Migrations
                         name: "FK_DetalhesDosPrecos_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -238,7 +231,7 @@ namespace InfoGames.Migrations
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Thumbnail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Destacar = table.Column<bool>(type: "bit", nullable: false),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -247,8 +240,7 @@ namespace InfoGames.Migrations
                         name: "FK_Filmes_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -258,7 +250,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdGenero = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -267,8 +259,7 @@ namespace InfoGames.Migrations
                         name: "FK_Generos_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -283,7 +274,7 @@ namespace InfoGames.Migrations
                     SalvarTexto = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ExibirTipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EAssinaturaRecorrente = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -292,8 +283,7 @@ namespace InfoGames.Migrations
                         name: "FK_GruposDePacotes_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -303,7 +293,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -312,8 +302,7 @@ namespace InfoGames.Migrations
                         name: "FK_InformacoesDeSuporte_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -323,7 +312,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdJogoCompleto = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -332,8 +321,7 @@ namespace InfoGames.Migrations
                         name: "FK_JogosCompletos_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -343,7 +331,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Pontuacao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -352,8 +340,7 @@ namespace InfoGames.Migrations
                         name: "FK_Metacriticas_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -364,7 +351,7 @@ namespace InfoGames.Migrations
                     Windows = table.Column<bool>(type: "bit", nullable: true),
                     Mac = table.Column<bool>(type: "bit", nullable: true),
                     Linux = table.Column<bool>(type: "bit", nullable: true),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -373,8 +360,7 @@ namespace InfoGames.Migrations
                         name: "FK_Plataformas_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -382,7 +368,7 @@ namespace InfoGames.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Minimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Recomendado = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -393,8 +379,7 @@ namespace InfoGames.Migrations
                         name: "FK_RequisitosLinux_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -402,7 +387,7 @@ namespace InfoGames.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Minimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Recomendado = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -413,8 +398,7 @@ namespace InfoGames.Migrations
                         name: "FK_RequisitosMac_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -422,7 +406,7 @@ namespace InfoGames.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Minimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Recomendado = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -433,8 +417,7 @@ namespace InfoGames.Migrations
                         name: "FK_RequisitosPC_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -444,7 +427,7 @@ namespace InfoGames.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     UrlThumbnail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UrlImagemCompleta = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdDetalhesJogo = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -453,8 +436,7 @@ namespace InfoGames.Migrations
                         name: "FK_Screenshots_DetalhesJogos_IdDetalhesJogo",
                         column: x => x.IdDetalhesJogo,
                         principalTable: "DetalhesJogos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -521,7 +503,8 @@ namespace InfoGames.Migrations
                 name: "Pacotes",
                 columns: table => new
                 {
-                    IdGrupoDePacote = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdGrupoDePacote = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GrupoDePacoteId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     PacoteId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PorcentagemDoDescontoTexto = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -534,7 +517,7 @@ namespace InfoGames.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pacotes", x => x.IdGrupoDePacote);
+                    table.PrimaryKey("PK_Pacotes", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Pacotes_GruposDePacotes_GrupoDePacoteId",
                         column: x => x.GrupoDePacoteId,
@@ -545,7 +528,7 @@ namespace InfoGames.Migrations
             migrationBuilder.InsertData(
                 table: "Lojas",
                 columns: new[] { "Id", "ChaveApi", "Logo", "Nome", "Url" },
-                values: new object[] { "5f53fa89-5bd1-466f-8090-ef580bd2e855", "123456", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
+                values: new object[] { "36b6719e-6365-469c-a029-9ad73136c371", "", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Categorias_IdDetalhesJogo",
@@ -556,19 +539,22 @@ namespace InfoGames.Migrations
                 name: "IX_ClassificacoesIndicativas_IdDetalhesJogo",
                 table: "ClassificacoesIndicativas",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Conquistas_IdDetalhesJogo",
                 table: "Conquistas",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DatasDeLancamento_IdDetalhesJogo",
                 table: "DatasDeLancamento",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Demos_IdDetalhesJogo",
@@ -579,7 +565,8 @@ namespace InfoGames.Migrations
                 name: "IX_DescritoresDeConteudo_IdDetalhesJogo",
                 table: "DescritoresDeConteudo",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Destaques_IdConquistas",
@@ -590,7 +577,8 @@ namespace InfoGames.Migrations
                 name: "IX_DetalhesDosPrecos_IdDetalhesJogo",
                 table: "DetalhesDosPrecos",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DetalhesJogos_IdJogo",
@@ -617,7 +605,8 @@ namespace InfoGames.Migrations
                 name: "IX_InformacoesDeSuporte_IdDetalhesJogo",
                 table: "InformacoesDeSuporte",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Jogos_LojaId",
@@ -628,13 +617,15 @@ namespace InfoGames.Migrations
                 name: "IX_JogosCompletos_IdDetalhesJogo",
                 table: "JogosCompletos",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Metacriticas_IdDetalhesJogo",
                 table: "Metacriticas",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Mp4s_IdFilme",
@@ -651,25 +642,29 @@ namespace InfoGames.Migrations
                 name: "IX_Plataformas_IdDetalhesJogo",
                 table: "Plataformas",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RequisitosLinux_IdDetalhesJogo",
                 table: "RequisitosLinux",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RequisitosMac_IdDetalhesJogo",
                 table: "RequisitosMac",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RequisitosPC_IdDetalhesJogo",
                 table: "RequisitosPC",
                 column: "IdDetalhesJogo",
-                unique: true);
+                unique: true,
+                filter: "[IdDetalhesJogo] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Screenshots_IdDetalhesJogo",

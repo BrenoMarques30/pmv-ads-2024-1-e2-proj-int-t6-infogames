@@ -1,10 +1,43 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using InfoGames.Models.Steam;
+using System.Diagnostics.CodeAnalysis;
+using Humanizer.Localisation;
 
 namespace InfoGames.Models {
     [Table("DetalhesJogos")]
-    public class DetalhesJogo {
+    public class DetalhesJogoModel {
+
+        public DetalhesJogoModel() { }
+
+        [SetsRequiredMembers]
+        public DetalhesJogoModel(AppData _AppData, JogoModel _jogo) {
+            Id = Guid.NewGuid().ToString();
+            IdJogo = _jogo.Id.ToString();
+            Jogo = _jogo;
+            Tipo = _AppData?.Type;
+            Nome = _AppData?.Name;
+            AppId = _AppData?.Appid;
+            Pacotes = _AppData?.Packages;
+            EGratuito = _AppData?.IsFree;
+            SuporteAControle = _AppData?.ControllerSupport;
+            DescricaoDetalhada = _AppData?.DetailedDescription;
+            SobreOJogo = _AppData?.AboutTheGame;
+            DescricaoCurta = _AppData?.ShortDescription;
+            LinguasDisponiveis = _AppData?.SupportedLanguages;
+            ImagemPrincipal = _AppData?.HeaderImage;
+            Thumbnail = _AppData?.CapsuleImage;
+            Thumbnailv5 = _AppData?.CapsuleImagev5;
+            Website = _AppData?.Website;
+            TermosDeUso = _AppData?.LegalNotice;
+            NumeroDeLikes = _AppData?.Recommendations?.Total;
+            Dlc = _AppData?.Dlc;
+            Desenvolvedor = _AppData?.Developers;
+            Editor = _AppData?.Publishers;
+            Pacotes = _AppData?.Packages;
+            RecomendacaoEtaria = _AppData?.RequiredAge;
+        }
 
         [Display(Name = "Id (referencia interna")]
         [Key] public required string Id { get; set; }
@@ -13,8 +46,8 @@ namespace InfoGames.Models {
         public required string IdJogo { get; set; }
 
         [ForeignKey("IdJogo")]
-        [Required(ErrorMessage = "Obrigatório informar o jogo")]
-        public required Jogo Jogo { get; set; }
+        [Required(ErrorMessage = "Obrigatório informar o _jogo")]
+        public required JogoModel Jogo { get; set; }
 
         [Display(Name = "Tipo")]
         public string? Tipo { get; set; }
@@ -37,7 +70,7 @@ namespace InfoGames.Models {
         [Display(Name = "Descrição detalhada")]
         public string? DescricaoDetalhada { get; set; }
 
-        [Display(Name = "Sobre o jogo")]
+        [Display(Name = "Sobre o _jogo")]
         public string? SobreOJogo { get; set; }
 
         [Display(Name = "Descrição curta")]
@@ -59,7 +92,7 @@ namespace InfoGames.Models {
         public string? Website { get; set; }
 
         [Display(Name = "Notificação Legal")]
-        public string? NotificacaoLegal { get; set; }
+        public string? TermosDeUso { get; set; }
 
         [Display(Name = "Número de Likes")]
         public string? NumeroDeLikes { get; set; }
@@ -134,32 +167,53 @@ namespace InfoGames.Models {
         public ClassificacaoIndicativa? Classificacao { get; set; }
 
         [Display(Name = "Demonstrações")]
-        public ICollection<Demos>? Demonstracao { get; set; }
+        public ICollection<Demonstracoes>? Demonstracao { get; set; }
     }
 
     public class FilhoDetalheJogo {
+
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
 
+        [ForeignKey("DetalhesJogo")]
         [Display(Name = "Id da key na tabela DetalhesJogos")]
-        public required string IdDetalhesJogo { get; set; }
+        public string? IdDetalhesJogo { get; set; }
 
-        [ForeignKey("IdDetalhesJogo")]
-        public required DetalhesJogo? DetalhesJogo { get; set; }
+        public DetalhesJogoModel? DetalhesJogo { get; set; }
     }
 
-    [Table("JogosCompletos")]
-    public class JogoCompleto : FilhoDetalheJogo {
+    [Table("Categorias")]
+    public class Categoria : FilhoDetalheJogo {
+        public Categoria() { }
 
-        [Display(Name = "Id do jogo completo (referencia na Steam)")]
-        public required string IdJogoCompleto { get; set; }
+        [SetsRequiredMembers]
+        public Categoria(Category _Category, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            IdCategoria = _Category.Id;
+            Descricao = _Category.Description;
+        }
 
-        [Display(Name = "Nome do jogo completo")]
-        public required string Nome { get; set; }
+        [Display(Name = "Id da Categoria (referencia na Steam)")]
+        public string? IdCategoria { get; set; }
+
+        [Display(Name = "Descrição")]
+        public string? Descricao { get; set; }
     }
 
     public class Requisito : FilhoDetalheJogo {
+
+        public Requisito() { }
+
+        [SetsRequiredMembers]
+        public Requisito(Requirements requirements, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Minimo = requirements.Minimum;
+            Recomendado = requirements.Recommended;
+        }
+
         [Display(Name = "Requisitos Mínimos")]
         public string? Minimo { get; set; }
 
@@ -169,18 +223,66 @@ namespace InfoGames.Models {
 
     [Table("RequisitosPC")]
     public class RequisitoPC : Requisito {
+
+        public RequisitoPC() { }
+
+        [SetsRequiredMembers]
+        public RequisitoPC(Requirements _Requirements, DetalhesJogoModel _DetalhesJogo) : base(_Requirements, _DetalhesJogo) { }
     }
 
     [Table("RequisitosMac")]
     public class RequisitoMac : Requisito {
+
+        public RequisitoMac() { }
+
+        [SetsRequiredMembers]
+        public RequisitoMac(Requirements _Requirements, DetalhesJogoModel _DetalhesJogo) : base(_Requirements, _DetalhesJogo) { }
     }
 
     [Table("RequisitosLinux")]
     public class RequisitoLinux : Requisito {
+        public RequisitoLinux() { }
+
+        [SetsRequiredMembers]
+        public RequisitoLinux(Requirements _Requirements, DetalhesJogoModel _DetalhesJogo) : base(_Requirements, _DetalhesJogo) { }
+    }
+
+    [Table("JogosCompletos")]
+    public class JogoCompleto : FilhoDetalheJogo {
+        public JogoCompleto() { }
+
+        [SetsRequiredMembers]
+        public JogoCompleto(FullGame fullGame, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            DetalhesJogo = _DetalhesJogo;
+            IdJogoCompleto = fullGame.Appid ?? string.Empty;
+            Nome = fullGame.Name ?? string.Empty;
+        }
+
+        [Display(Name = "Id do _jogo completo (referencia na Steam)")]
+        public required string IdJogoCompleto { get; set; }
+
+        [Display(Name = "Nome do _jogo completo")]
+        public required string Nome { get; set; }
     }
 
     [Table("DetalhesDosPrecos")]
     public class DetalhesDoPreco : FilhoDetalheJogo {
+        public DetalhesDoPreco() { }
+
+        [SetsRequiredMembers]
+        public DetalhesDoPreco(PriceOverview _PriceOverview, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Moeda = _PriceOverview.Currency;
+            PrecoInicial = _PriceOverview.Initial;
+            PrecoFinal = _PriceOverview.Final;
+            DescontoPorcentagem = _PriceOverview.DiscountPercent;
+            PrecoInicialFormatado = _PriceOverview.InitialFormatted;
+            PrecoFinalFormatado = _PriceOverview.FinalFormatted;
+
+        }
 
         [Display(Name = "Moeda")]
         public string? Moeda { get; set; }
@@ -203,6 +305,20 @@ namespace InfoGames.Models {
 
     [Table("GruposDePacotes")]
     public class GrupoDePacote : FilhoDetalheJogo {
+        public GrupoDePacote() { }
+
+        [SetsRequiredMembers]
+        public GrupoDePacote(PackageGroup _PackageGroup, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Nome = _PackageGroup?.Name;
+            Titulo = _PackageGroup?.Title;
+            Descricao = _PackageGroup?.Description;
+            SelecaoDeTexto = _PackageGroup?.SelectionText;
+            SalvarTexto = _PackageGroup?.SaveText;
+            ExibirTipo = _PackageGroup?.DisplayType;
+            EAssinaturaRecorrente = _PackageGroup?.IsRecurringSubscription;
+        }
 
         [Display(Name = "Nome")]
         public string? Nome { get; set; }
@@ -231,7 +347,25 @@ namespace InfoGames.Models {
 
     [Table("Pacotes")]
     public class Pacote {
-        [Key] public required string IdGrupoDePacote { get; set; }
+        public Pacote() { }
+
+        [SetsRequiredMembers]
+        public Pacote(Sub sub, GrupoDePacote _GrupoDePacote) {
+            Id = Guid.NewGuid().ToString();
+            IdGrupoDePacote = _GrupoDePacote.Id;
+            GrupoDePacote = _GrupoDePacote;
+            PacoteId = sub?.Packageid;
+            PorcentagemDoDescontoTexto = sub?.PercentSavingsText;
+            PorcentagemDoDesconto = sub?.PercentSavings;
+            OpcaoTexto = sub?.OptionText;
+            OpcaoDescricao = sub?.OptionDescription;
+            ObtidaGratuitamente = sub?.CanGetFreeLicense;
+            LicencaEGratuita = sub?.IsFreeLicense;
+            PrecoComDesconto = sub?.PriceInCentsWithDiscount;
+        }
+        [Key]
+        public required string Id { get; set; }
+        public required string IdGrupoDePacote { get; set; }
 
         [ForeignKey("GrupoDePacoteId")]
         public required GrupoDePacote? GrupoDePacote { get; set; }
@@ -263,6 +397,16 @@ namespace InfoGames.Models {
 
     [Table("Plataformas")]
     public class Plataforma : FilhoDetalheJogo {
+        public Plataforma() { }
+
+        [SetsRequiredMembers]
+        public Plataforma(Platforms _Platforms, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Windows = _Platforms.Windows;
+            Mac = _Platforms.Mac;
+            Linux = _Platforms.Linux;
+        }
 
         [Display(Name = "Windows")]
         public bool? Windows { get; set; }
@@ -276,6 +420,15 @@ namespace InfoGames.Models {
 
     [Table("Metacriticas")]
     public class Metacritica : FilhoDetalheJogo {
+        public Metacritica() { }
+
+        [SetsRequiredMembers]
+        public Metacritica(Metacritic _Metacritic, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Pontuacao = _Metacritic.Score;
+            Url = _Metacritic.Url;
+        }
 
         [Display(Name = "Pontuação")]
         public string? Pontuacao { get; set; }
@@ -284,17 +437,19 @@ namespace InfoGames.Models {
         public string? Url { get; set; }
     }
 
-    [Table("Categorias")]
-    public class Categoria : FilhoDetalheJogo {
-        [Display(Name = "Id da Categoria (referencia na Steam)")]
-        public string? IdCategoria { get; set; }
 
-        [Display(Name = "Descrição")]
-        public string? Descricao { get; set; }
-    }
 
     [Table("Generos")]
     public class Generos : FilhoDetalheJogo {
+        public Generos() { }
+
+        [SetsRequiredMembers]
+        public Generos(Genre _Genre, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            IdGenero = _Genre.Id;
+            Descricao = _Genre.Description;
+        }
 
         [Display(Name = "Id do Gênero (referencia na Steam)")]
         public string? IdGenero { get; set; }
@@ -305,6 +460,15 @@ namespace InfoGames.Models {
 
     [Table("Screenshots")]
     public class Screenshot : FilhoDetalheJogo {
+        public Screenshot() { }
+
+        [SetsRequiredMembers]
+        public Screenshot(Images _Image, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            UrlThumbnail = _Image.PathThumbnail;
+            UrlImagemCompleta = _Image.PathFull;
+        }
 
         [Display(Name = "URL da thumbnail")]
         public required string UrlThumbnail { get; set; }
@@ -315,6 +479,16 @@ namespace InfoGames.Models {
 
     [Table("Filmes")]
     public class Filme : FilhoDetalheJogo {
+        public Filme() { }
+
+        [SetsRequiredMembers]
+        public Filme(Movie _Movie, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Nome = _Movie.Name;
+            Thumbnail = _Movie.Thumbnail;
+            Destacar = _Movie.Highlight;
+        }
 
         [Display(Name = "Nome")]
         public string? Nome { get; set; }
@@ -322,17 +496,28 @@ namespace InfoGames.Models {
         [Display(Name = "URL da thumbnail")]
         public string? Thumbnail { get; set; }
 
+        [Display(Name = "Destacar?")]
+        public bool Destacar { get; set; }
+
         [Display(Name = "Vídeo (Web movie)")]
         public Webm? Webm { get; set; }
 
         [Display(Name = "Vídeo (.mp4)")]
         public Mp4? Mp4 { get; set; }
-
-        [Display(Name = "Destacar?")]
-        public bool Destacar { get; set; }
     }
 
     public class Midias {
+        public Midias() { }
+
+        [SetsRequiredMembers]
+        public Midias(Media _Media, Filme _Filme) {
+            Id = Guid.NewGuid().ToString();
+            IdFilme = _Filme.Id;
+            Filme = _Filme;
+            Max = _Media.Max;
+            _480 = _Media._480;
+        }
+
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -352,14 +537,30 @@ namespace InfoGames.Models {
 
     [Table("Webms")]
     public class Webm : Midias {
+        public Webm() { }
+
+        [SetsRequiredMembers]
+        public Webm(Media _Media, Filme _Filme) : base(_Media, _Filme) { }
     }
 
     [Table("Mp4s")]
     public class Mp4 : Midias {
+        public Mp4() { }
+
+        [SetsRequiredMembers]
+        public Mp4(Media _Media, Filme _Filme) : base(_Media, _Filme) { }
     }
 
     [Table("Conquistas")]
     public class Conquista : FilhoDetalheJogo {
+        public Conquista() { }
+
+        [SetsRequiredMembers]
+        public Conquista(Achievements _Achievements, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Total = _Achievements.Total;
+        }
 
         [Display(Name = "Número de pessoas que atingiram essa conquista")]
         public string? Total { get; set; }
@@ -370,6 +571,17 @@ namespace InfoGames.Models {
 
     [Table("Destaques")]
     public class Destaque {
+        public Destaque() { }
+
+        [SetsRequiredMembers]
+        public Destaque(Highlighted _Highlighted, Conquista _Conquista) {
+            Id = Guid.NewGuid().ToString();
+            IdConquista = _Conquista.Id;
+            Conquista = _Conquista;
+            Nome = _Highlighted.Name;
+            UrlIcone = _Highlighted.Path;
+        }
+
         [Key]
         [Display(Name = "Id (referencia interna)")]
         public required string Id { get; set; }
@@ -389,6 +601,15 @@ namespace InfoGames.Models {
 
     [Table("DatasDeLancamento")]
     public class DataDeLancamento : FilhoDetalheJogo {
+        public DataDeLancamento() { }
+
+        [SetsRequiredMembers]
+        public DataDeLancamento(ReleaseDate _ReleaseDate, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Data = _ReleaseDate.Date;
+            EstaChegando = _ReleaseDate.ComingSoon;
+        }
 
         [Display(Name = "Está chegando?")]
         public bool EstaChegando { get; set; }
@@ -399,6 +620,15 @@ namespace InfoGames.Models {
 
     [Table("InformacoesDeSuporte")]
     public class InformacaoDeSuporte : FilhoDetalheJogo {
+        public InformacaoDeSuporte() { }
+
+        [SetsRequiredMembers]
+        public InformacaoDeSuporte(SupportInfo _SupportInfo, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Url = _SupportInfo.Url;
+            Email = _SupportInfo.Email;
+        }
 
         [Display(Name = "URL")]
         public string? Url { get; set; }
@@ -409,9 +639,18 @@ namespace InfoGames.Models {
 
     [Table("DescritoresDeConteudo")]
     public class DescritorDeConteudo : FilhoDetalheJogo {
+        public DescritorDeConteudo() { }
+
+        [SetsRequiredMembers]
+        public DescritorDeConteudo(ContentDescriptors _ContentDescriptors, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Ids = _ContentDescriptors?.Ids;
+            Notas = _ContentDescriptors?.Notes;
+        }
 
         [Display(Name = "Ids")]
-        public ICollection<string>? Ids { get; set; }
+        public List<string?>? Ids { get; set; }
 
         [Display(Name = "Notas")]
         public string? Notas { get; set; }
@@ -419,6 +658,17 @@ namespace InfoGames.Models {
 
     [Table("ClassificacoesIndicativas")]
     public class ClassificacaoIndicativa : FilhoDetalheJogo {
+        public ClassificacaoIndicativa() { }
+
+        [SetsRequiredMembers]
+        public ClassificacaoIndicativa(Ratings _Ratings, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Rating = _Ratings.Dejus?.Rating;
+            Descricao = _Ratings.Dejus?.Descriptors;
+            RecomendacaoEtaria = _Ratings.Dejus?.RequiredAge;
+            BloquearPorIdade = _Ratings.Dejus?.UseAgeGate;
+        }
 
         [Display(Name = "Classificação")]
         public string? Rating { get; set; }
@@ -434,9 +684,18 @@ namespace InfoGames.Models {
     }
 
     [Table("Demos")]
-    public class Demos : FilhoDetalheJogo {
+    public class Demonstracoes : FilhoDetalheJogo {
+        public Demonstracoes() { }
 
-        [Display(Name = "Id do jogo (referencia na Steam)")]
+        [SetsRequiredMembers]
+        public Demonstracoes(Demos _Demos, DetalhesJogoModel _DetalhesJogo) {
+            Id = Guid.NewGuid().ToString();
+            DetalhesJogo = _DetalhesJogo;
+            Appid = _Demos.Appid;
+            Descricao = _Demos.Description;
+        }
+
+        [Display(Name = "Id do _jogo (referencia na Steam)")]
         public string? Appid { get; set; }
 
         [Display(Name = "Descrição")]
