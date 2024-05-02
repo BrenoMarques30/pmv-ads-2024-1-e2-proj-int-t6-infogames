@@ -58,11 +58,11 @@
 
     <div>
         @if (ViewBag.Page > 1) {
-            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page - 1, pageSize = ViewBag.PageSize })">Previous</a>
+            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page - 1, pageSize = ViewBag.PageSize, searchTerm = ViewBag.SerchTerm })">Previous</a>
         }
 
         @if (ViewBag.Page < ViewBag.TotalPages) {
-            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page + 1, pageSize = ViewBag.PageSize })">Next</a>
+            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page + 1, pageSize = ViewBag.PageSize, ViewBag.SearchTerm })">Next</a>
         }
     </div>
     <span>Page @ViewBag.Page / <a href="@Url.Action("Index","Jogo", new { page=ViewBag.TotalPages,pageSize = ViewBag.PageSize})">@ViewBag.TotalPages</a></span>

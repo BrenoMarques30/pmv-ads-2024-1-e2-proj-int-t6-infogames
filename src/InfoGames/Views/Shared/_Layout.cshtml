@@ -30,6 +30,20 @@
                             <a class="nav-link text-dark" asp-controller="Jogo" asp-action="Index">Jogos</a>
                         </li>
                     </ul>
+                    <div class="row col-6 end-0">
+                        <form class="form-inline" asp-controller="Jogo" asp-action="Index" method="get" onsubmit="return false;">
+                            <div class="input-group">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm" id="searchTerm">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success my-2 my-sm-0 visually-hidden" type="button" onclick="submitSearch()">
+                                        <!--<i class="fas fa-search"></i>-->
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
                 </div>
             </div>
         </nav>
@@ -49,6 +63,18 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="/js/disableButtonOnClick.js"></script>
+    <script>
+        function submitSearch() {
+            var searchTerm = document.getElementById('searchTerm').value;
+            window.location.href = '/Jogo/Index?searchTerm=' + encodeURIComponent(searchTerm);
+        }
+
+        document.getElementById('searchTerm').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                submitSearch();
+            }
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

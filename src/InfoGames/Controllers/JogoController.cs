@@ -3,8 +3,6 @@ using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
 using InfoGames.Middlewares;
 using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 
 namespace InfoGames.Controllers {
     public class JogoController : Controller {
@@ -12,15 +10,17 @@ namespace InfoGames.Controllers {
         public JogoController(ApplicationDbContext db) {
             _db = db;
         }
-        public ActionResult Index(int page = 1, int pageSize = 50) {
-            // Perform pagination
-            var jogosOnPage = _db.Jogos.OrderBy(j => j.Nome).Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        public ActionResult Index(int page = 1, int pageSize = 50, string searchTerm = "") {
+            var jogosFiltrados = _db.Jogos.Where(j => j.Nome.Contains(searchTerm)).OrderBy(j => j.Nome).ToList();
+
+            var jogosOnPage = jogosFiltrados.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
             // Pass data to the view
             ViewBag.Jogos = jogosOnPage;
             ViewBag.Page = page;
             ViewBag.PageSize = pageSize;
-            ViewBag.TotalPages = Math.Ceiling((double)_db.Jogos.Count() / pageSize);
+            ViewBag.SearchTerm = searchTerm;
+            ViewBag.TotalPages = Math.Ceiling((double)jogosFiltrados.Count() / pageSize);
 
 
             return View(jogosOnPage);
@@ -28,6 +28,10 @@ namespace InfoGames.Controllers {
 
         public IActionResult ChangePageSize(int pageSize) {
             return RedirectToAction("Index", new { pageSize });
+        }
+
+        public IActionResult Search(string searchTerm) {
+            return RedirectToAction("Index", new { searchTerm });
         }
 
         public IActionResult RecuperarJogos() {
@@ -127,6 +131,10 @@ namespace InfoGames.Controllers {
             if (_jogo.DetalhesJogo?.Demonstracao is not null) {
                 List<JogoModel> demos = [];
                 foreach (var demo in _jogo.DetalhesJogo.Demonstracao) {
+                    if (demo.Appid is null) {
+                        Debug.WriteLine("Appid da demo não encontrado.");
+                        continue;
+                    }
                     JogoModel? _demo = BuscarJogo.PorAppId(demo.Appid, _db);
                     if (_demo is null) {
                         Debug.WriteLine("Demo " + demo.Appid + " não encontrada no banco de dados.");
