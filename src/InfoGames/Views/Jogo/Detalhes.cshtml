@@ -36,7 +36,7 @@
                             @{
                                 var tipoApp = app?.DetalhesJogo?.Tipo == "game" ? "Jogo" :
                                 app?.DetalhesJogo?.Tipo == "dlc" ? "DLC" :
-                                app?.DetalhesJogo?.Tipo == "music" ? "Soundtrack" :
+                                app?.DetalhesJogo?.Tipo == "music" ? "Trilha Sonora" :
                                 app?.DetalhesJogo?.Tipo == "demo" ? "Demonstração" : app?.DetalhesJogo?.Tipo;
                                 <div>@tipoApp</div>
                             }
@@ -50,7 +50,6 @@
                             @if (app?.DetalhesJogo?.Desenvolvedor is not null) {
                                 foreach (var developer in app.DetalhesJogo.Desenvolvedor) {
                                     <span>@developer</span>
-                                    <br />
                                 }
                             }
                         </div>
@@ -63,7 +62,6 @@
                             @if (app?.DetalhesJogo?.Editor is not null) {
                                 foreach (var publisher in app.DetalhesJogo.Editor) {
                                     <span>@publisher</span>
-                                    <br />
                                 }
                             }
                         </div>
@@ -73,18 +71,21 @@
                             Sistemas Operacionais Suportados
                         </div>
                         <div class="col-5">
+                            @{
+                                int counter = 0;
+                                string _texto = "";
+                            }
                             @if (app?.DetalhesJogo?.Plataforma?.Windows is true) {
-                                <span>Windows</span>
-                                <br />
+                                _texto += "Windows";
+                                counter++;
                             }
                             @if (app?.DetalhesJogo?.Plataforma?.Mac is true) {
-                                <span>Mac</span>
-                                <br />
+                                _texto += counter++ > 0 ? ", Mac" : "Mac";
                             }
                             @if (app?.DetalhesJogo?.Plataforma?.Linux is true) {
-                                <span>Linux</span>
-                                <br />
+                                _texto += counter++ > 0 ? ", Linux" : "Linux";
                             }
+                            <span>@_texto</span>
                         </div>
                     </div>
                     <div class="row">
@@ -93,11 +94,15 @@
                         </div>
                         <div class="col-5">
                             @if (app?.DetalhesJogo?.RecomendacaoEtaria is not null) {
-                                <span>@app?.DetalhesJogo?.RecomendacaoEtaria</span>
+                                @if (app?.DetalhesJogo?.RecomendacaoEtaria == "0") {
+                                    <span>Livre</span>
+                                } else {
+                                    <span>@app.DetalhesJogo.RecomendacaoEtaria</span>
+                                }
                             } else {
                                 <span>Não informado</span>
                             }
-                            <span>@app?.DetalhesJogo?.Classificacao?.Descricao</span>
+                            <span> - @app?.DetalhesJogo?.Classificacao?.Descricao</span>
                         </div>
                     </div>
                     <div class="row">
@@ -225,13 +230,17 @@
             </div>
         }
 
-        @if (tipoApp == "Jogo" && app?.DetalhesJogo?.Dlc?.Count > 0) {
+        @if (tipoApp == "Jogo" && dlcs?.Count > 0) {
             <div>
                 <h2>DLCs</h2>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
-                    @foreach (var dlc in dlcs.OrderBy(u => u.Nome)) {
+                    @{
+                        var displayedDLCs = dlcs.OrderBy(u => u.Nome).Take(10).ToList();
+                        var hiddenDLCs = dlcs.OrderBy(u => u.Nome).Skip(10).ToList();
+                    }
+                    @foreach (var dlc in displayedDLCs) {
                         <tr>
                             <td>
                                 <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">
@@ -239,12 +248,35 @@
                                 </a>
                             </td>
                             <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">@dlc.Nome</a></td>
-                            <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">@dlc.DetalhesJogo?.DetalhesDoPreco?.PrecoFinalFormatado</a></td>
                         </tr>
                     }
                 </tbody>
             </table>
+            @if (hiddenDLCs.Any()) {
+                <button id="seeMoreButton" class="btn btn-primary">@displayedDLCs.Count de @dlcs.Count mostrados. Ver todos</button>
+                <table id="hiddenDLCsTable" class="table table-bordered table-striped" style="display: none;">
+                    <tbody>
+                        @foreach (var dlc in hiddenDLCs) {
+                            <tr>
+                                <td>
+                                    <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">
+                                        <img src="@("https://cdn.cloudflare.steamstatic.com/steam/apps/"+dlc.AppId+"/capsule_sm_120.jpg")" onerror="this.onerror=null;this.src='/img/dummy_120x45.png';" />
+                                    </a>
+                                </td>
+                                <td><a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@dlc.Id">@dlc.Nome</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
         }
+
+        <script>
+            document.getElementById('seeMoreButton').addEventListener('click', function () {
+                document.getElementById('seeMoreButton').style.display = 'none';
+                document.getElementById('hiddenDLCsTable').style.display = 'table';
+            });
+        </script>
 
         @if (demos is not null) {
             <div>

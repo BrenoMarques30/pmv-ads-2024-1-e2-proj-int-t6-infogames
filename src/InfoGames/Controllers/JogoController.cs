@@ -3,9 +3,6 @@ using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
 using InfoGames.Middlewares;
 using System.Diagnostics;
-using Microsoft.AspNetCore.Html;
-using System.Text;
-using System.Web;
 
 namespace InfoGames.Controllers {
     public class JogoController : Controller {
@@ -102,13 +99,17 @@ namespace InfoGames.Controllers {
             return RedirectToAction("Index");
         }
 
+        public ActionResult JogoNaoEncontrado() {
+            return View();
+        }
+
         public IActionResult Detalhes(string id) {
             if (id == null || id == "") {
-                return NotFound();
+                return RedirectToAction("JogoNaoEncontrado");
             }
             JogoModel? _jogo = ConstruirInstanciaJogo(id);
             if (_jogo == null) {
-                return BadRequest();
+                return RedirectToAction("JogoNaoEncontrado");
             }
             ViewData["App"] = _jogo;
 
@@ -120,10 +121,7 @@ namespace InfoGames.Controllers {
                         Debug.WriteLine("DLC " + dlc + " não encontrada no banco de dados.");
                         continue;
                     }
-                    _dlc = ConstruirInstanciaJogo(_dlc.Id);
-                    if (_dlc?.DetalhesJogo is not null) {
-                        dlcs.Add(_dlc);
-                    }
+                    dlcs.Add(_dlc);
                 }
                 if (dlcs.Count > 0) ViewData["Dlcs"] = dlcs;
             }
