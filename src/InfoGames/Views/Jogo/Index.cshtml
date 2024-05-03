@@ -1,29 +1,37 @@
 ﻿@model List<JogoModel>
 
-@if (Model.Count == 0) {
+@if (ViewBag.SearchTerm is not "") {
+    <script>
+        document.getElementById('searchTerm').value = '@ViewBag.SearchTerm';
+    </script>
+}
+
+@if (ViewBag.DboJogosVazio) {
     <div class="alert alert-warning" role="alert">
-        Nenhum Jogo encontrado.
+        Nenhum Jogo encontrado na base de dados
     </div>
-    <div class="col-3 text-end">
+    <div>
         <a class="btn btn-primary disable-button-on-click" asp-controller="Jogo" asp-action="RecuperarJogos">
-            Sincronizar com a Steam (~1 minuto)
+            Baixar jogos da Steam (~1 minuto)
         </a>
+    </div>
+} else if (Model.Count == 0) {
+    <div class="alert alert-warning" role="alert">
+        Nenhum Jogo encontrado com o termo de pesquisa "@ViewBag.SearchTerm"
     </div>
 } else {
     <div class="container">
-        <!-- Ainda nao implementado -->
-        <!--<div class="col-3 text-end">
-            <a class="btn btn-primary disable-button-on-click" asp-controller="Jogo" asp-action="GetAppPrices">
-                Baixar Preços (~1 minuto)
-                </div>
-           </a>-->
-
         <div class="row pt-4 pb-3">
             <div class="col-6">
-                <h2 class="text-primary">
-                    Lista de Jogos
-                </h2>
+                @if (ViewBag.SearchTerm == "") {
+                    <h2 class="text-primary">Lista de Jogos</h2>
+                } else {
+                    <h2 class="text-primary">Lista de Jogos com o termo "@ViewBag.SearchTerm"</h2>
+                }
             </div>
+        </div>
+        <div class="pagination col-12 justify-content-center">
+            @ViewBag.Pagination
         </div>
         <table class="table table-bordered table-striped">
             <thead>
@@ -44,29 +52,22 @@
                 }
             </tbody>
         </table>
+        <div class="pagination col-12 justify-content-center">
+            @ViewBag.Pagination
+        </div>
     </div>
     <div>
         <form action="@Url.Action("ChangePageSize", "Jogo")" method="post">
-            <label for="pageSizeDropdown">Entries per page:</label>
+            <label for="pageSizeDropdown">Entradas por página:</label>
             <select id="pageSizeDropdown" name="pageSize" onchange="this.form.submit()">
                 <!option value="10" @(ViewBag.PageSize == 10 ? "selected" : "")>10</!option>
                 <!option value="25" @(ViewBag.PageSize == 25 ? "selected" : "")>25</!option>
                 <!option value="50" @(ViewBag.PageSize == 50 ? "selected" : "")>50</!option>
+                <!option value="100" @(ViewBag.PageSize == 100 ? "selected" : "")>100</!option>
+                <!option value="500" @(ViewBag.PageSize == 500 ? "selected" : "")>500</!option>
             </select>
         </form>
     </div>
-
-    <div>
-        @if (ViewBag.Page > 1) {
-            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page - 1, pageSize = ViewBag.PageSize, searchTerm = ViewBag.SerchTerm })">Previous</a>
-        }
-
-        @if (ViewBag.Page < ViewBag.TotalPages) {
-            <a href="@Url.Action("Index", "Jogo", new { page = ViewBag.Page + 1, pageSize = ViewBag.PageSize, ViewBag.SearchTerm })">Next</a>
-        }
-    </div>
-    <span>Page @ViewBag.Page / <a href="@Url.Action("Index","Jogo", new { page=ViewBag.TotalPages,pageSize = ViewBag.PageSize})">@ViewBag.TotalPages</a></span>
-
 }
 
 

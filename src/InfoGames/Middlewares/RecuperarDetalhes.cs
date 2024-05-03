@@ -16,7 +16,7 @@ namespace InfoGames.Middlewares {
 
             AppData? APIResponse = APICalls.GetAppDetails(_jogo.AppId);
             if (APIResponse is null) {
-                Debug.WriteLine("Falha ao buscar detalhes do _jogo na Steam");
+                Debug.WriteLine("Falha ao buscar detalhes do app \"" + _jogo.Nome + "\" na Steam");
                 return null;
             }
 
@@ -205,7 +205,7 @@ namespace InfoGames.Middlewares {
                 _ = ex.Entries.Single().ReloadAsync();
                 _ = _db.SaveChangesAsync();
                 // Now you can try updating the entity again or handle the conflict as needed
-                Debug.WriteLine("Erro ao atualizar o _jogo no banco de dados: " + ex.Message + ex.HelpLink);
+                Debug.WriteLine("Erro ao atualizar o app \"" + _jogo.Nome + "\"no banco de dados: " + ex.Message + ex.HelpLink);
             }
             return _jogo;
         }

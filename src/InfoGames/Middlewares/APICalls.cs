@@ -6,6 +6,7 @@ using System.Net;
 using InfoGames.Data;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace InfoGames.Middlewares {
     public class APICalls {
@@ -39,10 +40,16 @@ namespace InfoGames.Middlewares {
             restReq.Method = Method.Get;
 
             var response = storeClient.Execute<dynamic>(restReq);
-            JObject? jObject = JObject.Parse(response?.Content);
-            var appData = jObject[AppId]?.Value<JObject>()?.ToObject<RootDetails>(new Newtonsoft.Json.JsonSerializer { Converters = { new RequirementsConverter() } })?.Data;
+            try {
+                JObject? jObject = JObject.Parse(response?.Content);
+                var appData = jObject[AppId]?.Value<JObject>()?.ToObject<RootDetails>(new Newtonsoft.Json.JsonSerializer { Converters = { new RequirementsConverter() } })?.Data;
 
-            return appData;
+                return appData;
+            } catch (JsonReaderException) {
+                Debug.WriteLine("Erro ao tentar converter JSON");
+                return null;
+
+            }
         }
     }
 }

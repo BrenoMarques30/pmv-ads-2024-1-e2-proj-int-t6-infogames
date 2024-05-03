@@ -42,7 +42,7 @@ namespace InfoGames.Models {
         [Display(Name = "Id (referencia interna")]
         [Key] public required string Id { get; set; }
 
-        [Display(Name = "Id do Jogo (referencia na Steam)")]
+        [Display(Name = "Id do Jogo (FK)")]
         public required string IdJogo { get; set; }
 
         [ForeignKey("IdJogo")]

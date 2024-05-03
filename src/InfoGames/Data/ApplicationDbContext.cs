@@ -9,13 +9,6 @@ namespace InfoGames.Data {
 
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-        //    base.OnConfiguring(optionsBuilder);
-
-        //    // Suppress the specific warning
-        //    optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.ForeignKeyPropertiesMappedToUnrelatedTables));
-        //}
-
         public DbSet<LojaModel> Lojas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {

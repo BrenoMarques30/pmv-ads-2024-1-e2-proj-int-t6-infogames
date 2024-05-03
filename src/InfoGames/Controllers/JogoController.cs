@@ -3,6 +3,9 @@ using InfoGames.Models;
 using Microsoft.AspNetCore.Mvc;
 using InfoGames.Middlewares;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Html;
+using System.Text;
+using System.Web;
 
 namespace InfoGames.Controllers {
     public class JogoController : Controller {
@@ -15,15 +18,24 @@ namespace InfoGames.Controllers {
 
             var jogosOnPage = jogosFiltrados.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
+            int totalPages = (int)Math.Ceiling((double)jogosFiltrados.Count() / pageSize);
+
+            var paginationHelper = new Paginacao(CreateNewBasket);
+
             // Pass data to the view
+            ViewBag.DboJogosVazio = _db.Jogos.Count() == 0;
             ViewBag.Jogos = jogosOnPage;
             ViewBag.Page = page;
             ViewBag.PageSize = pageSize;
             ViewBag.SearchTerm = searchTerm;
-            ViewBag.TotalPages = Math.Ceiling((double)jogosFiltrados.Count() / pageSize);
-
+            ViewBag.TotalPages = totalPages;
+            ViewBag.Pagination = paginationHelper.GeneratePagination(page, pageSize, searchTerm, totalPages);
 
             return View(jogosOnPage);
+        }
+
+        private string CreateNewBasket(int page, int pageSize, string searchTerm) {
+            return $"/Jogo/Index?page={page}&pageSize={pageSize}&searchTerm={searchTerm}";
         }
 
         public IActionResult ChangePageSize(int pageSize) {
@@ -156,18 +168,18 @@ namespace InfoGames.Controllers {
             if (_jogo == null) {
                 return null;
             }
-
+            Debug.WriteLine("Buscando app \"" + _jogo.Nome + "\" no banco de dados.");
             _jogo.DetalhesJogo = BuscarDetalhes.PorIdJogo(_jogo.Id, _db);
 
             if (_jogo.DetalhesJogo is null) {
-                Debug.WriteLine("Detalhes do _jogo não encontrados no banco de dados. Buscando da API Steam.");
+                Debug.WriteLine("Detalhes do app \"" + _jogo.Nome + "\" não encontrados no banco de dados. Buscando da API Steam.");
                 _ = RecuperarDetalhes.BuscarNaSteam(_jogo, _db);
                 if (_jogo.DetalhesJogo is null) {
-                    Debug.WriteLine("Detalhes do _jogo não encontrados na API Steam.");
+                    Debug.WriteLine("Detalhes do app \"" + _jogo.Nome + "\" não encontrados na API Steam.");
                     return null;
                 }
             } else {
-                Debug.WriteLine("Detalhes do _jogo encontrados no banco de dados.");
+                Debug.WriteLine("Detalhes do app \"" + _jogo.Nome + "\" encontrados no banco de dados.");
                 _ = RecuperarDetalhes.BuscarNoBancoDeDados(_jogo, _db);
                 if (_jogo.DetalhesJogo is null) {
                     Debug.WriteLine("Erro ao processar banco de dados");

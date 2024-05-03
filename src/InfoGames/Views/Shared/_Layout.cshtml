@@ -26,24 +26,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Loja" asp-action="Index">Lojas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Jogo" asp-action="Index">Jogos</a>
-                        </li>
                     </ul>
                     <div class="row col-6 end-0">
                         <form class="form-inline" asp-controller="Jogo" asp-action="Index" method="get" onsubmit="return false;">
                             <div class="input-group">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm" id="searchTerm">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Buscar por jogos" aria-label="Search" name="searchTerm" id="searchTerm" onchange="submitSearch()">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-success my-2 my-sm-0 visually-hidden" type="button" onclick="submitSearch()">
-                                        <!--<i class="fas fa-search"></i>-->
-                                    </button>
+                                    <button class="btn btn-outline-success my-2 my-sm-0 visually-hidden" type="button" onclick="submitSearch()" />
                                 </div>
                             </div>
                         </form>
                     </div>
-
-
                 </div>
             </div>
         </nav>
@@ -66,7 +59,12 @@
     <script>
         function submitSearch() {
             var searchTerm = document.getElementById('searchTerm').value;
+            if (searchTerm === '') {
+                window.location.href = '/Jogo/Index';
+                return;
+            }
             window.location.href = '/Jogo/Index?searchTerm=' + encodeURIComponent(searchTerm);
+            document.getElementById('searchTerm').focus();
         }
 
         document.getElementById('searchTerm').addEventListener('keypress', function (e) {
