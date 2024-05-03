@@ -66,6 +66,7 @@
                 <!option value="100" @(ViewBag.PageSize == 100 ? "selected" : "")>100</!option>
                 <!option value="500" @(ViewBag.PageSize == 500 ? "selected" : "")>500</!option>
             </select>
+            <input type="hidden" name="searchTerm" value="@ViewBag.SearchTerm" />
         </form>
     </div>
 }

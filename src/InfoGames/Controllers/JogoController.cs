@@ -38,8 +38,8 @@ namespace InfoGames.Controllers {
             return $"/Jogo/Index?page={page}&pageSize={pageSize}&searchTerm={searchTerm}";
         }
 
-        public IActionResult ChangePageSize(int pageSize) {
-            return RedirectToAction("Index", new { pageSize });
+        public IActionResult ChangePageSize(int pageSize, string searchTerm) {
+            return RedirectToAction("Index", new { pageSize, searchTerm });
         }
 
         public IActionResult Search(string searchTerm) {
