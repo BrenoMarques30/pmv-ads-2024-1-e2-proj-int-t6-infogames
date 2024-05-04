@@ -4,6 +4,10 @@
     var jogoCompleto = ViewData["JogoCompleto"] as JogoModel;
     var demos = ViewData["Demos"] as List<JogoModel>;
 }
+
+
+
+
 <div class="container">
 
     <div class="col-3">
@@ -155,17 +159,7 @@
             </div>
         </div>
 
-        <script>
-            document.getElementById("btnReadMore").addEventListener("click", function () {
-                document.getElementById("descricaoCurta").hidden = true;
-                document.getElementById("descricaoDetalhada").hidden = false;
-            });
 
-            document.getElementById("btnReadLess").addEventListener("click", function () {
-                document.getElementById("descricaoCurta").hidden = false;
-                document.getElementById("descricaoDetalhada").hidden = true;
-            });
-        </script>
         @if (app?.DetalhesJogo?.Screenshot?.Count > 0 || app?.DetalhesJogo?.Filme?.Count > 0) {
             <div>
                 <h2>Traillers e Screenshots</h2>
@@ -271,12 +265,7 @@
             }
         }
 
-        <script>
-            document.getElementById('seeMoreButton').addEventListener('click', function () {
-                document.getElementById('seeMoreButton').style.display = 'none';
-                document.getElementById('hiddenDLCsTable').style.display = 'table';
-            });
-        </script>
+
 
         @if (demos is not null) {
             <div>
@@ -298,7 +287,6 @@
             </table>
         }
 
-
         @if (jogoCompleto is not null) {
             <div>
                 <h2>Jogo Completo</h2>
@@ -319,3 +307,19 @@
         }
     </div>
 </div>
+
+
+<script>
+    document.getElementById("btnReadMore").addEventListener("click", function () {
+        document.getElementById("descricaoCurta").hidden = true;
+        document.getElementById("descricaoDetalhada").hidden = false;
+    });
+    document.getElementById("btnReadLess").addEventListener("click", function () {
+        document.getElementById("descricaoCurta").hidden = false;
+        document.getElementById("descricaoDetalhada").hidden = true;
+    });
+    document.getElementById('seeMoreButton').addEventListener('click', function () {
+        document.getElementById('seeMoreButton').style.display = 'none';
+        document.getElementById('hiddenDLCsTable').style.display = 'table';
+    });
+</script>
