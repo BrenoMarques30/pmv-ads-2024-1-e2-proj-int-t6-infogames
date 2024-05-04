@@ -1,0 +1,35 @@
+﻿@{
+    var noticias = ViewData["Noticias"] as List<NoticiaModel>;
+}
+<!--Form to fetch news about a specific AppId-->
+<form action="@Url.Action("RecuperarNoticias", "Noticia")" method="post">
+    <div class="form-group">
+        <label for="appId">AppId</label>
+        <input type="text" class="form-control" id="appId" name="AppId" placeholder="AppId (ID na Steam)">
+        <input type="number" class="form-control" id="NumeroDeNoticias" name="NumeroDeNoticias" value="5" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar Notícias</button>
+</form>
+@if (noticias is null) {
+    <h1>Nenhuma notícia encontrada</h1>
+} else {
+    <h1>Notícias</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Data de Publicação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var noticia in noticias) {
+                <tr>
+                    <td>@noticia.Titulo</td>
+                    <td>@Html.Raw(noticia.Conteudo)</td>
+                    <td>@noticia.Data</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

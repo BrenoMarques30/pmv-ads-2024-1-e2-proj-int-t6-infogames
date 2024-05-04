@@ -22,5 +22,7 @@ namespace InfoGames.Models {
 
         public DetalhesJogoModel? DetalhesJogo { get; set; }
 
+        public List<NoticiaModel>? Noticias { get; set; }
+
     }
 }

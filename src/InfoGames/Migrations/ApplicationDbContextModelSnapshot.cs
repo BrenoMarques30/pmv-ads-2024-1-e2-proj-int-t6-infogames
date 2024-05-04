@@ -480,7 +480,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "36b6719e-6365-469c-a029-9ad73136c371",
+                            Id = "8322647b-d931-43aa-86fb-1897841cdfc4",
                             ChaveApi = "",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
@@ -532,6 +532,46 @@ namespace InfoGames.Migrations
                         .IsUnique();
 
                     b.ToTable("Mp4s");
+                });
+
+            modelBuilder.Entity("InfoGames.Models.NoticiaModel", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AppId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Autor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Conteudo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Data")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsExternalUrl")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("JogoId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("NomeNoFeed")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JogoId");
+
+                    b.ToTable("Noticias");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Pacote", b =>
@@ -877,6 +917,17 @@ namespace InfoGames.Migrations
                     b.Navigation("Filme");
                 });
 
+            modelBuilder.Entity("InfoGames.Models.NoticiaModel", b =>
+                {
+                    b.HasOne("InfoGames.Models.JogoModel", "Jogo")
+                        .WithMany("Noticias")
+                        .HasForeignKey("JogoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Jogo");
+                });
+
             modelBuilder.Entity("InfoGames.Models.Pacote", b =>
                 {
                     b.HasOne("InfoGames.Models.GrupoDePacote", "GrupoDePacote")
@@ -1001,6 +1052,8 @@ namespace InfoGames.Migrations
             modelBuilder.Entity("InfoGames.Models.JogoModel", b =>
                 {
                     b.Navigation("DetalhesJogo");
+
+                    b.Navigation("Noticias");
                 });
 
             modelBuilder.Entity("InfoGames.Models.LojaModel", b =>

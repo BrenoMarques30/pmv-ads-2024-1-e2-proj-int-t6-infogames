@@ -5,7 +5,7 @@
 namespace InfoGames.Migrations
 {
     /// <inheritdoc />
-    public partial class addtables : Migration
+    public partial class AddTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -80,6 +80,32 @@ namespace InfoGames.Migrations
                     table.ForeignKey(
                         name: "FK_DetalhesJogos_Jogos_IdJogo",
                         column: x => x.IdJogo,
+                        principalTable: "Jogos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Noticias",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    JogoId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AppId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsExternalUrl = table.Column<bool>(type: "bit", nullable: true),
+                    Autor = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Conteudo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NomeNoFeed = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Data = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Noticias", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Noticias_Jogos_JogoId",
+                        column: x => x.JogoId,
                         principalTable: "Jogos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -528,7 +554,7 @@ namespace InfoGames.Migrations
             migrationBuilder.InsertData(
                 table: "Lojas",
                 columns: new[] { "Id", "ChaveApi", "Logo", "Nome", "Url" },
-                values: new object[] { "36b6719e-6365-469c-a029-9ad73136c371", "", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
+                values: new object[] { "8322647b-d931-43aa-86fb-1897841cdfc4", "", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Categorias_IdDetalhesJogo",
@@ -634,6 +660,11 @@ namespace InfoGames.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Noticias_JogoId",
+                table: "Noticias",
+                column: "JogoId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Pacotes_GrupoDePacoteId",
                 table: "Pacotes",
                 column: "GrupoDePacoteId");
@@ -716,6 +747,9 @@ namespace InfoGames.Migrations
 
             migrationBuilder.DropTable(
                 name: "Mp4s");
+
+            migrationBuilder.DropTable(
+                name: "Noticias");
 
             migrationBuilder.DropTable(
                 name: "Pacotes");

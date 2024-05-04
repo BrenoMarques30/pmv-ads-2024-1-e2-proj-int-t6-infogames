@@ -4,11 +4,7 @@ using InfoGames.Models;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace InfoGames.Data {
-    public class ApplicationDbContext : DbContext {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
-
-        }
-
+    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options) {
         public DbSet<LojaModel> Lojas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
@@ -48,5 +44,7 @@ namespace InfoGames.Data {
         public DbSet<RequisitoPC> RequisitosPC { get; set; }
         public DbSet<Screenshot> Screenshots { get; set; }
         public DbSet<Webm> Webms { get; set; }
+
+        public DbSet<NoticiaModel> Noticias { get; set; }
     }
 }
