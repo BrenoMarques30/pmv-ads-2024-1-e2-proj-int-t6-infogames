@@ -4,19 +4,35 @@
 
 Para cada caso de teste definido no Plano de Testes de Software, realize o registro das evidências dos testes feitos na aplicação pela equipe, que comprovem que o critério de êxito foi alcançado (ou não!!!). Para isso, utilize uma ferramenta de captura de tela que mostre cada um dos casos de teste definidos (obs.: cada caso de teste deverá possuir um vídeo do tipo _screencast_ para caracterizar uma evidência do referido caso).
 
-| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+| **Caso de Teste** 	| **CT-01 – Cadastrar Usuário** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
+|	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
 |Registro de evidência | www.teste.com.br/drive/ct-01 |
 
 | **Caso de Teste** 	| **CT-02 – Realizar login** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00Y - A aplicação deve permitir que um usuário previamente cadastrado faça login |
+|	Requisito Associado 	| RF-001 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
+
+| **Caso de Teste** 	| **CT-03 – Redefinir Senha** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-002 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
+|Registro de evidência | www.teste.com.br/drive/ct-02 |
+
+| **Caso de Teste** 	| **CT-04 – Encerrar Sessão** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário encerre a Sessão logada. |
+|Registro de evidência | www.teste.com.br/drive/ct-02 |
+
+| **Caso de Teste** 	| **CT-05 – Pesquisa Jogoso** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
+|Registro de evidência | www.teste.com.br/drive/ct-02 |
+
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Todas as funções implementadas até o presente momento encontram-se funcionais. Ainda há a necessidade de implementar as seguintes funcionalidades, tais como, Portal de Notícias e Portal de Promoções.
+O cadastro e Login de usuários estão funcionando, bem como pesquisa de Jogos e Lojas através da API em Steam de jogos eletrônicos.
+Ressaltamos que estamos implementando as funcionalidades que faltam, devido ao tempo de aprendizado na linguagem e ambiente de programação.
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
