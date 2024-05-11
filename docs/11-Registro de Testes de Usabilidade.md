@@ -11,9 +11,9 @@ __Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das fun
 
 __Participantes:__
 
-•	Usuário 1: João Silva, 22 anos, estudante universitário e jogador experiente.
-•	Usuário 2: Maria Costa, 18 anos, jogadora novata.
-•	Usuário 3: Carlos Pereira, 35 anos, entusiasta de tecnologia e jogos casuais.
+*	Usuário 1: João Silva, 22 anos, estudante universitário e jogador experiente.
+*	Usuário 2: Maria Costa, 18 anos, jogadora novata.
+*	Usuário 3: Carlos Pereira, 35 anos, entusiasta de tecnologia e jogos casuais.
 
 __Metodologia:__
 
@@ -22,17 +22,16 @@ Tarefa: Criar, Acessar e Fazer o Logout de uma Conta de Usuário
 
 __Resultados:__
 
-•	João Silva: Completou todas as tarefas em 4 minutos sem erros.
-•	Maria Costa: Completou em 6 minutos com uma dificuldade na criação de senha.
-•	Carlos Pereira: Completou em 5 minutos, inicialmente clicou em links errados durante o acesso.
+* João Silva: Completou todas as tarefas em 4 minutos sem erros.
+* Maria Costa: Completou em 6 minutos com uma dificuldade na criação de senha.
+* Carlos Pereira: Completou em 5 minutos, inicialmente clicou em links errados durante o acesso.
 
 
 __Questionário de Satisfação:__
 
 __Considerações:__
 
-Os testes indicaram uma boa usabilidade geral com algumas áreas de melhoria na clareza das instruções para novos usuários. Recomenda-se revisar a visualização de obrigatoriedade de campos e as instruções de senha e.
-Este registro de teste de usabilidade é parcial e foi utilizado apenas para os Requisitos implementados até o momento.
+Os testes indicaram uma boa usabilidade geral com algumas áreas de melhoria na clareza das instruções para novos usuários. Recomenda-se revisar a visualização de obrigatoriedade de campos e as instruções de criação de senha.
 
 
 
