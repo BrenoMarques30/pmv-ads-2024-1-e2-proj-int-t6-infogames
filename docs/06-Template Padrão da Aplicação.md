@@ -44,10 +44,13 @@ Todas as telas apresentam um layout responsivo, tendo seu conteúdo ajustado par
 
 ![3-Tela Cadastro Usuário-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/be8f3625-d4c8-4900-8288-9023d21686e8)
 
+Para a Tela de Cadastro (acima), é necessário o preenchimento do formulário com os dados do Usuário, incluindo sua Senha de acesso. Como a implementação consiste em uma ferramenta Back End, os dados do cadastro ficam armazenados no Banco de Dados localstorage, para posteriores Login na ferramenta.
   
 - Tela da Login do Usuário
 
 ![2-Tela Inicial Usuário-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/2507093c-035b-474d-aefc-7d3f50783e87)
+
+Para a Tela de Login (acima), é necessário cadastrar o Usuário e a Senha de acesso. Como a implementação consiste em uma ferramenta Back End, os atributos do Usuário ficam armazenados, após o cadastro, no Banco de Dados local storage, para acesso a cada início de Sessão.
 
 
 - Tela Redefinir Senha do Usuário
