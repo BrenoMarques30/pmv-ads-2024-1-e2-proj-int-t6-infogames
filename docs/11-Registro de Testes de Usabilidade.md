@@ -11,9 +11,9 @@ __Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das fun
 
 __Participantes:__
 
-*	Usuário 1: João Silva, 22 anos, estudante universitário e jogador experiente.
-*	Usuário 2: Maria Costa, 18 anos, jogadora novata.
-*	Usuário 3: Carlos Pereira, 35 anos, entusiasta de tecnologia e jogos casuais.
+*	Usuário 1: Rodolfo 22 anos, estudante universitário e jogador experiente.
+*	Usuário 2: Laura, 18 anos, jogadora novata.
+*	Usuário 3: Ana Silva, 35 anos, entusiasta de tecnologia e jogos casuais.
 
 __Metodologia:__
 
