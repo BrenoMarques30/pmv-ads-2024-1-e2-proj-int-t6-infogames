@@ -2,7 +2,7 @@
 
 Abaixo, vídeo em que, sucintamente, é arepsentado a integração do Back-end com o Front-end, na implementação do projeto
 
-(Vídeo)
+<video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/blob/main/presentation/prova_de_conceito_crud.mp4" width="320" height="240" controls></video>
 
 # Apresentação da Solução
 
