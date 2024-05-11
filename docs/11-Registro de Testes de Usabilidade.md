@@ -32,9 +32,9 @@ __Questionário de Satisfação:__
 
 | Usuário       | Os campos obrigatórios e opcionais são corretamente sinalizados? | Você teve alguma dificuldade específica durante os testes? | Você acredita que a plataforma é fácil de navegar? | Como você avaliaria a sua experiência de criar, acessar e fazer o logout? |
 |---------------|----------------------------------------------------------------|----------------------------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------|
-| João Silva    | Sim, todos os campos estavam claramente marcados              | Não, o processo foi bastante intuitivo                   | Sim, a navegação é fluída e as seções estão bem organizadas | Avalio como excelente, tudo funcionou como esperado                          |
-| Maria Costa   | Sim, mas sugiro uma sinalização adicional                     | Tela muito direta                                        | Sim, após o cadastro a navegação foi simples    | Boa, mas melhoraria a clareza nas instruções de criação de senha             |
-| Carlos Pereira| Sim, tudo estava bem claro                                    | Inicialmente cliquei em alguns links errados por não estar familiarizado com a interface | Depois de um breve período de adaptação, sim  | Muito boa, mas sugiro sinalizar mais claramente a obrigatoriedade dos campos |
+| Rodolfo Nunes    | Sim, todos os campos estavam claramente marcados              | Não, o processo foi bastante intuitivo                   | Sim, a navegação é fluída e as seções estão bem organizadas | Avalio como excelente, tudo funcionou como esperado                          |
+| Laura Fagundes   | Sim, mas sugiro uma sinalização adicional                     | Tela muito direta                                        | Sim, após o cadastro a navegação foi simples    | Boa, mas melhoraria a clareza nas instruções de criação de senha             |
+| Ana Silva | Sim, tudo estava bem claro                                    | Inicialmente cliquei em alguns links errados por não estar familiarizado com a interface | Depois de um breve período de adaptação, sim  | Muito boa, mas sugiro sinalizar mais claramente a obrigatoriedade dos campos |
 
 
 __Considerações:__
