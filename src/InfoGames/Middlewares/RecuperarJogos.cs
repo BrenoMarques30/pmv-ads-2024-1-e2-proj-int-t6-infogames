@@ -30,7 +30,7 @@ namespace InfoGames.Middlewares {
             }
 
             foreach (var _jogo in orderedApps) {
-                if (_jogo.Name == "" || _jogo.Name == null) continue;
+                if (_jogo.Name == "" || _jogo.Name == null || _jogo.Appid == null) continue;
                 _db.Jogos.Add(new JogoModel { Id = Guid.NewGuid().ToString(), AppId = _jogo.Appid.ToString(), Nome = _jogo.Name, Loja = loja, LojaId = loja.Id });
             }
             try {

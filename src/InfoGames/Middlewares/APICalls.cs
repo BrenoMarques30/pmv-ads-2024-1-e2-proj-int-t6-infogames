@@ -15,13 +15,18 @@ namespace InfoGames.Middlewares {
 
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            RestClient storeClient = new RestClient("https://api.steampowered.com/");
-            RestRequest restReq = new RestRequest("ISteamApps/GetAppList/v2/");
-            restReq.RequestFormat = DataFormat.Json;
-            restReq.Method = Method.Get;
+            RestClient storeClient = new("https://api.steampowered.com/");
+            RestRequest restReq = new("ISteamApps/GetAppList/v2/") {
+                RequestFormat = DataFormat.Json,
+                Method = Method.Get
+            };
 
             var response = storeClient.Execute<dynamic>(restReq);
-            JObject? jObject = JObject.Parse(response?.Content);
+            if (response?.Content == null) {
+                Debug.WriteLine("Erro ao tentar obter a lista de jogos");
+                return null;
+            }
+            JObject? jObject = JObject.Parse(response.Content);
             var appList = jObject["applist"]?.Value<JObject>()?.ToObject<SteamAppList>()?.Apps;
 
             return appList;
@@ -30,7 +35,7 @@ namespace InfoGames.Middlewares {
         public static AppData? GetAppDetails(string AppId) {
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            RestClient storeClient = new RestClient("https://store.steampowered.com/api/");
+            RestClient storeClient = new("https://store.steampowered.com/api/");
 
             RestRequest restReq = new RestRequest("appdetails/")
             .AddQueryParameter("l", "brazilian")
@@ -40,8 +45,12 @@ namespace InfoGames.Middlewares {
             restReq.Method = Method.Get;
 
             var response = storeClient.Execute<dynamic>(restReq);
+            if (response?.Content == null) {
+                Debug.WriteLine("Erro ao tentar obter a lista de jogos");
+                return null;
+            }
             try {
-                JObject? jObject = JObject.Parse(response?.Content);
+                JObject? jObject = JObject.Parse(response.Content);
                 var appData = jObject[AppId]?.Value<JObject>()?.ToObject<RootDetails>(new Newtonsoft.Json.JsonSerializer { Converters = { new RequirementsConverter() } })?.Data;
 
                 return appData;
@@ -49,6 +58,34 @@ namespace InfoGames.Middlewares {
                 Debug.WriteLine("Erro ao tentar converter JSON");
                 return null;
 
+            }
+        }
+
+        public static NewsData? GetAppNews(string AppId, string countOfEntries) {
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            RestClient storeClient = new("https://api.steampowered.com/");
+            RestRequest restReq = new RestRequest("ISteamNews/GetNewsForApp/v0002/")
+            .AddQueryParameter("appid", AppId)
+            .AddQueryParameter("count", countOfEntries)
+            .AddQueryParameter("maxlength", "3000")
+            .AddQueryParameter("format", "json");
+            restReq.RequestFormat = DataFormat.Json;
+            restReq.Method = Method.Get;
+
+            var response = storeClient.Execute<dynamic>(restReq);
+            if (response?.Content == null) {
+                Debug.WriteLine("Erro ao tentar obter a lista de jogos");
+                return null;
+            }
+            try {
+                JObject? jObject = JObject.Parse(response.Content);
+                var appNews = jObject["appnews"]?.Value<JObject>()?.ToObject<NewsData>();
+
+                return appNews;
+            } catch (JsonReaderException) {
+                Debug.WriteLine("Erro ao tentar converter JSON");
+                return null;
             }
         }
     }

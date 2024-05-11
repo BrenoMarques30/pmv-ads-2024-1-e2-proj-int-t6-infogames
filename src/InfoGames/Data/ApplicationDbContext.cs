@@ -48,5 +48,7 @@ namespace InfoGames.Data {
         public DbSet<RequisitoPC> RequisitosPC { get; set; }
         public DbSet<Screenshot> Screenshots { get; set; }
         public DbSet<Webm> Webms { get; set; }
+
+        public DbSet<NoticiaModel> Noticias { get; set; }
     }
 }

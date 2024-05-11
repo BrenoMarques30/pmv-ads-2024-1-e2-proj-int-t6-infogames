@@ -5,22 +5,18 @@ using InfoGames.Middlewares;
 using System.Diagnostics;
 
 namespace InfoGames.Controllers {
-    public class JogoController : Controller {
-        private readonly ApplicationDbContext _db;
-        public JogoController(ApplicationDbContext db) {
-            _db = db;
-        }
+    public class JogoController(ApplicationDbContext db) : Controller {
         public ActionResult Index(int page = 1, int pageSize = 50, string searchTerm = "") {
-            var jogosFiltrados = _db.Jogos.Where(j => j.Nome.Contains(searchTerm)).OrderBy(j => j.Nome).ToList();
+            var jogosFiltrados = db.Jogos.Where(j => j.Nome.Contains(searchTerm)).OrderBy(j => j.Nome).ToList();
 
             var jogosOnPage = jogosFiltrados.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-            int totalPages = (int)Math.Ceiling((double)jogosFiltrados.Count() / pageSize);
+            int totalPages = (int)Math.Ceiling((double)jogosFiltrados.Count / pageSize);
 
             var paginationHelper = new Paginacao(CreateNewBasket);
 
             // Pass data to the view
-            ViewBag.DboJogosVazio = _db.Jogos.Count() == 0;
+            ViewBag.DboJogosVazio = !db.Jogos.Any();
             ViewBag.Jogos = jogosOnPage;
             ViewBag.Page = page;
             ViewBag.PageSize = pageSize;
@@ -45,12 +41,12 @@ namespace InfoGames.Controllers {
 
         public IActionResult RecuperarJogos() {
             var recuperarJogos = new RecuperarJogos();
-            recuperarJogos.BuscarNaSteam(_db);
+            recuperarJogos.BuscarNaSteam(db);
             return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> GetAppPrices() { // Ainda não implementado 100%
-            GetAppPrices getAppPrices = new GetAppPrices(_db);
+            GetAppPrices getAppPrices = new(db);
             return await getAppPrices.Index();
         }
 
@@ -58,7 +54,7 @@ namespace InfoGames.Controllers {
             if (method == "add") {
                 return View();
             } else if (method == "edit" && !string.IsNullOrEmpty(id)) {
-                var obj = _db.Jogos.Find(id);
+                var obj = db.Jogos.Find(id);
                 if (obj == null) {
                     return NotFound();
                 }
@@ -70,8 +66,8 @@ namespace InfoGames.Controllers {
 
         public IActionResult Add(JogoModel obj) {
             if (ModelState.IsValid) {
-                _db.Jogos.Add(obj);
-                _db.SaveChanges();
+                db.Jogos.Add(obj);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Form");
@@ -79,8 +75,8 @@ namespace InfoGames.Controllers {
 
         public IActionResult Edit(JogoModel obj) {
             if (ModelState.IsValid) {
-                _db.Jogos.Update(obj);
-                _db.SaveChanges();
+                db.Jogos.Update(obj);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -90,12 +86,12 @@ namespace InfoGames.Controllers {
             if (id == null || id == "") {
                 return NotFound();
             }
-            var obj = _db.Jogos.Find(id);
+            var obj = db.Jogos.Find(id);
             if (obj == null) {
                 return NotFound();
             }
-            _db.Jogos.Remove(obj);
-            _db.SaveChanges();
+            db.Jogos.Remove(obj);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -116,7 +112,7 @@ namespace InfoGames.Controllers {
             if (_jogo.DetalhesJogo?.Dlc?.Count > 0) {
                 List<JogoModel> dlcs = [];
                 foreach (var dlc in _jogo.DetalhesJogo.Dlc) {
-                    JogoModel? _dlc = BuscarJogo.PorAppId(dlc, _db);
+                    JogoModel? _dlc = BuscarJogo.PorAppId(dlc, db);
                     if (_dlc is null) {
                         Debug.WriteLine("DLC " + dlc + " não encontrada no banco de dados.");
                         continue;
@@ -127,7 +123,7 @@ namespace InfoGames.Controllers {
             }
 
             if (_jogo.DetalhesJogo?.JogoCompleto is not null) {
-                JogoModel? _jogoCompleto = BuscarJogo.PorAppId(_jogo.DetalhesJogo.JogoCompleto.IdJogoCompleto, _db);
+                JogoModel? _jogoCompleto = BuscarJogo.PorAppId(_jogo.DetalhesJogo.JogoCompleto.IdJogoCompleto, db);
                 if (_jogoCompleto is null) {
                     Debug.WriteLine("Jogo completo " + _jogo.DetalhesJogo.JogoCompleto.IdJogoCompleto + " não encontrado no banco de dados.");
                 } else {
@@ -145,7 +141,7 @@ namespace InfoGames.Controllers {
                         Debug.WriteLine("Appid da demo não encontrado.");
                         continue;
                     }
-                    JogoModel? _demo = BuscarJogo.PorAppId(demo.Appid, _db);
+                    JogoModel? _demo = BuscarJogo.PorAppId(demo.Appid, db);
                     if (_demo is null) {
                         Debug.WriteLine("Demo " + demo.Appid + " não encontrada no banco de dados.");
                         continue;
@@ -162,23 +158,23 @@ namespace InfoGames.Controllers {
         }
 
         public JogoModel? ConstruirInstanciaJogo(string id) {
-            JogoModel? _jogo = BuscarJogo.PorId(id, _db);
+            JogoModel? _jogo = BuscarJogo.PorId(id, db);
             if (_jogo == null) {
                 return null;
             }
             Debug.WriteLine("Buscando app \"" + _jogo.Nome + "\" no banco de dados.");
-            _jogo.DetalhesJogo = BuscarDetalhes.PorIdJogo(_jogo.Id, _db);
+            _jogo.DetalhesJogo = BuscarDetalhes.PorIdJogo(_jogo.Id, db);
 
             if (_jogo.DetalhesJogo is null) {
                 Debug.WriteLine("Detalhes do app \"" + _jogo.Nome + "\" não encontrados no banco de dados. Buscando da API Steam.");
-                _ = RecuperarDetalhes.BuscarNaSteam(_jogo, _db);
+                _ = RecuperarDetalhes.BuscarNaSteam(_jogo, db);
                 if (_jogo.DetalhesJogo is null) {
                     Debug.WriteLine("Detalhes do app \"" + _jogo.Nome + "\" não encontrados na API Steam.");
                     return null;
                 }
             } else {
                 Debug.WriteLine("Detalhes do app \"" + _jogo.Nome + "\" encontrados no banco de dados.");
-                _ = RecuperarDetalhes.BuscarNoBancoDeDados(_jogo, _db);
+                _ = RecuperarDetalhes.BuscarNoBancoDeDados(_jogo, db);
                 if (_jogo.DetalhesJogo is null) {
                     Debug.WriteLine("Erro ao processar banco de dados");
                     return null;

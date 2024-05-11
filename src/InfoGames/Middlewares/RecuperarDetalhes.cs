@@ -35,7 +35,7 @@ namespace InfoGames.Middlewares {
             }
 
             if (APIResponse?.PcRequirements is not null && APIResponse?.PcRequirements.GetType() is object) {
-                Requirements requirements = new Requirements {
+                Requirements requirements = new() {
                     Minimum = APIResponse.PcRequirements.Requirements?.Minimum,
                     Recommended = APIResponse.PcRequirements.Requirements?.Recommended,
                 };
@@ -45,7 +45,7 @@ namespace InfoGames.Middlewares {
             }
 
             if (APIResponse?.MacRequirements is not null && APIResponse?.MacRequirements.GetType() is object) {
-                Requirements requirements = new Requirements {
+                Requirements requirements = new() {
                     Minimum = APIResponse.MacRequirements.Requirements?.Minimum,
                     Recommended = APIResponse.MacRequirements.Requirements?.Recommended,
                 };
@@ -55,7 +55,7 @@ namespace InfoGames.Middlewares {
             }
 
             if (APIResponse?.LinuxRequirements is not null && APIResponse?.LinuxRequirements.GetType() is object) {
-                Requirements requirements = new Requirements {
+                Requirements requirements = new() {
                     Minimum = APIResponse.LinuxRequirements.Requirements?.Minimum,
                     Recommended = APIResponse.LinuxRequirements.Requirements?.Recommended,
                 };
@@ -186,6 +186,10 @@ namespace InfoGames.Middlewares {
             if (APIResponse?.Demos is not null) {
                 _detalhesJogo.Demonstracao = new List<Demonstracoes>();
                 foreach (var demo in APIResponse.Demos) {
+                    if (demo is null) {
+                        Debug.WriteLine("Appid da demo não encontrado.");
+                        continue;
+                    }
                     Demonstracoes _demonstracao = new(demo, _detalhesJogo);
                     _detalhesJogo.Demonstracao.Add(_demonstracao);
                     _ = _db.Demos.Add(_demonstracao);

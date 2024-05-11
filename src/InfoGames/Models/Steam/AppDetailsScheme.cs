@@ -292,12 +292,12 @@ namespace InfoGames.Models.Steam {
             return objectType == typeof(RequirementsOrEmptyArray);
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, Newtonsoft.Json.JsonSerializer serializer) {
-            RequirementsOrEmptyArray result = new RequirementsOrEmptyArray();
+        public override object ReadJson(JsonReader reader, Type objectType, object? existingValue, Newtonsoft.Json.JsonSerializer serializer) {
+            RequirementsOrEmptyArray result = new();
 
             if (reader.TokenType == JsonToken.StartArray) {
                 // If it's an array, read it as an array of strings
-                result.EmptyArray = serializer.Deserialize<List<string?>>(reader) ?? new List<string?>();
+                result.EmptyArray = serializer.Deserialize<List<string?>>(reader) ?? [];
             } else if (reader.TokenType == JsonToken.StartObject) {
                 // If it's an object, deserialize it as Requirements
                 result.Requirements = serializer.Deserialize<Requirements>(reader);
@@ -308,7 +308,7 @@ namespace InfoGames.Models.Steam {
             return result;
         }
 
-        public override void WriteJson(JsonWriter writer, object value, Newtonsoft.Json.JsonSerializer serializer) {
+        public override void WriteJson(JsonWriter writer, object? value, Newtonsoft.Json.JsonSerializer serializer) {
             throw new NotImplementedException();
         }
 

@@ -46,7 +46,7 @@ namespace InfoGames.Models {
         public required string IdJogo { get; set; }
 
         [ForeignKey("IdJogo")]
-        [Required(ErrorMessage = "Obrigatório informar o _jogo")]
+        [Required(ErrorMessage = "Obrigatório informar o Jogo")]
         public required JogoModel Jogo { get; set; }
 
         [Display(Name = "Tipo")]
