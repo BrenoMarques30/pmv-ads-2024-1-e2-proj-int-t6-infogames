@@ -4,10 +4,10 @@ Os registros, abaixo reprentados, representam uma visão parcial, uma vez que o 
 
 __Registro de Teste de Usabilidade:__ InfoGames
 
-__Data do Teste:__ 11 de Maio de 2024
-__Local:__ Testes realizados de forma remota
-__Versão do Software:__ 1.0
-__Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das funcionalidades de criação de conta, acesso e logout.
+* __Data do Teste:__ 11 de Maio de 2024
+* __Local:__ Testes realizados de forma remota
+* __Versão do Software:__ 1.0
+* __Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das funcionalidades de criação de conta, acesso e logout.
 
 __Participantes:__
 
