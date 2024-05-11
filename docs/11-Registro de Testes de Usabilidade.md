@@ -11,9 +11,9 @@ __Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das fun
 
 __Participantes:__
 
-* Usuário 1: Rodolfo Nunes, 23 anos, programador recém-formado e trabalha para uma empresa desenvolvedora de jogos digitais.
-* Usuário 2: Laura Fagundes, 18 anos, estudante universitária e joga online com pessoas ao redor do globo.
-* 	Usuário 3: Ana Silva, 28 anos, trabalha como desenvolvedora de software em uma empresa de tecnologia.
+* _Usuário 1_: Rodolfo Nunes, 23 anos, programador recém-formado e trabalha para uma empresa desenvolvedora de jogos digitais.
+* _Usuário 2_: Laura Fagundes, 18 anos, estudante universitária e joga online com pessoas ao redor do globo.
+* _Usuário 3_: Ana Silva, 28 anos, trabalha como desenvolvedora de software em uma empresa de tecnologia.
 
 
 __Metodologia:__
@@ -23,9 +23,9 @@ Tarefa: Criar, Acessar e Fazer o Logout de uma Conta de Usuário
 
 __Resultados:__
 
-* Rodolfo Nunes: Completou todas as tarefas em 4 minutos sem erros.
-* Laura Fagundes: Completou em 6 minutos com uma dificuldade na criação de senha.
-* Ana Silva: Completou em 4 minutos, teve poucas dificuldades.
+* _Rodolfo Nunes_: Completou todas as tarefas em 4 minutos sem erros.
+* _Laura Fagundes_: Completou em 6 minutos com uma dificuldade na criação de senha.
+* _Ana Silva_: Completou em 4 minutos, teve poucas dificuldades.
 
 
 __Questionário de Satisfação:__
