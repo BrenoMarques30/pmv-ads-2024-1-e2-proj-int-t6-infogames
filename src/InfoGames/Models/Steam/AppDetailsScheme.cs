@@ -13,7 +13,7 @@ namespace InfoGames.Models.Steam {
 
         [JsonProperty("data", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("data")]
-        public Data? Data { get; set; }
+        public AppData? Data { get; set; }
     }
 
     public class Category {
@@ -36,7 +36,7 @@ namespace InfoGames.Models.Steam {
         public string? Notes { get; set; }
     }
 
-    public class Data {
+    public class AppData {
         [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("type")]
         public string? Type { get; set; }
@@ -167,7 +167,7 @@ namespace InfoGames.Models.Steam {
 
         [JsonProperty("screenshots", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("screenshots")]
-        public List<Screenshot>? Screenshots { get; set; }
+        public List<Images>? Screenshots { get; set; }
 
         [JsonProperty("movies", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("movies")]
@@ -195,7 +195,7 @@ namespace InfoGames.Models.Steam {
 
         [JsonProperty("demos", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("demos")]
-        public List<Demos?>? Demos { get; set; }        
+        public List<Demos?>? Demos { get; set; }
     }
 
     public class Dejus {
@@ -255,7 +255,7 @@ namespace InfoGames.Models.Steam {
     public class Achievements {
         [JsonProperty("total", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("total")]
-        public int? Total { get; set; }
+        public string? Total { get; set; }
 
         [JsonProperty("highlighted", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("highlighted")]
@@ -292,12 +292,12 @@ namespace InfoGames.Models.Steam {
             return objectType == typeof(RequirementsOrEmptyArray);
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, Newtonsoft.Json.JsonSerializer serializer) {
-            RequirementsOrEmptyArray result = new RequirementsOrEmptyArray();
+        public override object ReadJson(JsonReader reader, Type objectType, object? existingValue, Newtonsoft.Json.JsonSerializer serializer) {
+            RequirementsOrEmptyArray result = new();
 
             if (reader.TokenType == JsonToken.StartArray) {
                 // If it's an array, read it as an array of strings
-                result.EmptyArray = serializer.Deserialize<List<string?>>(reader) ?? new List<string?>();
+                result.EmptyArray = serializer.Deserialize<List<string?>>(reader) ?? [];
             } else if (reader.TokenType == JsonToken.StartObject) {
                 // If it's an object, deserialize it as Requirements
                 result.Requirements = serializer.Deserialize<Requirements>(reader);
@@ -308,7 +308,7 @@ namespace InfoGames.Models.Steam {
             return result;
         }
 
-        public override void WriteJson(JsonWriter writer, object value, Newtonsoft.Json.JsonSerializer serializer) {
+        public override void WriteJson(JsonWriter writer, object? value, Newtonsoft.Json.JsonSerializer serializer) {
             throw new NotImplementedException();
         }
 
@@ -337,10 +337,10 @@ namespace InfoGames.Models.Steam {
 
         [JsonProperty("highlight", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("highlight")]
-        public bool? Highlight { get; set; }
+        public bool Highlight { get; set; }
     }
 
-    public class Mp4 {
+    public class Media {
         [JsonProperty("480", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("480")]
         public string? _480 { get; set; }
@@ -349,6 +349,16 @@ namespace InfoGames.Models.Steam {
         [JsonPropertyName("max")]
         public string? Max { get; set; }
     }
+
+    public class Mp4 : Media {
+
+    }
+
+    public class Webm : Media {
+
+    }
+
+
 
     public class PackageGroup {
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
@@ -433,25 +443,25 @@ namespace InfoGames.Models.Steam {
     public class ReleaseDate {
         [JsonProperty("coming_soon", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("coming_soon")]
-        public bool? ComingSoon { get; set; }
+        public bool ComingSoon { get; set; }
 
         [JsonProperty("date", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("date")]
         public string? Date { get; set; }
     }
 
-    public class Screenshot {
+    public class Images {
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("id")]
-        public string? Id { get; set; }
+        public required string Id { get; set; }
 
         [JsonProperty("path_thumbnail", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("path_thumbnail")]
-        public string? PathThumbnail { get; set; }
+        public required string PathThumbnail { get; set; }
 
         [JsonProperty("path_full", NullValueHandling = NullValueHandling.Ignore)]
         [JsonPropertyName("path_full")]
-        public string? PathFull { get; set; }
+        public required string PathFull { get; set; }
     }
 
     public class Sub {
@@ -508,13 +518,4 @@ namespace InfoGames.Models.Steam {
         public string? Email { get; set; }
     }
 
-    public class Webm {
-        [JsonProperty("480", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonPropertyName("480")]
-        public string? _480 { get; set; }
-
-        [JsonProperty("max", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonPropertyName("max")]
-        public string? Max { get; set; }
-    }
 }

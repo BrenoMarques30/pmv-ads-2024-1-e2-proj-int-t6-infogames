@@ -1,0 +1,55 @@
+﻿@model InfoGames.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow" style="background:#DCDCDC; border-radius: 15px;">
+                <div class="card-body" >
+                    <div class="text-center">
+                        <img src="~/Logo/INFOGAME.png" alt="Logo da Empresa" class="img-fluid" style="height: 100px; width: 100px;">
+                    </div>
+                    <!-- Background cinza -->
+                    <h1 class="text-center">Deletar Usuario</h1>
+                    <h3 class="text-center">
+                        Tem certeza de que deseja excluir essas informações?
+                    </h3>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-right">Nome:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Nome)</dd>
+                        <dt class="col-sm-4 text-right">Nome de Usuário:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NomeDeUsuario)</dd>
+                        <dt class="col-sm-4 text-right">Senha:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Senha)</dd>
+                        <dt class="col-sm-4 text-right">Email:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+                        <dt class="col-sm-4 text-right">Token:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Token)</dd>
+                        <dt class="col-sm-4 text-right">Data de Nascimento:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.DataNascimento)</dd>
+                        <dt class="col-sm-4 text-right">Conta Suspensa:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.ContaSuspensa)</dd>
+                        <dt class="col-sm-4 text-right">Conta Restrita:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.ContaRestrita)</dd>
+                        <dt class="col-sm-4 text-right">Steam ID Vinculado:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.SteamIdVinculado)</dd>
+                        <dt class="col-sm-4 text-right">Email Verificado:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.EmailVerificado)</dd>
+                    </dl>
+                    <hr />
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="text-center">
+                            <input type="submit" value="Deletar" class="btn btn-danger" />
+                            <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
