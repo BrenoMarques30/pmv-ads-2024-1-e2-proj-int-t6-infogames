@@ -56,11 +56,11 @@ __Ferramentas:__ questionários e gravações de sessões de teste para análise
 
 __Participantes:__
 
-- **Usuário 1**: Carlos Eduardo, 22 anos, estudante universitário e gamer assíduo.
+- **Usuário 1**: _Carlos Eduardo_, 22 anos, estudante universitário e gamer assíduo.
   - **Tarefa**: Pesquisar jogos de estratégia para PC
-- **Usuário 2**: Luísa Martins, 35 anos, mãe e jogadora casual.
+- **Usuário 2**: _Luísa Martins_, 35 anos, mãe e jogadora casual.
   - **Tarefa**: Buscar jogos educativos para seu filho de 7 anos.
-- **Usuário 3**: Renato Borges, 45 anos, novato em tecnologia e jogos.
+- **Usuário 3**: _Renato Borges_, 45 anos, novato em tecnologia e jogos.
   - **Tarefa**: Encontrar jogos simples para iniciantes.
  
 
