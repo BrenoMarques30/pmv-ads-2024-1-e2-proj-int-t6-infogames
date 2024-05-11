@@ -50,6 +50,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9nb1xKb2dvTmFvRW5jb250cmFkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Login/Create - Cópia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ3JlYXRlIC0gQ8OzcGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Login/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Login/Interface.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW50ZXJmYWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Login/Reset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Login/resetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5ccmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Loja/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9qYVxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,12 +82,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9qYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Shared/Components/Menu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/_ViewImports.cshtml]
@@ -77,3 +125,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-u2673rni05
+
+[C:/Users/Pichau/Documents/GitHub/pmv-ads-2024-1-e2-proj-int-t6-infogames/src/InfoGames/Views/Shared/_LayoutDeslogado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mz6kkd8z0o

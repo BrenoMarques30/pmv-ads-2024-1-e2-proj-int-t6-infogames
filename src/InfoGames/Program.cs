@@ -1,5 +1,8 @@
 using InfoGames.Data;
+using InfoGames.Repositorio;
+using InfoGames.Helper;
 using Microsoft.EntityFrameworkCore;
+using InfoGames.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,24 +10,35 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var _jogo = builder.Build();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<ISessao, Sessao>();
+builder.Services.AddSession(o => {
+    o.Cookie.HttpOnly = true;
+    o.Cookie.IsEssential = true;
+});
+
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!_jogo.Environment.IsDevelopment()) {
-    _jogo.UseExceptionHandler("/Home/Error");
+if (!app.Environment.IsDevelopment()) {
+    app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    _jogo.UseHsts();
+    app.UseHsts();
 }
 
-_jogo.UseHttpsRedirection();
-_jogo.UseStaticFiles();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
-_jogo.UseRouting();
+app.UseRouting();
 
-_jogo.UseAuthorization();
+app.UseAuthorization();
 
-_jogo.MapControllerRoute(
+app.UseSession();
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-_jogo.Run();
+app.Run();

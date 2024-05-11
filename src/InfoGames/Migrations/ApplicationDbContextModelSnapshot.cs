@@ -480,7 +480,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "36b6719e-6365-469c-a029-9ad73136c371",
+                            Id = "f16ebb03-9513-43e4-a9e4-7043b970d7f7",
                             ChaveApi = "",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
@@ -693,6 +693,65 @@ namespace InfoGames.Migrations
                     b.HasIndex("IdDetalhesJogo");
 
                     b.ToTable("Screenshots");
+                });
+
+            modelBuilder.Entity("InfoGames.Models.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("ContaRestrita")
+                        .HasColumnType("bit")
+                        .HasColumnName("ContaRestrita");
+
+                    b.Property<bool>("ContaSuspensa")
+                        .HasColumnType("bit")
+                        .HasColumnName("ContaSuspensa");
+
+                    b.Property<DateTime>("DataNascimento")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DataNascimento");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Email");
+
+                    b.Property<bool>("EmailVerificado")
+                        .HasColumnType("bit")
+                        .HasColumnName("EmailVerificado");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Nome");
+
+                    b.Property<string>("NomeDeUsuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("NomeDeUsuario");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Senha");
+
+                    b.Property<int>("SteamIdVinculado")
+                        .HasColumnType("int")
+                        .HasColumnName("SteamIdVinculado");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Token");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("InfoGames.Models.Webm", b =>

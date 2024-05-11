@@ -8,7 +8,7 @@ namespace InfoGames.Data {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
 
         }
-
+        public DbSet<Usuario> Usuario { get; set; }
         public DbSet<LojaModel> Lojas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {

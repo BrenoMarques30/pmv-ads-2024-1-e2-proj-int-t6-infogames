@@ -7,39 +7,59 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/InfoGames.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ml-2">
+            <div class="">
+                <img src="~/Logo/LOGO FAVICON BLACK.png" alt="Logo da Empresa" class="img-fluid" style="height: 50px; width: 50px;">
+            </div>
             <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">InfoGames</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    @{
+                        string exibir = ViewBag.nomeUsuario is null ? "INFO GAME" : ViewBag.nomeUsuario;
+                        <span>@exibir</span>
+                    }
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav">
+                        <li>
+
+                            <form class="form-inline" asp-controller="Jogo" asp-action="Index" method="get" onsubmit="return false;">
+
+                                <input type="hidden" name="pageSize" value="@ViewBag.pageSize" />
+                                <div class="input-group">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar por jogos" aria-label="Search" name="searchTerm" id="searchTerm" onchange="submitSearch()">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-success my-2 my-sm-0 visually-hidden" type="button" onclick="submitSearch()" />
+                                    </div>
+                                </div>
+
+                            </form>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Loja" asp-action="Index">Lojas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Jogo" asp-action="Index">Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+                        </li>
                     </ul>
-                    <div class="row col-6 end-0">
-                        <form class="form-inline" asp-controller="Jogo" asp-action="Index" method="get" onsubmit="return false;">
-
-                            <input type="hidden" name="pageSize" value="@ViewBag.pageSize" />
-                            <div class="input-group">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Buscar por jogos" aria-label="Search" name="searchTerm" id="searchTerm" onchange="submitSearch()">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-success my-2 my-sm-0 visually-hidden" type="button" onclick="submitSearch()" />
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -51,8 +71,15 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - InfoGames - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="text-center flex-grow-1">
+                &copy; 2024 INFOGAME, Inc
+            </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="text-dark mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
