@@ -34,10 +34,27 @@ A imagem abaixo ilustra o Template padrão do InfoGames.
 ## Telas
 
 Todas as telas apresentam um layout responsivo, tendo seu conteúdo ajustado para qualquer tamanho de tela. O template criado é composto pelos seguintes layouts:
+
 - Home Page
+
+![1-Landing Page-InfoGames](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/c5a4ba8d-bc0a-419d-a949-fa37c217e093)
+
+  
 - Tela do Cadastro do Usuário
+
+![3-Tela Cadastro Usuário-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/be8f3625-d4c8-4900-8288-9023d21686e8)
+
+  
 - Tela da Login do Usuário
+
+![2-Tela Inicial Usuário-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/2507093c-035b-474d-aefc-7d3f50783e87)
+
+
 - Tela Redefinir Senha do Usuário
+
+![4-Tela Recuperar Senha-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3533b886-f527-4a42-9897-a645986ceb24)
+
+  
 - Tela Portal de Notícias
 - Tela Portal de Promoções
 - Tela de Comentários
