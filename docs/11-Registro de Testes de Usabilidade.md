@@ -4,6 +4,8 @@ Os registros, abaixo reprentados, representam uma visão parcial, uma vez que o 
 
 __Registro de Teste de Usabilidade:__ InfoGames
 
+### Teste 01 - Criar, acessar e fazer o logout de uma conta
+
 * __Data do Teste:__ 11 de Maio de 2024
 * __Local:__ Testes realizados de forma remota
 * __Versão do Software:__ 1.0
