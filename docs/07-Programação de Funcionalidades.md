@@ -9,7 +9,8 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 |------|-----------------------------------------|----|
 |RF-01 a RF-11| A aplicação deve permitir que o administrador crie, edite e exclua Usuários, Jogos e Lojas | HomeController.cs | 
 |RF-01 a RF-04 | A aplicação deve permitir que o usuário gerencie seu perfil   |  UsuariosController.cs |
-|RF-01 a RF-04 | A aplicação deve permitir que o usuário gerencie seu perfil   |  UsuariosController.cs |
+|RF-05 a RF-11 | A aplicação deve permitir acesso e manipulação aos Portais de Jogos, Notícias e Lojas   |  NoticiasController.cs, JogosController.cs, LojasController.cs |
+
 
 # Instruções de acesso
 
