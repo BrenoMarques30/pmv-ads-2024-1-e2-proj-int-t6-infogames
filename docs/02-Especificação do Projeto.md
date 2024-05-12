@@ -34,9 +34,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ID    | Descrição do Requisito                                                                                                       | Prioridade |
 | ----- | ---------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | RF-01 | Permitir que o usuário crie e gerencie seu perfil na plataforma.                                                             | ALTA       |
-| RF-02 | Proibir interação de usuários menores de 13 anos com demais usuários                                                         | ALTA       |
-| RF-03 | Permitir que o usuário sincronize seu perfil da plataforma com o seu perfil da Steam® - Via única Steam® -> InfoGames        | BAIXA      |
-| RF-04 | Permitir que o usuário faça cadastro e login usando SSO Steam®                                                               | MÉDIA      |
+| RF-02 | Permitir que o usuário realize Login e Logout                                                                                | ALTA       |
+| RF-03 | Permitir que o usuário realize Redefinição de Senha                                                                          | ALTA       |
+| RF-04 | Permitir que o usuário sincronize seu perfil da plataforma com o seu perfil da Steam® - Via única Steam® -> InfoGames        | BAIXA      |
 | RF-05 | Exibir notícias atualizadas sobre jogos que o usuário possui e/ou segue (Portal de notícias)                                 | BAIXA      |
 | RF-06 | Permitir o usuário personalizar seu portal de notícias.                                                                      | ALTA       |
 | RF-07 | Permitir o usuário curtir e comentar nas notícias.                                                                           | MÉDIA      |
@@ -57,6 +57,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-22 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
 | RF-23 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
 | RF-24 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
+| RF-25 | Proibir interação de usuários menores de 13 anos com demais usuários                                                         | ALTA       |
+
 
 ### Requisitos Não Funcionais
 
