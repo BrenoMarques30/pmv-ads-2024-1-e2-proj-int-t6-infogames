@@ -3,7 +3,8 @@
 
 Na tabela abaixo, estão relacionados os requisitos atendidos com os artefatos criados (código fonte), com as devidas instruções principais para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
 
-Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos desenvolvidos.
+
+
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
