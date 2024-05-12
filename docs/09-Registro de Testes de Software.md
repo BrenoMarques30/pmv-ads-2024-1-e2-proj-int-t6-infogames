@@ -9,20 +9,28 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
 |Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3dfc9f13-f8fd-476b-9315-b5384d39ae8f    |
 
+
 | **Caso de Teste** 	| **CT-02 – Realizar Login e Logout** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-001 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
+|	Requisito Associado 	| RF-002 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
 |Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/53ae3ae2-0832-47d9-88a6-52787eb51629  |
+
 
 | **Caso de Teste** 	| **CT-03 – Redefinir Senha** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-002 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
+|	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
 |Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b181f77-e359-4b96-8922-6e0c2631b19e |
 
-
-| **Caso de Teste** 	| **CT-04 – Pesquisa Jogos** 	|
+| **Caso de Teste** 	| **CT-04 – O Administrador pode Incluir, Alterar e Excluir Usuários do Sistema** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
+|	Requisito Associado 	| RF-001 a RF-003 - A aplicação deve permitir que o Administrador crie, edite e exclua Usuários. |
+|Registro de evidência | - Criar Usuário: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b181f77-e359-4b96-8922-6e0c2631b19e </b> |
+|                      | - Editar Usuário: : https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b181f77-e359-4b96-8922-6e0c2631b19e </b> |
+|                      | - Excluir Usuário: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b181f77-e359-4b96-8922-6e0c2631b19e </b> |
+
+| **Caso de Teste** 	| **CT-05 – Pesquisa Jogos** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
 
 
