@@ -9,7 +9,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
 |Registro de evidência | www.teste.com.br/drive/ct-01 |
 
-| **Caso de Teste** 	| **CT-02 – Realizar login** 	|
+| **Caso de Teste** 	| **CT-02 – Realizar Login e Logout** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
@@ -19,12 +19,8 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF-002 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
 
-| **Caso de Teste** 	| **CT-04 – Encerrar Sessão** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário encerre a Sessão logada. |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
 
-| **Caso de Teste** 	| **CT-05 – Pesquisa Jogoso** 	|
+| **Caso de Teste** 	| **CT-04 – Pesquisa Jogos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
 |Registro de evidência | www.teste.com.br/drive/ct-02 |
