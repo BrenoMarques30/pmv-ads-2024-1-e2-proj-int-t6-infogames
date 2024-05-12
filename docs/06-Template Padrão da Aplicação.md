@@ -58,7 +58,7 @@ Para a Tela de Login (acima), é necessário cadastrar o Usuário e a Senha de a
 
   
 - Tela Portal de Notícias
-- Tela Portal de Promoções
+- Tela Portal de Promoções  
 - Tela de Comentários
 
 
