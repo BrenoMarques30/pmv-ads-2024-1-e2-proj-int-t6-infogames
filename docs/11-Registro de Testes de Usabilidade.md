@@ -4,10 +4,12 @@ Os registros, abaixo reprentados, representam uma visão parcial, uma vez que o 
 
 __Registro de Teste de Usabilidade:__ InfoGames
 
-__Data do Teste:__ 11 de Maio de 2024
-__Local:__ Testes realizados de forma remota
-__Versão do Software:__ 1.0
-__Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das funcionalidades de criação de conta, acesso e logout.
+### Teste 01 - Criar, acessar e fazer o logout de uma conta
+
+* __Data do Teste:__ 11 de Maio de 2024
+* __Local:__ Testes realizados de forma remota
+* __Versão do Software:__ 1.0
+* __Objetivo do Teste:__ Avaliar a facilidade de navegação e usabilidade das funcionalidades de criação de conta, acesso e logout.
 
 __Participantes:__
 
@@ -41,4 +43,35 @@ __Considerações:__
 
 Os testes indicaram uma boa usabilidade geral com algumas áreas de melhoria na clareza das instruções para novos usuários. Recomenda-se revisar a visualização de obrigatoriedade de campos e as instruções de criação de senha.
 
+### Teste 02 - Pesquisa de Jogos Eletrônicos
+
+* __Data do Teste:__ 11 de Maio de 2024
+* __Local:__ Testes realizados de forma remota
+* __Versão do Software:__ 1.0
+* __Objetivo do Teste:__ Avaliar a eficiência, eficácia e satisfação dos usuários com a funcionalidade de pesquisa de jogos eletrônicos, incluindo a facilidade de navegação, a qualidade das listas de resultados e a legibilidade da interface.
+
+__Metodologia:__ Testes qualitativos com um grupo de usuários fictícios utilizando cenários simulados para a pesquisa de jogos por gênero, idade, tipo, etc.
+
+__Ferramentas:__ questionários e gravações de sessões de teste para análise posterior.
+
+__Participantes:__
+
+- **Usuário 1**: _Carlos Eduardo_, 22 anos, estudante universitário e gamer assíduo.
+  - **Tarefa**: Pesquisar jogos de estratégia para PC
+- **Usuário 2**: _Luísa Martins_, 35 anos, mãe e jogadora casual.
+  - **Tarefa**: Buscar jogos educativos para seu filho de 7 anos.
+- **Usuário 3**: _Renato Borges_, 45 anos, novato em tecnologia e jogos.
+  - **Tarefa**: Encontrar jogos simples para iniciantes.
+ 
+
+| Usuário        | Dificuldade de navegação                       | Satisfação com a lista                           | Legibilidade da página                            |
+|----------------|-----------------------------------------------|-------------------------------------------------|--------------------------------------------------|
+| Carlos Eduardo | Nenhuma. A interface foi fácil de usar        | Alta. Encontrou vários jogos novos e clássicos bem avaliados | Excelente. Informações claras e layout amigável  |
+| Luísa Martins  | Média. Encontrou alguns desafios em filtrar por faixa etária adequada | Moderada. Gostaria de mais opções de filtros    | Boa. Algumas informações estavam em texto pequeno|
+| Renato Borges  | Nenhuma. Era bastante simples.                | Media. Lista grande de jogos                    | Satisfatória. Não tem muito a reclamar.          |
+
+
+__Análise dos Resultados__
+
+Os resultados indicam uma aceitação geral da interface e funcionalidade, com pontos a melhorar na lista de jogos apresentados, em termos de quantidade e visualização. Ações recomendadas incluem aprimoramento dos guias de uso, aumento de legibilidade em textos informativos.
 
