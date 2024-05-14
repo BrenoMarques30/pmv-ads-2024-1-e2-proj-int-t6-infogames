@@ -1,0 +1,112 @@
+body {
+    font-family: "Exo", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+  html, body {
+    height: 100%
+  }
+
+  section.img{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/BG\ Body\ 02.jpg);
+    background-position: center;
+    background-size: cover;
+
+  }
+  
+  .container {
+    
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #CC2503;
+    border-radius: 14px;
+    
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+  }
+  
+  .promotion-title {
+    color: #fff;
+    padding: 10px 20px;
+    box-sizing:50px ;
+    
+  }
+  
+  .filter-box {
+    display: flex;
+    background-color: #cc2503;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 10px ;
+  }
+  
+  .filter-box label {
+    margin-right: 10px;
+  }
+  
+  .game-list {
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  
+  .game-item {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    
+  }
+  
+  .game-item img {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .game-details {
+    overflow: hidden;
+    width: 50%;
+
+  }
+
+  h3{
+    font-size: 20px;
+    
+  }
+  
+  p{
+    font-size: 10px;
+  }
+
+  .discount-box {
+    background-color: #4c6b22;
+    color: #b3e112;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    margin-bottom: 5px;
+  }
+  
+  .cart-icon {
+    text-align: center;
+
+  }
+  
