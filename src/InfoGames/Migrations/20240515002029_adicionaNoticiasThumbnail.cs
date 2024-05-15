@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace InfoGames.Migrations
 {
     /// <inheritdoc />
-    public partial class AdicionarTabelas : Migration
+    public partial class adicionaNoticiasThumbnail : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -119,6 +119,7 @@ namespace InfoGames.Migrations
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IsExternalUrl = table.Column<bool>(type: "bit", nullable: true),
                     Autor = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Thumbnail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Conteudo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NomeNoFeed = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Data = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -577,7 +578,7 @@ namespace InfoGames.Migrations
             migrationBuilder.InsertData(
                 table: "Lojas",
                 columns: new[] { "Id", "ChaveApi", "Logo", "Nome", "Url" },
-                values: new object[] { "99647d55-57b6-4509-bea6-f6f288d89607", "", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
+                values: new object[] { "fcd084a2-1cb8-4c1e-9c48-4b05c60b6d3f", "", "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", "Steam", "https://store.steampowered.com/" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Categorias_IdDetalhesJogo",

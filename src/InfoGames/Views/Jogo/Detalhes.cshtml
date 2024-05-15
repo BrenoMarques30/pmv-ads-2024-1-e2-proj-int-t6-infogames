@@ -3,6 +3,7 @@
     var dlcs = ViewData["Dlcs"] as List<JogoModel>;
     var jogoCompleto = ViewData["JogoCompleto"] as JogoModel;
     var demos = ViewData["Demos"] as List<JogoModel>;
+    var noticias = ViewData["Noticias"] as List<NoticiaModel>;
 }
 
 
@@ -306,6 +307,31 @@
             </table>
         }
     </div>
+    @if (noticias is null) {
+        <h1>Nenhuma notícia encontrada</h1>
+    } else {
+        <h1>Notícias</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Thumbnail</th>
+                    <th>Descrição</th>
+                    <th>Data de Publicação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var noticia in noticias) {
+                    <tr>
+                        <td>@noticia.Titulo</td>
+                        <td><img src="@noticia.Thumbnail" /></td>
+                        <td>@Html.Raw(noticia.Conteudo)</td>
+                        <td>@noticia.Data</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
 </div>
 
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ikJhvHQIaWVobi+nVAtPY/L7be4Eu07xUdvgNpSMx50SJ/2QF3fkZEgsuD2FfZLNJMH/4mtcNm+VeaMIZN2aDA==",
+  "dgSpecHash": "QZeGk5xXY0HN6xUxbgnfw80z65SKZQIVT3A4tPDtA7ExMrgSqbDfrMZkU/iLeuWlUwyxMym3dZwS6DmpaiknaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pichau\\Documents\\GitHub\\pmv-ads-2024-1-e2-proj-int-t6-infogames\\src\\InfoGames\\InfoGames.csproj",
   "expectedPackageFiles": [
@@ -165,6 +165,7 @@
     "C:\\Users\\Pichau\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Pichau\\.nuget\\packages\\system.servicemodel.syndication\\8.0.0\\system.servicemodel.syndication.8.0.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGames.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240511140706_AdicionarTabelas")]
-    partial class AdicionarTabelas
+    [Migration("20240515002029_adicionaNoticiasThumbnail")]
+    partial class adicionaNoticiasThumbnail
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -483,7 +483,7 @@ namespace InfoGames.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "99647d55-57b6-4509-bea6-f6f288d89607",
+                            Id = "fcd084a2-1cb8-4c1e-9c48-4b05c60b6d3f",
                             ChaveApi = "",
                             Logo = "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",
                             Nome = "Steam",
@@ -562,6 +562,9 @@ namespace InfoGames.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("NomeNoFeed")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Thumbnail")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")

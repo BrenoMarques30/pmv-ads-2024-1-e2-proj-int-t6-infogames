@@ -30,6 +30,9 @@ namespace InfoGames.Models {
         [Display(Name = "Autor")]
         public string? Autor { get; set; }
 
+        [Display(Name = "Thumbnail")]
+        public string? Thumbnail { get; set; }
+
         [Display(Name = "Conteúdo")]
         public string? Conteudo { get; set; }
 
