@@ -7,6 +7,10 @@ using InfoGames.Data;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using static System.Net.WebRequestMethods;
+using System.ServiceModel.Syndication;
+using System.Xml;
+
 
 namespace InfoGames.Middlewares {
     public class APICalls {
@@ -87,6 +91,14 @@ namespace InfoGames.Middlewares {
                 Debug.WriteLine("Erro ao tentar converter JSON");
                 return null;
             }
+        }
+
+        public static SyndicationFeed? GetAppNewsXML(string AppId) {
+            if (AppId is null) return null;
+            var url = "https://store.steampowered.com/feeds/news/app/" + AppId + "/?cc=BR&l=brazilian&feed=rss&enddate=1508138599";
+            using var reader = XmlReader.Create(url);
+            var feed = SyndicationFeed.Load(reader);
+            return feed;
         }
     }
 }

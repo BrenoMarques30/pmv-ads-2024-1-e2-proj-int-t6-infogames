@@ -153,8 +153,39 @@ namespace InfoGames.Controllers {
                 }
                 if (demos.Count > 0) ViewData["Demos"] = demos;
             }
+            var noticias = BuscarNoticiaNoDB(_jogo.AppId);
+            if (noticias is null) {
+                Debug.WriteLine("Notícias do app \"" + _jogo.Nome + "\" não encontradas no banco de dados. Buscando da API Steam.");
+                _ = BuscarNoticiasNaSteam(_jogo.AppId);
+                ViewData["Noticias"] = BuscarNoticiaNoDB(_jogo.AppId);
+            } else {
+                Debug.WriteLine("Notícias do app \"" + _jogo.Nome + "\" encontradas no banco de dados.");
+                ViewData["Noticias"] = noticias;
+            }
+
 
             return View();
+        }
+
+        public List<NoticiaModel> BuscarNoticiaNoDB(string AppId) {
+            var noticias = db.Noticias.Where(n => n.AppId == AppId).OrderByDescending(n => n.Data).ToList();
+            if (noticias is null || noticias.Count == 0) {
+                return null;
+            }
+            foreach (var noticia in noticias) {
+                if (noticia.Data == null) continue;
+                long unixTime = long.Parse(noticia.Data);
+                DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(unixTime).UtcDateTime;
+                noticia.Data = dateTime.ToString("dd/MM/yyyy");
+            }
+
+            return noticias;
+        }
+
+        public string BuscarNoticiasNaSteam(string AppId) {
+            var recuperarNoticias = new RecuperarNoticias();
+            recuperarNoticias.BuscarNaSteamXML(db, AppId);
+            return "Notícias recuperadas com sucesso.";
         }
 
         public JogoModel? ConstruirInstanciaJogo(string id) {
@@ -180,6 +211,7 @@ namespace InfoGames.Controllers {
                     return null;
                 }
             }
+
             return _jogo;
         }
     }
