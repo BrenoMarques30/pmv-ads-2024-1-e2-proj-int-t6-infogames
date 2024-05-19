@@ -24,7 +24,7 @@ namespace InfoGames.Controllers {
             ViewBag.TotalPages = totalPages;
             ViewBag.Pagination = paginationHelper.GeneratePagination(page, pageSize, searchTerm, totalPages);
 
-            return View(jogosOnPage);
+            return View();
         }
 
         private string CreateNewBasket(int page, int pageSize, string searchTerm) {

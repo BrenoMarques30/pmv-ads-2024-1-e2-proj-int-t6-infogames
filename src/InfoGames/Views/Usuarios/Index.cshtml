@@ -1,7 +1,7 @@
-﻿@model IEnumerable<InfoGames.Models.Usuario>
-
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Usurários";
+    List<Usuario> usuarios = ViewBag.listaUsuarios;
+    Usuario _usuario = new Usuario();
 }
 
 <h1>DASHBOARD USUARIOS</h1>
@@ -10,54 +10,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => _usuario.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NomeDeUsuario)
+                @Html.DisplayNameFor(model => _usuario.NomeDeUsuario)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Senha)
+                @Html.DisplayNameFor(model => _usuario.Senha)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                @Html.DisplayNameFor(model => _usuario.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
+                @Html.DisplayNameFor(model => _usuario.DataNascimento)
             </th>
-            
-            <th></th>
-            <th></th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeDeUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
-            </td>
-            <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a> 
-            </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalhe</a>
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Deletar</a>
-                </td>
-        </tr>
-}
+        @foreach (var usuario in usuarios) {
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.NomeDeUsuario</td>
+                <td>@usuario.Senha</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.DataNascimento.ToShortDateString()</td>
+            </tr>
+        }
     </tbody>
 </table>

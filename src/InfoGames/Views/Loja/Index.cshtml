@@ -1,4 +1,6 @@
-﻿@model List<LojaModel>
+﻿@{
+    List<LojaModel> lojas = ViewBag.listaLoja;
+}
 
 <div class="container">
     <div class="row pt-4 pb-3">
@@ -25,7 +27,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var loja in Model.OrderBy(u => u.Id)) {
+            @foreach (var loja in lojas.OrderBy(u => u.Id)) {
                 <tr>
                     <td>@loja.Id</td>
                     <td>@loja.Nome</td>
@@ -39,7 +41,7 @@
                         <a class="btn btn-danger" asp-controller="Loja" asp-action="Delete" asp-route-id="@loja.Id">
                             Excluir
                         </a>
-                        
+
                 </tr>
             }
         </tbody>

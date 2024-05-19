@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using InfoGames.Helper;
 using InfoGames.Models;
 using InfoGames.Data;
+using System.Diagnostics;
 
 namespace InfoGames.Controllers;
 
@@ -48,6 +49,7 @@ public class LoginController : Controller {
 
             if (ModelState.IsValid) {
                 Usuario? usuario = BuscarPorLogin(loginModel.Login);
+                Debug.WriteLine(usuario?.Email);
                 if (usuario != null) {
                     if (usuario.SenhaValida(loginModel.Senha)) {
                         _sessao.CriarSessaoUsuario(usuario);
