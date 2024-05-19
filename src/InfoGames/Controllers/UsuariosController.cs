@@ -13,17 +13,17 @@ namespace InfoGames.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _db;
 
-        public UsuariosController(ApplicationDbContext context)
+        public UsuariosController(ApplicationDbContext db)
         {
-            _context = context;
+            _db = db;
         }
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuario.ToListAsync());
+            return View(await _db.Usuario.ToListAsync());
         }
 
         // GET: Usuarios/Details/5
@@ -34,7 +34,7 @@ namespace InfoGames.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
+            var usuario = await _db.Usuario
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
@@ -50,6 +50,8 @@ namespace InfoGames.Controllers
             return View();
         }
 
+        
+
         // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -59,8 +61,8 @@ namespace InfoGames.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
+                _db.Add(usuario);
+                await _db.SaveChangesAsync();
 
                 // Verificar se o cabeçalho Referer está presente na requisição
                 if (Request.Headers.ContainsKey("Referer"))
@@ -92,7 +94,7 @@ namespace InfoGames.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario.FindAsync(id);
+            var usuario = await _db.Usuario.FindAsync(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -116,8 +118,8 @@ namespace InfoGames.Controllers
             {
                 try
                 {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
+                    _db.Update(usuario);
+                    await _db.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -143,7 +145,7 @@ namespace InfoGames.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
+            var usuario = await _db.Usuario
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
@@ -158,19 +160,19 @@ namespace InfoGames.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var usuario = await _context.Usuario.FindAsync(id);
+            var usuario = await _db.Usuario.FindAsync(id);
             if (usuario != null)
             {
-                _context.Usuario.Remove(usuario);
+                _db.Usuario.Remove(usuario);
             }
 
-            await _context.SaveChangesAsync();
+            await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool UsuarioExists(int id)
         {
-            return _context.Usuario.Any(e => e.Id == id);
+            return _db.Usuario.Any(e => e.Id == id);
         }
     }
 }
