@@ -61,7 +61,7 @@ namespace InfoGames.Middlewares {
             }
 
             foreach (var _noticia in appNewsResponse.Items) {
-                if (_noticia.Title == null) continue;
+                if (_noticia.Title == null || _noticia.Summary == null) continue;
                 var _publishDate = _noticia.PublishDate;
                 DateTime dateTime = new DateTime(_publishDate.Year, _publishDate.Month, _publishDate.Day);
                 var unixDate = new DateTimeOffset(dateTime).ToUnixTimeSeconds();
