@@ -263,5 +263,3 @@ C:\Users\Pichau\Documents\GitHub\pmv-ads-2024-1-e2-proj-int-t6-infogames\src\Inf
 C:\Users\Pichau\Documents\GitHub\pmv-ads-2024-1-e2-proj-int-t6-infogames\src\InfoGames\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Pichau\Documents\GitHub\pmv-ads-2024-1-e2-proj-int-t6-infogames\src\InfoGames\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Pichau\Documents\GitHub\pmv-ads-2024-1-e2-proj-int-t6-infogames\src\InfoGames\bin\Debug\net8.0\RestSharp.dll
-C:\Users\Pichau\Documents\GitHub\pmv-ads-2024-1-e2-proj-int-t6-infogames\src\InfoGames\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutDeslogado.cshtml.rz.scp.css
-C:\Users\Pichau\Documents\GitHub\pmv-ads-2024-1-e2-proj-int-t6-infogames\src\InfoGames\bin\Debug\net8.0\System.ServiceModel.Syndication.dll

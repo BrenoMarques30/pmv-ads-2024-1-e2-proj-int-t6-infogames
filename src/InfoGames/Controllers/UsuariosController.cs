@@ -9,35 +9,30 @@ using NuGet.Protocol;
 using InfoGames.Models;
 using InfoGames.Data;
 
-namespace InfoGames.Controllers
-{
-    public class UsuariosController : Controller
-    {
-        private readonly ApplicationDbContext _context;
+namespace InfoGames.Controllers {
+    public class UsuariosController : Controller {
+        private readonly ApplicationDbContext _db;
 
-        public UsuariosController(ApplicationDbContext context)
-        {
-            _context = context;
+        public UsuariosController(ApplicationDbContext db) {
+            _db = db;
         }
 
         // GET: Usuarios
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Usuario.ToListAsync());
+        public IActionResult Index() {
+            List<Usuario> objUsuariosList = _db.Usuario.ToList();
+            ViewBag.listaUsuarios = objUsuariosList;
+            return View();
         }
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
+        public async Task<IActionResult> Details(int? id) {
+            if (id == null) {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
+            var usuario = await _db.Usuario
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
+            if (usuario == null) {
                 return NotFound();
             }
 
@@ -45,26 +40,24 @@ namespace InfoGames.Controllers
         }
 
         // GET: Usuarios/Create
-        public IActionResult Create()
-        {
+        public IActionResult Create() {
             return View();
         }
+
+
 
         // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,NomeDeUsuario,Senha,Email,Token,DataNascimento,ContaSuspensa,ContaRestrita,SteamIdVinculado,EmailVerificado")] Usuario usuario)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
+        public async Task<IActionResult> Create([Bind("Id,Nome,NomeDeUsuario,Senha,Email,Token,DataNascimento,ContaSuspensa,ContaRestrita,SteamIdVinculado,EmailVerificado")] Usuario usuario) {
+            if (ModelState.IsValid) {
+                _db.Add(usuario);
+                await _db.SaveChangesAsync();
 
                 // Verificar se o cabeçalho Referer está presente na requisição
-                if (Request.Headers.ContainsKey("Referer"))
-                {
+                if (Request.Headers.ContainsKey("Referer")) {
                     // Obter o URL da página anterior a partir do cabeçalho Referer
                     string returnUrl = Request.Headers["Referer"].ToString();
 
@@ -74,9 +67,7 @@ namespace InfoGames.Controllers
 
                     // Redirecionar de volta para a página anterior
                     return Redirect(returnUrl);
-                }
-                else
-                {
+                } else {
                     // Se o cabeçalho Referer não estiver presente, redirecione para uma página padrão
                     return RedirectToAction(nameof(Index));
                 }
@@ -85,16 +76,13 @@ namespace InfoGames.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
+        public async Task<IActionResult> Edit(int? id) {
+            if (id == null) {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario.FindAsync(id);
-            if (usuario == null)
-            {
+            var usuario = await _db.Usuario.FindAsync(id);
+            if (usuario == null) {
                 return NotFound();
             }
             return View(usuario);
@@ -105,28 +93,19 @@ namespace InfoGames.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,NomeDeUsuario,Senha,Email,Token,DataNascimento,ContaSuspensa,ContaRestrita,SteamIdVinculado,EmailVerificado")] Usuario usuario)
-        {
-            if (id != usuario.Id)
-            {
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,NomeDeUsuario,Senha,Email,Token,DataNascimento,ContaSuspensa,ContaRestrita,SteamIdVinculado,EmailVerificado")] Usuario usuario) {
+            if (id != usuario.Id) {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.Id))
-                    {
+            if (ModelState.IsValid) {
+                try {
+                    _db.Update(usuario);
+                    await _db.SaveChangesAsync();
+                } catch (DbUpdateConcurrencyException) {
+                    if (!UsuarioExists(usuario.Id)) {
                         return NotFound();
-                    }
-                    else
-                    {
+                    } else {
                         throw;
                     }
                 }
@@ -136,17 +115,14 @@ namespace InfoGames.Controllers
         }
 
         // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
+        public async Task<IActionResult> Delete(int? id) {
+            if (id == null) {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
+            var usuario = await _db.Usuario
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
+            if (usuario == null) {
                 return NotFound();
             }
 
@@ -156,21 +132,18 @@ namespace InfoGames.Controllers
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var usuario = await _context.Usuario.FindAsync(id);
-            if (usuario != null)
-            {
-                _context.Usuario.Remove(usuario);
+        public async Task<IActionResult> DeleteConfirmed(int id) {
+            var usuario = await _db.Usuario.FindAsync(id);
+            if (usuario != null) {
+                _db.Usuario.Remove(usuario);
             }
 
-            await _context.SaveChangesAsync();
+            await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuarioExists(int id)
-        {
-            return _context.Usuario.Any(e => e.Id == id);
+        private bool UsuarioExists(int id) {
+            return _db.Usuario.Any(e => e.Id == id);
         }
     }
 }

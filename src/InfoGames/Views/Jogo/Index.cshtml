@@ -1,4 +1,6 @@
-﻿@model List<JogoModel>
+﻿@{
+    List<JogoModel>? jogos = ViewBag.Jogos;
+}
 
 @if (ViewBag.SearchTerm is not "") {
     <script>
@@ -15,7 +17,7 @@
             Baixar jogos da Steam (~1 minuto)
         </a>
     </div>
-} else if (!Model.Any()) {
+} else if (!jogos.Any()) {
     <div class="alert alert-warning" role="alert">
         Nenhum Jogo encontrado com o termo de pesquisa "@ViewBag.SearchTerm"
     </div>
@@ -40,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var _jogo in Model.OrderBy(u => u.Nome)) {
+                @foreach (var _jogo in jogos.OrderBy(u => u.Nome)) {
                     <tr>
                         <td>
                             <a asp-controller="Jogo" asp-action="Detalhes" asp-route-id="@_jogo.Id">
