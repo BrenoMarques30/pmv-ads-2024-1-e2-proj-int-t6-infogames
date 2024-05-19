@@ -3,18 +3,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using InfoGames.Helper;
 using InfoGames.Models;
-using InfoGames.Repositorio;
 using InfoGames.Data;
+using System.Diagnostics;
 
 namespace InfoGames.Controllers;
 
 public class LoginController : Controller {
-    private readonly IUsuarioRepositorio _usuarioRepositorio;
     private readonly ISessao _sessao;
     private readonly ApplicationDbContext _db;
 
-    public LoginController(IUsuarioRepositorio usuarioRepositorio, ISessao sessao, ApplicationDbContext db) {
-        _usuarioRepositorio = usuarioRepositorio;
+    public LoginController(ISessao sessao, ApplicationDbContext db) {
+
         _sessao = sessao;
         _db = db;
     }
@@ -40,13 +39,17 @@ public class LoginController : Controller {
         _sessao.RemoverSessaoUsuario();
         return RedirectToAction("Index", "Login");
     }
+    public Usuario? BuscarPorLogin(string email) {
+        return _db.Usuario.FirstOrDefault(m => m.Email == email);
+    }
 
     [HttpPost]
     public IActionResult Entrar(LoginModel loginModel) {
         try {
 
             if (ModelState.IsValid) {
-                Usuario usuario = _usuarioRepositorio.BuscarPorLogin(loginModel.Login);
+                Usuario? usuario = BuscarPorLogin(loginModel.Login);
+                Debug.WriteLine(usuario?.Email);
                 if (usuario != null) {
                     if (usuario.SenhaValida(loginModel.Senha)) {
                         _sessao.CriarSessaoUsuario(usuario);
@@ -72,7 +75,7 @@ public class LoginController : Controller {
     public async Task<IActionResult> Reset(LoginModel loginModel) {
         try {
             if (ModelState.IsValid) {
-                Usuario usuario = _usuarioRepositorio.BuscarPorLogin(loginModel.Login);
+                Usuario? usuario = BuscarPorLogin(loginModel.Login);
 
                 if (usuario != null) {
                     usuario.AtualizarSenha(loginModel.Senha);

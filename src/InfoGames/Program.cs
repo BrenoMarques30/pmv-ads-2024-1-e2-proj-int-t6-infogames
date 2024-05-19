@@ -1,5 +1,4 @@
 using InfoGames.Data;
-using InfoGames.Repositorio;
 using InfoGames.Helper;
 using Microsoft.EntityFrameworkCore;
 using InfoGames.Models;
@@ -11,7 +10,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<ISessao, Sessao>();
 builder.Services.AddSession(o => {
     o.Cookie.HttpOnly = true;

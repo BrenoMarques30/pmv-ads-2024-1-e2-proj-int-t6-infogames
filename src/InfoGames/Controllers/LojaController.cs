@@ -11,7 +11,10 @@ namespace InfoGames.Controllers {
         }
         public IActionResult Index() {
             List<LojaModel> objLojasList = _db.Lojas.ToList();
-            return View(objLojasList);
+
+            ViewBag.listaLoja = objLojasList;
+
+            return View();
         }
 
         public IActionResult Form(string method, string id) {
