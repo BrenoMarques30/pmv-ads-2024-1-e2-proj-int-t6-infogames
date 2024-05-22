@@ -33,34 +33,28 @@ Diagrama 7 –FLUXO PORTAL DE PROMOÇÕES
 
 ## Wireframes
 
-Figura 1 - __Tela Inicial com Jogos tendências - Antes do Login__
+Figura 1 - __Landing Page- Antes do Login__
 
-![1-Tela Inicial](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/22520e8b-f0b4-45f3-a565-473125c9749a)
+![1-Landing Page-ok](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/77d32d18-4e19-4616-980f-74af0ca1bb1f)
 
 
 Figura 2 - __Telas de Login-Cadastro-Recuperar senha-Redefinir senha__
-![2-Telas de Login-Cadastro-Recuperar senha-Redefinir senha](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d5b7edcc-3f56-46d5-be3a-5d40ec94afc6)
 
-Figura 3- __Tela de Menu (após Login) com Tendência dos Jogos Atuais e seus resumos__
-![3-Tendência dos Jogos Atuais e resumo deles-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3bab6460-d94a-4456-8814-58a2c795267f)
+![4-Tela Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9c3e844f-0037-4ece-8dd7-31951b89f0fa)
+
+![2-Telas Login-Cadastro-Redefinição de senha-Usuário-OLD-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b5cda4c8-46b4-418e-93ad-bc4652058f3f)
+
+
+Figura 3- __Tela Inicial (após Login) 
+
+![2- Tela Inicial](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b9be5b45-de79-4ea8-bd1e-b5257c8a59e0)
+
 
 Figura 4 - __Portal de Notícias__
 
-![5-Portal de Notícias-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/75a90dbf-b196-4ca2-93b6-b71073cb52b0)
+![3-Portal de Notícias](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/4326d8fd-f6c1-45f3-9ed2-16d797f4ffec)
 
-Figura 5 - __Portal de Promoções__
-![6-Portal de Promoções](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/5c65966c-0954-4948-8b99-7a5cf7945258)
 
-Figura 6 - __Estatísticas e Ranking dos jogos__
+Figura 5 - __Portal de Pesquisas__
 
-![4-Estatísticas dos jogos-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/74eff7b3-7dbb-4308-bf83-da52e4fe7e60)
-
-Figura 7 - __Portal de Novidades sobre Jogos__
-![7-Portal de Novidades sobre Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e1c4b015-aad6-42b6-9b1f-f34c13400fad)
-
-Figura 8 - __Portal de Pesquisas de Jogos com Card sobre informações de jogos pesquisados__
-![8-Portal de Pesquisas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0527a733-44d2-4edd-909a-f6487964d1ca)
-
-Figura 9- __Área (Caixa) para Comentários dos Usuários__
-![9-Área para Comentários dos Usuários](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0e4010da-7965-4aa9-b962-d68680834357)
-
+![5-Tela Busca-Jogos e Lojas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/4b22ecaa-114a-4a23-89d4-927a6d4bf711)
