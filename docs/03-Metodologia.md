@@ -1,4 +1,4 @@
-
+ 
 # Metodologia
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
@@ -13,7 +13,7 @@ Como mencionado anteriormente, o Scrum é uma abordagem ágil e colaborativa que
 Os papéis: Scrum Master, Product Owner e a Equipe de Desenvolvimento;
 Os eventos: planejamento, sprints e retrospectiva de sprint;
 Os artefatos: backlog do produto, lista de pendências de sprint, lista de pendências do produto, gráfico de burndown, log, etc;
-
+ 
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
@@ -102,7 +102,15 @@ Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diver
        Realização e registro dos testes de usabilidade
        Projeto do Github com Backlog e Plano de Sprints
 
-
+- **Etapa 4 (Sprint 4)**:
+  
+       Conclusão da Aplicação com as entregas abaixo
+       Template padrão da aplicação interativa
+       Prova de Conceito da Arquitetura (POC) - exemplo de implementação com a integração do front-end com o back-end
+       Programação de Funcionalidades
+       Realização e registro dos testes de software
+       Realização e registro dos testes de usabilidade
+       Projeto do Github com Backlog e Plano de Sprints
 
 ### Etapa 1 (Sprint 1):
 
@@ -275,6 +283,42 @@ Figura 15 - Exemplo de armazenamento no Banco de dados
 Figura 16 - Kanban do projeto InfoGames - Etapa 3
 
 ![5-Print Kanban-Etapa 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/437a7b7a-cfd1-45ec-a7af-47a4aa707ebb)
+
+
+### Etapa 4 (Sprint 4):
+
+*4.1 Planejamento:*
+
+O planejamento dessa etapa consistiu na definição do que faltava para a conclusão da aplicação do projeto. Nesse sentido, foi realizada uma revisão do que já estava pronto e do que tinha inicialmente sido planejado.  Com base nesse material, a equipe se reuniu e decidiu por realizar uma redução em algumas funcionalidades, sem qualquer prejuízo ao objetivo e à solução almejada. 
+
+Para essa etapa, foram planejadas as implemenaões dos seguintes funcionalidades: Front-end do módulo de Usuários; Front-end de pesquisa de Lojas e Jogos; Portal de Notícias, além do término dos registros de testes de softwares e de Usabilidade dessas funcionalidades.
+
+As atividades restantes para conclusão da aplicação foram distribuídas com a equipe. Para essa etapa, foi planejado a implemenação do Requisito Funcional RF-01 a 04.
+
+
+*4.2 Execução:*
+
+A equipe realizou, em 19.05.2024, reunião de avaliação geral do projeto, onde decidiu-se por reduzir algumas funcionalidades, antes planejadas, sem prejuízo ao objetivo proposto do projeto. Analisadas as funcionalidades, resolveu-se retirar, momentaneamente, o seguinte: Portal de Promoções, Portal de Novidades, inserção de comentários por parte dos Usuários e exibição de Jogos mais Jogados. Essa decisão não impede que, futuramente, essas funcionalidades não sejam implementadas e incorporadas à aplicação, bem como não compromete, de forma alguma, os objetivos almejados.
+
+As tarefas, nessa etapa, foram assim distribuídas:
+
+a. Módulo do Usuário (back-end e front-end inicial): Caio e Márcia; <br />
+b. Módulos de Lojas, Jogos e Notícias (back-end e front-end inicial): Rafael; <br />
+c. Front-end das páginas construídas: Willian e Pablo; <br />
+f. GitHub - textos e atualizações: Márcia; <br />
+g. Correções e Revisões gerais (Programação e GitHub): toda equipe.
+
+
+*4.3 Evidências:*
+
+Algumas demonstrações das atividades realizadas nessa etapa, estão nas imagens abaixo:
+
+Figura 17 - Resumo da reunião de equipe para planejamento e implementação da Etapa 4, decidindo reduzir as funcionalidades a serem concluídas.
+
+![1-Ata Reunião de Equipe](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/173d63b6-987c-4bf6-a068-17363f4ccfe1)
+
+Figura 18 - Kanban da Etapa 4.
+
 
 
 ### Ferramentas
