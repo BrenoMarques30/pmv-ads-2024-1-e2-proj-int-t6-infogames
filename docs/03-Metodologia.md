@@ -319,6 +319,7 @@ Figura 17 - Resumo da reunião de equipe para planejamento e implementação da 
 
 Figura 18 - Kanban da Etapa 4.
 
+![2-Kanban -etapa4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/7d51bca6-676c-4cd6-83a6-279090215fc4)
 
 
 ### Ferramentas
