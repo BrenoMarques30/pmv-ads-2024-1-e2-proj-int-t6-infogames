@@ -39,9 +39,9 @@ Figura 4: Entidades do conjunto de Classes Usuário e Jogador
 ![2-Modelo ER-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3ce6648a-9d3b-45af-9e4d-3071061f9359)
 
 Abaixo, Figutas com as representações dos objetos, entidades e seus atributos, dos modelos ER do projeto InfoGames:
-![3-Respres-Entidades-Atrib-Usr](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e106b7d0-1326-42c9-9574-0326c4c37138)
 
-![3-Respres-Entidades-Atrib-Usr-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/67c6554e-0114-4ff2-a9dc-97eee7c19aee)
+![1-Modelo E-R-Usuário-após etapa 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/0524ce98-0c79-4bba-95e1-6c548d8022ae)
+
 
 ![4-Respres-Entidades-Atrib-Jogos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1c8236b9-88cb-4ec0-b2a9-eae1dcab884f)
 
