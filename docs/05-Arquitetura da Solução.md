@@ -51,7 +51,8 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ![1-Diagrama BD-Jogos-2-Final](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a48e383e-6c1b-44ea-abec-ac26eb6f6bab)
 
-![2-Diagrama BD-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/88dd0716-09f9-4213-870b-57d879058bae)
+![2-Projeto BD-Usuário-após etapa 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1bf8b470-4ab0-43ab-852f-f7bfe87ae348)
+
 
 
 ## Tecnologias Utilizadas
