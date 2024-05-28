@@ -291,14 +291,14 @@ Figura 16 - Kanban do projeto InfoGames - Etapa 3
 
 O planejamento dessa etapa consistiu na definição do que faltava para a conclusão da aplicação do projeto. Nesse sentido, foi realizada uma revisão do que já estava pronto e do que tinha inicialmente sido planejado.  Com base nesse material, a equipe se reuniu e decidiu por realizar uma redução em algumas funcionalidades, sem qualquer prejuízo ao objetivo e à solução almejada. 
 
-Para essa etapa, foram planejadas as implemenaões dos seguintes funcionalidades: Front-end do módulo de Usuários; Front-end de pesquisa de Lojas e Jogos; Portal de Notícias, além do término dos registros de testes de softwares e de Usabilidade dessas funcionalidades.
+Para essa etapa, foram planejadas as implementações dos seguintes funcionalidades: Front-end do módulo de Usuários; Front-end de pesquisa de Lojas e Jogos; Portal de Notícias, além do término dos registros de testes de softwares e de Usabilidade dessas funcionalidades.
 
-As atividades restantes para conclusão da aplicação foram distribuídas com a equipe. Para essa etapa, foi planejado a implemenação do Requisito Funcional RF-01 a 04.
+As atividades restantes para conclusão da aplicação foram distribuídas com a equipe. Para essa etapa, foi planejado a implemenação do Requisito Funcional RF-05 a 10, uma vez que as demais já foram concluídas na etapa 03.
 
 
 *4.2 Execução:*
 
-A equipe realizou, em 19.05.2024, reunião de avaliação geral do projeto, onde decidiu-se por reduzir algumas funcionalidades, antes planejadas, sem prejuízo ao objetivo proposto do projeto. Analisadas as funcionalidades, resolveu-se retirar, momentaneamente, o seguinte: Portal de Promoções, Portal de Novidades, inserção de comentários por parte dos Usuários e exibição de Jogos mais Jogados. Essa decisão não impede que, futuramente, essas funcionalidades não sejam implementadas e incorporadas à aplicação, bem como não compromete, de forma alguma, os objetivos almejados.
+A equipe realizou, em 19.05.2024, reunião de avaliação geral do projeto, onde decidiu-se por reduzir algumas funcionalidades, antes planejadas, sem prejuízo ao objetivo proposto do projeto. Analisadas as funcionalidades, resolveu-se retirar, momentaneamente, o seguinte: Portal de Promoções, Portal de Novidades, inserção de comentários por parte dos Usuários e exibição de Jogos mais Jogados. Essa decisão não impede que, futuramente, essas funcionalidades sejam implementadas e incorporadas à aplicação, bem como não compromete, de forma alguma, os objetivos almejados.
 
 As tarefas, nessa etapa, foram assim distribuídas:
 
@@ -317,7 +317,12 @@ Figura 17 - Resumo da reunião de equipe para planejamento e implementação da 
 
 ![1-Ata Reunião de Equipe](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/173d63b6-987c-4bf6-a068-17363f4ccfe1)
 
-Figura 18 - Kanban da Etapa 4.
+Figura 18 - Construção da interface final da aplicação InfoGames
+
+![1-Evidência-construção interface](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/1f234d8e-6595-47e9-9c0c-40f65e881478)
+
+
+Figura 19 - Kanban da Etapa 4.
 
 ![2-Kanban -etapa4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/7d51bca6-676c-4cd6-83a6-279090215fc4)
 
