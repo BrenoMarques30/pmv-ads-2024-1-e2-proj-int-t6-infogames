@@ -104,3 +104,41 @@ __Ferramentas Utilizadas:__
 
 __Tabela com as Respostas dos Usuários__
 
+| Pergunta | Usuário 1: João Silva | Usuário 2: Maria Oliveira |
+|----------|-----------------------|---------------------------|
+| Como você avaliaria a facilidade de encontrar e utilizar a função de login? | Muito fácil | Muito fácil |
+| A navegação até a seção de notícias foi intuitiva? | Muito intuitiva | Intuitiva |
+| Como você descreveria a experiência de leitura das notícias? | Muito boa | Boa |
+| Foi fácil retornar à página inicial após ler a notícia? | Muito fácil | Fácil |
+| Você tem alguma sugestão para melhorar a navegação ou a apresentação das notícias? | Nada a observar até o momento | Opção para marcar notícias como favoritas |
+
+__Relato dos Usuários:__
+
+1.	**Usuário 1**: João Silva
+* Login: Fácil de encontrar e utilizar. O tempo de resposta foi rápido.
+*	Navegação até a seção de notícias: Intuitiva. Os menus são claros e de fácil acesso.
+*	Leitura da notícia: Texto bem formatado e fácil de ler. A navegação de retorno à página inicial foi fluida.
+*	Observações: Nada a observar, até o momento.
+
+2.	**Usuário 2**: Maria Oliveira
+*	Login: Simples e rápido. As instruções foram claras.
+*	Navegação até a seção de notícias: Encontrei a seção sem dificuldades. A interface é amigável.
+*	Leitura da notícia: O conteúdo é bem apresentado. Retornar à página inicial foi direto.
+*	Observações: Seria interessante ter uma opção para marcar notícias como favoritas.
+
+__Questionário Aplicado:__
+
+Nome: 
+Idade: 
+Experiência com jogos: 
+Experiência com tecnologia:
+1.	Como você avaliaria a facilidade de encontrar e utilizar a função de login?
+(   ) Muito fácil  (   )  Fácil   (   ) Neutro  (   )  Difícil   (   ) Muito difícil
+2.	A navegação até a seção de notícias foi intuitiva?
+(   )  Muito intuitiva    (   )  Intuitiva   (   )  Neutra   (   )  Pouco intuitiva  (   )  Nada intuitiva
+3.	Como você descreveria a experiência de leitura das notícias?
+(   ) Muito boa   (   ) Boa    (   ) Neutra   (   ) Ruim   (   ) Muito ruim
+4.	Foi fácil retornar à página inicial após ler a notícia?
+(   ) Muito fácil   (   ) Fácil   (   ) Neutro    (   ) Difícil    (   ) Muito difícil
+5.	Você tem alguma sugestão para melhorar a navegação ou a apresentação das notícias?
+
