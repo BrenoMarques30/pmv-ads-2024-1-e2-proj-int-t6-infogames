@@ -75,3 +75,32 @@ __Análise dos Resultados__
 
 Os resultados indicam uma aceitação geral da interface e funcionalidade, com pontos a melhorar na lista de jogos apresentados, em termos de quantidade e visualização. Ações recomendadas incluem aprimoramento dos guias de uso, aumento de legibilidade em textos informativos.
 
+### Teste 03 - Portal de Notícias
+
+*	__Data do Teste:__ 28 de Maio de 2024
+*	__Local:__ Testes realizados de forma remota
+*	__Versão do Software:__ 1.0
+*	__Objetivo do Teste:__ Avaliar a usabilidade do software, em relação à utilização do portal de notícias atualizadas, estatísticas detalhadas sobre jogos, incluindo tempo de resposta, facilidade de navegação e qualidade das notícias.
+
+
+__Metodologia:__ Observação com envio de respostas através de prints de tela e áudio. Cada participante realizou as tarefas de fazer login na conta, acessar o portal de Notícias  e fazer o logout. Após a conclusão das tarefas, os participantes responderam a um questionário de satisfação.
+
+__Participantes:__
+
+*	**Usuário 1**: João Silva, 25 anos, profissional de TI, experiência alta com jogos e tecnologia.
+*	**Usuário 2**: Maria Oliveira, 30 anos, administradora, experiência média com jogos e tecnologia.
+
+__Procedimento e instruções:__
+
+1.	Solicitar ao usuário que faça login.
+2.	Orientar o usuário a acessar a seção de notícias.
+3.	Solicitar ao usuário que retorne à página inicial.
+   
+__Ferramentas Utilizadas:__
+
+*	Software de captura de tela e gravação de vídeo para registrar as ações dos usuários.
+*	Questionário online para coletar as respostas dos usuários após o teste.
+*	Plataforma de comunicação remota para interação com os participantes.
+
+__Tabela com as Respostas dos Usuários__
+
