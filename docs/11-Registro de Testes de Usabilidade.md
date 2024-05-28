@@ -128,17 +128,19 @@ __Relato dos Usuários:__
 
 __Questionário Aplicado:__
 
-Nome: 
-Idade: 
-Experiência com jogos: 
-Experiência com tecnologia:
-1.	Como você avaliaria a facilidade de encontrar e utilizar a função de login?
-(   ) Muito fácil  (   )  Fácil   (   ) Neutro  (   )  Difícil   (   ) Muito difícil
-2.	A navegação até a seção de notícias foi intuitiva?
-(   )  Muito intuitiva    (   )  Intuitiva   (   )  Neutra   (   )  Pouco intuitiva  (   )  Nada intuitiva
-3.	Como você descreveria a experiência de leitura das notícias?
-(   ) Muito boa   (   ) Boa    (   ) Neutra   (   ) Ruim   (   ) Muito ruim
-4.	Foi fácil retornar à página inicial após ler a notícia?
-(   ) Muito fácil   (   ) Fácil   (   ) Neutro    (   ) Difícil    (   ) Muito difícil
-5.	Você tem alguma sugestão para melhorar a navegação ou a apresentação das notícias?
+       Nome:
+       Idade:
+       Experiência com jogos:
+       Experiência com tecnologia:
+       1.	Como você avaliaria a facilidade de encontrar e utilizar a função de login
+       (   ) Muito fácil  (   )  Fácil   (   ) Neutro  (   )  Difícil   (   ) Muito difícil
+       2.	A navegação até a seção de notícias foi intuitiva?
+       (   )  Muito intuitiva    (   )  Intuitiva   (   )  Neutra   (   )  Pouco intuitiva  (   )  Nada intuitiva
+       3.	Como você descreveria a experiência de leitura das notícias?
+       (   ) Muito boa   (   ) Boa    (   ) Neutra   (   ) Ruim   (   ) Muito ruim
+       4.	Foi fácil retornar à página inicial após ler a notícia?
+       (   ) Muito fácil   (   ) Fácil   (   ) Neutro    (   ) Difícil    (   ) Muito difícil
+       5.	Você tem alguma sugestão para melhorar a navegação ou a apresentação das notícias?
+  
+
 
