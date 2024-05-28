@@ -36,29 +36,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-01 | Permitir que o usuário crie e gerencie seu perfil na plataforma.                                                             | ALTA       |
 | RF-02 | Permitir que o usuário realize Login e Logout                                                                                | ALTA       |
 | RF-03 | Permitir que o usuário realize Redefinição de Senha                                                                          | ALTA       |
-| RF-04 | Permitir que o usuário sincronize seu perfil da plataforma com o seu perfil da Steam® - Via única Steam® -> InfoGames        | BAIXA      |
-| RF-05 | Exibir notícias atualizadas sobre jogos que o usuário possui e/ou segue (Portal de notícias)                                 | BAIXA      |
-| RF-06 | Permitir o usuário personalizar seu portal de notícias.                                                                      | ALTA       |
-| RF-07 | Permitir o usuário curtir e comentar nas notícias.                                                                           | MÉDIA      |
-| RF-08 | Permitir que outros usuários interajam (curtir e responder) com comentários                                                  | MÉDIA      |
-| RF-09 | Proibir que usuários criem comentários ofensivos (xingamentos, ofensas à raça, religião, gênero, etc)                        | ALTA       |
-| RF-10 | Ordenar comentários por engajamento (curtidas+comentários)                                                                   | BAIXA      |
-| RF-11 | Permitir a pesquisa de jogos disponíveis na loja por nome e gênero                                                           | ALTA       |
-| RF-12 | Permitir a filtrar e/ou ordenar a lista de resultados de pesquisa por classificação, preço, desconto e/ou data de lançamento | ALTA       |
-| RF-13 | Definir todos jogos classificados como "Mature" ou "Proibido para menores" como "restritos"                                  | ALTA       |
-| RF-14 | Criar verificação de idade para acessar conteúdo de jogos restritos                                                          | ALTA       |
-| RF-15 | Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                       | ALTA       |
-| RF-16 | Permitir que usuários de 18 anos ou mais habilitem o acesso a conteúdo de jogos restritos                                    | MÉDIA      |
-| RF-17 | Exibir informações de preço atual e histórico de jogos na Steam®                                                             | ALTA       |
-| RF-18 | Exibir estatísticas de jogos, incluindo número de jogadores online.                                                          | ALTA       |
-| RF-19 | Permitir que o usuário compartilhe a página do jogo                                                                          | MÉDIA      |
-| RF-20 | Permitir que o usuários pesquise por outros usuários                                                                         | MÉDIA      |
-| RF-21 | Permitir que usuários gerenciem seus amigos (convidar, adicionar, remover)                                                   | BAIXA      |
-| RF-22 | Criar uma lista de resultados de pesquisa dinâmica                                                                           | MÉDIA      |
-| RF-23 | Usar pesquisa contextual para jogos e usuários                                                                               | BAIXA      |
-| RF-24 | Exibir jogos que atualmente estão em promoção (Portal de promoções)                                                          | MÉDIA      |
+| RF-04 | Exibir notícias atualizadas sobre jogos que o usuário possui e/ou segue (Portal de notícias)                                 | BAIXA      |
+| RF-05 | Permitir a pesquisa de jogos disponíveis na loja por nome e gênero                                                           | ALTA       |
+| RF-06 | Permitir a filtrar e/ou ordenar a lista de resultados de pesquisa por classificação, preço, desconto e/ou data de lançamento | BAIXA      |
+| RF-07 | Exibir informações de preço atual e histórico de jogos na Steam®                                                             | MÉDIA      |
+| RF-08 | Exibir estatísticas de jogos, incluindo número de jogadores online.                                                          | MÉDIA      |
 | RF-25 | Proibir interação de usuários menores de 13 anos com demais usuários                                                         | ALTA       |
-
+| RF-15 | Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                       | ALTA       |
 
 ### Requisitos Não Funcionais
 
