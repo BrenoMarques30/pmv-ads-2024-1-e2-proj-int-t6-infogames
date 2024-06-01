@@ -6,42 +6,42 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 | **Caso de Teste** 	| **CT-01 – Cadastrar Usuário** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-001 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
+|	Requisito Associado 	| RF-01 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
 |Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3dfc9f13-f8fd-476b-9315-b5384d39ae8f    |
 
 
 | **Caso de Teste** 	| **CT-02 – Realizar Login e Logout** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-002 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
+|	Requisito Associado 	| RF-02 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
 |Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/53ae3ae2-0832-47d9-88a6-52787eb51629  |
 
 
 | **Caso de Teste** 	| **CT-03 – Redefinir Senha** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-003 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
+|	Requisito Associado 	| RF-03 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
 |Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b181f77-e359-4b96-8922-6e0c2631b19e |
 
 | **Caso de Teste** 	| **CT-04 – O Administrador pode Incluir, Alterar e Excluir Usuários do Sistema** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-001 a RF-003 - A aplicação deve permitir que o Administrador crie, edite e exclua Usuários. |
+|	Requisito Associado 	| RF-01 a RF-03/10 e 11 - A aplicação deve permitir que o Administrador crie, edite e exclua Usuários. |
 |Registro de evidência | - Criar Usuário: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9ce9b17e-6d3c-4d58-bae9-65d1d4348f06  </b> |
 |                      | - Editar Usuário: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/987e003a-1461-4a5d-a80e-75fe4313855a  </b> |
 |                      | - Excluir Usuário: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/fb1fcea8-753b-4a67-a14c-111ba1dabb0c </b> |
 
-| **Caso de Teste** 	| **CT-05 – Pesquisa Jogos** 	|
+| **Caso de Teste** 	| **CT-05 – Portal Notícias** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
-|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/abada7fe-8438-44d2-b4c7-bb5079ece5ae |
+|	Requisito Associado 	| RF-04 - A aplicação deve permitir que um usuário realizar consulta sobre notícias recentes de Jogos na Steam. |
+|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/715334a4-59c2-4d7c-9af1-5be46da0e3e0   |
 
 | **Caso de Teste** 	| **CT-06 – Portal Lojas** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar pesquisa sobre Lojas de jogos eletrônicos na Steam. |
+|	Requisito Associado 	| RF-05 - A aplicação deve permitir que um usuário realizar pesquisa sobre Lojas de jogos eletrônicos na Steam. |
 |Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/aef84cc8-0172-4021-a293-1b968caa741d  |
 
-| **Caso de Teste** 	| **CT-05 – Portal Notícias** 	|
+| **Caso de Teste** 	| **CT-07 – Pesquisa Jogos** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar consulta sobre notícias recentes de Jogos na Steam. |
-|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/715334a4-59c2-4d7c-9af1-5be46da0e3e0   |
+|	Requisito Associado 	| RF-06 a RF-08 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/abada7fe-8438-44d2-b4c7-bb5079ece5ae |
 
 
 
