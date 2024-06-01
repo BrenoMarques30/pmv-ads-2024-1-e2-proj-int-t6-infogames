@@ -31,7 +31,18 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-05 – Pesquisa Jogos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
-|Registro de evidência | www.teste.com.br/drive/ct-02 |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/abada7fe-8438-44d2-b4c7-bb5079ece5ae |
+
+| **Caso de Teste** 	| **CT-06 – Portal Lojas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar pesquisa sobre Lojas de jogos eletrônicos na Steam. |
+|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/aef84cc8-0172-4021-a293-1b968caa741d  |
+
+| **Caso de Teste** 	| **CT-05 – Portal Notícias** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-011 - A aplicação deve permitir que um usuário realizar consulta sobre notícias recentes de Jogos na Steam. |
+|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/715334a4-59c2-4d7c-9af1-5be46da0e3e0   |
+
 
 
 ## Avaliação
