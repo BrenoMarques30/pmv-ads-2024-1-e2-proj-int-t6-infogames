@@ -41,8 +41,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-06 | Permitir a filtrar e/ou ordenar a lista de resultados de pesquisa por classificação, preço, desconto e/ou data de lançamento | BAIXA      |
 | RF-07 | Exibir informações de preço atual e histórico de jogos na Steam®                                                             | MÉDIA      |
 | RF-08 | Exibir estatísticas de jogos, incluindo número de jogadores online.                                                          | MÉDIA      |
-| RF-25 | Proibir interação de usuários menores de 13 anos com demais usuários                                                         | ALTA       |
-| RF-15 | Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                       | ALTA       |
+| RF-09 | Proibir interação de usuários menores de 13 anos com demais usuários                                                         | ALTA       |
+| RF-10 | Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                       | ALTA       |
 
 ### Requisitos Não Funcionais
 
