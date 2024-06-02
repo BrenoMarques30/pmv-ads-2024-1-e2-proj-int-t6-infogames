@@ -9,8 +9,8 @@ Na tabela abaixo, estão relacionados os requisitos atendidos com os artefatos c
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
 |RF-01 a RF-11| A aplicação deve permitir que o administrador crie, edite e exclua Usuários, Jogos e Lojas | HomeController.cs | 
-|RF-01 a RF-04 | A aplicação deve permitir que o usuário gerencie seu perfil   |  UsuariosController.cs |
-|RF-05 a RF-10 | A aplicação deve permitir acesso, pesqyusa e manipulação aos Portais de Jogos, Notícias e Lojas   |  NoticiasController.cs, JogosController.cs, LojasController.cs |
+|RF-01 a RF-04 | A aplicação deve permitir que o usuário gerencie seu perfil   |  UsuariosController.cs </br> Usuario.cs, LoginModel.cs |
+|RF-05 a RF-10 | A aplicação deve permitir acesso, pesqyusa e manipulação aos Portais de Jogos, Notícias e Lojas   |  NoticiasController.cs, JogosController.cs, LojasController.cs </br> LojasModel.cs, JogoModel.cs, NoticiaModel.cs  |
 
 
 # Instruções de acesso
