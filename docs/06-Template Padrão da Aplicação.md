@@ -63,9 +63,10 @@ Para a Tela de Login (acima), é necessário cadastrar o Usuário e a Senha de a
 
 - Tela Portal de Notícias
 
-  ![5-Tela Notícias](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/bf4b6fa1-7980-4933-8fa2-deb2e610c50f)
-  
+![5-Tela Notícias-ok](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/12c007dc-49b9-4138-8d63-4207014fe1cb)
+
 - Tela Portal de Buscas de Jogos e Lojas
+![8-Tela Jogos e Lojas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/cdd452e8-816e-40e2-8bae-5924762b9248)
 
 
 > **Links Úteis**:
