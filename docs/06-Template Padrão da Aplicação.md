@@ -35,31 +35,37 @@ A imagem abaixo ilustra o Template padrão do InfoGames.
 
 Todas as telas apresentam um layout responsivo, tendo seu conteúdo ajustado para qualquer tamanho de tela. O template criado é composto pelos seguintes layouts:
 
-- Home Page
+- Página de Entrada:
 
-![1-Landing Page-InfoGames-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a88efffb-e49c-4d10-b66b-d1197f3214da)
+![1-Tela Entrada](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/66595692-34f6-4157-acbe-8a814ba90911)
+
+- Página Home
+
+![1-Tela Home](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/da1d1622-5216-47f8-a6ff-aac97f1b6187)
+
 
 - Tela do Cadastro do Usuário
 
-![3-Tela Cadastro Usuário-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/be8f3625-d4c8-4900-8288-9023d21686e8)
+![3-Tela Cadastro de Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a9f94942-af01-4f9e-968b-4bff7d0b30a3)
 
 Para a Tela de Cadastro (acima), é necessário o preenchimento do formulário com os dados do Usuário, incluindo sua Senha de acesso. Como a implementação consiste em uma ferramenta Back End, os dados do cadastro ficam armazenados no Banco de Dados localstorage, para posteriores Login na ferramenta.
   
 - Tela da Login do Usuário
 
-![2-Tela Inicial Usuário-2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/2507093c-035b-474d-aefc-7d3f50783e87)
+![2-Tela Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d3d1b861-15e1-4857-84a6-2739867df7df)
+
 
 Para a Tela de Login (acima), é necessário cadastrar o Usuário e a Senha de acesso. Como a implementação consiste em uma ferramenta Back End, os atributos do Usuário ficam armazenados, após o cadastro, no Banco de Dados local storage, para acesso a cada início de Sessão.
 
-
 - Tela Redefinir Senha do Usuário
 
-![4-Tela Recuperar Senha-Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3533b886-f527-4a42-9897-a645986ceb24)
+![4-Tela Recuperação de Senha](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/bb556090-eb14-4ddb-8574-e4ce36e2c0d0)
 
-  
 - Tela Portal de Notícias
-- 
-- Tela Portal de Buscas  
+
+  ![5-Tela Notícias](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/bf4b6fa1-7980-4933-8fa2-deb2e610c50f)
+  
+- Tela Portal de Buscas de Jogos e Lojas
 
 
 > **Links Úteis**:
