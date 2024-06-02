@@ -17,7 +17,7 @@ O template padrão do projeto, que irá aparecer em suas páginas, foi planejado
 
 A imagem abaixo ilustra o Template padrão do InfoGames.
 
-![Template-página InfoGames](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/d3166d4c-9e8d-4312-b2dd-702d414b5a35)
+![0-Template-Padrão-projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/6934855e-fa94-4a93-8f3c-7dff6510fb7c)
 
 ## Logotipo
 ![logo-pequena-OK](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b8a4d9ec-8b2d-400a-ad16-6de28b14ace7)
