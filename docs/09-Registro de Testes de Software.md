@@ -47,7 +47,5 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 ## Avaliação
 
-Todas as funções implementadas até o presente momento encontram-se funcionais. Ainda há a necessidade de implementar as seguintes funcionalidades, tais como, Portal de Notícias e Portal de Promoções.
-O cadastro e Login de usuários estão funcionando, bem como pesquisa de Jogos e Lojas através da API em Steam de jogos eletrônicos.
-Ressaltamos que estamos implementando as funcionalidades que faltam, devido ao tempo de aprendizado na linguagem e ambiente de programação.
-
+Todas as funções implementadas até o presente momento encontram-se funcionais. 
+O cadastro, Login de usuários e Redefinição de senha estão funcionando, bem como pesquisa de Jogos, Lojas e Portal de Notícias através da API em Steam de jogos eletrônicos.
