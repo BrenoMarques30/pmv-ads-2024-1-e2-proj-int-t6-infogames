@@ -19,7 +19,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-03 – Redefinir Senha** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-03 - A aplicação deve permitir que um usuário, previamente cadastrado, possa redefinir sua senha. |
-|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/9b181f77-e359-4b96-8922-6e0c2631b19e |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/a6eb3c79-98ca-4c39-ab23-16a430ea5366 |
 
 | **Caso de Teste** 	| **CT-04 – O Administrador pode Incluir, Alterar e Excluir Usuários do Sistema** 	|
 |:---:	|:---:	|
