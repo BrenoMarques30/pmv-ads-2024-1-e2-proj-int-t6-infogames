@@ -7,13 +7,13 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-01 – Cadastrar Usuário** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-01 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
-|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3dfc9f13-f8fd-476b-9315-b5384d39ae8f    |
+|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/adc619d8-8c2e-46ef-a226-c6ea7d086f05 |
 
 
 | **Caso de Teste** 	| **CT-02 – Realizar Login e Logout** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-02 - A aplicação deve permitir que um usuário previamente cadastrado faça login |
-|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/53ae3ae2-0832-47d9-88a6-52787eb51629  |
+|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/65db0ac9-76a1-4f9a-81a4-1620e19e6210  |
 
 
 | **Caso de Teste** 	| **CT-03 – Redefinir Senha** 	|
