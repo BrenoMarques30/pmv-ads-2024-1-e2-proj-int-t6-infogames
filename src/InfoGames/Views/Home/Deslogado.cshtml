@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Bem Vindo";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InfoGames</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/InfoGames.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            background: url('/img/BG01.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #botao {
+            position: absolute;
+            top: 40px;
+            right: 70px;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .img {
+            position: absolute;
+            top: 40px;
+            left: 70px;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .text {
+            background-color: rgba(255, 0, 0, 0.5); /* Increased transparency */
+            color: white;
+            height: 350px;
+            width: 70%;
+            padding: 40px;
+            border-radius: 25px;
+            margin-top: 22%;
+        }
+
+            .text h1, .text p {
+                color: #ffffff; /* Stronger white color */
+            }
+    </style>
+</head>
+<body>
+    <div class="">
+        <img src="~/Logo/LOGO FAVICON WHITE.png" alt="Logo da Empresa" class="img" style="height: 120px; width: 140px;">
+    </div>
+    <a class="btn btn-danger mt-3 mr-3" id="botao" asp-area="" asp-controller="Login" asp-action="Index">Entrar</a>
+
+    <div class="text">
+        <h1 style="text-align: center; font-weight: bold;">INFOGAME</h1>
+        <p style="text-align: center;" class="mt-3">
+            INFOGAME é o seu portal definitivo para tudo relacionado a jogos, diretamente conectado à Steam. Aqui, você pode acessar instantaneamente as últimas novidades do mundo dos jogos, verificar quais dos seus amigos estão online e explorar todos os jogos da sua biblioteca Steam em um só lugar.
+
+            Descubra os Últimos Lançamentos e Tendências: Mantenha-se atualizado com os jogos mais recentes e as tendências emergentes. Nossa integração com a Steam garante que você nunca perca um lançamento ou uma atualização importante.
+
+            Conecte-se com Amigos: Veja quem está online e pronto para jogar. Com INFOGAME, é fácil sincronizar sessões de jogo e planejar sua próxima aventura multiplayer com amigos.
+
+            Explore Sua Coleção: Acesse facilmente toda a sua coleção de jogos na Steam. Organize seus jogos, acompanhe seu progresso e redescubra tesouros escondidos em sua vasta biblioteca de jogos.
+
+            Se você é um gamer ávido ou apenas um entusiasta casual, INFOGAME é o lugar perfeito para ampliar sua experiência de jogo. Junte-se a nós hoje e transforme a maneira como você joga!
+        </p>
+    </div>
+</body>
+</html>

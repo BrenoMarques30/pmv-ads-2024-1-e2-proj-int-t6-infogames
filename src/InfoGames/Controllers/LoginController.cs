@@ -37,7 +37,7 @@ public class LoginController : Controller {
 
     public IActionResult Sair() {
         _sessao.RemoverSessaoUsuario();
-        return RedirectToAction("Index", "Login");
+        return RedirectToAction("Deslogado", "Home");
     }
     public Usuario? BuscarPorLogin(string email) {
         return _db.Usuario.FirstOrDefault(m => m.Email == email);

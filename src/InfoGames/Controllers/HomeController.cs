@@ -10,6 +10,10 @@ namespace InfoGames.Controllers {
             _logger = logger;
         }
 
+	    public IActionResult Deslogado() {
+        return View();
+        }
+
         public IActionResult Index() {
             return View();
         }
