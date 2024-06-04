@@ -304,7 +304,8 @@ As tarefas, nessa etapa, foram assim distribuídas:
 
 a. Módulo do Usuário (back-end e front-end inicial): Caio e Márcia; <br />
 b. Módulos de Lojas, Jogos e Notícias (back-end e front-end inicial): Rafael; <br />
-c. Front-end das páginas construídas: Willian e Pablo; <br />
+c. Front-end das páginas Inicial, Home e Usuário: Márcia e Caio; <br />
+d. Hospedagem do Projeto: Willian e Márcia; <br />
 f. GitHub - textos e atualizações: Márcia; <br />
 g. Correções e Revisões gerais (Programação e GitHub): toda equipe.
 
