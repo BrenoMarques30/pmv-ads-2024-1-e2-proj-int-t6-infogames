@@ -15,11 +15,9 @@ Na tabela abaixo, estão relacionados os requisitos atendidos com os artefatos c
 
 # Instruções de acesso
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+O projeto InfoGame está hospedado no link: https://infogame20240606.azurewebsites.net
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Para utilizá-lo, basta clicar no link acima, realizar seu cadastro e fazer login com as credenciais cadastradas. Após isso, você poderá navegar, facilmente, no Menu para ter acesso às informações disponíveis sobre jogos eletrônicos.
 
 > **Links Úteis**:
 >
