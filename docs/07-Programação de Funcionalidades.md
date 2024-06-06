@@ -19,10 +19,4 @@ O projeto InfoGame está hospedado no link: https://infogame20240606.azurewebsit
 
 Para utilizá-lo, basta clicar no link acima, realizar seu cadastro e fazer login com as credenciais cadastradas. Após isso, você poderá navegar, facilmente, no Menu para ter acesso às informações disponíveis sobre jogos eletrônicos.
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+
