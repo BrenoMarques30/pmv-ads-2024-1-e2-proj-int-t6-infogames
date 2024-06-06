@@ -70,18 +70,3 @@
 | Passos              | 1. Clicar no botão de filtros;<br>2. Selecionar um tipo de filtro e ordenamento;<br>3. Aplicar o filtro                              |
 | Critério de Êxito   | A lista de resultados é atualizada baseada nos parâmetros de pesquisa, filtro e ordenamento                                          |
 
-| Caso de Teste       | CT-10 – Filtragem de conteúdo adulto                                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Requisito Associado | RF-15 - Proibir que usuários menores de 18 acessem conteúdo de jogos restritos                                                            |
-| Objetivo do Teste   | Garantir que menores de 18 anos não sejam expostos a conteúdo sensível                                                                    |
-| Prerequisitos       | 1. O usuário com menos de 18 anos está logado;                                                                                            |
-| Passos              | 1. No campo de pesquisa, digitar o nome de um jogo proibido para menores de 18 anos (ex.: Cyberpunk 2077);<br>2. Selecionar a tecla Enter |
-| Critério de Êxito   | Nenhum resultado com classificação indicativa 18+ é exibido                                                                               |
-
-| Caso de Teste       | CT-11 – Portal de promoções                                                 |
-| ------------------- | --------------------------------------------------------------------------- |
-| Requisito Associado | RF-24 - Exibir jogos que atualmente estão em promoção (Portal de promoções) |
-| Objetivo do Teste   | Verificar que é possível visualizar jogos que estão atualmente em promoção  |
-| Prerequisitos       | 1. O usuário está logado;                                                   |
-| Passos              | 1. Selecionar 'Promoções' no menu superior                                  |
-| Critério de Êxito   | Jogos que estão atualmente em promoção são listados no portal de promoções  |
