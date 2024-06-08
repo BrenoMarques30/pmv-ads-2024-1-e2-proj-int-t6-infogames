@@ -31,7 +31,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-05 – Portal Notícias** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-04 - A aplicação deve permitir que um usuário realizar consulta sobre notícias recentes de Jogos na Steam. |
-|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/715334a4-59c2-4d7c-9af1-5be46da0e3e0   |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/e5ccff8a-dcb0-4430-aebc-2c9814055ab2 |
 
 | **Caso de Teste** 	| **CT-06 – Portal Lojas** 	|
 |:---:	|:---:	|
