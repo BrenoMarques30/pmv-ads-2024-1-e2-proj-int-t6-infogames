@@ -41,7 +41,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-07 – Pesquisa Jogos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-06 a RF-08 - A aplicação deve permitir que um usuário realizar pesquisa sobre jogos na Steam. |
-|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/abada7fe-8438-44d2-b4c7-bb5079ece5ae |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/90d81af1-69b3-4514-92d9-5b20206256be |
 
 
 
