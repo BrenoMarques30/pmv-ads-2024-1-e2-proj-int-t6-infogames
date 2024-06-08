@@ -36,7 +36,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-06 – Portal Lojas** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-05 - A aplicação deve permitir que um usuário realizar pesquisa sobre Lojas de jogos eletrônicos na Steam. |
-|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/aef84cc8-0172-4021-a293-1b968caa741d  |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/c517fcc1-6f2b-44e7-9baa-01fe6e644a0 |
 
 | **Caso de Teste** 	| **CT-07 – Pesquisa Jogos** 	|
 |:---:	|:---:	|
