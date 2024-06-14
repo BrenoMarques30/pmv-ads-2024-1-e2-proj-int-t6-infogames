@@ -18,4 +18,9 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogame
 
 # Apresentação da Solução
 
-Faça uma apresentação de um resumo de todos o processo de desenvolvimento e no final apresente a solução desenvolvida, usando um pequeno vídeo.
+Vídeo com pequena e resumida apresentação da plataforma desenvolvida, com um pequeno Tutorial de utilização do site INFOGAME, no Eixo 2 do curso Análise de Desenvolvimento de Sistemas, 2024.1.
+
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/3c3a013d-8e2a-4c13-882d-86543ce7610f
+
+
