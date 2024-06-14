@@ -364,7 +364,8 @@ Figura 20 - Kanban com finalização das tarefas do projeto InfoGame
 Figura 21 - Processo de Hospedagem do site InfoGame no Azure
 ![2-Azure-hospedagem-InfoGame](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b1444722-3ab1-4b3c-9e7d-2916a2ce9af2)
 
-
+Figura 22 - Projeto InfoGame hospedado - Página de entrada do Site
+![3-Site Infogame Hospedado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b9f04b3b-5293-4492-8ef1-2ebda55289ca)
 
 
 ### Ferramentas
