@@ -112,6 +112,15 @@ Esse processo de desenvolvimento foi sempre auxiliado pela utilização de diver
        Realização e registro dos testes de usabilidade
        Projeto do Github com Backlog e Plano de Sprints
 
+- **Etapa 5 (Sprint 5)**:
+  
+       Conclusão do Teste de Software
+       Conclusão do Teste de Usabilidade
+       Apresentação da Solução
+       Projeto do Github com Backlog e Plano de Sprints
+       Construção do vídeo de, aproximadamente, 3 minutos
+
+
 ### Etapa 1 (Sprint 1):
 
 *1.1 Planejamento:*
@@ -328,6 +337,36 @@ Figura 19 - Kanban da Etapa 4.
 ![2-Kanban -etapa4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/7d51bca6-676c-4cd6-83a6-279090215fc4)
 
 
+### Etapa 5 (Sprint 5):
+
+*5.1 Planejamento:*
+
+O planejamento dessa etapa consistiu na revisão do código implementado, na elaboração do roteiro para construção do vídeo e da apresentação do projeto. Foram distribuídas as atividades finais do projeto com a equipe, para revisão final, após finalização das tarefas.
+
+*5.2 Execução:*
+
+As atividades restantes, que completam a execução do projeto, foram revisadas, executadas e atualizadas por membros da equipe.
+
+Foi construído um pequeno roteiro para elaboração da apresentação do projeto, utilizando a ferramenta Power Point, bem como para a construção do vídeo, que é um Tutorial resumido da plataforma construída.
+
+Nessa etapa, as atividades foram distribuídas entre os membros da equipe, da seguinte forma:
+
+a. Vídeo: Márcia, Caio e Willian; <br/>
+b. Apresentação em Power Point e PDF: Márcia; <br/>
+c. Revisão do código e hospedagem: Márcia e Rafael; <br/>
+d. GitHub e KanBan- textos e atualizações: Toda equipe; <br/>
+
+*5.3 Evidências:*
+
+Figura 20 - Kanban com finalização das tarefas do projeto InfoGame
+![1-Kanban-Etapa 5](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/95d21e5f-0b4a-4a7c-9ae8-89c39f88d48d)
+
+Figura 21 - Processo de Hospedagem do site InfoGame no Azure
+![2-Azure-hospedagem-InfoGame](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b1444722-3ab1-4b3c-9e7d-2916a2ce9af2)
+
+
+
+
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
@@ -343,7 +382,8 @@ As ferramentas empregadas no projeto são:
 | Comunicação da equipe               | WhatsApp                           | web.whatsapp.com                            |
 | Diagramas de Fluxo do projeto  | Whimsical                          |  https://whimsical.com/            |
 | Modelos Entidade-Relacionamento (Conceitual)  | Lucid                          |  https://lucid.com/            |
-| Linguagem de programação que permite interatividade e dinamismo às páginas web  | Visual Studio                       |  https://code.visualstudio.com   |
+| Construção e Edição de Vídeos  | ScreenCast                       |  https://screenpal.com   |
+| Construção de slides  | Power Point                       |  https://support.microsoft.com/pt-br/office/  |
 
 
 
