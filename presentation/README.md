@@ -15,6 +15,12 @@ Abaixo, vídeo sobre a integração Back-end e Front-end da classe Usuários
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/df0378cf-a1ae-46e5-9ec9-3b6730498970
 
 
+# Relatório Final do Projeto INFOGAME
+
+Abaixo, relatório final do projeto, em formato PDF, conforme Template fornecido pela PUC-Minas. Esse documento contém um relato sobre todas as fases exigidas no Eixo 2, para documentação, registro de desenvolvimento, testes e conclusões.
+
+[Relatório do Projeto-Eixo 2-Turma 6-InfoGame.pdf](https://github.com/user-attachments/files/15904357/Relatorio.do.Projeto-Eixo.2-Turma.6-InfoGame.pdf)
+
 
 # Apresentação da Solução
 
