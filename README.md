@@ -56,7 +56,8 @@ Para utilizá-lo, basta clicar no link acima, realizar seu cadastro e fazer logi
 
 # Citação
 
-[Uploading citation.message: Please cite this software using these metadata.
+message: Please cite this software using these metadata.
+
 title: INFOGAME
 
 authors:
