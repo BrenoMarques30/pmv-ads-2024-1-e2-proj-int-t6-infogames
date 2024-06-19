@@ -57,7 +57,8 @@ Para utilizá-lo, basta clicar no link acima, realizar seu cadastro e fazer logi
 # Citação
 
 [Uploading citation.message: Please cite this software using these metadata.
-title:
+title: INFOGAME
+
 authors:
   - family-names: Costa Miranda
     given-names: Caio
@@ -77,11 +78,15 @@ authors:
     affiliation: PUC Minas
     family-names: Jeunon de Alencar
     given-names: Bernardo
+
 keywords:
   - Jogos eletrônicos
   - Desenvolvimento de Software
   - Back-end e Front-end
+
 repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/edit/main/
+
 version: 1.0.0
-date-released: 2024-06-19cff…]()
+
+date-released: 2024-06-19
 
