@@ -71,11 +71,8 @@ As ferramentas empregadas no projeto são:
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+A hospedagem do projeto foi implementada na ferramenta Azure, através do seu portal.
+Após seguir os passos de implementação do próprio tutorial do Azure, o projeto InfoGame está hospedado no link: https://infogame20240606.azurewebsites.net
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Para utilizá-lo, basta clicar no link acima, realizar seu cadastro e fazer login com as credenciais cadastradas. Após isso, você poderá navegar, facilmente, no Menu para ter acesso às informações disponíveis sobre jogos eletrônicos.
+
