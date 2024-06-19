@@ -71,11 +71,7 @@ authors:
     given-names: Rafael
   - family-names: Barbosa de Andrade
     given-names: Willian
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
+   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Jeunon de Alencar
     given-names: Bernardo
