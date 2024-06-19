@@ -49,5 +49,7 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogame
 
 4- __Relatório Final do Projeto__
 
+Abaixo, relatório final do projeto, em formato PDF, conforme Template fornecido pela PUC-Minas. Esse documento contém um relato sobre todas as fases exigidas no Eixo 2, para documentação, registro de desenvolvimento, testes e conclusões.
+
 [Relatório do Projeto-Eixo 2-Turma 6-InfoGame.pdf](https://github.com/user-attachments/files/15904322/Relatorio.do.Projeto-Eixo.2-Turma.6-InfoGame.pdf)
 
