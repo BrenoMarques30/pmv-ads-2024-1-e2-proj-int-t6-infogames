@@ -53,3 +53,35 @@ Para utilizá-lo, basta clicar no link acima, realizar seu cadastro e fazer logi
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
+
+# Citação
+
+[Uploading citation.message: Please cite this software using these metadata.
+title:
+authors:
+  - family-names: Costa Miranda
+    given-names: Caio
+  - family-names: Costa Miranda
+    given-names: Márcia Verônica
+  - family-names: Ramos Lopes
+    given-names: Pablo Vinícius
+  - family-names: Fernandes Mourão
+    given-names: Rafael
+  - family-names: Barbosa de Andrade
+    given-names: Willian
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: 
+    given-names: 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Jeunon de Alencar
+    given-names: Bernardo
+keywords:
+  - Jogos eletrônicos
+  - Desenvolvimento de Software
+  - Back-end e Front-end
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/edit/main/
+version: 1.0.0
+date-released: 2024-06-19cff…]()
+
