@@ -51,3 +51,7 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogame
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/assets/145228139/b7df77b9-75ef-4a59-9593-1bc69a89d928
 
+4- __Relatório Final do Projeto__
+
+[Relatório do Projeto-Eixo 2-Turma 6-InfoGame.pdf](https://github.com/user-attachments/files/15904322/Relatorio.do.Projeto-Eixo.2-Turma.6-InfoGame.pdf)
+
