@@ -85,9 +85,7 @@ keywords:
   - Desenvolvimento de Software
   - Back-end e Front-end
 
-repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/edit/main
-
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/tree/main
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t6-infogames/tree/main
 
 
 version: 1.0.0
