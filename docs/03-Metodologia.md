@@ -8,11 +8,6 @@ A metodologia utilizada neste projeto é baseada no SCRUM, que é uma abordagem 
 
 O Scrum é uma metodologia que se baseia na entrega do produto de forma parcial e construtiva, ou seja, em etapas curtas e regulares, chamadas de sprints. Nesse sentido, com o Scrum, procuramos fazer com que todos trabalhem de forma colaborativa e contribuam com suas ideias e habilidades. Além disso, por meio dessa metodologia, procura-se fazer com que o problema em foco possa ser resolvido com mais facilidade, otimizando cada etapa de desenvolvimento e execução.
 
-Como mencionado anteriormente, o Scrum é uma abordagem ágil e colaborativa que se concentra no trabalho em equipe, com responsabilidades e atividades bem definidas. Basicamente, sua estrutura está dividida nos seguintes componentes:
-
-Os papéis: Scrum Master, Product Owner e a Equipe de Desenvolvimento;
-Os eventos: planejamento, sprints e retrospectiva de sprint;
-Os artefatos: backlog do produto, lista de pendências de sprint, lista de pendências do produto, gráfico de burndown, log, etc;
  
 ## Controle de Versão
 
